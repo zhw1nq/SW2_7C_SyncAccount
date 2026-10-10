@@ -1,9 +1,0 @@
-{
-  "prefix": "[gold]7Mau [default]» ",
-  "sync.welcome": "Chào mừng [gold]{0}[default] đã tham gia máy chủ!",
-  "sync.register_chat": "[yellow]Vui lòng truy cập [lime]7-MAU.COM [yellow]để đăng ký và liên kết tài khoản!",
-  "sync.kick_countdown": "[red]Bạn chưa liên kết tài khoản! Bạn sẽ bị kick sau [gold]{0}[red] giây nữa.",
-  "sync.health_offline": "[red]Dịch vụ đồng bộ hiện đang bảo trì. Bạn không thể tham gia máy chủ.",
-  "sync.health_offline_html": "<span color=\"red\" class=\"fontSize-l fontWeight-bold\">Dịch vụ đồng bộ đang bảo trì</span><br><br><span color=\"white\" class=\"fontSize-sm\">Hệ thống tạm ngưng để bảo trì. Bạn sẽ bị ngắt kết nối.</span>",
-  "sync.register_html": "<span color=\"gold\" class=\"fontSize-l fontWeight-bold\">Vui lòng đăng ký tài khoản để chơi</span><br><br><span color=\"white\" class=\"fontSize-sm\">Truy cập </span><span color=\"lime\" class=\"fontSize-m fontWeight-bold\">7-MAU.COM</span><span color=\"white\" class=\"fontSize-sm\"> để liên kết tài khoản.</span>"
-}
