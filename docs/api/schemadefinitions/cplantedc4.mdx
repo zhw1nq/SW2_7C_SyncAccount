@@ -1,0 +1,472 @@
+---
+title: CPlantedC4
+---
+
+# Interface CPlantedC4
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPlantedC4 : CBaseAnimGraph, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseAnimGraph>, ISchemaClass<CPlantedC4>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseAnimGraph](/docs/api/schemadefinitions/cbaseanimgraph)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraph\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPlantedC4\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AbortDetonationBecauseWorldIsFrozen
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L26" />
+
+```csharp
+ref bool AbortDetonationBecauseWorldIsFrozen { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AttributeManager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L28" />
+
+```csharp
+CAttributeContainer AttributeManager { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAttributeContainer" typeHref="/docs/api/schemadefinitions/cattributecontainer" />
+
+### BeingDefused
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L50" />
+
+```csharp
+ref bool BeingDefused { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BombDefused
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L44" />
+
+```csharp
+ref bool BombDefused { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BombDefuser
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L58" />
+
+```csharp
+ref CHandle<CCSPlayerPawn> BombDefuser { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerPawn&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### BombSite
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L22" />
+
+```csharp
+ref int BombSite { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### BombTicking
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L18" />
+
+```csharp
+ref bool BombTicking { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### C4Blow
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L20" />
+
+```csharp
+GameTime_t C4Blow { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### CannotBeDefused
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L36" />
+
+```csharp
+ref bool CannotBeDefused { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CatchUpToPlayerEye
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L68" />
+
+```csharp
+ref QAngle CatchUpToPlayerEye { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### DefuseCountDown
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L56" />
+
+```csharp
+GameTime_t DefuseCountDown { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### DefuseLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L54" />
+
+```csharp
+ref float DefuseLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### EntitySpottedState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L38" />
+
+```csharp
+EntitySpottedState_t EntitySpottedState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="EntitySpottedState_t" typeHref="/docs/api/schemadefinitions/entityspottedstate_t" />
+
+### HasExploded
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L42" />
+
+```csharp
+ref bool HasExploded { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LastDefuseTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L52" />
+
+```csharp
+GameTime_t LastDefuseTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastSpinDetectionTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L70" />
+
+```csharp
+GameTime_t LastSpinDetectionTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### NextBotBeepTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L66" />
+
+```csharp
+GameTime_t NextBotBeepTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### OnBombBeginDefuse
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L32" />
+
+```csharp
+ref CEntityIOOutput OnBombBeginDefuse { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### OnBombDefuseAborted
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L34" />
+
+```csharp
+ref CEntityIOOutput OnBombDefuseAborted { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### OnBombDefused
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L30" />
+
+```csharp
+ref CEntityIOOutput OnBombDefused { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### ProgressBarTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L60" />
+
+```csharp
+ref int ProgressBarTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SourceSoundscapeHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L24" />
+
+```csharp
+ref int SourceSoundscapeHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SpotRules
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L40" />
+
+```csharp
+ref int SpotRules { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TimerLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L48" />
+
+```csharp
+ref float TimerLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TrainingPlacedByPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L46" />
+
+```csharp
+ref bool TrainingPlacedByPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### VoiceAlertFired
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L62" />
+
+```csharp
+ref bool VoiceAlertFired { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### VoiceAlertPlayed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L64" />
+
+```csharp
+ISchemaFixedArray<bool> VoiceAlertPlayed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;bool&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+## Methods
+
+### AttributeManagerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L76" />
+
+```csharp
+void AttributeManagerUpdated()
+```
+
+### BeingDefusedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L82" />
+
+```csharp
+void BeingDefusedUpdated()
+```
+
+### BombDefusedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L80" />
+
+```csharp
+void BombDefusedUpdated()
+```
+
+### BombDefuserUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L85" />
+
+```csharp
+void BombDefuserUpdated()
+```
+
+### BombSiteUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L74" />
+
+```csharp
+void BombSiteUpdated()
+```
+
+### BombTickingUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L72" />
+
+```csharp
+void BombTickingUpdated()
+```
+
+### C4BlowUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L73" />
+
+```csharp
+void C4BlowUpdated()
+```
+
+### CannotBeDefusedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L77" />
+
+```csharp
+void CannotBeDefusedUpdated()
+```
+
+### DefuseCountDownUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L84" />
+
+```csharp
+void DefuseCountDownUpdated()
+```
+
+### DefuseLengthUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L83" />
+
+```csharp
+void DefuseLengthUpdated()
+```
+
+### EntitySpottedStateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L78" />
+
+```csharp
+void EntitySpottedStateUpdated()
+```
+
+### HasExplodedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L79" />
+
+```csharp
+void HasExplodedUpdated()
+```
+
+### SourceSoundscapeHashUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L75" />
+
+```csharp
+void SourceSoundscapeHashUpdated()
+```
+
+### TimerLengthUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlantedC4.cs#L81" />
+
+```csharp
+void TimerLengthUpdated()
+```
+

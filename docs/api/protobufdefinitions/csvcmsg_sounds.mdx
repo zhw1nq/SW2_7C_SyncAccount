@@ -1,0 +1,49 @@
+---
+title: CSVCMsg_Sounds
+---
+
+# Interface CSVCMsg_Sounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CSVCMsg_Sounds.cs#L7" />
+
+**Namespace**: [SwiftlyS2.Shared.ProtobufDefinitions](/docs/api/protobufdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSVCMsg_Sounds : ITypedProtobuf<CSVCMsg_Sounds>, INativeHandle, INetMessage<CSVCMsg_Sounds>, IDisposable
+```
+
+#### Implements
+
+- [ITypedProtobuf\<CSVCMsg_Sounds\>](/docs/api/netmessages/itypedprotobuft)
+- [INativeHandle](/docs/api/natives/inativehandle)
+- [INetMessage\<CSVCMsg_Sounds\>](/docs/api/netmessages/inetmessaget)
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+## Properties
+
+### ReliableSound
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CSVCMsg_Sounds.cs#L15" />
+
+```csharp
+bool ReliableSound { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Sounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CSVCMsg_Sounds.cs#L16" />
+
+```csharp
+IProtobufRepeatedFieldSubMessageType<CSVCMsg_Sounds_sounddata_t> Sounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IProtobufRepeatedFieldSubMessageType&lt;CSVCMsg_Sounds_sounddata_t&gt;" typeHref="/docs/api/netmessages/iprotobufrepeatedfieldsubmessagetypet" />
+

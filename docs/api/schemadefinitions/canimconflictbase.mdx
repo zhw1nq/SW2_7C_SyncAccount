@@ -1,0 +1,73 @@
+---
+title: CAnimConflictBase
+---
+
+# Interface CAnimConflictBase
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimConflictBase.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimConflictBase : ISchemaClass<CAnimConflictBase>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CAnimConflictBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ConflictData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimConflictBase.cs#L22" />
+
+```csharp
+ISchemaClassFixedArray<CAnimConflictInfo_t> ConflictData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaClassFixedArray&lt;CAnimConflictInfo_t&gt;" typeHref="/docs/api/schemas/ischemaclassfixedarrayt" />
+
+### ConflictDesc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimConflictBase.cs#L18" />
+
+```csharp
+string ConflictDesc { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### ConflictType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimConflictBase.cs#L24" />
+
+```csharp
+ref AnimConflictType_t ConflictType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimConflictType_t" typeHref="/docs/api/schemadefinitions/animconflicttype_t" />
+
+### ResolveIdx
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimConflictBase.cs#L20" />
+
+```csharp
+ref int ResolveIdx { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

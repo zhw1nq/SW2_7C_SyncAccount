@@ -1,0 +1,61 @@
+---
+title: PermEntityLumpData_t
+---
+
+# Interface PermEntityLumpData_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PermEntityLumpData_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface PermEntityLumpData_t : ISchemaClass<PermEntityLumpData_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<PermEntityLumpData_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ChildLumps
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PermEntityLumpData_t.cs#L20" />
+
+```csharp
+ref CUtlVector<CStrongHandle<InfoForResourceTypeCEntityLump>> ChildLumps { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CStrongHandle&lt;InfoForResourceTypeCEntityLump&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EntityKeyValues
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PermEntityLumpData_t.cs#L22" />
+
+```csharp
+ref CUtlLeanVector<EntityKeyValueData_t, int> EntityKeyValues { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;EntityKeyValueData_t, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PermEntityLumpData_t.cs#L18" />
+
+```csharp
+string Name { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

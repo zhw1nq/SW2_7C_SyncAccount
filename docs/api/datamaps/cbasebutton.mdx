@@ -1,0 +1,54 @@
+---
+title: CBaseButton
+---
+
+# CBaseButton
+
+Inherited from [CBaseToggle](/docs/api/datamaps/cbasetoggle)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `movedir` | `m_angMoveEntitySpace` | `FIELD_QANGLE` |
+| `use_sound` | `m_sUseSound` | `FIELD_SOUNDNAME` |
+| `locked_sound` | `m_sLockedSound` | `FIELD_SOUNDNAME` |
+| `unlocked_sound` | `m_sUnlockedSound` | `FIELD_SOUNDNAME` |
+| `override_anticipation_name` | `m_sOverrideAnticipationName` | `FIELD_STRING` |
+| `forcenpcexclude` | `m_bForceNpcExclude` | `FIELD_BOOLEAN` |
+| `glow` | `m_sGlowEntity` | `FIELD_STRING` |
+| `displaytext` | `m_szDisplayText` | `FIELD_STRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Lock` | `FIELD_VOID` |
+| `Unlock` | `FIELD_VOID` |
+| `Press` | `FIELD_VOID` |
+| `PressIn` | `FIELD_VOID` |
+| `PressOut` | `FIELD_VOID` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnDamaged` | `FIELD_CUSTOM` |
+| `OnPressed` | `FIELD_CUSTOM` |
+| `OnUseLocked` | `FIELD_CUSTOM` |
+| `OnIn` | `FIELD_CUSTOM` |
+| `OnOut` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBaseButtonButtonTouch` |
+| `CBaseButtonButtonSpark` |
+| `CBaseButtonTriggerAndWait` |
+| `CBaseButtonButtonReturn` |
+| `CBaseButtonButtonBackHome` |
+| `CBaseButtonButtonUse` |
+| `CBaseButtonActivateTouch` |

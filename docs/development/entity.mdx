@@ -1,0 +1,276 @@
+---
+title: Entity
+---
+
+SwiftlyS2 provides a full entity system for creating entities, querying existing entities, safely tracking entities with handles, and hooking entity inputs/outputs.
+
+## Accessing Entity System Service
+
+The entity system service is available through `Core.EntitySystem`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    var entitySystem = Core.EntitySystem;
+}
+```
+
+## Creating Entities
+
+You can create entities by schema class or by designer name.
+
+### Create by Class
+
+```c#
+CPointWorldText worldText = Core.EntitySystem.CreateEntity<CPointWorldText>();
+```
+
+Signature:
+
+```c#
+T CreateEntity&lt;T&gt;() where T : class, ISchemaClass&lt;T&gt;
+```
+
+### Create by Designer Name
+
+```c#
+CBaseEntity relay = Core.EntitySystem.CreateEntityByDesignerName<CBaseEntity>("logic_relay");
+```
+
+Signature:
+
+```c#
+T CreateEntityByDesignerName&lt;T&gt;(string designerName) where T : class, ISchemaClass&lt;T&gt;
+```
+
+## Spawning Entities
+
+Creating an entity does not automatically spawn it into the game world.
+After creating, call `DispatchSpawn` (or `DispatchSpawnAsync`) on the entity instance.
+
+### Basic Spawn
+
+```c#
+CPointWorldText worldText = Core.EntitySystem.CreateEntity<CPointWorldText>();
+worldText.DispatchSpawn();
+```
+
+### Spawn with Key Values
+
+```c#
+CBaseEntity relay = Core.EntitySystem.CreateEntityByDesignerName<CBaseEntity>("logic_relay");
+
+using var keyValues = new CEntityKeyValues();
+keyValues.SetString("targetname", "sw_relay_01");
+keyValues.SetBool("StartDisabled", false);
+
+relay.DispatchSpawn(keyValues);
+```
+
+### Async Spawn
+
+```c#
+await relay.DispatchSpawnAsync(keyValues);
+```
+
+Use the async variant when spawning from non-main-thread contexts.
+
+## Querying Existing Entities
+
+Most query methods return `IEnumerable&lt;T&gt;`, so filter as early as possible.
+
+### Get All Entities
+
+```c#
+IEnumerable<CEntityInstance> allEntities = Core.EntitySystem.GetAllEntities();
+```
+
+### Get by Class
+
+```c#
+IEnumerable<CPointWorldText> worldTexts = Core.EntitySystem.GetAllEntitiesByClass<CPointWorldText>();
+```
+
+### Get by Designer Name
+
+```c#
+IEnumerable<CBaseEntity> relays = Core.EntitySystem.GetAllEntitiesByDesignerName<CBaseEntity>("logic_relay");
+```
+
+### Get by Index or Address
+
+```c#
+CEntityInstance? byIndex = Core.EntitySystem.GetEntityByIndex(100);
+CBaseEntity? typedByIndex = Core.EntitySystem.GetEntityByIndex<CBaseEntity>(100);
+
+CEntityInstance? byAddress = Core.EntitySystem.GetEntityByAddress((nint)0x12345678);
+CBaseEntity? typedByAddress = Core.EntitySystem.GetEntityByAddress<CBaseEntity>((nint)0x12345678);
+```
+
+## Getting Game Rules
+
+```c#
+CCSGameRules? gameRules = Core.EntitySystem.GetGameRules();
+```
+
+## Entity Handles and Safety
+
+For long-term tracking, store `CHandle&lt;T&gt;` instead of storing direct entity references.
+
+### Check Entity Validity with IsValid
+
+When you are working with a direct entity reference, check `IsValid` before using it.
+
+```c#
+CBaseEntity? entity = Core.EntitySystem.GetEntityByIndex<CBaseEntity>(100);
+
+if (entity == null || !entity.IsValid)
+{
+    return;
+}
+
+Console.WriteLine("Entity reference is valid.");
+```
+
+`IsValid` is a point-in-time check. For long-lived tracking, prefer storing `CHandle&lt;T&gt;` and checking `handle.IsValid` before accessing `handle.Value`.
+
+### Convert Entity to Handle
+
+```c#
+CHandle<CBaseEntity> handle = Core.EntitySystem.GetRefEHandle(entity);
+```
+
+### Resolve Handle Back to Entity
+
+```c#
+if (handle.IsValid)
+{
+    CBaseEntity resolved = handle.Value;
+}
+```
+
+### Safe Tracking Pattern
+
+```c#
+List<CHandle<CBaseEntity>> trackedEntities = new();
+
+CBaseEntity entity = Core.EntitySystem.CreateEntity<CBaseEntity>();
+trackedEntities.Add(Core.EntitySystem.GetRefEHandle(entity));
+
+entity.Despawn();
+
+Core.Scheduler.DelayBySeconds(10f, () =>
+{
+    foreach (var tracked in trackedEntities)
+    {
+        if (!tracked.IsValid)
+        {
+            continue;
+        }
+
+        CBaseEntity current = tracked.Value;
+        Console.WriteLine("Tracked entity is still valid.");
+    }
+});
+```
+
+## Hooking Entity Outputs
+
+Entity output hooks can be registered using methods or attributes.
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _outputHookGuid;
+
+    public override void Load(bool hotReload)
+    {
+        _outputHookGuid = Core.EntitySystem.HookEntityOutput("func_door", "OnOpen", OnDoorOpened);
+    }
+
+    public override void Unload(bool hotReload)
+    {
+        if (_outputHookGuid != Guid.Empty)
+        {
+            Core.EntitySystem.UnhookEntityOutput(_outputHookGuid);
+        }
+    }
+
+    private void OnDoorOpened(IOnEntityFireOutputHookEvent @event)
+    {
+        Console.WriteLine($"Output '{@event.OutputName}' fired by '{@event.DesignerName}'");
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [EntityOutputHandler("func_door", "OnOpen")]
+    public void OnDoorOpened(IOnEntityFireOutputHookEvent @event)
+    {
+        Console.WriteLine($"Output '{@event.OutputName}' fired by '{@event.DesignerName}'");
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Hooking Entity Inputs
+
+Entity input hooks can also be registered with methods or attributes.
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _inputHookGuid;
+
+    public override void Load(bool hotReload)
+    {
+        _inputHookGuid = Core.EntitySystem.HookEntityInput("func_button", "Press", OnButtonPress);
+    }
+
+    public override void Unload(bool hotReload)
+    {
+        if (_inputHookGuid != Guid.Empty)
+        {
+            Core.EntitySystem.UnhookEntityInput(_inputHookGuid);
+        }
+    }
+
+    private void OnButtonPress(IOnEntityIdentityAcceptInputHookEvent @event)
+    {
+        Console.WriteLine($"Input '{@event.InputName}' accepted by '{@event.DesignerName}'");
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [EntityInputHandler("func_button", "Press")]
+    public void OnButtonPress(IOnEntityIdentityAcceptInputHookEvent @event)
+    {
+        Console.WriteLine($"Input '{@event.InputName}' accepted by '{@event.DesignerName}'");
+    }
+    ```
+  </Tab>
+</Tabs>
+
+If you need to block the input/output flow, you can set `@event.Result = HookResult.Stop` inside the callback.
+
+## Callback Signatures
+
+The hook callbacks use these delegate signatures:
+
+```c#
+public delegate void IEntitySystemService.EntityOutputEventHandler(IOnEntityFireOutputHookEvent @event)
+public delegate void IEntitySystemService.EntityInputEventHandler(IOnEntityIdentityAcceptInputHookEvent @event)
+```
+
+<Callout type="warning">
+  Many entity-system methods throw `InvalidOperationException` if called too early when the entity system is not available yet.
+</Callout>
+
+## Reference
+
+See [IEntitySystemService](/docs/api/entitysystem/ientitysystemservice/) for all entity-system methods.
+
+See [IEntitySystemService.EntityInputEventHandler](/docs/api/entitysystem/ientitysystemservice/entityinputeventhandler/) and [IEntitySystemService.EntityOutputEventHandler](/docs/api/entitysystem/ientitysystemservice/entityoutputeventhandler/) for callback signatures.
+
+See [EntityInputHandlerAttribute](/docs/api/entitysystem/entityinputhandlerattribute/) and [EntityOutputHandlerAttribute](/docs/api/entitysystem/entityoutputhandlerattribute/) for attribute-based hooks.

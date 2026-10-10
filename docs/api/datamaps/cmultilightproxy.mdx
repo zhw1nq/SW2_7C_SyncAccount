@@ -1,0 +1,37 @@
+---
+title: CMultiLightProxy
+---
+
+# CMultiLightProxy
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `light_name` | `m_iszLightNameFilter` | `FIELD_STRING` |
+| `light_class` | `m_iszLightClassFilter` | `FIELD_STRING` |
+| `light_radius` | `m_flLightRadiusFilter` | `FIELD_FLOAT32` |
+| `brightness_delta` | `m_flBrightnessDelta` | `FIELD_FLOAT32` |
+| `screen_fade` | `m_bPerformScreenFade` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `FlickerLights` | `FIELD_FLOAT32` |
+| `DisableLights` | `FIELD_FLOAT32` |
+| `SetLightsBrightnessMultiplier` | `FIELD_FLOAT32` |
+| `SetBrightnessDelta` | `FIELD_FLOAT32` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CMultiLightProxyRestoreFlashlightThink` |
+| `CMultiLightProxyApproachBrightnessThink` |

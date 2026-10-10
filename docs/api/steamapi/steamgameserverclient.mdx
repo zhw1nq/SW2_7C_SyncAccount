@@ -1,0 +1,719 @@
+---
+title: SteamGameServerClient
+---
+
+# Class SteamGameServerClient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class SteamGameServerClient
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [SteamGameServerClient](/docs/api/steamapi/steamgameserverclient)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### BReleaseSteamPipe(HSteamPipe)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L19" />
+
+Releases a previously created communications pipe
+
+NOT THREADSAFE - ensure that no other threads are accessing Steamworks API when calling
+
+```csharp
+public static bool BReleaseSteamPipe(HSteamPipe hSteamPipe)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BShutdownIfAllPipesClosed()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L226" />
+
+Trigger global shutdown for the DLL
+
+```csharp
+public static bool BShutdownIfAllPipesClosed()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ConnectToGlobalUser(HSteamPipe)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L29" />
+
+connects to an existing global user, failing if none exists
+
+used by the game to coordinate with the steamUI
+
+NOT THREADSAFE - ensure that no other threads are accessing Steamworks API when calling
+
+```csharp
+public static HSteamUser ConnectToGlobalUser(HSteamPipe hSteamPipe)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+
+### CreateLocalUser(out HSteamPipe, EAccountType)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L38" />
+
+used by game servers, create a steam user that won't be shared with anyone else
+
+NOT THREADSAFE - ensure that no other threads are accessing Steamworks API when calling
+
+```csharp
+public static HSteamUser CreateLocalUser(out HSteamPipe phSteamPipe, EAccountType eAccountType)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="phSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="eAccountType" type="EAccountType" typeHref="/docs/api/steamapi/eaccounttype" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+
+### CreateSteamPipe()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L10" />
+
+Creates a communication pipe to the Steam client.
+
+NOT THREADSAFE - ensure that no other threads are accessing Steamworks API when calling
+
+```csharp
+public static HSteamPipe CreateSteamPipe()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+
+### GetIPCCallCount()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L207" />
+
+returns the number of IPC calls made since the last time this function was called
+
+Used for perf debugging so you can understand how many IPC calls your game makes per frame
+
+Every IPC call is at minimum a thread context switch if not a process one so you want to rate
+
+control how often you do them.
+
+```csharp
+public static uint GetIPCCallCount()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### GetISteamApps(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L154" />
+
+returns apps interface
+
+```csharp
+public static nint GetISteamApps(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamController(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L244" />
+
+Exposes the ISteamController interface - deprecated in favor of Steam Input
+
+```csharp
+public static nint GetISteamController(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamFriends(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L84" />
+
+returns the ISteamFriends interface
+
+```csharp
+public static nint GetISteamFriends(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamGameSearch(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L194" />
+
+game search
+
+```csharp
+public static nint GetISteamGameSearch(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamGameServer(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L65" />
+
+retrieves the ISteamGameServer interface associated with the handle
+
+```csharp
+public static nint GetISteamGameServer(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamGameServerStats(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L144" />
+
+returns the ISteamGameServerStats interface
+
+```csharp
+public static nint GetISteamGameServerStats(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamGenericInterface(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L124" />
+
+returns the a generic interface
+
+```csharp
+public static nint GetISteamGenericInterface(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamHTMLSurface(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L284" />
+
+html page display
+
+```csharp
+public static nint GetISteamHTMLSurface(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamHTTP(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L234" />
+
+Expose HTTP interface
+
+```csharp
+public static nint GetISteamHTTP(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamInput(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L324" />
+
+Exposes the Steam Input interface for controller support
+
+```csharp
+public static nint GetISteamInput(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamInventory(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L294" />
+
+inventory
+
+```csharp
+public static nint GetISteamInventory(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamMatchmaking(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L104" />
+
+returns the ISteamMatchmaking interface
+
+```csharp
+public static nint GetISteamMatchmaking(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamMatchmakingServers(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L114" />
+
+returns the ISteamMatchmakingServers interface
+
+```csharp
+public static nint GetISteamMatchmakingServers(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamMusic(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L264" />
+
+Music Player
+
+```csharp
+public static nint GetISteamMusic(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamMusicRemote(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L274" />
+
+Music Player Remote
+
+```csharp
+public static nint GetISteamMusicRemote(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamNetworking(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L164" />
+
+networking
+
+```csharp
+public static nint GetISteamNetworking(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamParentalSettings(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L314" />
+
+Parental controls
+
+```csharp
+public static nint GetISteamParentalSettings(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamParties(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L334" />
+
+Steam Parties interface
+
+```csharp
+public static nint GetISteamParties(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamRemotePlay(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L344" />
+
+Steam Remote Play interface
+
+```csharp
+public static nint GetISteamRemotePlay(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamRemoteStorage(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L174" />
+
+remote storage
+
+```csharp
+public static nint GetISteamRemoteStorage(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamScreenshots(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L184" />
+
+user screenshots
+
+```csharp
+public static nint GetISteamScreenshots(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamUGC(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L254" />
+
+Exposes the ISteamUGC interface
+
+```csharp
+public static nint GetISteamUGC(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamUser(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L55" />
+
+retrieves the ISteamUser interface associated with the handle
+
+```csharp
+public static nint GetISteamUser(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamUserStats(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L134" />
+
+returns the ISteamUserStats interface
+
+```csharp
+public static nint GetISteamUserStats(HSteamUser hSteamUser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamUtils(HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L94" />
+
+returns the ISteamUtils interface
+
+```csharp
+public static nint GetISteamUtils(HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetISteamVideo(HSteamUser, HSteamPipe, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L304" />
+
+Video
+
+```csharp
+public static nint GetISteamVideo(HSteamUser hSteamuser, HSteamPipe hSteamPipe, string pchVersion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamuser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="pchVersion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### ReleaseUser(HSteamPipe, HSteamUser)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L47" />
+
+removes an allocated user
+
+NOT THREADSAFE - ensure that no other threads are accessing Steamworks API when calling
+
+```csharp
+public static void ReleaseUser(HSteamPipe hSteamPipe, HSteamUser hUser)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSteamPipe" type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+- <ApiParam name="hUser" type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+
+### SetLocalIPBinding(ref SteamIPAddress_t, ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L76" />
+
+set the local IP and Port to bind to
+
+this must be set before CreateLocalUser()
+
+```csharp
+public static void SetLocalIPBinding(ref SteamIPAddress_t unIP, ushort usPort)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="unIP" type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+- <ApiParam name="usPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### SetWarningMessageHook(SteamAPIWarningMessageHook_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverclient.cs#L218" />
+
+API warning handling
+
+'int' is the severity; 0 for msg, 1 for warning
+
+'const char *' is the text of the message
+
+callbacks will occur directly after the API function is called that generated the warning or message.
+
+```csharp
+public static void SetWarningMessageHook(SteamAPIWarningMessageHook_t pFunction)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pFunction" type="SteamAPIWarningMessageHook_t" typeHref="/docs/api/steamapi/steamapiwarningmessagehook_t" />
+

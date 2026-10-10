@@ -1,0 +1,403 @@
+---
+title: Chat & CenterHTML Styling
+description: Learn how to use Chat colors and CenterHTML styling to customize text elements in SwiftlyS2
+---
+
+# Chat Colors
+
+Chat colors provide a simple way to colorize text using bracket syntax. This works in chat messages and other text outputs.
+
+## Syntax
+
+Use square brackets with color names to change text color:
+
+```csharp
+var message = "[red]This is red [lime]This is lime [default]Back to default";
+player.SendChat(message);
+```
+
+<Callout type="info">
+Use `[default]` or `[/]` to reset text back to the default color.
+</Callout>
+
+### Available Chat Colors
+
+<div className="grid grid-cols-2 md:grid-cols-3 gap-2 my-4">
+  <code style={{color: '#FFFFFF'}}>white</code>
+  <code style={{color: '#8B0000'}}>darkred</code>
+  <code style={{color: '#00FF00'}}>green</code>
+  <code style={{color: '#FFFFE0'}}>lightyellow</code>
+  <code style={{color: '#ADD8E6'}}>lightblue</code>
+  <code style={{color: '#808000'}}>olive</code>
+  <code style={{color: '#00FF00'}}>lime</code>
+  <code style={{color: '#FF0000'}}>red</code>
+  <code style={{color: '#DDA0DD'}}>lightpurple</code>
+  <code style={{color: '#800080'}}>purple</code>
+  <code style={{color: '#808080'}}>grey</code>
+  <code style={{color: '#FFFF00'}}>yellow</code>
+  <code style={{color: '#FFD700'}}>gold</code>
+  <code style={{color: '#C0C0C0'}}>silver</code>
+  <code style={{color: '#0000FF'}}>blue</code>
+  <code style={{color: '#00008B'}}>darkblue</code>
+  <code style={{color: '#6699CC'}}>bluegrey</code>
+  <code style={{color: '#FF00FF'}}>magenta</code>
+  <code style={{color: '#FFB6C1'}}>lightred</code>
+  <code style={{color: '#FFA500'}}>orange</code>
+</div>
+
+### Chat Color Examples
+
+Using translations with placeholders for dynamic content:
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    // Simple colored message
+    player.SendChat(Core.Localizer["chat.welcome"]);
+
+    // Multiple colors with player name
+    player.SendChat(Core.Localizer["chat.player_joined", player.PlayerName]);
+
+    // Error message with reset
+    player.SendChat(Core.Localizer["chat.error", "Something went wrong"]);
+
+    // Team score announcement
+    Core.PlayerManager.SendChat(Core.Localizer["chat.team_scores", ctScore, tScore]);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "chat.welcome": "[green]Welcome to the server!",
+        "chat.player_joined": "[gold]Player [lime]{0}[gold] has joined!",
+        "chat.error": "[red]ERROR: [/]{0}",
+        "chat.team_scores": "[blue]CT Team: [yellow]{0} [default]- [orange]T Team: [yellow]{1}"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+# CenterHTML Styling
+
+## Syntax
+
+Panorama UI uses a different syntax than standard HTML for styling elements.
+
+<Callout type="tip">
+Browse all available Panorama UI stylings in the [CS2 data tracking repository](https://github.com/SteamDatabase/GameTracking-CS2/tree/master/game/core/pak01_dir/panorama/styles) `.css` files.
+</Callout>
+
+## Supported HTML Tags
+
+Panorama UI supports most standard HTML tags:
+
+<div className="grid grid-cols-2 md:grid-cols-4 gap-2 my-4">
+  <code>div</code>
+  <code>span</code>
+  <code>p</code>
+  <code>a</code>
+  <code>img</code>
+  <code>br</code>
+  <code>hr</code>
+  <code>h1-h6</code>
+  <code>strong</code>
+  <code>em</code>
+  <code>b</code>
+  <code>i</code>
+  <code>u</code>
+  <code>pre</code>
+</div>
+
+### Inline Properties
+
+<Tabs items={['Panorama UI', 'Standard HTML']}>
+  <Tab value="Panorama UI">
+    ```csharp
+    // ✅ Correct - Direct property attributes
+    var element = "<span color=\"red\">Red Text</span>";
+    ```
+  </Tab>
+  <Tab value="Standard HTML">
+    ```html
+    <!-- ❌ Doesn't work in Panorama UI -->
+    <span style="color:red;">Red Text</span>
+    ```
+  </Tab>
+</Tabs>
+
+<Callout type="info">
+Use property names directly as attributes instead of wrapping them in a `style` attribute.
+</Callout>
+
+### CSS Classes
+
+Apply built-in Panorama UI classes using the standard `class` attribute:
+
+```csharp
+// Single class
+var element = "<span class=\"fontStyle-m\">Medium Font</span>";
+
+// Multiple classes
+var element = "<span class=\"fontStyle-m CriticalText\">Critical text</span>";
+```
+
+## Common Styling Options
+
+### Colors
+
+For HTML elements, use the `color` attribute with color names or hex codes.
+
+<Tabs items={['Color Names', 'Hex Codes']}>
+  <Tab value="Color Names">
+    The same color names from [Chat Colors](#chat-colors) work in HTML:
+    
+    ```csharp
+    var message = "<span color=\"red\">Red Text</span>";
+    ```
+    
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 my-4">
+      <code style={{color: '#FFFFFF'}}>white</code>
+      <code style={{color: '#8B0000'}}>darkred</code>
+      <code style={{color: '#00FF00'}}>green</code>
+      <code style={{color: '#FFFFE0'}}>lightyellow</code>
+      <code style={{color: '#ADD8E6'}}>lightblue</code>
+      <code style={{color: '#808000'}}>olive</code>
+      <code style={{color: '#00FF00'}}>lime</code>
+      <code style={{color: '#FF0000'}}>red</code>
+      <code style={{color: '#DDA0DD'}}>lightpurple</code>
+      <code style={{color: '#800080'}}>purple</code>
+      <code style={{color: '#808080'}}>grey</code>
+      <code style={{color: '#FFFF00'}}>yellow</code>
+      <code style={{color: '#FFD700'}}>gold</code>
+      <code style={{color: '#C0C0C0'}}>silver</code>
+      <code style={{color: '#0000FF'}}>blue</code>
+      <code style={{color: '#00008B'}}>darkblue</code>
+      <code style={{color: '#6699CC'}}>bluegrey</code>
+      <code style={{color: '#FF00FF'}}>magenta</code>
+      <code style={{color: '#FFB6C1'}}>lightred</code>
+      <code style={{color: '#FFA500'}}>orange</code>
+    </div>
+  </Tab>
+  <Tab value="Hex Codes">
+    HTML elements also support hex color codes for custom colors:
+    
+    ```csharp
+    var ctBlue = "<span color=\"#5E98D9\">CT Blue</span>";
+    var tOrange = "<span color=\"#FFB800\">T Orange</span>";
+    var custom = "<span color=\"#FF5733\">Custom Color</span>";
+    ```
+  </Tab>
+</Tabs>
+
+### Custom Color Picker
+
+Try out different colors and copy the hex code to use in your HTML:
+
+<ColorPicker />
+
+### Font Size Classes
+
+| Class | Size |
+|-------|------|
+| `fontSize-xs` | Extra Small |
+| `fontSize-sm` | Small |
+| `fontSize-m` | Medium |
+| `fontSize-l` | Large |
+| `fontSize-xl` | Extra Large |
+| `fontSize-xxl` | Extra Extra Large |
+
+### Font Style Classes
+
+| Class | Effect |
+|-------|--------|
+| `fontStyle-m` | Medium font style |
+| `fontWeight-bold` | Bold text |
+| `CriticalText` | Critical/warning styling |
+
+## Practical Examples
+
+### Basic Usage
+
+<Steps>
+
+<Step>
+
+#### Simple Color Text
+
+```csharp
+var message = "<span color=\"red\">This text is red</span>";
+Core.PlayerManager.SendCenterHTML(message, 5);
+```
+
+</Step>
+
+<Step>
+
+#### Combining Properties
+
+```csharp
+var message = "<span color=\"green\" class=\"fontSize-l\">Large Green Text</span>";
+Core.PlayerManager.SendCenterHTML(message, 5);
+```
+
+</Step>
+
+</Steps>
+
+### Player Status Display
+
+Show ready player counts with dynamic colors:
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    var readyPlayers = 5;
+    var playersToStart = 10;
+
+    Core.PlayerManager.SendCenterHTML(
+        Core.Localizer["centerhtml.ready_status", readyPlayers, playersToStart], 10);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.ready_status": "[<span color=\"red\">{0}</span>/<span color=\"green\">{1}</span>]<br><span class=\"fontSize-sm\">Match starts when <span color=\"green\">{1}</span> players are ready!</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Multi-line Formatted Messages
+
+Create structured messages with titles and lists:
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    Core.PlayerManager.SendCenterHTML(
+        Core.Localizer["centerhtml.server_rules"], 15);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.server_rules": "<span color=\"yellow\" class=\"fontSize-l\">Server Rules</span><br><br><span>• Be respectful to other players</span><br><span>• No cheating or exploiting</span><br><span>• Have fun!</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Dynamic Status Indicators
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    var player = Core.PlayerManager.GetPlayerBySlot(1);
+    var status = "ready";
+    var statusColor = status == "ready" ? "green" : "red";
+
+    player.SendCenterHTML(
+        Core.Localizer["centerhtml.player_status", player.PlayerName, statusColor, status], 5);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.player_status": "<span>{0}</span> is <span color=\"{1}\">{2}</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Progress Bar with Characters
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    var progress = 75; // 75%
+    var filled = progress / 10;
+    var empty = 10 - filled;
+    var bar = new string('█', filled) + new string('░', empty);
+
+    Core.PlayerManager.SendCenterHTML(
+        Core.Localizer["centerhtml.loading_bar", bar, progress], 3);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.loading_bar": "<span color=\"cyan\">Loading:</span> <span color=\"green\">{0}</span> <span>{1}%</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Countdown Timer
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    var timeLeft = 30;
+    var color = timeLeft <= 5 ? "red" : timeLeft <= 10 ? "yellow" : "green";
+
+    Core.PlayerManager.SendCenterHTML(
+        Core.Localizer["centerhtml.countdown", color, timeLeft], 1);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.countdown": "<span class=\"fontSize-xl\">Round starts in</span><br><span color=\"{0}\" class=\"fontSize-xxl\">{1}</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Team Score Display
+
+<Tabs items={['Code', 'Translation File']}>
+  <Tab value="Code">
+    ```csharp
+    var ctScore = 8;
+    var tScore = 6;
+
+    Core.PlayerManager.SendCenterHTML(
+        Core.Localizer["centerhtml.team_scores", ctScore, tScore], 5);
+    ```
+  </Tab>
+  <Tab value="Translation File">
+    ```json
+    {
+        "centerhtml.team_scores": "<span color=\"#5E98D9\" class=\"fontSize-l\">CT: {0}</span> - <span color=\"#FFB800\" class=\"fontSize-l\">T: {1}</span>"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Best Practices
+
+<Callout type="warn">
+**Remember:** Panorama UI's HTML parsing has limitations. Always test complex layouts in-game to ensure they render correctly.
+</Callout>
+
+1. **Keep it Simple**: Complex nested structures may not render as expected
+2. **Test Colors**: Verify color visibility against different background themes
+3. **Use Classes**: Prefer built-in classes over inline properties for consistency
+4. **Duration Matters**: Set appropriate display durations for message complexity
+5. **String Interpolation**: Use `$""` for clean, readable message construction
+
+## Reference
+
+### Common Inline Properties
+
+- `color` - Text color (color names or hex codes)
+- `font-size` - Font size (prefer classes)
+- `font-weight` - Font weight (prefer classes)
+
+### Finding More Classes
+
+<Callout type="info">
+Explore the [CS2 Panorama styles](https://github.com/SteamDatabase/GameTracking-CS2/tree/master/game/core/pak01_dir/panorama/styles) to discover additional classes and styling options. New classes are added with CS2 updates.
+</Callout>

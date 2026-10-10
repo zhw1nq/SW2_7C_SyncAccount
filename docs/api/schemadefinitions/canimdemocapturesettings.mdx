@@ -1,0 +1,205 @@
+---
+title: CAnimDemoCaptureSettings
+---
+
+# Interface CAnimDemoCaptureSettings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimDemoCaptureSettings : ISchemaClass<CAnimDemoCaptureSettings>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CAnimDemoCaptureSettings\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BaseSequence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L38" />
+
+```csharp
+string BaseSequence { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### BaseSequenceFrame
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L40" />
+
+```csharp
+ref int BaseSequenceFrame { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### BoneSelectionMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L42" />
+
+```csharp
+ref EDemoBoneSelectionMode BoneSelectionMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="EDemoBoneSelectionMode" typeHref="/docs/api/schemadefinitions/edemoboneselectionmode" />
+
+### Bones
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L44" />
+
+```csharp
+ref CUtlVector<BoneDemoCaptureSettings_t> Bones { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;BoneDemoCaptureSettings_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ErrorRangeQuantizationRotation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L28" />
+
+```csharp
+ref Vector2D ErrorRangeQuantizationRotation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### ErrorRangeQuantizationScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L32" />
+
+```csharp
+ref Vector2D ErrorRangeQuantizationScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### ErrorRangeQuantizationTranslation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L30" />
+
+```csharp
+ref Vector2D ErrorRangeQuantizationTranslation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### ErrorRangeSplineRotation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L18" />
+
+```csharp
+ref Vector2D ErrorRangeSplineRotation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### ErrorRangeSplineScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L22" />
+
+```csharp
+ref Vector2D ErrorRangeSplineScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### ErrorRangeSplineTranslation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L20" />
+
+```csharp
+ref Vector2D ErrorRangeSplineTranslation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### IkChains
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L46" />
+
+```csharp
+ref CUtlVector<IKDemoCaptureSettings_t> IkChains { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;IKDemoCaptureSettings_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### IkRotation_MaxQuantizationError
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L34" />
+
+```csharp
+ref float IkRotation_MaxQuantizationError { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### IkRotation_MaxSplineError
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L24" />
+
+```csharp
+ref float IkRotation_MaxSplineError { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### IkTranslation_MaxQuantizationError
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L36" />
+
+```csharp
+ref float IkTranslation_MaxQuantizationError { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### IkTranslation_MaxSplineError
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimDemoCaptureSettings.cs#L26" />
+
+```csharp
+ref float IkTranslation_MaxSplineError { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

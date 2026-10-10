@@ -1,0 +1,60 @@
+---
+title: CTriggerDetectBulletFire
+---
+
+# Interface CTriggerDetectBulletFire
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTriggerDetectBulletFire.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CTriggerDetectBulletFire : CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseToggle>, ISchemaClass<CBaseTrigger>, ISchemaClass<CTriggerDetectBulletFire>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseTrigger](/docs/api/schemadefinitions/cbasetrigger)
+- [CBaseToggle](/docs/api/schemadefinitions/cbasetoggle)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseToggle\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseTrigger\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CTriggerDetectBulletFire\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### OnDetectedBulletFire
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTriggerDetectBulletFire.cs#L20" />
+
+```csharp
+ref CEntityIOOutput OnDetectedBulletFire { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### PlayerFireOnly
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTriggerDetectBulletFire.cs#L18" />
+
+```csharp
+ref bool PlayerFireOnly { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

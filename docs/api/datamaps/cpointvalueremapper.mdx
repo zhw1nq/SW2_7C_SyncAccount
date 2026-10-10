@@ -1,0 +1,60 @@
+---
+title: CPointValueRemapper
+---
+
+# CPointValueRemapper
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `StartDisabled` | `m_bDisabled` | `FIELD_BOOLEAN` |
+| `updateOnClient` | `m_bUpdateOnClient` | `FIELD_BOOLEAN` |
+| `inputType` | `m_nInputType` | `FIELD_INT32` |
+| `remapLineStart` | `m_iszRemapLineStartName` | `FIELD_STRING` |
+| `remapLineEnd` | `m_iszRemapLineEndName` | `FIELD_STRING` |
+| `maximumChangePerSecond` | `m_flMaximumChangePerSecond` | `FIELD_FLOAT32` |
+| `maximumDistanceFromLine` | `m_flDisengageDistance` | `FIELD_FLOAT32` |
+| `engageDistance` | `m_flEngageDistance` | `FIELD_FLOAT32` |
+| `requiresUseKey` | `m_bRequiresUseKey` | `FIELD_BOOLEAN` |
+| `outputType` | `m_nOutputType` | `FIELD_INT32` |
+| `outputEntity` | `m_iszOutputEntityName` | `FIELD_STRING` |
+| `outputEntity2` | `m_iszOutputEntity2Name` | `FIELD_STRING` |
+| `outputEntity3` | `m_iszOutputEntity3Name` | `FIELD_STRING` |
+| `outputEntity4` | `m_iszOutputEntity4Name` | `FIELD_STRING` |
+| `hapticsType` | `m_nHapticsType` | `FIELD_INT32` |
+| `momentumType` | `m_nMomentumType` | `FIELD_INT32` |
+| `momentumModifier` | `m_flMomentumModifier` | `FIELD_FLOAT32` |
+| `snapValue` | `m_flSnapValue` | `FIELD_FLOAT32` |
+| `ratchetType` | `m_nRatchetType` | `FIELD_INT32` |
+| `inputOffset` | `m_flInputOffset` | `FIELD_FLOAT32` |
+| `customOutputValue` | `m_flCustomOutputValue` | `FIELD_FLOAT32` |
+| `soundEngage` | `m_iszSoundEngage` | `FIELD_STRING` |
+| `soundDisengage` | `m_iszSoundDisengage` | `FIELD_STRING` |
+| `soundReachedValueZero` | `m_iszSoundReachedValueZero` | `FIELD_STRING` |
+| `soundReachedValueOne` | `m_iszSoundReachedValueOne` | `FIELD_STRING` |
+| `soundMovingLoop` | `m_iszSoundMovingLoop` | `FIELD_STRING` |
+
+## Input
+
+_No Entry_
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `Position` | `FIELD_CUSTOM` |
+| `PositionDelta` | `FIELD_CUSTOM` |
+| `OnReachedValueZero` | `FIELD_CUSTOM` |
+| `OnReachedValueOne` | `FIELD_CUSTOM` |
+| `OnReachedValueCustom` | `FIELD_CUSTOM` |
+| `OnEngage` | `FIELD_CUSTOM` |
+| `OnDisengage` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPointValueRemapperUpdateThink` |

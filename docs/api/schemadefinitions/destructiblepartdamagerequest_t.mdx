@@ -1,0 +1,145 @@
+---
+title: DestructiblePartDamageRequest_t
+---
+
+# Interface DestructiblePartDamageRequest_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface DestructiblePartDamageRequest_t : ISchemaClass<DestructiblePartDamageRequest_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<DestructiblePartDamageRequest_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Attacker
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L32" />
+
+```csharp
+ref CHandle<C_BaseEntity> Attacker { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;C_BaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### BreakDamage
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L28" />
+
+```csharp
+ref float BreakDamage { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### BreakDamageRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L30" />
+
+```csharp
+ref float BreakDamageRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DamageLevel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L20" />
+
+```csharp
+ref int DamageLevel { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DamageType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L26" />
+
+```csharp
+ref DamageTypes_t DamageType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="DamageTypes_t" typeHref="/docs/api/schemadefinitions/damagetypes_t" />
+
+### DesiredHealth
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L22" />
+
+```csharp
+ref ushort DesiredHealth { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### DestroyFlags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L24" />
+
+```csharp
+ref EDestructibleParts_DestroyParameterFlags DestroyFlags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="EDestructibleParts_DestroyParameterFlags" typeHref="/docs/api/schemadefinitions/edestructibleparts_destroyparameterflags" />
+
+### HitGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L18" />
+
+```csharp
+ref HitGroup_t HitGroup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### WsBreakDamageForce
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L36" />
+
+```csharp
+ref Vector WsBreakDamageForce { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### WsBreakDamageOrigin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/DestructiblePartDamageRequest_t.cs#L34" />
+
+```csharp
+ref Vector WsBreakDamageOrigin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+

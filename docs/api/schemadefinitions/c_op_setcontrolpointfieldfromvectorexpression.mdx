@@ -1,0 +1,115 @@
+---
+title: C_OP_SetControlPointFieldFromVectorExpression
+---
+
+# Interface C_OP_SetControlPointFieldFromVectorExpression
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_OP_SetControlPointFieldFromVectorExpression : CParticleFunctionPreEmission, CParticleFunctionOperator, CParticleFunction, ISchemaClass<CParticleFunction>, ISchemaClass<CParticleFunctionOperator>, ISchemaClass<CParticleFunctionPreEmission>, ISchemaClass<C_OP_SetControlPointFieldFromVectorExpression>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CParticleFunctionPreEmission](/docs/api/schemadefinitions/cparticlefunctionpreemission)
+- [CParticleFunctionOperator](/docs/api/schemadefinitions/cparticlefunctionoperator)
+- [CParticleFunction](/docs/api/schemadefinitions/cparticlefunction)
+- [ISchemaClass\<CParticleFunction\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleFunctionOperator\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleFunctionPreEmission\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_OP_SetControlPointFieldFromVectorExpression\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Expression
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L18" />
+
+```csharp
+ref VectorFloatExpressionType_t Expression { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VectorFloatExpressionType_t" typeHref="/docs/api/schemadefinitions/vectorfloatexpressiontype_t" />
+
+### Input1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L20" />
+
+```csharp
+CParticleCollectionVecInput Input1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParticleCollectionVecInput" typeHref="/docs/api/schemadefinitions/cparticlecollectionvecinput" />
+
+### Input2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L22" />
+
+```csharp
+CParticleCollectionVecInput Input2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParticleCollectionVecInput" typeHref="/docs/api/schemadefinitions/cparticlecollectionvecinput" />
+
+### Lerp
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L24" />
+
+```csharp
+CPerParticleFloatInput Lerp { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### OutVectorField
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L30" />
+
+```csharp
+ref int OutVectorField { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### OutputCP
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L28" />
+
+```csharp
+ref int OutputCP { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### OutputRemap
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_SetControlPointFieldFromVectorExpression.cs#L26" />
+
+```csharp
+CParticleRemapFloatInput OutputRemap { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParticleRemapFloatInput" typeHref="/docs/api/schemadefinitions/cparticleremapfloatinput" />
+

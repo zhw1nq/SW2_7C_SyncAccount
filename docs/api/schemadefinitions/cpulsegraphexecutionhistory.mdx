@@ -1,0 +1,85 @@
+---
+title: CPulseGraphExecutionHistory
+---
+
+# Interface CPulseGraphExecutionHistory
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPulseGraphExecutionHistory : ISchemaClass<CPulseGraphExecutionHistory>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CPulseGraphExecutionHistory\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### History
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L22" />
+
+```csharp
+ref CUtlVector<PointerTo<PulseGraphExecutionHistoryEntry_t>> History { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;PulseGraphExecutionHistoryEntry_t&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### InstanceID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L18" />
+
+```csharp
+PulseGraphInstanceID_t InstanceID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PulseGraphInstanceID_t" typeHref="/docs/api/schemadefinitions/pulsegraphinstanceid_t" />
+
+### MapCellDesc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L25" />
+
+```csharp
+SchemaUntypedField MapCellDesc { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### MapCursorDesc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L28" />
+
+```csharp
+SchemaUntypedField MapCursorDesc { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### StrFileName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseGraphExecutionHistory.cs#L20" />
+
+```csharp
+string StrFileName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

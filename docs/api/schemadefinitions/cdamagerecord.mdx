@@ -1,0 +1,319 @@
+---
+title: CDamageRecord
+---
+
+# Interface CDamageRecord
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CDamageRecord : ISchemaClass<CDamageRecord>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CDamageRecord\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ActualHealthRemoved
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L38" />
+
+```csharp
+ref float ActualHealthRemoved { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### BulletsDamage
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L34" />
+
+```csharp
+ref float BulletsDamage { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Damage
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L36" />
+
+```csharp
+ref float Damage { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DamagerXuid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L30" />
+
+```csharp
+ref ulong DamagerXuid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### IsOtherEnemy
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L44" />
+
+```csharp
+ref bool IsOtherEnemy { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### KillType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L46" />
+
+```csharp
+ref EKillTypes_t KillType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="EKillTypes_t" typeHref="/docs/api/schemadefinitions/ekilltypes_t" />
+
+### LastBulletUpdate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L42" />
+
+```csharp
+ref int LastBulletUpdate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### NumHits
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L40" />
+
+```csharp
+ref int NumHits { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### PlayerControllerDamager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L22" />
+
+```csharp
+ref CHandle<CCSPlayerController> PlayerControllerDamager { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerController&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### PlayerControllerRecipient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L24" />
+
+```csharp
+ref CHandle<CCSPlayerController> PlayerControllerRecipient { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerController&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### PlayerDamager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L18" />
+
+```csharp
+ref CHandle<CCSPlayerPawn> PlayerDamager { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerPawn&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### PlayerDamagerName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L26" />
+
+```csharp
+string PlayerDamagerName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### PlayerRecipient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L20" />
+
+```csharp
+ref CHandle<CCSPlayerPawn> PlayerRecipient { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerPawn&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### PlayerRecipientName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L28" />
+
+```csharp
+string PlayerRecipientName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### RecipientXuid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L32" />
+
+```csharp
+ref ulong RecipientXuid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+## Methods
+
+### ActualHealthRemovedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L57" />
+
+```csharp
+void ActualHealthRemovedUpdated()
+```
+
+### DamageUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L56" />
+
+```csharp
+void DamageUpdated()
+```
+
+### DamagerXuidUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L54" />
+
+```csharp
+void DamagerXuidUpdated()
+```
+
+### IsOtherEnemyUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L60" />
+
+```csharp
+void IsOtherEnemyUpdated()
+```
+
+### KillTypeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L61" />
+
+```csharp
+void KillTypeUpdated()
+```
+
+### LastBulletUpdateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L59" />
+
+```csharp
+void LastBulletUpdateUpdated()
+```
+
+### NumHitsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L58" />
+
+```csharp
+void NumHitsUpdated()
+```
+
+### PlayerControllerDamagerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L50" />
+
+```csharp
+void PlayerControllerDamagerUpdated()
+```
+
+### PlayerControllerRecipientUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L51" />
+
+```csharp
+void PlayerControllerRecipientUpdated()
+```
+
+### PlayerDamagerNameUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L52" />
+
+```csharp
+void PlayerDamagerNameUpdated()
+```
+
+### PlayerDamagerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L48" />
+
+```csharp
+void PlayerDamagerUpdated()
+```
+
+### PlayerRecipientNameUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L53" />
+
+```csharp
+void PlayerRecipientNameUpdated()
+```
+
+### PlayerRecipientUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L49" />
+
+```csharp
+void PlayerRecipientUpdated()
+```
+
+### RecipientXuidUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDamageRecord.cs#L55" />
+
+```csharp
+void RecipientXuidUpdated()
+```
+

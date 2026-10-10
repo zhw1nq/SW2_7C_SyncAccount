@@ -1,0 +1,51 @@
+---
+title: CPhysConstraint
+---
+
+# CPhysConstraint
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `attach1` | `m_nameAttach1` | `FIELD_STRING` |
+| `attach2` | `m_nameAttach2` | `FIELD_STRING` |
+| `attachedentity1` | `m_hAttach1` | `FIELD_EHANDLE` |
+| `attachedentity2` | `m_hAttach2` | `FIELD_EHANDLE` |
+| `attachment1` | `m_nameAttachment1` | `FIELD_STRING` |
+| `attachment2` | `m_nameAttachment2` | `FIELD_STRING` |
+| `breaksound` | `m_breakSound` | `FIELD_SOUNDNAME` |
+| `forcelimit` | `m_forceLimit` | `FIELD_FLOAT32` |
+| `torquelimit` | `m_torqueLimit` | `FIELD_FLOAT32` |
+| `teleportfollowdistance` | `m_minTeleportDistance` | `FIELD_FLOAT32` |
+| `snapobjectpositions` | `m_bSnapObjectPositions` | `FIELD_BOOLEAN` |
+| `treat_entity1_as_infinite_mass` | `m_bTreatEntity1AsInfiniteMass` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Break` | `FIELD_VOID` |
+| `ConstraintBroken` | `FIELD_VOID` |
+| `TurnOn` | `FIELD_VOID` |
+| `TurnOff` | `FIELD_VOID` |
+| `EnableLinearConstraint` | `FIELD_VOID` |
+| `DisableLinearConstraint` | `FIELD_VOID` |
+| `EnableAngularConstraint` | `FIELD_VOID` |
+| `DisableAngularConstraint` | `FIELD_VOID` |
+| `TurnMotorOn` | `FIELD_VOID` |
+| `TurnMotorOff` | `FIELD_VOID` |
+| `SetMotorTorqueFactor` | `FIELD_FLOAT32` |
+| `SetMotorTargetVelocity` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnBreak` | `FIELD_CUSTOM` |
+
+## Functions
+
+_No Entry_

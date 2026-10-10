@@ -1,0 +1,305 @@
+---
+title: CMotionMatchingUpdateNode
+---
+
+# Interface CMotionMatchingUpdateNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CMotionMatchingUpdateNode : CLeafUpdateNode, CAnimUpdateNodeBase, ISchemaClass<CAnimUpdateNodeBase>, ISchemaClass<CLeafUpdateNode>, ISchemaClass<CMotionMatchingUpdateNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CLeafUpdateNode](/docs/api/schemadefinitions/cleafupdatenode)
+- [CAnimUpdateNodeBase](/docs/api/schemadefinitions/canimupdatenodebase)
+- [ISchemaClass\<CAnimUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLeafUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CMotionMatchingUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendCurve
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L32" />
+
+```csharp
+CBlendCurve BlendCurve { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBlendCurve" typeHref="/docs/api/schemadefinitions/cblendcurve" />
+
+### BlendTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L36" />
+
+```csharp
+ref float BlendTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DataSet
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L18" />
+
+```csharp
+CMotionDataSet DataSet { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CMotionDataSet" typeHref="/docs/api/schemadefinitions/cmotiondataset" />
+
+### DistanceScale_Damping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L52" />
+
+```csharp
+CAnimInputDamping DistanceScale_Damping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### DistanceScale_InnerRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L56" />
+
+```csharp
+ref float DistanceScale_InnerRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DistanceScale_MaxScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L58" />
+
+```csharp
+ref float DistanceScale_MaxScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DistanceScale_MinScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L60" />
+
+```csharp
+ref float DistanceScale_MinScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DistanceScale_OuterRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L54" />
+
+```csharp
+ref float DistanceScale_OuterRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### EnableDistanceScaling
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L62" />
+
+```csharp
+ref bool EnableDistanceScaling { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### EnableRotationCorrection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L44" />
+
+```csharp
+ref bool EnableRotationCorrection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GoalAssist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L46" />
+
+```csharp
+ref bool GoalAssist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GoalAssistDistance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L48" />
+
+```csharp
+ref float GoalAssistDistance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GoalAssistTolerance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L50" />
+
+```csharp
+ref float GoalAssistTolerance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### LockClipWhenWaning
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L38" />
+
+```csharp
+ref bool LockClipWhenWaning { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Metrics
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L20" />
+
+```csharp
+ref CUtlVector<SchemaUntypedField> Metrics { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SchemaUntypedField&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ReselectionTimeWindow
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L42" />
+
+```csharp
+ref float ReselectionTimeWindow { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SampleRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L34" />
+
+```csharp
+ref float SampleRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SearchEveryTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L24" />
+
+```csharp
+ref bool SearchEveryTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SearchInterval
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L26" />
+
+```csharp
+ref float SearchInterval { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SearchWhenClipEnds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L28" />
+
+```csharp
+ref bool SearchWhenClipEnds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SearchWhenGoalChanges
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L30" />
+
+```csharp
+ref bool SearchWhenGoalChanges { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SelectionThreshold
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L40" />
+
+```csharp
+ref float SelectionThreshold { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Weights
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionMatchingUpdateNode.cs#L22" />
+
+```csharp
+ref CUtlVector<float> Weights { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

@@ -1,0 +1,41 @@
+---
+title: CColorCorrection
+---
+
+# CColorCorrection
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `minfalloff` | `m_MinFalloff` | `FIELD_FLOAT32` |
+| `maxfalloff` | `m_MaxFalloff` | `FIELD_FLOAT32` |
+| `maxweight` | `m_flMaxWeight` | `FIELD_FLOAT32` |
+| `fadeInDuration` | `m_flFadeInDuration` | `FIELD_FLOAT32` |
+| `fadeOutDuration` | `m_flFadeOutDuration` | `FIELD_FLOAT32` |
+| `filename` | `m_lookupFilename` | `FIELD_STRING` |
+| `enabled` | `m_bEnabled` | `FIELD_BOOLEAN` |
+| `StartDisabled` | `m_bStartDisabled` | `FIELD_BOOLEAN` |
+| `exclusive` | `m_bExclusive` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+| `SetFadeInDuration` | `FIELD_FLOAT32` |
+| `SetFadeOutDuration` | `FIELD_FLOAT32` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CColorCorrectionFadeInThink` |
+| `CColorCorrectionFadeOutThink` |

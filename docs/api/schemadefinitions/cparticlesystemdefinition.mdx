@@ -1,0 +1,819 @@
+---
+title: CParticleSystemDefinition
+---
+
+# Interface CParticleSystemDefinition
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CParticleSystemDefinition : IParticleSystemDefinition, ISchemaClass<IParticleSystemDefinition>, ISchemaClass<CParticleSystemDefinition>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [IParticleSystemDefinition](/docs/api/schemadefinitions/iparticlesystemdefinition)
+- [ISchemaClass\<IParticleSystemDefinition\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleSystemDefinition\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AggregateRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L126" />
+
+```csharp
+ref float AggregateRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### AggregationMinAvailableParticles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L124" />
+
+```csharp
+ref int AggregationMinAvailableParticles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### AllowRenderControlPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L144" />
+
+```csharp
+ref int AllowRenderControlPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### BehaviorVersion
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L18" />
+
+```csharp
+ref int BehaviorVersion { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### BoundingBoxMax
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L46" />
+
+```csharp
+ref Vector BoundingBoxMax { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### BoundingBoxMin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L44" />
+
+```csharp
+ref Vector BoundingBoxMin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Children
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L34" />
+
+```csharp
+ref CUtlVector<ParticleChildrenInfo_t> Children { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ParticleChildrenInfo_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ConstantColor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L60" />
+
+```csharp
+ref Color ConstantColor { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Color" typeHref="/docs/api/natives/color" />
+
+### ConstantLifespan
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L70" />
+
+```csharp
+ref float ConstantLifespan { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ConstantNormal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L62" />
+
+```csharp
+ref Vector ConstantNormal { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ConstantRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L64" />
+
+```csharp
+ref float ConstantRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ConstantRotation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L66" />
+
+```csharp
+ref float ConstantRotation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ConstantRotationSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L68" />
+
+```csharp
+ref float ConstantRotationSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ConstantSequenceNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L72" />
+
+```csharp
+ref int ConstantSequenceNumber { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ConstantSequenceNumber1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L74" />
+
+```csharp
+ref int ConstantSequenceNumber1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Constraints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L30" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionConstraint>> Constraints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionConstraint&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ControlPointConfigurations
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L148" />
+
+```csharp
+ref CUtlVector<ParticleControlPointConfiguration_t> ControlPointConfigurations { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ParticleControlPointConfiguration_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CullControlPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L86" />
+
+```csharp
+ref int CullControlPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### CullFillCost
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L84" />
+
+```csharp
+ref float CullFillCost { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### CullRadius
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L82" />
+
+```csharp
+ref float CullRadius { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### CullReplacementName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L80" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> CullReplacementName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSystemDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### DepthSortBias
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L48" />
+
+```csharp
+ref float DepthSortBias { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Emitters
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L22" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionEmitter>> Emitters { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionEmitter&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EnableNamedValues
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L54" />
+
+```csharp
+ref bool EnableNamedValues { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Fallback
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L88" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> Fallback { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSystemDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### FallbackMaxCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L90" />
+
+```csharp
+ref int FallbackMaxCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### FirstMultipleOverride_BackwardCompat
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L36" />
+
+```csharp
+ref int FirstMultipleOverride_BackwardCompat { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ForceGenerators
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L28" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionForce>> ForceGenerators { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionForce&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### GroupID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L42" />
+
+```csharp
+ref int GroupID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### InfiniteBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L52" />
+
+```csharp
+ref bool InfiniteBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### InitialParticles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L38" />
+
+```csharp
+ref int InitialParticles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Initializers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L24" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionInitializer>> Initializers { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionInitializer&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### IsGPUParticleSystem
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L110" />
+
+```csharp
+ref bool IsGPUParticleSystem { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LowViolenceDef
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L92" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> LowViolenceDef { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSystemDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### MaxCreationDistance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L122" />
+
+```csharp
+ref float MaxCreationDistance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MaxDrawDistance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L118" />
+
+```csharp
+ref float MaxDrawDistance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MaxParticles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L40" />
+
+```csharp
+ref int MaxParticles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MaximumSimTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L102" />
+
+```csharp
+ref float MaximumSimTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MaximumTimeStep
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L100" />
+
+```csharp
+ref float MaximumTimeStep { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinCPULevel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L112" />
+
+```csharp
+ref int MinCPULevel { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MinGPULevel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L114" />
+
+```csharp
+ref int MinGPULevel { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MinimumFrames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L108" />
+
+```csharp
+ref int MinimumFrames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MinimumSimTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L104" />
+
+```csharp
+ref float MinimumSimTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinimumTimeStep
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L106" />
+
+```csharp
+ref float MinimumTimeStep { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### NamedValueDomain
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L56" />
+
+```csharp
+string NamedValueDomain { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### NamedValueLocals
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L58" />
+
+```csharp
+ref CUtlVector<PointerTo<ParticleNamedValueSource_t>> NamedValueLocals { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;ParticleNamedValueSource_t&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### NoDrawTimeToGoToSleep
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L116" />
+
+```csharp
+ref float NoDrawTimeToGoToSleep { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Operators
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L26" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionOperator>> Operators { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionOperator&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PreEmissionOperators
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L20" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionPreEmission>> PreEmissionOperators { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionPreEmission&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PreSimulationTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L96" />
+
+```csharp
+ref float PreSimulationTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ReferenceReplacement
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L94" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> ReferenceReplacement { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSystemDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### Renderers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L32" />
+
+```csharp
+ref CUtlVector<PointerTo<CParticleFunctionRenderer>> Renderers { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CParticleFunctionRenderer&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ScreenSpaceEffect
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L138" />
+
+```csharp
+ref bool ScreenSpaceEffect { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShouldBatch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L128" />
+
+```csharp
+ref bool ShouldBatch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShouldHitboxesFallbackToCollisionHulls
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L134" />
+
+```csharp
+ref bool ShouldHitboxesFallbackToCollisionHulls { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShouldHitboxesFallbackToRenderBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L130" />
+
+```csharp
+ref bool ShouldHitboxesFallbackToRenderBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShouldHitboxesFallbackToSnapshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L132" />
+
+```csharp
+ref bool ShouldHitboxesFallbackToSnapshot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShouldSort
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L146" />
+
+```csharp
+ref bool ShouldSort { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SkipRenderControlPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L142" />
+
+```csharp
+ref int SkipRenderControlPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Snapshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L78" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSnapshot> Snapshot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSnapshot&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### SnapshotControlPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L76" />
+
+```csharp
+ref int SnapshotControlPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SortOverridePositionCP
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L50" />
+
+```csharp
+ref int SortOverridePositionCP { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### StartFadeDistance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L120" />
+
+```csharp
+ref float StartFadeDistance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### StopSimulationAfterTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L98" />
+
+```csharp
+ref float StopSimulationAfterTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TargetLayerID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L140" />
+
+```csharp
+string TargetLayerID { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### ViewModelEffect
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleSystemDefinition.cs#L136" />
+
+```csharp
+ref InheritableBoolType_t ViewModelEffect { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="InheritableBoolType_t" typeHref="/docs/api/schemadefinitions/inheritablebooltype_t" />
+

@@ -1,0 +1,582 @@
+---
+title: TraceParamsBuilder
+---
+
+# Class TraceParamsBuilder
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L9" />
+
+**Namespace**: [SwiftlyS2.Shared.Trace](/docs/api/trace)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Fluent builder for TraceParams.
+
+```csharp
+public sealed class TraceParamsBuilder
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [TraceParamsBuilder](/docs/api/trace/traceparamsbuilder)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### TraceParamsBuilder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L13" />
+
+```csharp
+public TraceParamsBuilder()
+```
+
+### TraceParamsBuilder(TraceParams?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L18" />
+
+```csharp
+public TraceParamsBuilder(TraceParams? seed)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="seed" type="TraceParams?" typeHref="/docs/api/trace/traceparams" />
+
+## Methods
+
+### Build()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L283" />
+
+```csharp
+public TraceParams Build()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParams" typeHref="/docs/api/trace/traceparams" />
+
+### ForceHitEverything(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L213" />
+
+Force the trace to hit everything.
+
+```csharp
+public TraceParamsBuilder ForceHitEverything(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### HitSolid(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L168" />
+
+Whether the trace should report solid hits.
+
+```csharp
+public TraceParamsBuilder HitSolid(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### HitSolidRequiresGenerateContacts(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L186" />
+
+Whether the trace should report hits requiring contact generation.
+
+```csharp
+public TraceParamsBuilder HitSolidRequiresGenerateContacts(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### HitTrigger(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L177" />
+
+Whether the trace should report trigger hits.
+
+```csharp
+public TraceParamsBuilder HitTrigger(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreDisabledPairs(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L195" />
+
+Whether disabled collision pairs should be ignored.
+
+```csharp
+public TraceParamsBuilder IgnoreDisabledPairs(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreEntities(IEnumerable\<CEntityInstance\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L231" />
+
+Entities that should be ignored by the trace.
+
+```csharp
+public TraceParamsBuilder IgnoreEntities(IEnumerable<CEntityInstance> entities)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entities" type="IEnumerable&lt;CEntityInstance&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreEntity(CEntityInstance)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L222" />
+
+Entities that should be ignored by the trace.
+
+```csharp
+public TraceParamsBuilder IgnoreEntity(CEntityInstance entity)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entity" type="CEntityInstance" typeHref="/docs/api/schemadefinitions/centityinstance" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreIfBothInteractWithHitboxes(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L204" />
+
+Whether hitboxes should be ignored when both sides interact with hitboxes.
+
+```csharp
+public TraceParamsBuilder IgnoreIfBothInteractWithHitboxes(bool enabled = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreOwner(CEntityInstance)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L240" />
+
+Entity owners that should be ignored by the trace.
+
+```csharp
+public TraceParamsBuilder IgnoreOwner(CEntityInstance owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="owner" type="CEntityInstance" typeHref="/docs/api/schemadefinitions/centityinstance" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### IgnoreOwners(IEnumerable\<CEntityInstance\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L249" />
+
+Entity owners that should be ignored by the trace.
+
+```csharp
+public TraceParamsBuilder IgnoreOwners(IEnumerable<CEntityInstance> owners)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="owners" type="IEnumerable&lt;CEntityInstance&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### InteractAs(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L132" />
+
+Interaction mask for "as" behavior.
+
+```csharp
+public TraceParamsBuilder InteractAs(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### InteractExclude(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L114" />
+
+Interaction mask to exclude.
+
+```csharp
+public TraceParamsBuilder InteractExclude(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### InteractWith(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L96" />
+
+Interaction mask to include.
+
+```csharp
+public TraceParamsBuilder InteractWith(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### RemoveInteractAs(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L141" />
+
+Interaction mask for "as" behavior.
+
+```csharp
+public TraceParamsBuilder RemoveInteractAs(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### RemoveInteractExclude(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L123" />
+
+Interaction mask to exclude.
+
+```csharp
+public TraceParamsBuilder RemoveInteractExclude(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### RemoveInteractWith(MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L105" />
+
+Interaction mask to include.
+
+```csharp
+public TraceParamsBuilder RemoveInteractWith(MaskTrace flags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flags" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithCapsuleRay(Vector, Vector, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L65" />
+
+```csharp
+public TraceParamsBuilder WithCapsuleRay(Vector centerA, Vector centerB, float radius)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="centerA" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="centerB" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="radius" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithCollisionGroup(CollisionGroup)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L150" />
+
+Collision group used by the trace.
+
+```csharp
+public TraceParamsBuilder WithCollisionGroup(CollisionGroup collisionGroup)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="collisionGroup" type="CollisionGroup" typeHref="/docs/api/natives/collisiongroup" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithDetailLayers(ushort, byte)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L267" />
+
+Included detail layers and target detail layer used by native query shape attributes.
+
+```csharp
+public TraceParamsBuilder WithDetailLayers(ushort includedDetailLayers, byte targetDetailLayer = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="includedDetailLayers" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="targetDetailLayer" type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithHierarchyIds(params ushort[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L258" />
+
+Optional hierarchy ids used by the native query shape attributes (max 2 values used).
+
+```csharp
+public TraceParamsBuilder WithHierarchyIds(params ushort[] hierarchyIds)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hierarchyIds" type="ushort[]" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithHullRay(Vector, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L57" />
+
+```csharp
+public TraceParamsBuilder WithHullRay(Vector mins, Vector maxs)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="mins" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="maxs" type="Vector" typeHref="/docs/api/natives/vector" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithInteraction(MaskTrace, MaskTrace, MaskTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L85" />
+
+Interaction mask to include/exclude and interaction mask for "as" behavior.
+
+```csharp
+public TraceParamsBuilder WithInteraction(MaskTrace interactWith, MaskTrace interactExclude = MaskTrace.Empty, MaskTrace interactAs = MaskTrace.Empty)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="interactWith" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+- <ApiParam name="interactExclude" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+- <ApiParam name="interactAs" type="MaskTrace" typeHref="/docs/api/natives/masktrace" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithIterateEntities(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L159" />
+
+Indicates whether entity iteration is enabled for custom filtering.
+
+```csharp
+public TraceParamsBuilder WithIterateEntities(bool iterateEntities)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="iterateEntities" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithLineRay(Vector, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L29" />
+
+```csharp
+public TraceParamsBuilder WithLineRay(Vector startOffset, float radius = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="startOffset" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="radius" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithLineRay()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L44" />
+
+```csharp
+public TraceParamsBuilder WithLineRay()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithObjectQuery(RnQueryObjectSet)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L76" />
+
+Which object groups should be included by the query.
+
+```csharp
+public TraceParamsBuilder WithObjectQuery(RnQueryObjectSet objectQuery)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="objectQuery" type="RnQueryObjectSet" typeHref="/docs/api/natives/rnqueryobjectset" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithRay(in Ray_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L23" />
+
+```csharp
+public TraceParamsBuilder WithRay(in Ray_t ray)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="ray" type="Ray_t" typeHref="/docs/api/natives/ray_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithShouldHitEntity(Func\<CEntityInstance, bool\>?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L277" />
+
+Optional callback to decide whether an entity should be hit.
+
+```csharp
+public TraceParamsBuilder WithShouldHitEntity(Func<CEntityInstance, bool>? shouldHitEntity)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="shouldHitEntity" type="Func&lt;CEntityInstance, bool&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.func-2" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+
+### WithSphereRay(Vector, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceParamsBuilder.cs#L49" />
+
+```csharp
+public TraceParamsBuilder WithSphereRay(Vector center, float radius)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="center" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="radius" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceParamsBuilder" typeHref="/docs/api/trace/traceparamsbuilder" />
+

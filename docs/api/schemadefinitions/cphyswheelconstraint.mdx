@@ -1,0 +1,180 @@
+---
+title: CPhysWheelConstraint
+---
+
+# Interface CPhysWheelConstraint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPhysWheelConstraint : CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CServerOnlyEntity>, ISchemaClass<CLogicalEntity>, ISchemaClass<CPhysConstraint>, ISchemaClass<CPhysWheelConstraint>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPhysConstraint](/docs/api/schemadefinitions/cphysconstraint)
+- [CLogicalEntity](/docs/api/schemadefinitions/clogicalentity)
+- [CServerOnlyEntity](/docs/api/schemadefinitions/cserveronlyentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CServerOnlyEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLogicalEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPhysConstraint\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPhysWheelConstraint\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### EnableSteeringLimit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L30" />
+
+```csharp
+ref bool EnableSteeringLimit { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### EnableSuspensionLimit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L24" />
+
+```csharp
+ref bool EnableSuspensionLimit { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### MaxSteeringAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L34" />
+
+```csharp
+ref float MaxSteeringAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MaxSuspensionOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L28" />
+
+```csharp
+ref float MaxSuspensionOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinSteeringAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L32" />
+
+```csharp
+ref float MinSteeringAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinSuspensionOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L26" />
+
+```csharp
+ref float MinSuspensionOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SpinAxisFriction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L38" />
+
+```csharp
+ref float SpinAxisFriction { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SteeringAxisFriction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L36" />
+
+```csharp
+ref float SteeringAxisFriction { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SteeringMimicsEntity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L40" />
+
+```csharp
+ref CHandle<CBaseEntity> SteeringMimicsEntity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### SuspensionDampingRatio
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L20" />
+
+```csharp
+ref float SuspensionDampingRatio { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SuspensionFrequency
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L18" />
+
+```csharp
+ref float SuspensionFrequency { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SuspensionHeightOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPhysWheelConstraint.cs#L22" />
+
+```csharp
+ref float SuspensionHeightOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

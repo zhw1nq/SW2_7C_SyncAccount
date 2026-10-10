@@ -1,0 +1,109 @@
+---
+title: CDestructiblePart
+---
+
+# Interface CDestructiblePart
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CDestructiblePart : ISchemaClass<CDestructiblePart>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CDestructiblePart\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BodyGroupName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L28" />
+
+```csharp
+ref CGlobalSymbol BodyGroupName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlobalSymbol" typeHref="/docs/api/natives/cglobalsymbol" />
+
+### DamageLevels
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L30" />
+
+```csharp
+ref CUtlVector<CDestructiblePart_DamageLevel> DamageLevels { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CDestructiblePart_DamageLevel&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### DebugName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L18" />
+
+```csharp
+ref CGlobalSymbol DebugName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlobalSymbol" typeHref="/docs/api/natives/cglobalsymbol" />
+
+### DisableHitGroupWhenDestroyed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L22" />
+
+```csharp
+ref bool DisableHitGroupWhenDestroyed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HitGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L20" />
+
+```csharp
+ref HitGroup_t HitGroup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### OnlyDestroyWhenGibbing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L26" />
+
+```csharp
+ref bool OnlyDestroyWhenGibbing { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### OtherHitgroupsToDestroyWhenFullyDestructed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CDestructiblePart.cs#L24" />
+
+```csharp
+ref CUtlVector<HitGroup_t> OtherHitgroupsToDestroyWhenFullyDestructed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;HitGroup_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

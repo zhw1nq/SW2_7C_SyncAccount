@@ -1,0 +1,46 @@
+---
+title: IGameHookPawn
+---
+
+# Interface IGameHookPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Pawn/IPawn.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameHookPawn
+```
+
+## Properties
+
+### CanMove
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Pawn/IPawn.cs#L13" />
+
+Hook triggered when the player pawn can move check is performed.
+
+```csharp
+ICanMovePawnHook CanMove { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ICanMovePawnHook" typeHref="/docs/api/gamehooks/icanmovepawnhook" />
+
+### PostThink
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Pawn/IPawn.cs#L8" />
+
+Hook triggered when the player pawn post think hook is triggered.
+
+```csharp
+IPostThinkPawnHook PostThink { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPostThinkPawnHook" typeHref="/docs/api/gamehooks/ipostthinkpawnhook" />
+

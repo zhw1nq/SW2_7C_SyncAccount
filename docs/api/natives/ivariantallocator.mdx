@@ -1,0 +1,46 @@
+---
+title: IVariantAllocator
+---
+
+# Interface IVariantAllocator
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L106" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IVariantAllocator
+```
+
+## Methods
+
+### Alloc(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L108" />
+
+```csharp
+public static abstract nint Alloc(ulong size)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="size" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### Free(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L109" />
+
+```csharp
+public static abstract void Free(nint ptr)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="ptr" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+

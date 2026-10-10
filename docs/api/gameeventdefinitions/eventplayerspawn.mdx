@@ -1,0 +1,82 @@
+---
+title: EventPlayerSpawn
+---
+
+# Interface EventPlayerSpawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerSpawn.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "player_spawn"
+player spawned in game
+
+```csharp
+public interface EventPlayerSpawn : IGameEvent<EventPlayerSpawn>
+```
+
+#### Implements
+
+- [IGameEvent\<EventPlayerSpawn\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### UserId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerSpawn.cs#L40" />
+
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int UserId { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserIdController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerSpawn.cs#L25" />
+
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController UserIdController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### UserIdPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerSpawn.cs#L31" />
+
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn UserIdPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### UserIdPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerSpawn.cs#L33" />
+
+```csharp
+IPlayer? UserIdPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

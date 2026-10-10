@@ -1,0 +1,133 @@
+---
+title: ICommandLine
+---
+
+# Interface ICommandLine
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.CommandLine](/docs/api/commandline)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ICommandLine
+```
+
+## Properties
+
+### CommandLine
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L30" />
+
+```csharp
+string CommandLine { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HasParameters
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L32" />
+
+```csharp
+bool HasParameters { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ParameterCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L13" />
+
+Gets the total number of parameters in the command line.
+
+```csharp
+int ParameterCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+## Methods
+
+### GetParameterFloat(string, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L28" />
+
+Gets a float parameter from the command line.
+
+```csharp
+float GetParameterFloat(string paramName, float defaultValue = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="paramName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="defaultValue" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetParameterInt(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L23" />
+
+Gets an integer parameter from the command line.
+
+```csharp
+int GetParameterInt(string paramName, int defaultValue = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="paramName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="defaultValue" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetParameterString(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L18" />
+
+Gets a string parameter from the command line.
+
+```csharp
+string GetParameterString(string paramName, string defaultValue = "")
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="paramName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="defaultValue" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HasParameter(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/CommandLine/ICommandLine.cs#L8" />
+
+Checks if a parameter exists in the command line.
+
+```csharp
+bool HasParameter(string paramName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="paramName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

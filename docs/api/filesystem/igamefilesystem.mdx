@@ -1,0 +1,257 @@
+---
+title: IGameFileSystem
+---
+
+# Interface IGameFileSystem
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.FileSystem](/docs/api/filesystem)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameFileSystem
+```
+
+## Methods
+
+### AddSearchPath(string, string, SearchPathAdd_t, SearchPathPriority_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L33" />
+
+Adds a search path to the file system.
+
+```csharp
+void AddSearchPath(string path, string pathId, SearchPathAdd_t addType, SearchPathPriority_t priority)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="path" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to add.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to add in.
+- <ApiParam name="addType" type="SearchPathAdd_t" typeHref="/docs/api/filesystem/searchpathadd_t" /> — The type of addition to perform.
+- <ApiParam name="priority" type="SearchPathPriority_t" typeHref="/docs/api/filesystem/searchpathpriority_t" /> — The priority of the search path.
+
+### FileExists(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L41" />
+
+Checks if a file exists at the given file path and path ID.
+
+```csharp
+bool FileExists(string filePath, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The file path to check.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to check in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the file exists, false otherwise.
+
+### FindFileAbsoluteList(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L108" />
+
+Finds all files matching the given wildcard and path ID.
+
+```csharp
+List<string> FindFileAbsoluteList(string wildcard, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="wildcard" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The wildcard to match files against.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to search in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="List&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" /> — A list of all files matching the given wildcard and path ID.
+
+### GetFileSize(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L75" />
+
+Gets the size of a file at the given file path and path ID.
+
+```csharp
+uint GetFileSize(string filePath, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to get the size of.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to get the file size from.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" /> — The size of the file in bytes.
+
+### GetSearchPath(string, GetSearchPathTypes_t, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L50" />
+
+Gets the search path(s) for the given path ID and search path type.
+
+```csharp
+string GetSearchPath(string pathId, GetSearchPathTypes_t searchPathType, int searchPathsToGet)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to get the search paths for.
+- <ApiParam name="searchPathType" type="GetSearchPathTypes_t" typeHref="/docs/api/filesystem/getsearchpathtypes_t" /> — The type of search path to get.
+- <ApiParam name="searchPathsToGet" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The number of search paths to get.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The search path(s) for the given path ID and search path type.
+
+### IsDirectory(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L16" />
+
+Checks if a directory exists at the given path and path ID.
+
+```csharp
+bool IsDirectory(string path, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="path" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to check.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to search in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the directory exists, false otherwise.
+
+### IsFileWritable(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L91" />
+
+Checks if a file is writable at the given file path and path ID.
+
+```csharp
+bool IsFileWritable(string filePath, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to check.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to check in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the file is writable, false otherwise.
+
+### PrecacheFile(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L83" />
+
+Precaches a file at the given file path and path ID.
+
+```csharp
+bool PrecacheFile(string filePath, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to precache.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to precache the file in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the file was precached successfully, false otherwise.
+
+### PrintSearchPaths()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L8" />
+
+Prints the current search paths to the console.
+
+```csharp
+void PrintSearchPaths()
+```
+
+### ReadFile(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L58" />
+
+Reads the contents of a file at the given file path and path ID.
+
+```csharp
+string ReadFile(string filePath, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to read.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to read the file from.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The contents of the file as a string.
+
+### RemoveSearchPath(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L24" />
+
+Removes a search path from the file system.
+
+```csharp
+bool RemoveSearchPath(string path, string pathId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="path" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to remove.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to remove in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the path was removed successfully, false otherwise.
+
+### SetFileWritable(string, string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L100" />
+
+Sets the writable status of a file at the given file path and path ID.
+
+```csharp
+bool SetFileWritable(string filePath, string pathId, bool writable)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to set the writable status for.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to set the writable status in.
+- <ApiParam name="writable" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True to make the file writable, false to make it read-only.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the writable status was set successfully, false otherwise.
+
+### WriteFile(string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/FileSystem/IGameFileSystem.cs#L67" />
+
+Writes content to a file at the given file path and path ID.
+
+```csharp
+bool WriteFile(string filePath, string pathId, string content)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="filePath" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the file to write.
+- <ApiParam name="pathId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the path to write the file to.
+- <ApiParam name="content" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content to write to the file.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the file was written successfully, false otherwise.
+

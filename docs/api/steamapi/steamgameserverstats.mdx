@@ -1,0 +1,238 @@
+---
+title: SteamGameServerStats
+---
+
+# Class SteamGameServerStats
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class SteamGameServerStats
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [SteamGameServerStats](/docs/api/steamapi/steamgameserverstats)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### ClearUserAchievement(CSteamID, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L76" />
+
+```csharp
+public static bool ClearUserAchievement(CSteamID steamIDUser, string pchName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetUserAchievement(CSteamID, string, out bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L35" />
+
+```csharp
+public static bool GetUserAchievement(CSteamID steamIDUser, string pchName, out bool pbAchieved)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="pbAchieved" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetUserStat(CSteamID, string, out int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L21" />
+
+requests stat information for a user, usable after a successful call to RequestUserStats()
+
+```csharp
+public static bool GetUserStat(CSteamID steamIDUser, string pchName, out int pData)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="pData" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetUserStat(CSteamID, string, out float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L28" />
+
+```csharp
+public static bool GetUserStat(CSteamID steamIDUser, string pchName, out float pData)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="pData" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RequestUserStats(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L13" />
+
+downloads stats for the user
+
+returns a GSStatsReceived_t callback when completed
+
+if the user has no stats, GSStatsReceived_t.m_eResult will be set to k_EResultFail
+
+these stats will only be auto-updated for clients playing on the server. For other
+
+users you'll need to call RequestUserStats() again to refresh any data
+
+```csharp
+public static SteamAPICall_t RequestUserStats(CSteamID steamIDUser)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamAPICall_t" typeHref="/docs/api/steamapi/steamapicall_t" />
+
+### SetUserAchievement(CSteamID, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L69" />
+
+```csharp
+public static bool SetUserAchievement(CSteamID steamIDUser, string pchName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetUserStat(CSteamID, string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L48" />
+
+Set / update stats and achievements.
+
+Note: These updates will work only on stats game servers are allowed to edit and only for
+
+game servers that have been declared as officially controlled by the game creators.
+
+Set the IP range of your official servers on the Steamworks page
+
+```csharp
+public static bool SetUserStat(CSteamID steamIDUser, string pchName, int nData)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="nData" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetUserStat(CSteamID, string, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L55" />
+
+```csharp
+public static bool SetUserStat(CSteamID steamIDUser, string pchName, float fData)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="fData" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### StoreUserStats(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L90" />
+
+Store the current data on the server, will get a GSStatsStored_t callback when set.
+
+If the callback has a result of k_EResultInvalidParam, one or more stats
+
+uploaded has been rejected, either because they broke constraints
+
+or were out of date. In this case the server sends back updated values.
+
+The stats should be re-iterated to keep in sync.
+
+```csharp
+public static SteamAPICall_t StoreUserStats(CSteamID steamIDUser)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamAPICall_t" typeHref="/docs/api/steamapi/steamapicall_t" />
+
+### UpdateUserAvgRateStat(CSteamID, string, float, double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserverstats.cs#L62" />
+
+```csharp
+public static bool UpdateUserAvgRateStat(CSteamID steamIDUser, string pchName, float flCountThisSession, double dSessionLength)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="flCountThisSession" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="dSessionLength" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

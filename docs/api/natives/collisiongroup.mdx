@@ -1,0 +1,47 @@
+---
+title: CollisionGroup
+---
+
+# Enum CollisionGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/RnQueryShapeAttr_t.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public enum CollisionGroup : byte
+```
+
+## Fields
+
+- <ApiParam name="Always" /> — Default layer, always collides with everything.
+- <ApiParam name="BreakableGlass" /> = 9
+- <ApiParam name="ConditionallySolid" /> — Conditionally solid means that the collision response will be zero or as defined in the table when there are matching interactions
+- <ApiParam name="Debris" /> — Collides with nothing but world, static stuff and triggers
+- <ApiParam name="Default" /> = 4
+- <ApiParam name="Dissolving" /> — Things that are dissolving are in this group
+- <ApiParam name="DoorBlocker" /> — Blocks entities not permitted to get near moving doors
+- <ApiParam name="FirstUser" /> — First unreserved collision layer index.
+- <ApiParam name="InVehicle" /> — for any entity inside a vehicle
+- <ApiParam name="Interactive" /> — Collides with everything except interactive debris or debris
+- <ApiParam name="InteractiveDebris" /> — Collides with everything except other interactive debris or debris
+- <ApiParam name="LastSharedCollisionGroup" /> = 25
+- <ApiParam name="MaxAllowed" /> = 64
+- <ApiParam name="NPC" /> — Generic NPC group
+- <ApiParam name="NPCActor" /> — Used so NPCs in scripts ignore the player.
+- <ApiParam name="NPCScripted" /> — Used for NPCs in scripts that should not collide with each other
+- <ApiParam name="Nonphysical" /> — This is how you turn off all collisions for an object - move it to this group
+- <ApiParam name="PZClip" /> = 23
+- <ApiParam name="PassableDoor" /> — Doors that the player shouldn't collide with
+- <ApiParam name="Player" /> = 8
+- <ApiParam name="PlayerMovement" /> — For HL2, same as Collision_Group_Player, for TF2, this filters out other players and CBaseObjects
+- <ApiParam name="Projectile" /> — Projectiles!
+- <ApiParam name="Props" /> = 24
+- <ApiParam name="Pushaway" /> — Nonsolid on client and server, pushaway in player code
+- <ApiParam name="Trigger" /> — Trigger layer, never collides with anything, only triggers/interacts.  Use when querying for interaction layers.
+- <ApiParam name="Vehicle" /> = 10
+- <ApiParam name="VehicleClip" /> — vehicle clip brush to restrict vehicle movement
+- <ApiParam name="Weapon" /> — for any weapons that need collision detection
+

@@ -1,0 +1,354 @@
+---
+title: CGameID
+---
+
+# Struct CGameID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+[Serializable]
+public struct CGameID : IEquatable<CGameID>, IComparable<CGameID>
+```
+
+#### Implements
+
+- [IEquatable\<CGameID\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [IComparable\<CGameID\>](https://learn.microsoft.com/dotnet/api/system.icomparable-1)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### CGameID(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L19" />
+
+```csharp
+public CGameID(ulong GameID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="GameID" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### CGameID(AppId_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L24" />
+
+```csharp
+public CGameID(AppId_t nAppID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="nAppID" type="AppId_t" typeHref="/docs/api/steamapi/appid_t" />
+
+### CGameID(AppId_t, uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L30" />
+
+```csharp
+public CGameID(AppId_t nAppID, uint nModID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="nAppID" type="AppId_t" typeHref="/docs/api/steamapi/appid_t" />
+- <ApiParam name="nModID" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+## Fields
+
+### m_GameID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L9" />
+
+```csharp
+public ulong m_GameID
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+## Methods
+
+### AppID()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L58" />
+
+```csharp
+public AppId_t AppID()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="AppId_t" typeHref="/docs/api/steamapi/appid_t" />
+
+### CompareTo(CGameID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L162" />
+
+Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+
+```csharp
+public int CompareTo(CGameID other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="CGameID" typeHref="/docs/api/steamapi/cgameid" /> — An object to compare with this instance.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — A value that indicates the relative order of the objects being compared. The return value has these meanings:
+
+ <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+
+### Equals(object)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L128" />
+
+Indicates whether this instance and a specified object are equal.
+
+```csharp
+public override bool Equals(object other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="object" typeHref="https://learn.microsoft.com/dotnet/api/system.object" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+
+### Equals(CGameID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L157" />
+
+Indicates whether the current object is equal to another object of the same type.
+
+```csharp
+public bool Equals(CGameID other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="CGameID" typeHref="/docs/api/steamapi/cgameid" /> — An object to compare with this object.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+
+### GetHashCode()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L133" />
+
+Returns the hash code for this instance.
+
+```csharp
+public override int GetHashCode()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — A 32-bit signed integer that is the hash code for this instance.
+
+### IsMod()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L43" />
+
+```csharp
+public bool IsMod()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsP2PFile()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L53" />
+
+```csharp
+public bool IsP2PFile()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsShortcut()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L48" />
+
+```csharp
+public bool IsShortcut()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsSteamApp()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L38" />
+
+```csharp
+public bool IsSteamApp()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsValid()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L73" />
+
+```csharp
+public bool IsValid()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ModID()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L68" />
+
+```csharp
+public uint ModID()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### Reset()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L95" />
+
+```csharp
+public void Reset()
+```
+
+### Set(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L100" />
+
+```csharp
+public void Set(ulong GameID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="GameID" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L123" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+
+### Type()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L63" />
+
+```csharp
+public CGameID.EGameIDType Type()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CGameID.EGameIDType" typeHref="/docs/api/steamapi/cgameid" />
+
+## Operators
+
+### operator ==(CGameID, CGameID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L138" />
+
+```csharp
+public static bool operator ==(CGameID x, CGameID y)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="x" type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+- <ApiParam name="y" type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### explicit operator CGameID(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L148" />
+
+```csharp
+public static explicit operator CGameID(ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+
+### explicit operator ulong(CGameID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L152" />
+
+```csharp
+public static explicit operator ulong(CGameID that)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="that" type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### operator !=(CGameID, CGameID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/Types/SteamClientPublic/CGameID.cs#L143" />
+
+```csharp
+public static bool operator !=(CGameID x, CGameID y)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="x" type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+- <ApiParam name="y" type="CGameID" typeHref="/docs/api/steamapi/cgameid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

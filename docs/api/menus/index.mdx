@@ -1,0 +1,34 @@
+---
+title: Menus
+---
+
+# Namespace SwiftlyS2.Shared.Menus
+
+- <ApiParam type="MenuConfiguration" typeHref="/docs/api/menus/menuconfiguration" /> — Defines configuration settings that control menu behavior.
+- <ApiParam type="MenuEventArgs" typeHref="/docs/api/menus/menueventargs" /> — Provides event data for menu-related events.
+- <ApiParam type="MenuExtraButton" typeHref="/docs/api/menus/menuextrabutton" /> — Represents an extra button in the menu that executes a custom action when pressed.
+- <ApiParam type="MenuManagerEventArgs" typeHref="/docs/api/menus/menumanagereventargs" /> — Provides event data for menu manager events.
+- <ApiParam type="MenuOptionClickEventArgs" typeHref="/docs/api/menus/menuoptionclickeventargs" /> — Provides event data for menu option click events.
+- <ApiParam type="MenuOptionEventArgs" typeHref="/docs/api/menus/menuoptioneventargs" /> — Provides event data for menu option events.
+- <ApiParam type="MenuOptionFormattingEventArgs" typeHref="/docs/api/menus/menuoptionformattingeventargs" /> — Provides event data for menu option HTML formatting events.
+- <ApiParam type="MenuOptionValidatingEventArgs" typeHref="/docs/api/menus/menuoptionvalidatingeventargs" /> — Provides event data for menu option validation events.
+- <ApiParam type="MenuOptionValueChangedEventArgs&lt;T&gt;" typeHref="/docs/api/menus/menuoptionvaluechangedeventargst" /> — Event arguments for when a menu option's value changes.
+
+- <ApiParam type="MenuKeybindOverrides" typeHref="/docs/api/menus/menukeybindoverrides" /> — Custom key bindings for menu actions.
+Each property can be set to override the default bindings, or left null to use defaults.
+- <ApiParam type="MenuManagerConfiguration" typeHref="/docs/api/menus/menumanagerconfiguration" /> — Configuration settings that control menu behavior, appearance, and player interaction.
+
+- <ApiParam type="IMenuAPI" typeHref="/docs/api/menus/imenuapi" /> — Represents an interactive menu that can be displayed to players.
+- <ApiParam type="IMenuBuilderAPI" typeHref="/docs/api/menus/imenubuilderapi" /> — Provides a fluent builder interface for creating and configuring menus.
+All methods support chaining for convenient menu construction.
+- <ApiParam type="IMenuDesignAPI" typeHref="/docs/api/menus/imenudesignapi" />
+- <ApiParam type="IMenuManagerAPI" typeHref="/docs/api/menus/imenumanagerapi" /> — Central manager for creating and controlling all player menus.
+- <ApiParam type="IMenuOption" typeHref="/docs/api/menus/imenuoption" /> — Represents a menu option that can be displayed and interacted with by players.
+
+- <ApiParam type="KeyBind" typeHref="/docs/api/menus/keybind" />
+- <ApiParam type="MenuOptionScrollStyle" typeHref="/docs/api/menus/menuoptionscrollstyle" /> — Defines how the menu scrolls when navigating between options.
+- <ApiParam type="MenuOptionTextSize" typeHref="/docs/api/menus/menuoptiontextsize" /> — Defines the available text size options for menu items.
+- <ApiParam type="MenuOptionTextStyle" typeHref="/docs/api/menus/menuoptiontextstyle" /> — Defines the horizontal text overflow behavior for menu options.
+
+- <ApiParam type="AsyncEventHandler&lt;TEventArgs&gt;" typeHref="/docs/api/menus/asynceventhandlert" /> — Represents an asynchronous event handler that returns a ValueTask.
+

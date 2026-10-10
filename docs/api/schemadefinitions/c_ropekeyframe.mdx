@@ -1,0 +1,512 @@
+---
+title: C_RopeKeyframe
+---
+
+# Interface C_RopeKeyframe
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_RopeKeyframe : C_BaseModelEntity, C_BaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<C_BaseEntity>, ISchemaClass<C_BaseModelEntity>, ISchemaClass<C_RopeKeyframe>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [C_BaseModelEntity](/docs/api/schemadefinitions/c_basemodelentity)
+- [C_BaseEntity](/docs/api/schemadefinitions/c_baseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_RopeKeyframe\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ApplyWind
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L23" />
+
+```csharp
+ref bool ApplyWind { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CachedEndPointAttachmentAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L87" />
+
+```csharp
+ISchemaFixedArray<QAngle> CachedEndPointAttachmentAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;QAngle&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### CachedEndPointAttachmentPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L85" />
+
+```csharp
+ISchemaFixedArray<Vector> CachedEndPointAttachmentPos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;Vector&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### ChangeCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L61" />
+
+```csharp
+ref byte ChangeCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### ColorMod
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L83" />
+
+```csharp
+ref Vector ColorMod { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ConstrainBetweenEndpoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L89" />
+
+```csharp
+ref bool ConstrainBetweenEndpoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CurScroll
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L33" />
+
+```csharp
+ref float CurScroll { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### CurrentGustLifetime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L77" />
+
+```csharp
+ref float CurrentGustLifetime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### CurrentGustTimer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L75" />
+
+```csharp
+ref float CurrentGustTimer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### EndAttachment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L49" />
+
+```csharp
+AttachmentHandle_t EndAttachment { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AttachmentHandle_t" typeHref="/docs/api/schemadefinitions/attachmenthandle_t" />
+
+### EndPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L45" />
+
+```csharp
+ref CHandle<C_BaseEntity> EndPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;C_BaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### EndPointAttachmentAnglesDirty
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L95" />
+
+```csharp
+SchemaUntypedField EndPointAttachmentAnglesDirty { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### EndPointAttachmentPositionsDirty
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L92" />
+
+```csharp
+SchemaUntypedField EndPointAttachmentPositionsDirty { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### ForcePointMoveCounter
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L27" />
+
+```csharp
+ref int ForcePointMoveCounter { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Impulse
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L71" />
+
+```csharp
+ref Vector Impulse { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### LinksTouchingSomething
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L19" />
+
+```csharp
+SchemaUntypedField LinksTouchingSomething { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### LinksTouchingSomething1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L21" />
+
+```csharp
+ref int LinksTouchingSomething1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LockedPoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L59" />
+
+```csharp
+ref byte LockedPoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### Material
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L67" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIMaterial2> Material { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIMaterial2&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### NewDataThisFrame
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L98" />
+
+```csharp
+SchemaUntypedField NewDataThisFrame { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### PhysicsDelegate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L65" />
+
+```csharp
+C_RopeKeyframe__CPhysicsDelegate PhysicsDelegate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="C_RopeKeyframe__CPhysicsDelegate" typeHref="/docs/api/schemadefinitions/c_ropekeyframe__cphysicsdelegate" />
+
+### PhysicsInitted
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L101" />
+
+```csharp
+SchemaUntypedField PhysicsInitted { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### PrevEndPointPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L29" />
+
+```csharp
+ISchemaFixedArray<bool> PrevEndPointPos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;bool&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### PrevEndPointPos2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L31" />
+
+```csharp
+ISchemaFixedArray<Vector> PrevEndPointPos2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;Vector&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### PrevLockedPoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L25" />
+
+```csharp
+ref int PrevLockedPoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### PreviousImpulse
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L73" />
+
+```csharp
+ref Vector PreviousImpulse { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### RopeFlags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L37" />
+
+```csharp
+ref ushort RopeFlags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### RopeLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L53" />
+
+```csharp
+ref short RopeLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### RopeMaterialModelIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L39" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIMaterial2> RopeMaterialModelIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIMaterial2&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### ScrollSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L35" />
+
+```csharp
+ref float ScrollSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Segments
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L41" />
+
+```csharp
+ref byte Segments { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### Slack
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L55" />
+
+```csharp
+ref short Slack { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### StartAttachment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L47" />
+
+```csharp
+AttachmentHandle_t StartAttachment { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AttachmentHandle_t" typeHref="/docs/api/schemadefinitions/attachmenthandle_t" />
+
+### StartPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L43" />
+
+```csharp
+ref CHandle<C_BaseEntity> StartPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;C_BaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### Subdiv
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L51" />
+
+```csharp
+ref byte Subdiv { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### TextureHeight
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L69" />
+
+```csharp
+ref int TextureHeight { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TextureScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L57" />
+
+```csharp
+ref float TextureScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeToNextGust
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L79" />
+
+```csharp
+ref float TimeToNextGust { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Width
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L63" />
+
+```csharp
+ref float Width { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### WindDir
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_RopeKeyframe.cs#L81" />
+
+```csharp
+ref Vector WindDir { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+

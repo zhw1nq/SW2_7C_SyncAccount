@@ -1,0 +1,372 @@
+---
+title: C_BasePlayerPawn
+---
+
+# Interface C_BasePlayerPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_BasePlayerPawn : C_BaseCombatCharacter, CBaseAnimGraph, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseAnimGraph>, ISchemaClass<C_BaseCombatCharacter>, ISchemaClass<C_BasePlayerPawn>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [C_BaseCombatCharacter](/docs/api/schemadefinitions/c_basecombatcharacter)
+- [CBaseAnimGraph](/docs/api/schemadefinitions/cbaseanimgraph)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraph\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BaseCombatCharacter\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BasePlayerPawn\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AutoaimServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L22" />
+
+```csharp
+CPlayer_AutoaimServices? AutoaimServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_AutoaimServices?" typeHref="/docs/api/schemadefinitions/cplayer_autoaimservices" />
+
+### CameraServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L32" />
+
+```csharp
+CPlayer_CameraServices? CameraServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_CameraServices?" typeHref="/docs/api/schemadefinitions/cplayer_cameraservices" />
+
+### Controller
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L69" />
+
+```csharp
+ref CHandle<CBasePlayerController> Controller { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBasePlayerController&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### DeathTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L47" />
+
+```csharp
+GameTime_t DeathTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### DefaultController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L71" />
+
+```csharp
+ref CHandle<CBasePlayerController> DefaultController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBasePlayerController&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### FOVSensitivityAdjust
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L57" />
+
+```csharp
+ref float FOVSensitivityAdjust { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FlashlightServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L30" />
+
+```csharp
+CPlayer_FlashlightServices? FlashlightServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_FlashlightServices?" typeHref="/docs/api/schemadefinitions/cplayer_flashlightservices" />
+
+### HideHUD
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L43" />
+
+```csharp
+ref uint HideHUD { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### IsSwappingToPredictableController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L73" />
+
+```csharp
+ref bool IsSwappingToPredictableController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ItemServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L20" />
+
+```csharp
+CPlayer_ItemServices? ItemServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_ItemServices?" typeHref="/docs/api/schemadefinitions/cplayer_itemservices" />
+
+### LastCameraSetupLocalOrigin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L53" />
+
+```csharp
+ref Vector LastCameraSetupLocalOrigin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### LastCameraSetupTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L55" />
+
+```csharp
+GameTime_t LastCameraSetupTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastExecutedCommandNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L65" />
+
+```csharp
+ref int LastExecutedCommandNumber { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LastExecutedCommandTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L67" />
+
+```csharp
+ref int LastExecutedCommandTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MouseSensitivity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L59" />
+
+```csharp
+ref float MouseSensitivity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MovementServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L34" />
+
+```csharp
+CPlayer_MovementServices? MovementServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_MovementServices?" typeHref="/docs/api/schemadefinitions/cplayer_movementservices" />
+
+### ObserverServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L24" />
+
+```csharp
+CPlayer_ObserverServices? ObserverServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_ObserverServices?" typeHref="/docs/api/schemadefinitions/cplayer_observerservices" />
+
+### OldOrigin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L61" />
+
+```csharp
+ref Vector OldOrigin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### OldSimulationTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L63" />
+
+```csharp
+ref float OldSimulationTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PredictionError
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L49" />
+
+```csharp
+ref Vector PredictionError { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### PredictionErrorTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L51" />
+
+```csharp
+GameTime_t PredictionErrorTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### ServerViewAngleChanges
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L37" />
+
+```csharp
+SchemaUntypedField ServerViewAngleChanges { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### Skybox3d
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L45" />
+
+```csharp
+sky3dparams_t Skybox3d { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="sky3dparams_t" typeHref="/docs/api/schemadefinitions/sky3dparams_t" />
+
+### UseServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L28" />
+
+```csharp
+CPlayer_UseServices? UseServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_UseServices?" typeHref="/docs/api/schemadefinitions/cplayer_useservices" />
+
+### V_angle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L39" />
+
+```csharp
+ref QAngle V_angle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### V_anglePrevious
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L41" />
+
+```csharp
+ref QAngle V_anglePrevious { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### WaterServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L26" />
+
+```csharp
+CPlayer_WaterServices? WaterServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_WaterServices?" typeHref="/docs/api/schemadefinitions/cplayer_waterservices" />
+
+### WeaponServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BasePlayerPawn.cs#L18" />
+
+```csharp
+CPlayer_WeaponServices? WeaponServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPlayer_WeaponServices?" typeHref="/docs/api/schemadefinitions/cplayer_weaponservices" />
+

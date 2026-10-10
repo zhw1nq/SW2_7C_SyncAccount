@@ -1,0 +1,1095 @@
+---
+title: IPlayer
+---
+
+# Interface IPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L37" />
+
+**Namespace**: [SwiftlyS2.Shared.Players](/docs/api/players)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IPlayer : IEquatable<IPlayer>
+```
+
+#### Implements
+
+- [IEquatable\<IPlayer\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+
+## Properties
+
+### ConnectedTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L225" />
+
+Gets the total time, in seconds, that the connection has been active.
+
+```csharp
+uint ConnectedTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### Controller
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L245" />
+
+Gets the player controller associated with the player.
+
+```csharp
+CCSPlayerController Controller { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### IPAddress
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L283" />
+
+Gets the IP address associated with the player.
+
+```csharp
+string IPAddress { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### IsAlive
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L240" />
+
+Gets a value indicating whether the player is currently alive.
+
+```csharp
+bool IsAlive { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsAuthorized
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L220" />
+
+Whether the current user is authorized by Steam.
+
+```csharp
+bool IsAuthorized { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsFakeClient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L215" />
+
+Whether the client is a bot.
+
+```csharp
+bool IsFakeClient { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsFirstSpawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L298" />
+
+Indicates whether this is the player's first spawn.
+
+```csharp
+bool IsFirstSpawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsValid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L303" />
+
+Checks if the player is valid (has controller, is not HLTV, is connected and has pawn).
+
+```csharp
+bool IsValid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L62" />
+
+Gets the name of the player.
+
+```csharp
+string Name { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Pawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L256" />
+
+Gets the pawn associated with the player.
+
+```csharp
+CBasePlayerPawn? Pawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" />
+
+### PlayerID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L42" />
+
+Gets the unique identifier for the player.
+
+```csharp
+int PlayerID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### PlayerLanguage
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L293" />
+
+Gets the language for the player.
+
+```csharp
+Language PlayerLanguage { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Language" typeHref="/docs/api/translation/language" />
+
+### PlayerPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L267" />
+
+Gets the player pawn associated with the player.
+
+```csharp
+CCSPlayerPawn? PlayerPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn?" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### PressedButtons
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L278" />
+
+Gets the set of game buttons that are currently pressed.
+
+```csharp
+GameButtonFlags PressedButtons { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameButtonFlags" typeHref="/docs/api/events/gamebuttonflags" />
+
+### RequiredController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L251" />
+
+Gets the player controller associated with the player. Requires the controller to be valid.
+[Thrown when the controller is not valid.](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception)
+
+```csharp
+CCSPlayerController RequiredController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### RequiredPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L262" />
+
+Gets the pawn associated with the player. Requires the pawn to be valid.
+[Thrown when the pawn is not valid.](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception)
+
+```csharp
+CBasePlayerPawn RequiredPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBasePlayerPawn" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" />
+
+### RequiredPlayerPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L273" />
+
+Gets the player pawn associated with the player. Requires the player pawn to be valid.
+[Thrown when the player pawn is not valid.](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception)
+
+```csharp
+CCSPlayerPawn RequiredPlayerPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### ServerSideClient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L67" />
+
+Gets the server-side client associated with the player.
+
+```csharp
+IServerSideClient ServerSideClient { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IServerSideClient" typeHref="/docs/api/engine/iserversideclient" />
+
+### SessionId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L47" />
+
+Gets the session ID for the player.
+
+```csharp
+ulong SessionId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### Slot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L57" />
+
+Gets the slot of the player. Equals to the player ID.
+
+```csharp
+int Slot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SteamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L230" />
+
+Gets the unique Steam identifier associated with the user.
+
+```csharp
+ulong SteamID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### UnauthorizedSteamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L235" />
+
+Gets the Steam ID that was not verified yet.
+
+```csharp
+ulong UnauthorizedSteamID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### UserID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L52" />
+
+Gets the user ID for the player.
+
+```csharp
+int UserID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### VoiceFlags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L288" />
+
+Gets or sets the set of flags that specify voice options or features to be applied.
+
+```csharp
+VoiceFlagValue VoiceFlags { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoiceFlagValue" typeHref="/docs/api/players/voiceflagvalue" />
+
+## Methods
+
+### ChangeTeam(Team)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L464" />
+
+Changes the player's team.
+This will also kill the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void ChangeTeam(Team team)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team to assign. Cannot be null.
+
+### ChangeTeamAsync(Team)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L472" />
+
+Changes the player's team asynchronously.
+This will also kill the player.
+
+```csharp
+Task ChangeTeamAsync(Team team)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team to assign. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### ClearTransmitEntityBlocks()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L342" />
+
+Removes all entity blocks from the transmit buffer, discarding any pending data scheduled for transmission.
+
+```csharp
+void ClearTransmitEntityBlocks()
+```
+
+### ExecuteCommand(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L484" />
+
+Executes a command on behalf of the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void ExecuteCommand(string command)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### ExecuteCommandAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L491" />
+
+Executes a command on behalf of the player asynchronously.
+
+```csharp
+Task ExecuteCommandAsync(string command)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The command to execute. Cannot be null or empty.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### GetClientConvarValue(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L361" />
+
+Retrieves userinfo values for convars such as: m_yaw, sensitivity.
+
+```csharp
+string GetClientConvarValue(string convarName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="convarName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### GetListenOverride(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L356" />
+
+Retrieves the listen override settings for the specified player.
+
+```csharp
+ListenOverride GetListenOverride(int player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The identifier of the player whose listen override settings are to be retrieved. Must be a valid player index.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ListenOverride" typeHref="/docs/api/players/listenoverride" /> — A ListenOverride object containing the listen override settings for the specified player.
+
+### IsTransmitEntityBlocked(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L337" />
+
+Determines whether the specified entity is currently blocked from transmitting data.
+
+```csharp
+bool IsTransmitEntityBlocked(int entityid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entityid" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The unique identifier of the entity to check for transmit blocking. Must be a valid entity ID.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — true if the entity is blocked from transmitting; otherwise, false.
+
+### Kick(string, ENetworkDisconnectionReason)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L313" />
+
+Disconnects the user from the network session, providing a specified reason and disconnection type.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void Kick(string reason, ENetworkDisconnectionReason gameReason)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="reason" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The message describing the reason for the disconnection. This message may be displayed to the user. Cannot be
+    null or empty.
+- <ApiParam name="gameReason" type="ENetworkDisconnectionReason" typeHref="/docs/api/protobufdefinitions/enetworkdisconnectionreason" /> — The disconnection reason code indicating the type of network disconnection to perform.
+
+### KickAsync(string, ENetworkDisconnectionReason)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L322" />
+
+Disconnects the user from the network session, providing a specified reason and disconnection type asynchronously.
+
+```csharp
+Task KickAsync(string reason, ENetworkDisconnectionReason gameReason)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="reason" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The message describing the reason for the disconnection. This message may be displayed to the user. Cannot be
+    null or empty.
+- <ApiParam name="gameReason" type="ENetworkDisconnectionReason" typeHref="/docs/api/protobufdefinitions/enetworkdisconnectionreason" /> — The disconnection reason code indicating the type of network disconnection to perform.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### Respawn()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L477" />
+
+Respawns the player.
+
+```csharp
+void Respawn()
+```
+
+### SendAlert(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L171" />
+
+Sends an alert message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendAlert(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendAlertAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L178" />
+
+Sends an alert message to the player asynchronously.
+
+```csharp
+Task SendAlertAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendCenter(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L156" />
+
+Sends a center message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendCenter(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendCenterAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L163" />
+
+Sends a center message to the player asynchronously.
+
+```csharp
+Task SendCenterAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendCenterHTML(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L187" />
+
+Sends a center HTML message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendCenterHTML(string message, int duration = 5000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+- <ApiParam name="duration" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The duration, in milliseconds, for which the message should be displayed in HTML format.
+
+### SendCenterHTMLAsync(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L195" />
+
+Sends a center HTML message to the player asynchronously.
+
+```csharp
+Task SendCenterHTMLAsync(string message, int duration = 5000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+- <ApiParam name="duration" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The duration, in milliseconds, for which the message should be displayed in HTML format.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendChat(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L141" />
+
+Sends a chat message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendChat(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendChatAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L148" />
+
+Sends a chat message to the player asynchronously.
+
+```csharp
+Task SendChatAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendChatEOT(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L203" />
+
+Sends an end-of-text chat message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendChatEOT(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendChatEOTAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L210" />
+
+Sends an end-of-text chat message to the player asynchronously.
+
+```csharp
+Task SendChatEOTAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendConsole(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L126" />
+
+Sends a console message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendConsole(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendConsoleAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L133" />
+
+Sends a console message to the player asynchronously.
+
+```csharp
+Task SendConsoleAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendMessage(MessageType, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L76" />
+
+Sends a message of the specified type to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendMessage(MessageType kind, string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="kind" type="MessageType" typeHref="/docs/api/players/messagetype" /> — The type of message to send. Determines how the message is processed or displayed.
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendMessage(MessageType, string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L87" />
+
+Sends a message of the specified type to the player with a custom HTML duration.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendMessage(MessageType kind, string message, int htmlDuration = 5000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="kind" type="MessageType" typeHref="/docs/api/players/messagetype" /> — The type of message to send. Determines how the message is processed or displayed.
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+- <ApiParam name="htmlDuration" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The duration, in milliseconds, for which the message should be displayed in HTML format.
+
+### SendMessageAsync(MessageType, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L95" />
+
+Sends a message of the specified type to the player asynchronously.
+
+```csharp
+Task SendMessageAsync(MessageType kind, string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="kind" type="MessageType" typeHref="/docs/api/players/messagetype" /> — The type of message to send. Determines how the message is processed or displayed.
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendMessageAsync(MessageType, string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L103" />
+
+Sends a message of the specified type to the player asynchronously with a custom HTML duration.
+
+```csharp
+Task SendMessageAsync(MessageType kind, string message, int htmlDuration = 5000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="kind" type="MessageType" typeHref="/docs/api/players/messagetype" /> — The type of message to send. Determines how the message is processed or displayed.
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+- <ApiParam name="htmlDuration" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The duration, in milliseconds, for which the message should be displayed in HTML format.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SendNotify(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L111" />
+
+Sends a notify message to the player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SendNotify(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+### SendNotifyAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L118" />
+
+Sends a notify message to the player asynchronously.
+
+```csharp
+Task SendNotifyAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The content of the message to send. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetListenOverride(int, ListenOverride)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L349" />
+
+Sets a custom listen override for the specified player.
+
+```csharp
+void SetListenOverride(int player, ListenOverride listenOverride)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The identifier of the player whose listen override setting will be updated. Must be a valid player index.
+- <ApiParam name="listenOverride" type="ListenOverride" typeHref="/docs/api/players/listenoverride" /> — The listen override value to apply to the specified player.
+
+### ShouldBlockTransmitEntity(int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L330" />
+
+Sets whether transmission of the specified entity should be blocked.
+
+```csharp
+void ShouldBlockTransmitEntity(int entityid, bool shouldBlockTransmit)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entityid" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The unique identifier of the entity whose transmission status is to be updated.
+- <ApiParam name="shouldBlockTransmit" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — A value indicating whether transmission for the entity should be blocked. Specify <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to
+    block transmission; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+
+### SwitchTeam(Team)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L448" />
+
+Switches the player's team.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SwitchTeam(Team team)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team to switch to. Cannot be null.
+
+### SwitchTeamAsync(Team)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L455" />
+
+Switches the player's team asynchronously.
+
+```csharp
+Task SwitchTeamAsync(Team team)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team to switch to. Cannot be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### TakeDamage(CTakeDamageInfo)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L370" />
+
+Applies damage to the entity based on the specified damage information.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void TakeDamage(CTakeDamageInfo damageInfo)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="damageInfo" type="CTakeDamageInfo" typeHref="/docs/api/natives/ctakedamageinfo" /> — An object containing details about the damage to be applied, including the amount, type, and source. Cannot be
+    null.
+
+### TakeDamage(float, DamageTypes_t, CBaseEntity?, CBaseEntity?, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L390" />
+
+Applies damage to the entity based on the specified damage information.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void TakeDamage(float damage, DamageTypes_t damageType, CBaseEntity? inflictor = null, CBaseEntity? attacker = null, CBaseEntity? ability = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="damage" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The amount of damage to apply.
+- <ApiParam name="damageType" type="DamageTypes_t" typeHref="/docs/api/schemadefinitions/damagetypes_t" /> — The type of damage to apply.
+- <ApiParam name="inflictor" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity that is inflicting the damage. Can be null.
+- <ApiParam name="attacker" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity that is attacking. Can be null.
+- <ApiParam name="ability" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The ability that caused the damage. Can be null.
+
+### TakeDamageAsync(CTakeDamageInfo)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L378" />
+
+Applies damage to the entity based on the specified damage information asynchronously.
+
+```csharp
+Task TakeDamageAsync(CTakeDamageInfo damageInfo)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="damageInfo" type="CTakeDamageInfo" typeHref="/docs/api/natives/ctakedamageinfo" /> — An object containing details about the damage to be applied, including the amount, type, and source. Cannot be
+    null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### TakeDamageAsync(float, DamageTypes_t, CBaseEntity?, CBaseEntity?, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L401" />
+
+Applies damage to the entity based on the specified damage information asynchronously.
+
+```csharp
+Task TakeDamageAsync(float damage, DamageTypes_t damageType, CBaseEntity? inflictor = null, CBaseEntity? attacker = null, CBaseEntity? ability = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="damage" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The amount of damage to apply.
+- <ApiParam name="damageType" type="DamageTypes_t" typeHref="/docs/api/schemadefinitions/damagetypes_t" /> — The type of damage to apply.
+- <ApiParam name="inflictor" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity that is inflicting the damage. Can be null.
+- <ApiParam name="attacker" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity that is attacking. Can be null.
+- <ApiParam name="ability" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The ability that caused the damage. Can be null.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### Teleport(Vector, QAngle, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L411" />
+
+Teleports the entity to the specified position, orientation, and velocity.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void Teleport(Vector pos, QAngle angle, Vector velocity)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The target position to teleport the entity to, represented as a SwiftlyS2.Shared.Natives.Vector.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The orientation to apply to the entity after teleportation, represented as a SwiftlyS2.Shared.Natives.QAngle.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity to assign to the entity upon arrival, represented as a SwiftlyS2.Shared.Natives.Vector.
+
+### Teleport(Vector?, QAngle?, Vector?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L422" />
+
+Teleports the entity to the specified position, orientation, and velocity.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void Teleport(Vector? pos = null, QAngle? angle = null, Vector? velocity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector?" typeHref="/docs/api/natives/vector" /> — The target position to teleport the entity to, represented as a SwiftlyS2.Shared.Natives.Vector.
+- <ApiParam name="angle" type="QAngle?" typeHref="/docs/api/natives/qangle" /> — The orientation to apply to the entity after teleportation, represented as a SwiftlyS2.Shared.Natives.QAngle.
+- <ApiParam name="velocity" type="Vector?" typeHref="/docs/api/natives/vector" /> — The velocity to assign to the entity upon arrival, represented as a SwiftlyS2.Shared.Natives.Vector.
+
+### TeleportAsync(Vector, QAngle, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L431" />
+
+Teleports the entity to the specified position, orientation, and velocity asynchronously.
+
+```csharp
+Task TeleportAsync(Vector pos, QAngle angle, Vector velocity)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The target position to teleport the entity to, represented as a SwiftlyS2.Shared.Natives.Vector.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The orientation to apply to the entity after teleportation, represented as a SwiftlyS2.Shared.Natives.QAngle.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity to assign to the entity upon arrival, represented as a SwiftlyS2.Shared.Natives.Vector.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### TeleportAsync(Vector?, QAngle?, Vector?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Players/IPlayer.cs#L440" />
+
+Teleports the entity to the specified position, orientation, and velocity asynchronously.
+
+```csharp
+Task TeleportAsync(Vector? pos = null, QAngle? angle = null, Vector? velocity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector?" typeHref="/docs/api/natives/vector" /> — The target position to teleport the entity to, represented as a SwiftlyS2.Shared.Natives.Vector.
+- <ApiParam name="angle" type="QAngle?" typeHref="/docs/api/natives/qangle" /> — The orientation to apply to the entity after teleportation, represented as a SwiftlyS2.Shared.Natives.QAngle.
+- <ApiParam name="velocity" type="Vector?" typeHref="/docs/api/natives/vector" /> — The velocity to assign to the entity upon arrival, represented as a SwiftlyS2.Shared.Natives.Vector.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+

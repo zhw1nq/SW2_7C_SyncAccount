@@ -1,0 +1,157 @@
+---
+title: Entity Key Values
+---
+
+SwiftlyS2 provides `CEntityKeyValues` as a typed key-value container for entity spawn/configuration values.
+
+## Creating and Disposing
+
+Create `CEntityKeyValues` with the default constructor.
+
+```c#
+var keyValues = new CEntityKeyValues();
+```
+
+`CEntityKeyValues` implements `IDisposable`, so prefer `using`.
+
+```c#
+using var keyValues = new CEntityKeyValues();
+```
+
+## Address Property
+
+The object exposes its native address through `Address`.
+
+```c#
+using var keyValues = new CEntityKeyValues();
+nint address = keyValues.Address;
+```
+
+## Setting Values
+
+### Type-Specific Setters
+
+```c#
+keyValues.SetBool("is_enabled", true);
+keyValues.SetInt32("health", 100);
+keyValues.SetUInt32("flags", 1u);
+keyValues.SetInt64("large_value", 9223372036854775807);
+keyValues.SetUInt64("ularge_value", 18446744073709551615UL);
+keyValues.SetFloat("speed", 250.5f);
+keyValues.SetDouble("precise_value", 3.14159265359);
+keyValues.SetString("name", "example");
+keyValues.SetPtr("pointer", nint.Zero);
+keyValues.SetStringToken("token", stringToken);
+keyValues.SetColor("color", new Color(255, 0, 0, 255));
+keyValues.SetVector("position", new Vector(0, 0, 100));
+keyValues.SetVector2D("position_2d", new Vector2D(10, 20));
+keyValues.SetVector4D("position_4d", new Vector4D(1, 2, 3, 4));
+keyValues.SetQAngle("angle", new QAngle(0, 90, 0));
+```
+
+### Generic Set&lt;T&gt;
+
+```c#
+keyValues.Set<int>("health", 100);
+keyValues.Set<string>("name", "example");
+keyValues.Set<Vector>("position", new Vector(0, 0, 100));
+```
+
+## Getting Values
+
+### Type-Specific Getters
+
+```c#
+bool isEnabled = keyValues.GetBool("is_enabled");
+int health = keyValues.GetInt32("health");
+uint flags = keyValues.GetUInt32("flags");
+long largeValue = keyValues.GetInt64("large_value");
+ulong ulargeValue = keyValues.GetUInt64("ularge_value");
+float speed = keyValues.GetFloat("speed");
+double preciseValue = keyValues.GetDouble("precise_value");
+string name = keyValues.GetString("name");
+nint pointer = keyValues.GetPtr("pointer");
+CUtlStringToken token = keyValues.GetStringToken("token");
+Color color = keyValues.GetColor("color");
+Vector position = keyValues.GetVector("position");
+Vector2D position2D = keyValues.GetVector2D("position_2d");
+Vector4D position4D = keyValues.GetVector4D("position_4d");
+QAngle angle = keyValues.GetQAngle("angle");
+```
+
+### Generic Get&lt;T&gt;
+
+```c#
+int health = keyValues.Get<int>("health");
+string name = keyValues.Get<string>("name");
+Vector position = keyValues.Get<Vector>("position");
+```
+
+## Supported Generic Types
+
+`Set&lt;T&gt;` and `Get&lt;T&gt;` support these types:
+
+- `bool`
+- `int`
+- `uint`
+- `long`
+- `ulong`
+- `float`
+- `double`
+- `string`
+- `nint`
+- `CUtlStringToken`
+- `Color`
+- `Vector`
+- `Vector2D`
+- `Vector4D`
+- `QAngle`
+
+## Using with Entity DispatchSpawn
+
+`CEntityKeyValues` is commonly passed into `DispatchSpawn` / `DispatchSpawnAsync`.
+
+```c#
+CBaseEntity relay = Core.EntitySystem.CreateEntityByDesignerName<CBaseEntity>("logic_relay");
+
+using var keyValues = new CEntityKeyValues();
+keyValues.SetString("targetname", "sw_relay_01");
+keyValues.SetBool("StartDisabled", false);
+
+relay.DispatchSpawn(keyValues);
+```
+
+Async variant:
+
+```c#
+await relay.DispatchSpawnAsync(keyValues);
+```
+
+## Complete Example
+
+```c#
+public override void Load(bool hotReload)
+{
+    CBaseEntity relay = Core.EntitySystem.CreateEntityByDesignerName<CBaseEntity>("logic_relay");
+
+    using var keyValues = new CEntityKeyValues();
+    keyValues.SetString("targetname", "sw_logic_relay_main");
+    keyValues.SetVector("origin", new Vector(0, 0, 64));
+    keyValues.SetQAngle("angles", new QAngle(0, 0, 0));
+    keyValues.SetBool("StartDisabled", false);
+
+    relay.DispatchSpawn(keyValues);
+
+    Console.WriteLine($"Spawned entity '{relay.DesignerName}' with key values.");
+}
+```
+
+<Callout type="warning">
+  Using unsupported types with `Set&lt;T&gt;` or `Get&lt;T&gt;` throws `InvalidOperationException`.
+</Callout>
+
+## Reference
+
+See [CEntityKeyValues](/docs/api/entitysystem/centitykeyvalues/) for all methods and properties.
+
+See [CEntityInstance](/docs/api/schemadefinitions/centityinstance/) for `DispatchSpawn(CEntityKeyValues?)` and `DispatchSpawnAsync(CEntityKeyValues?)`.

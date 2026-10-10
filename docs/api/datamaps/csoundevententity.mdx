@@ -1,0 +1,46 @@
+---
+title: CSoundEventEntity
+---
+
+# CSoundEventEntity
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `startOnSpawn` | `m_bStartOnSpawn` | `FIELD_BOOLEAN` |
+| `toLocalPlayer` | `m_bToLocalPlayer` | `FIELD_BOOLEAN` |
+| `stopOnNew` | `m_bStopOnNew` | `FIELD_BOOLEAN` |
+| `saveAndRestore` | `m_bSaveRestore` | `FIELD_BOOLEAN` |
+| `entityIndexSelection` | `m_nEntityIndexSelection` | `FIELD_INT32` |
+| `soundName` | `m_iszSoundName` | `FIELD_STRING` |
+| `sourceEntityName` | `m_iszSourceEntityName` | `FIELD_STRING` |
+| `sourceEntityAttachment` | `m_iszAttachmentName` | `FIELD_STRING` |
+| `clientCullRadius` | `m_flClientCullRadius` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetSoundEventName` | `FIELD_STRING` |
+| `SetSourceEntity` | `FIELD_STRING` |
+| `StartSound` | `FIELD_STRING` |
+| `StartSoundOnSingleClient` | `FIELD_INT32` |
+| `PauseSound` | `FIELD_BOOLEAN` |
+| `UnPauseSound` | `FIELD_BOOLEAN` |
+| `StopSound` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `SoundEventGuid` | `FIELD_CUSTOM` |
+| `OnSoundFinished` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CSoundEventEntitySoundFinishedThink` |

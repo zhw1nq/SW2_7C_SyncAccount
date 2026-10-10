@@ -1,0 +1,75 @@
+---
+title: CAnimGraphDoc_PathMetric
+---
+
+# Interface CAnimGraphDoc_PathMetric
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_PathMetric.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimGraphDoc_PathMetric : CAnimGraphDoc_MotionMetric, ISchemaClass<CAnimGraphDoc_MotionMetric>, ISchemaClass<CAnimGraphDoc_PathMetric>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_MotionMetric](/docs/api/schemadefinitions/canimgraphdoc_motionmetric)
+- [ISchemaClass\<CAnimGraphDoc_MotionMetric\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CAnimGraphDoc_PathMetric\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Distance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_PathMetric.cs#L18" />
+
+```csharp
+ref float Distance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ExtrapolateMovement
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_PathMetric.cs#L22" />
+
+```csharp
+ref bool ExtrapolateMovement { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### MinExtrapolationSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_PathMetric.cs#L24" />
+
+```csharp
+ref float MinExtrapolationSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PathSamples
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_PathMetric.cs#L20" />
+
+```csharp
+ref CUtlVector<float> PathSamples { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

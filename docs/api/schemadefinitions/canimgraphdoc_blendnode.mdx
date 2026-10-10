@@ -1,0 +1,171 @@
+---
+title: CAnimGraphDoc_BlendNode
+---
+
+# Interface CAnimGraphDoc_BlendNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimGraphDoc_BlendNode : CAnimGraphDoc_Node, ISchemaClass<CAnimGraphDoc_Node>, ISchemaClass<CAnimGraphDoc_BlendNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_Node](/docs/api/schemadefinitions/canimgraphdoc_node)
+- [ISchemaClass\<CAnimGraphDoc_Node\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CAnimGraphDoc_BlendNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendKeyType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L26" />
+
+```csharp
+ref BlendKeyType BlendKeyType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="BlendKeyType" typeHref="/docs/api/schemadefinitions/blendkeytype" />
+
+### BlendValueSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L20" />
+
+```csharp
+ref AnimValueSource BlendValueSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimValueSource" typeHref="/docs/api/schemadefinitions/animvaluesource" />
+
+### Children
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L18" />
+
+```csharp
+ref CUtlVector<CBlendNodeChild> Children { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CBlendNodeChild&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Damping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L38" />
+
+```csharp
+CAnimInputDamping Damping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### IsAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L36" />
+
+```csharp
+ref bool IsAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LinearRootMotionBlendMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L40" />
+
+```csharp
+ref LinearRootMotionBlendMode_t LinearRootMotionBlendMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="LinearRootMotionBlendMode_t" typeHref="/docs/api/schemadefinitions/linearrootmotionblendmode_t" />
+
+### LockBlendOnReset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L28" />
+
+```csharp
+ref bool LockBlendOnReset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LockWhenWaning
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L34" />
+
+```csharp
+ref bool LockWhenWaning { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Loop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L32" />
+
+```csharp
+ref bool Loop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Param
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L24" />
+
+```csharp
+AnimParamID Param { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### ParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L22" />
+
+```csharp
+string ParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SyncCycles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_BlendNode.cs#L30" />
+
+```csharp
+ref bool SyncCycles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

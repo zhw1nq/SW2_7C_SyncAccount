@@ -1,0 +1,37 @@
+---
+title: CEnvSpark
+---
+
+# CEnvSpark
+
+Inherited from [CPointEntity](/docs/api/datamaps/cpointentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `MaxDelay` | `m_flDelay` | `FIELD_FLOAT32` |
+| `Magnitude` | `m_nMagnitude` | `FIELD_INT32` |
+| `SparkType` | `m_nType` | `FIELD_INT32` |
+| `TrailLength` | `m_nTrailLength` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `StartSpark` | `FIELD_VOID` |
+| `StopSpark` | `FIELD_VOID` |
+| `ToggleSpark` | `FIELD_VOID` |
+| `SparkOnce` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnSpark` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CEnvSparkSparkThink` |

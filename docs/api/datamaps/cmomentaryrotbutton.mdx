@@ -1,0 +1,44 @@
+---
+title: CMomentaryRotButton
+---
+
+# CMomentaryRotButton
+
+Inherited from [CRotButton](/docs/api/datamaps/crotbutton)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `StartDirection` | `m_direction` | `FIELD_INT32` |
+| `returnspeed` | `m_returnSpeed` | `FIELD_FLOAT32` |
+| `StartPosition` | `m_flStartPosition` | `FIELD_FLOAT32` |
+| `solidbsp` | `m_bSolidBsp` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetPosition` | `FIELD_FLOAT32` |
+| `SetPositionImmediately` | `FIELD_FLOAT32` |
+| `_DisableUpdateTarget` | `FIELD_VOID` |
+| `_EnableUpdateTarget` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `Position` | `FIELD_CUSTOM` |
+| `OnUnpressed` | `FIELD_CUSTOM` |
+| `OnFullyClosed` | `FIELD_CUSTOM` |
+| `OnFullyOpen` | `FIELD_CUSTOM` |
+| `OnReachedPosition` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CMomentaryRotButtonUseMoveDone` |
+| `CMomentaryRotButtonReturnMoveDone` |
+| `CMomentaryRotButtonSetPositionMoveDone` |
+| `CMomentaryRotButtonUpdateThink` |

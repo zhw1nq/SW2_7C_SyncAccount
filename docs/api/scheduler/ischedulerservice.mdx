@@ -1,0 +1,462 @@
+---
+title: ISchedulerService
+---
+
+# Interface ISchedulerService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Scheduler](/docs/api/scheduler)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ISchedulerService
+```
+
+## Methods
+
+### AddTimer(Func\<ITimerContext, TimerStep\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L171" />
+
+Add an advanced timer to the scheduler.
+
+```csharp
+CancellationTokenSource AddTimer(Func<ITimerContext, TimerStep> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;ITimerContext, TimerStep&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-2" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### Delay(int, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L112" />
+
+Add a delayed task to the scheduler.
+
+```csharp
+CancellationTokenSource Delay(int delayTick, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="delayTick" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The delay of the timer in ticks.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### DelayAndRepeat(int, int, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L130" />
+
+Add a delayed and repeated task to the scheduler.
+
+```csharp
+CancellationTokenSource DelayAndRepeat(int delayTick, int periodTick, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="delayTick" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The delay of the timer in ticks.
+- <ApiParam name="periodTick" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The period of the timer in ticks.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### DelayAndRepeatBySeconds(float, float, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L163" />
+
+Add a delayed and repeated task to the scheduler.
+
+The timing is based on game tick, which means it becomes inaccurate when intervals approachs 1 tick (approximately 15ms).
+
+```csharp
+CancellationTokenSource DelayAndRepeatBySeconds(float delaySeconds, float periodSeconds, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="delaySeconds" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The delay of the timer in seconds.
+- <ApiParam name="periodSeconds" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The period of the timer in seconds.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### DelayBySeconds(float, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L141" />
+
+Add a delayed task to the scheduler.
+
+The timing is based on game tick, which means it becomes inaccurate when intervals approachs 1 tick (approximately 15ms).
+
+```csharp
+CancellationTokenSource DelayBySeconds(float delaySeconds, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="delaySeconds" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The delay of the timer in seconds.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### NextTick(Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L10" />
+
+Add a task to be executed on the next tick.
+
+```csharp
+void NextTick(Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+### NextTick(Func\<Task?\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L17" />
+
+Never use this! you should never calls async callback in next tick,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextTick(Func<Task?> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task?&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextTick\<T\>(Func\<Task\<T?\>\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L25" />
+
+Never use this! you should never calls async callback in next tick,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextTick<T>(Func<Task<T?>> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task&lt;T?&gt;&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextTickAsync(Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L32" />
+
+Add a task to be executed on the next tick asynchronously.
+
+```csharp
+Task NextTickAsync(Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### NextTickAsync(Func\<Task?\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L39" />
+
+Never use this! you should never calls async callback in next tick,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextTickAsync(Func<Task?> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task?&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextTickAsync\<T\>(Func\<Task\<T?\>\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L47" />
+
+Never use this! you should never calls async callback in next tick,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextTickAsync<T>(Func<Task<T?>> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task&lt;T?&gt;&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextTickAsync\<T\>(Func\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L54" />
+
+Add a task to be executed on the next tick asynchronously.
+
+```csharp
+Task<T> NextTickAsync<T>(Func<T> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### NextWorldUpdate(Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L60" />
+
+Add a task to be executed on the next world update.
+
+```csharp
+void NextWorldUpdate(Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+### NextWorldUpdate(Func\<Task?\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L67" />
+
+Never use this! you should never calls async callback in next world update,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextWorldUpdate(Func<Task?> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task?&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextWorldUpdate\<T\>(Func\<Task\<T?\>\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L75" />
+
+Never use this! you should never calls async callback in next world update,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextWorldUpdate<T>(Func<Task<T?>> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task&lt;T?&gt;&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextWorldUpdateAsync(Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L82" />
+
+Add a task to be executed on the next world update asynchronously.
+
+```csharp
+Task NextWorldUpdateAsync(Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### NextWorldUpdateAsync(Func\<Task?\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L89" />
+
+Never use this! you should never calls async callback in next world update,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+void NextWorldUpdateAsync(Func<Task?> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task?&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextWorldUpdateAsync\<T\>(Func\<Task\<T?\>\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L97" />
+
+Never use this! you should never calls async callback in next world update,
+because async callback have chance to run in async context, which breaks the the synchronization safety this function gives.
+
+```csharp
+[Obsolete("Please remove the async modifier on your callback for safety reason. See comments for more details.")]
+Task<T> NextWorldUpdateAsync<T>(Func<Task<T?>> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;Task&lt;T?&gt;&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when this method is called.
+
+### NextWorldUpdateAsync\<T\>(Func\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L104" />
+
+Add a task to be executed on the next world update asynchronously.
+
+```csharp
+Task<T> NextWorldUpdateAsync<T>(Func<T> task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="task" type="Func&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.func-1" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### Repeat(int, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L121" />
+
+Add a repeated task to the scheduler.
+This will be executed once immediately, and then every periodTick ticks.
+
+```csharp
+CancellationTokenSource Repeat(int periodTick, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="periodTick" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The period of the timer in ticks.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### RepeatBySeconds(float, Action)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L152" />
+
+Add a repeated task to the scheduler.
+This will be executed once immediately, and then every periodSeconds seconds.
+
+The timing is based on game tick, which means it becomes inaccurate when intervals approachs 1 tick (approximately 15ms).
+
+```csharp
+CancellationTokenSource RepeatBySeconds(float periodSeconds, Action task)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="periodSeconds" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The period of the timer in seconds.
+- <ApiParam name="task" type="Action" typeHref="https://learn.microsoft.com/dotnet/api/system.action" /> — The task to execute.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — A CancellationTokenSource that can be used to cancel the timer.
+
+### StopOnMapChange(CancellationTokenSource)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Scheduler/ISchedulerService.cs#L177" />
+
+Stop a timer when the map changes.
+
+```csharp
+void StopOnMapChange(CancellationTokenSource cts)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="cts" type="CancellationTokenSource" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource" /> — The CancellationTokenSource to stop.
+

@@ -1,0 +1,42 @@
+---
+title: CInfoSpawnGroupLoadUnload
+---
+
+# CInfoSpawnGroupLoadUnload
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `mapname` | `m_iszSpawnGroupName` | `FIELD_STRING` |
+| `entityfiltername` | `m_iszSpawnGroupFilterName` | `FIELD_STRING` |
+| `landmark` | `m_iszLandmarkName` | `FIELD_STRING` |
+| `timeoutInterval` | `m_flTimeoutInterval` | `FIELD_FLOAT32` |
+| `autoactivate` | `m_bAutoActivate` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `StartSpawnGroupLoad` | `FIELD_VOID` |
+| `ActivateSpawnGroup` | `FIELD_VOID` |
+| `StartSpawnGroupUnload` | `FIELD_VOID` |
+| `SetSpawnGroup` | `FIELD_STRING` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnSpawnGroupLoadStarted` | `FIELD_CUSTOM` |
+| `OnSpawnGroupLoadFinished` | `FIELD_CUSTOM` |
+| `OnSpawnGroupUnloadStarted` | `FIELD_CUSTOM` |
+| `OnSpawnGroupUnloadFinished` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CInfoSpawnGroupLoadUnloadSpawnGroupLoadingThink` |
+| `CInfoSpawnGroupLoadUnloadSpawnGroupUnloadingThink` |

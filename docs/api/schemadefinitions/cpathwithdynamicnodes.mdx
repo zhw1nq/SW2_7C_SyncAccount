@@ -1,0 +1,74 @@
+---
+title: CPathWithDynamicNodes
+---
+
+# Interface CPathWithDynamicNodes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathWithDynamicNodes.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPathWithDynamicNodes : CPathSimple, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CPathSimple>, ISchemaClass<CPathWithDynamicNodes>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPathSimple](/docs/api/schemadefinitions/cpathsimple)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPathSimple\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPathWithDynamicNodes\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### PathNodes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathWithDynamicNodes.cs#L18" />
+
+```csharp
+ref CUtlVector<CHandle<CPathNode>> PathNodes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CPathNode&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### XInitialPathWorldToLocal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathWithDynamicNodes.cs#L20" />
+
+```csharp
+ref CTransform XInitialPathWorldToLocal { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTransform" typeHref="/docs/api/natives/ctransform" />
+
+## Methods
+
+### PathNodesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathWithDynamicNodes.cs#L22" />
+
+```csharp
+void PathNodesUpdated()
+```
+
+### XInitialPathWorldToLocalUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathWithDynamicNodes.cs#L23" />
+
+```csharp
+void XInitialPathWorldToLocalUpdated()
+```
+

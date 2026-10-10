@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "getting-started",
+    "swiftly-core",
+    "using-attributes",
+    "thread-safety",
+    "commands",
+    "configuration",
+    "translations",
+    "entity",
+    "entitykeyvalues",
+    "game-events",
+    "core-events",
+    "netmessages",
+    "menus",
+    "convars",
+    "native-functions-and-hooks",
+    "scheduler",
+    "shared-api",
+    "permissions",
+    "profiler",
+    "database",
+    "soundevents",
+    "custom-hud",
+    "steamworks"
+  ]
+}

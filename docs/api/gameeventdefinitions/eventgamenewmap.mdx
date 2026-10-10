@@ -1,0 +1,57 @@
+---
+title: EventGameNewmap
+---
+
+# Interface EventGameNewmap
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameNewmap.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "game_newmap"
+send when new map is completely loaded
+
+```csharp
+public interface EventGameNewmap : IGameEvent<EventGameNewmap>
+```
+
+#### Implements
+
+- [IGameEvent\<EventGameNewmap\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### MapName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameNewmap.cs#L26" />
+
+map name
+<br />
+type: string
+
+```csharp
+string MapName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Transition
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameNewmap.cs#L33" />
+
+true if this is a transition from one map to another
+<br />
+type: bool
+
+```csharp
+bool Transition { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

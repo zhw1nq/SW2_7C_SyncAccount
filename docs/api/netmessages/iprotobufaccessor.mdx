@@ -1,0 +1,1165 @@
+---
+title: IProtobufAccessor
+---
+
+# Interface IProtobufAccessor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.NetMessages](/docs/api/netmessages)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IProtobufAccessor : INativeHandle
+```
+
+#### Implements
+
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Methods
+
+### Add\<T\>(string, T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L95" />
+
+```csharp
+void Add<T>(string fieldName, T value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### AddBool(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L9" />
+
+```csharp
+void AddBool(string fieldName, bool value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AddBytes(string, byte[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L57" />
+
+```csharp
+void AddBytes(string fieldName, byte[] value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### AddColor(string, Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L75" />
+
+```csharp
+void AddColor(string fieldName, Color value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Color" typeHref="/docs/api/natives/color" />
+
+### AddDouble(string, double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L45" />
+
+```csharp
+void AddDouble(string fieldName, double value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### AddFloat(string, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L39" />
+
+```csharp
+void AddFloat(string fieldName, float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### AddInt32(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L15" />
+
+```csharp
+void AddInt32(string fieldName, int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### AddInt64(string, long)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L27" />
+
+```csharp
+void AddInt64(string fieldName, long value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### AddNestedMessage(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L88" />
+
+```csharp
+nint AddNestedMessage(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### AddQAngle(string, QAngle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L81" />
+
+```csharp
+void AddQAngle(string fieldName, QAngle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### AddString(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L51" />
+
+```csharp
+void AddString(string fieldName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### AddUInt32(string, uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L21" />
+
+```csharp
+void AddUInt32(string fieldName, uint value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### AddUInt64(string, ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L33" />
+
+```csharp
+void AddUInt64(string fieldName, ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### AddVector(string, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L69" />
+
+```csharp
+void AddVector(string fieldName, Vector value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Vector" typeHref="/docs/api/natives/vector" />
+
+### AddVector2D(string, Vector2D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L63" />
+
+```csharp
+void AddVector2D(string fieldName, Vector2D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### Clear()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L92" />
+
+```csharp
+void Clear()
+```
+
+### ClearRepeatedField(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L91" />
+
+```csharp
+void ClearRepeatedField(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Get\<T\>(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L98" />
+
+```csharp
+T Get<T>(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### GetBool(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L12" />
+
+```csharp
+bool GetBool(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetBytes(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L60" />
+
+```csharp
+byte[] GetBytes(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### GetColor(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L78" />
+
+```csharp
+Color GetColor(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Color" typeHref="/docs/api/natives/color" />
+
+### GetDouble(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L48" />
+
+```csharp
+double GetDouble(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### GetFloat(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L42" />
+
+```csharp
+float GetFloat(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetInt32(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L18" />
+
+```csharp
+int GetInt32(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetInt64(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L30" />
+
+```csharp
+long GetInt64(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### GetNestedMessage(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L86" />
+
+```csharp
+nint GetNestedMessage(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetQAngle(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L84" />
+
+```csharp
+QAngle GetQAngle(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### GetRepeated\<T\>(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L97" />
+
+```csharp
+T GetRepeated<T>(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### GetRepeatedBool(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L11" />
+
+```csharp
+bool GetRepeatedBool(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetRepeatedBytes(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L59" />
+
+```csharp
+byte[] GetRepeatedBytes(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### GetRepeatedColor(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L77" />
+
+```csharp
+Color GetRepeatedColor(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Color" typeHref="/docs/api/natives/color" />
+
+### GetRepeatedDouble(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L47" />
+
+```csharp
+double GetRepeatedDouble(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### GetRepeatedFieldSize(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L90" />
+
+```csharp
+int GetRepeatedFieldSize(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetRepeatedFloat(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L41" />
+
+```csharp
+float GetRepeatedFloat(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetRepeatedInt32(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L17" />
+
+```csharp
+int GetRepeatedInt32(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetRepeatedInt64(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L29" />
+
+```csharp
+long GetRepeatedInt64(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### GetRepeatedNestedMessage(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L87" />
+
+```csharp
+nint GetRepeatedNestedMessage(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### GetRepeatedQAngle(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L83" />
+
+```csharp
+QAngle GetRepeatedQAngle(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### GetRepeatedString(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L53" />
+
+```csharp
+string GetRepeatedString(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### GetRepeatedUInt32(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L23" />
+
+```csharp
+uint GetRepeatedUInt32(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### GetRepeatedUInt64(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L35" />
+
+```csharp
+ulong GetRepeatedUInt64(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### GetRepeatedVector(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L71" />
+
+```csharp
+Vector GetRepeatedVector(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### GetRepeatedVector2D(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L65" />
+
+```csharp
+Vector2D GetRepeatedVector2D(string fieldName, int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### GetString(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L54" />
+
+```csharp
+string GetString(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### GetUInt32(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L24" />
+
+```csharp
+uint GetUInt32(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### GetUInt64(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L36" />
+
+```csharp
+ulong GetUInt64(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### GetVector(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L72" />
+
+```csharp
+Vector GetVector(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### GetVector2D(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L66" />
+
+```csharp
+Vector2D GetVector2D(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### HasField(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L7" />
+
+```csharp
+bool HasField(string fieldName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Set\<T\>(string, T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L94" />
+
+```csharp
+void Set<T>(string fieldName, T value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### SetBool(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L8" />
+
+```csharp
+void SetBool(string fieldName, bool value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetBytes(string, byte[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L56" />
+
+```csharp
+void SetBytes(string fieldName, byte[] value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### SetColor(string, Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L74" />
+
+```csharp
+void SetColor(string fieldName, Color value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Color" typeHref="/docs/api/natives/color" />
+
+### SetDouble(string, double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L44" />
+
+```csharp
+void SetDouble(string fieldName, double value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### SetFloat(string, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L38" />
+
+```csharp
+void SetFloat(string fieldName, float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SetInt32(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L14" />
+
+```csharp
+void SetInt32(string fieldName, int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetInt64(string, long)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L26" />
+
+```csharp
+void SetInt64(string fieldName, long value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### SetQAngle(string, QAngle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L80" />
+
+```csharp
+void SetQAngle(string fieldName, QAngle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### SetRepeated\<T\>(string, int, T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L96" />
+
+```csharp
+void SetRepeated<T>(string fieldName, int index, T value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### SetRepeatedBool(string, int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L10" />
+
+```csharp
+void SetRepeatedBool(string fieldName, int index, bool value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetRepeatedBytes(string, int, byte[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L58" />
+
+```csharp
+void SetRepeatedBytes(string fieldName, int index, byte[] value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### SetRepeatedColor(string, int, Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L76" />
+
+```csharp
+void SetRepeatedColor(string fieldName, int index, Color value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="Color" typeHref="/docs/api/natives/color" />
+
+### SetRepeatedDouble(string, int, double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L46" />
+
+```csharp
+void SetRepeatedDouble(string fieldName, int index, double value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### SetRepeatedFloat(string, int, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L40" />
+
+```csharp
+void SetRepeatedFloat(string fieldName, int index, float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SetRepeatedInt32(string, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L16" />
+
+```csharp
+void SetRepeatedInt32(string fieldName, int index, int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetRepeatedInt64(string, int, long)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L28" />
+
+```csharp
+void SetRepeatedInt64(string fieldName, int index, long value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### SetRepeatedQAngle(string, int, QAngle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L82" />
+
+```csharp
+void SetRepeatedQAngle(string fieldName, int index, QAngle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### SetRepeatedString(string, int, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L52" />
+
+```csharp
+void SetRepeatedString(string fieldName, int index, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetRepeatedUInt32(string, int, uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L22" />
+
+```csharp
+void SetRepeatedUInt32(string fieldName, int index, uint value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### SetRepeatedUInt64(string, int, ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L34" />
+
+```csharp
+void SetRepeatedUInt64(string fieldName, int index, ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### SetRepeatedVector(string, int, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L70" />
+
+```csharp
+void SetRepeatedVector(string fieldName, int index, Vector value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="Vector" typeHref="/docs/api/natives/vector" />
+
+### SetRepeatedVector2D(string, int, Vector2D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L64" />
+
+```csharp
+void SetRepeatedVector2D(string fieldName, int index, Vector2D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="value" type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### SetString(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L50" />
+
+```csharp
+void SetString(string fieldName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetUInt32(string, uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L20" />
+
+```csharp
+void SetUInt32(string fieldName, uint value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### SetUInt64(string, ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L32" />
+
+```csharp
+void SetUInt64(string fieldName, ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### SetVector(string, Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L68" />
+
+```csharp
+void SetVector(string fieldName, Vector value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Vector" typeHref="/docs/api/natives/vector" />
+
+### SetVector2D(string, Vector2D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufAccessor.cs#L62" />
+
+```csharp
+void SetVector2D(string fieldName, Vector2D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="fieldName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+

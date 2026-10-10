@@ -1,0 +1,45 @@
+---
+title: CFuncShatterglass
+---
+
+# CFuncShatterglass
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `GlassNavIgnore` | `m_bGlassNavIgnore` | `FIELD_BOOLEAN` |
+| `GlassThickness` | `m_flGlassThickness` | `FIELD_FLOAT32` |
+| `GlassInFrame` | `m_bGlassInFrame` | `FIELD_BOOLEAN` |
+| `SpawnInvulnerability` | `m_flSpawnInvulnerability` | `FIELD_FLOAT32` |
+| `StartBroken` | `m_bStartBroken` | `FIELD_BOOLEAN` |
+| `DamageType` | `m_iInitialDamageType` | `FIELD_UINT8` |
+| `DamagePositioningEntity` | `m_szDamagePositioningEntityName01` | `FIELD_STRING` |
+| `DamagePositioningEntity02` | `m_szDamagePositioningEntityName02` | `FIELD_STRING` |
+| `DamagePositioningEntity03` | `m_szDamagePositioningEntityName03` | `FIELD_STRING` |
+| `DamagePositioningEntity04` | `m_szDamagePositioningEntityName04` | `FIELD_STRING` |
+| `BreakShardless` | `m_bBreakShardless` | `FIELD_BOOLEAN` |
+| `surface_type` | `m_iSurfaceType` | `FIELD_UINT8` |
+| `DamagedMaterial` | `m_hMaterialDamageBase` | `FIELD_HMATERIAL` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Hit` | `FIELD_VOID` |
+| `Shatter` | `FIELD_VOID` |
+| `Restore` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnBroken` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncShatterglassGlassThink` |

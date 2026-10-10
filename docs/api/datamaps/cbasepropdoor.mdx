@@ -1,0 +1,62 @@
+---
+title: CBasePropDoor
+---
+
+# CBasePropDoor
+
+Inherited from [CDynamicProp](/docs/api/datamaps/cdynamicprop)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `hardware` | `m_nHardwareType` | `FIELD_INT32` |
+| `returndelay` | `m_flAutoReturnDelay` | `FIELD_FLOAT32` |
+| `soundmoveoverride` | `m_SoundMoving` | `FIELD_SOUNDNAME` |
+| `soundopenoverride` | `m_SoundOpen` | `FIELD_SOUNDNAME` |
+| `soundcloseoverride` | `m_SoundClose` | `FIELD_SOUNDNAME` |
+| `soundjiggleoverride` | `m_SoundJiggle` | `FIELD_SOUNDNAME` |
+| `soundsetlockedoverride` | `m_SoundLock` | `FIELD_SOUNDNAME` |
+| `soundsetunlockedoverride` | `m_SoundUnlock` | `FIELD_SOUNDNAME` |
+| `soundlatchoverride` | `m_SoundLatch` | `FIELD_SOUNDNAME` |
+| `slavename` | `m_SlaveName` | `FIELD_STRING` |
+| `forceclosed` | `m_bForceClosed` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Open` | `FIELD_VOID` |
+| `OpenAwayFrom` | `FIELD_STRING` |
+| `OpenAwayFromActivator` | `FIELD_FLOAT32` |
+| `Close` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `Lock` | `FIELD_VOID` |
+| `Unlock` | `FIELD_VOID` |
+| `PlayerOpen` | `FIELD_VOID` |
+| `PlayerClose` | `FIELD_VOID` |
+| `SetNoNPCs` | `FIELD_BOOLEAN` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnBlockedOpening` | `FIELD_CUSTOM` |
+| `OnBlockedClosing` | `FIELD_CUSTOM` |
+| `OnUnblockedOpening` | `FIELD_CUSTOM` |
+| `OnUnblockedClosing` | `FIELD_CUSTOM` |
+| `OnFullyClosed` | `FIELD_CUSTOM` |
+| `OnFullyOpen` | `FIELD_CUSTOM` |
+| `OnClose` | `FIELD_CUSTOM` |
+| `OnOpen` | `FIELD_CUSTOM` |
+| `OnLockedUse` | `FIELD_CUSTOM` |
+| `OnAjarOpen` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBasePropDoorDoorOpenMoveDone` |
+| `CBasePropDoorDoorCloseMoveDone` |
+| `CBasePropDoorDoorAutoCloseThink` |
+| `CBasePropDoorDisableAreaPortalThink` |

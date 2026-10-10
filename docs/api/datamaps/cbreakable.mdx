@@ -1,0 +1,42 @@
+---
+title: CBreakable
+---
+
+# CBreakable
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `explosion` | `m_Explosion` | `FIELD_INT32` |
+| `PressureDelay` | `m_flPressureDelay` | `FIELD_FLOAT32` |
+| `minhealthdmg` | `m_iMinHealthDmg` | `FIELD_INT32` |
+| `PerformanceMode` | `m_PerformanceMode` | `FIELD_INT32` |
+| `overrideBlockLOS` | `m_nOverrideBlockLOS` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `physdamagescale` | `FIELD_FLOAT32` |
+| `Break` | `FIELD_VOID` |
+| `SetHealth` | `FIELD_INT32` |
+| `AddHealth` | `FIELD_INT32` |
+| `RemoveHealth` | `FIELD_INT32` |
+| `SetMass` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnStartDeath` | `FIELD_CUSTOM` |
+| `OnBreak` | `FIELD_CUSTOM` |
+| `OnHealthChanged` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBreakableDie` |

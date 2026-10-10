@@ -1,0 +1,41 @@
+---
+title: CTriggerHurt
+---
+
+# CTriggerHurt
+
+Inherited from [CBaseTrigger](/docs/api/datamaps/cbasetrigger)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `damage` | `m_flDamage` | `FIELD_FLOAT32` |
+| `damagecap` | `m_flDamageCap` | `FIELD_FLOAT32` |
+| `damagetype` | `m_bitsDamageInflict` | `FIELD_INT32` |
+| `damagemodel` | `m_damageModel` | `FIELD_INT32` |
+| `nodmgforce` | `m_bNoDmgForce` | `FIELD_BOOLEAN` |
+| `damageforce` | `m_vDamageForce` | `FIELD_DIRECTION_VECTOR_WORLDSPACE` |
+| `forgivedelay` | `m_flForgivenessDelay` | `FIELD_FLOAT32` |
+| `thinkalways` | `m_thinkAlways` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetDamage` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnHurt` | `FIELD_CUSTOM` |
+| `OnHurtPlayer` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CTriggerHurtRadiationThink` |
+| `CTriggerHurtHurtThink` |
+| `CTriggerHurtNavThink` |

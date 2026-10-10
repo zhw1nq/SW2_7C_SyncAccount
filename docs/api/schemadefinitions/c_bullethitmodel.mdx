@@ -1,0 +1,106 @@
+---
+title: C_BulletHitModel
+---
+
+# Interface C_BulletHitModel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_BulletHitModel : CBaseAnimGraph, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseAnimGraph>, ISchemaClass<C_BulletHitModel>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseAnimGraph](/docs/api/schemadefinitions/cbaseanimgraph)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraph\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BulletHitModel\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BoneIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L20" />
+
+```csharp
+ref int BoneIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### IsHit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L24" />
+
+```csharp
+ref bool IsHit { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### MatLocal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L18" />
+
+```csharp
+ref matrix3x4_t MatLocal { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="matrix3x4_t" typeHref="/docs/api/natives/matrix3x4_t" />
+
+### PlayerParent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L22" />
+
+```csharp
+ref CHandle<C_BaseEntity> PlayerParent { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;C_BaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### StartPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L28" />
+
+```csharp
+ref Vector StartPos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### TimeCreated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BulletHitModel.cs#L26" />
+
+```csharp
+ref float TimeCreated { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

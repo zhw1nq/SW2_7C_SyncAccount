@@ -1,0 +1,48 @@
+---
+title: CPointCommentaryNode
+---
+
+# CPointCommentaryNode
+
+Inherited from [CBaseAnimGraph](/docs/api/datamaps/cbaseanimgraph)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `precommands` | `m_iszPreCommands` | `FIELD_STRING` |
+| `postcommands` | `m_iszPostCommands` | `FIELD_STRING` |
+| `commentaryfile` | `m_iszCommentaryFile` | `FIELD_STRING` |
+| `viewtarget` | `m_iszViewTarget` | `FIELD_STRING` |
+| `viewposition` | `m_iszViewPosition` | `FIELD_STRING` |
+| `prevent_movement` | `m_bPreventMovement` | `FIELD_BOOLEAN` |
+| `title` | `m_iszTitle` | `FIELD_STRING` |
+| `speakers` | `m_iszSpeakers` | `FIELD_STRING` |
+| `node_id` | `m_iNodeNumber` | `FIELD_INT32` |
+| `start_disabled` | `m_bDisabled` | `FIELD_BOOLEAN` |
+| `teleport_origin` | `m_vecTeleportOrigin` | `FIELD_POSITION_VECTOR` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `StartCommentary` | `FIELD_VOID` |
+| `StartUnstoppableCommentary` | `FIELD_VOID` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnCommentaryStarted` | `FIELD_CUSTOM` |
+| `OnCommentaryStopped` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPointCommentaryNodeSpinThink` |
+| `CPointCommentaryNodeUpdateViewThink` |
+| `CPointCommentaryNodeUpdateViewPostThink` |
+| `CPointCommentaryNodeAcculumatePlayTimeThink` |

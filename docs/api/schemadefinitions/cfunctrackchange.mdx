@@ -1,0 +1,148 @@
+---
+title: CFuncTrackChange
+---
+
+# Interface CFuncTrackChange
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CFuncTrackChange : CFuncPlatRot, CFuncPlat, CBasePlatTrain, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseToggle>, ISchemaClass<CBasePlatTrain>, ISchemaClass<CFuncPlat>, ISchemaClass<CFuncPlatRot>, ISchemaClass<CFuncTrackChange>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CFuncPlatRot](/docs/api/schemadefinitions/cfuncplatrot)
+- [CFuncPlat](/docs/api/schemadefinitions/cfuncplat)
+- [CBasePlatTrain](/docs/api/schemadefinitions/cbaseplattrain)
+- [CBaseToggle](/docs/api/schemadefinitions/cbasetoggle)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseToggle\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBasePlatTrain\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CFuncPlat\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CFuncPlatRot\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CFuncTrackChange\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Code
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L30" />
+
+```csharp
+ref TRAIN_CODE Code { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TRAIN_CODE" typeHref="/docs/api/schemadefinitions/train_code" />
+
+### TargetState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L32" />
+
+```csharp
+ref int TargetState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TrackBottom
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L20" />
+
+```csharp
+ref CHandle<CPathTrack> TrackBottom { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CPathTrack&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TrackBottomName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L26" />
+
+```csharp
+string TrackBottomName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### TrackTop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L18" />
+
+```csharp
+ref CHandle<CPathTrack> TrackTop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CPathTrack&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TrackTopName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L24" />
+
+```csharp
+string TrackTopName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Train
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L22" />
+
+```csharp
+ref CHandle<CFuncTrackTrain> Train { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CFuncTrackTrain&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TrainName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L28" />
+
+```csharp
+string TrainName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Use
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFuncTrackChange.cs#L34" />
+
+```csharp
+ref int Use { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

@@ -1,0 +1,96 @@
+---
+title: EventVoteStarted
+---
+
+# Interface EventVoteStarted
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "vote_started"
+
+```csharp
+public interface EventVoteStarted : IGameEvent<EventVoteStarted>
+```
+
+#### Implements
+
+- [IGameEvent\<EventVoteStarted\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Initiator
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L45" />
+
+entity id of the player who initiated the vote
+<br />
+type: long
+
+```csharp
+int Initiator { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Issue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L23" />
+
+type: string
+
+```csharp
+string Issue { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Param1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L28" />
+
+type: string
+
+```csharp
+string Param1 { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Team
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L38" />
+
+type: byte
+
+```csharp
+byte Team { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### VoteData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventVoteStarted.cs#L33" />
+
+type: string
+
+```csharp
+string VoteData { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

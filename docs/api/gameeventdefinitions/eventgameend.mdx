@@ -1,0 +1,41 @@
+---
+title: EventGameEnd
+---
+
+# Interface EventGameEnd
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameEnd.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "game_end"
+a game ended
+
+```csharp
+public interface EventGameEnd : IGameEvent<EventGameEnd>
+```
+
+#### Implements
+
+- [IGameEvent\<EventGameEnd\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Winner
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameEnd.cs#L26" />
+
+winner team/user id
+<br />
+type: byte
+
+```csharp
+byte Winner { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+

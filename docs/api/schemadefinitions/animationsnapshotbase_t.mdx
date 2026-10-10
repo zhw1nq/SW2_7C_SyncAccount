@@ -1,0 +1,133 @@
+---
+title: AnimationSnapshotBase_t
+---
+
+# Interface AnimationSnapshotBase_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface AnimationSnapshotBase_t : ISchemaClass<AnimationSnapshotBase_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<AnimationSnapshotBase_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BoneSetupMask
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L24" />
+
+```csharp
+ref CUtlVector<uint> BoneSetupMask { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;uint&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### BoneTransforms
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L26" />
+
+```csharp
+ref CUtlVector<matrix3x4_t> BoneTransforms { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;matrix3x4_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### BonesInWorldSpace
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L22" />
+
+```csharp
+ref bool BonesInWorldSpace { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DecodeDump
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L34" />
+
+```csharp
+AnimationDecodeDebugDumpElement_t DecodeDump { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimationDecodeDebugDumpElement_t" typeHref="/docs/api/schemadefinitions/animationdecodedebugdumpelement_t" />
+
+### FlexControllers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L28" />
+
+```csharp
+ref CUtlVector<float> FlexControllers { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### HasDecodeDump
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L32" />
+
+```csharp
+ref bool HasDecodeDump { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RealTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L18" />
+
+```csharp
+ref float RealTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### RootToWorld
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L20" />
+
+```csharp
+ref matrix3x4_t RootToWorld { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="matrix3x4_t" typeHref="/docs/api/natives/matrix3x4_t" />
+
+### SnapshotType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/AnimationSnapshotBase_t.cs#L30" />
+
+```csharp
+ref AnimationSnapshotType_t SnapshotType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimationSnapshotType_t" typeHref="/docs/api/schemadefinitions/animationsnapshottype_t" />
+

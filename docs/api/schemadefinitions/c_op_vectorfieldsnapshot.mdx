@@ -1,0 +1,137 @@
+---
+title: C_OP_VectorFieldSnapshot
+---
+
+# Interface C_OP_VectorFieldSnapshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_OP_VectorFieldSnapshot : CParticleFunctionOperator, CParticleFunction, ISchemaClass<CParticleFunction>, ISchemaClass<CParticleFunctionOperator>, ISchemaClass<C_OP_VectorFieldSnapshot>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CParticleFunctionOperator](/docs/api/schemadefinitions/cparticlefunctionoperator)
+- [CParticleFunction](/docs/api/schemadefinitions/cparticlefunction)
+- [ISchemaClass\<CParticleFunction\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleFunctionOperator\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_OP_VectorFieldSnapshot\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AttributeToWrite
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L20" />
+
+```csharp
+ParticleAttributeIndex_t AttributeToWrite { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleAttributeIndex_t" typeHref="/docs/api/schemadefinitions/particleattributeindex_t" />
+
+### BoundaryDampening
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L28" />
+
+```csharp
+ref float BoundaryDampening { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ControlPointNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L18" />
+
+```csharp
+ref int ControlPointNumber { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GridSpacing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L34" />
+
+```csharp
+ref float GridSpacing { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Interpolation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L24" />
+
+```csharp
+CPerParticleFloatInput Interpolation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### LocalSpaceCP
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L22" />
+
+```csharp
+ref int LocalSpaceCP { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LockToSurface
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L32" />
+
+```csharp
+ref bool LockToSurface { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Scale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L26" />
+
+```csharp
+CPerParticleVecInput Scale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleVecInput" typeHref="/docs/api/schemadefinitions/cperparticlevecinput" />
+
+### SetVelocity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_VectorFieldSnapshot.cs#L30" />
+
+```csharp
+ref bool SetVelocity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

@@ -1,0 +1,214 @@
+---
+title: IEngineService
+---
+
+# Interface IEngineService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Services](/docs/api/services)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IEngineService
+```
+
+## Properties
+
+### GlobalVars
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L21" />
+
+Gets a reference to the global variables structure.
+
+```csharp
+ref CGlobalVars GlobalVars { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlobalVars" typeHref="/docs/api/natives/cglobalvars" />
+
+### ServerIP
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L11" />
+
+The IP address of the server.
+
+```csharp
+string? ServerIP { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WorkshopId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L16" />
+
+Gets the Workshop ID of the current map.
+
+```csharp
+string WorkshopId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### DispatchParticleEffect(string, ParticleAttachment_t, byte, CUtlSymbolLarge, CRecipientFilter, bool, int, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L78" />
+
+Dispatches a particle effect to the specified recipients.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+void DispatchParticleEffect(string particleName, ParticleAttachment_t attachmentType, byte attachmentPoint, CUtlSymbolLarge attachmentName, CRecipientFilter filter, bool resetAllParticlesOnEntity = false, int splitScreenSlot = 0, CBaseEntity? entity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="particleName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the particle effect.
+- <ApiParam name="attachmentType" type="ParticleAttachment_t" typeHref="/docs/api/schemadefinitions/particleattachment_t" /> — The type of attachment for the particle effect.
+- <ApiParam name="attachmentPoint" type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" /> — The attachment point for the particle effect.
+- <ApiParam name="attachmentName" type="CUtlSymbolLarge" typeHref="/docs/api/natives/cutlsymbollarge" /> — The name of the attachment for the particle effect.
+- <ApiParam name="filter" type="CRecipientFilter" typeHref="/docs/api/natives/crecipientfilter" /> — The recipient filter for the particle effect.
+- <ApiParam name="resetAllParticlesOnEntity" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether to reset all particles on the entity.
+- <ApiParam name="splitScreenSlot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The split screen slot for the particle effect.
+- <ApiParam name="entity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity to attach the particle effect to.
+
+### DispatchParticleEffectAsync(string, ParticleAttachment_t, byte, CUtlSymbolLarge, CRecipientFilter, bool, int, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L94" />
+
+Dispatches a particle effect to the specified recipients asynchronously.
+
+```csharp
+Task DispatchParticleEffectAsync(string particleName, ParticleAttachment_t attachmentType, byte attachmentPoint, CUtlSymbolLarge attachmentName, CRecipientFilter filter, bool resetAllParticlesOnEntity = false, int splitScreenSlot = 0, CBaseEntity? entity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="particleName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the particle effect.
+- <ApiParam name="attachmentType" type="ParticleAttachment_t" typeHref="/docs/api/schemadefinitions/particleattachment_t" /> — The type of attachment for the particle effect.
+- <ApiParam name="attachmentPoint" type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" /> — The attachment point for the particle effect.
+- <ApiParam name="attachmentName" type="CUtlSymbolLarge" typeHref="/docs/api/natives/cutlsymbollarge" /> — The name of the attachment for the particle effect.
+- <ApiParam name="filter" type="CRecipientFilter" typeHref="/docs/api/natives/crecipientfilter" /> — The recipient filter for the particle effect.
+- <ApiParam name="resetAllParticlesOnEntity" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether to reset all particles on the entity.
+- <ApiParam name="splitScreenSlot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The split screen slot for the particle effect.
+- <ApiParam name="entity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — The entity to attach the particle effect to.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" /> — A task representing the asynchronous operation.
+
+### ExecuteCommand(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L34" />
+
+Executes the specified command string in the current context.
+
+```csharp
+void ExecuteCommand(string command)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The command to execute. Cannot be null or empty.
+
+### ExecuteCommandAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L40" />
+
+Executes the specified command string in the current context asynchronously.
+
+```csharp
+Task ExecuteCommandAsync(string command)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The command to execute. Cannot be null or empty.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### ExecuteCommandWithBuffer(string, Action\<string\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L47" />
+
+Executes the specified command string in the current context.
+
+```csharp
+[Obsolete("This method is planned to be removed.")]
+void ExecuteCommandWithBuffer(string command, Action<string> bufferCallback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The command to execute. Cannot be null or empty.
+- <ApiParam name="bufferCallback" type="Action&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The callback to receive the output of the command.
+
+### ExecuteCommandWithBufferAsync(string, Action\<string\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L55" />
+
+Executes the specified command string in the current context with a buffer callback asynchronously.
+
+```csharp
+[Obsolete("This method is planned to be removed.")]
+Task ExecuteCommandWithBufferAsync(string command, Action<string> bufferCallback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="command" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The command to execute. Cannot be null or empty.
+- <ApiParam name="bufferCallback" type="Action&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The callback to receive the output of the command.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### FindGameSystemByName(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L63" />
+
+Find a game system by name.
+
+```csharp
+nint? FindGameSystemByName(string name)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the game system.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint?" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The game system handle. Null if not found.
+
+### IsMapValid(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/IEngineService.cs#L28" />
+
+Determines whether the specified map string represents a valid map in server files.
+
+```csharp
+bool IsMapValid(string map)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="map" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The map string to validate. It also supports Workshop ID.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — true if the map is valid; otherwise, false.
+

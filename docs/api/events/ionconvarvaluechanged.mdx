@@ -1,0 +1,76 @@
+---
+title: IOnConVarValueChanged
+---
+
+# Interface IOnConVarValueChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnConVarValueChanged.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Events](/docs/api/events)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Called when a ConVar value is changed.
+
+```csharp
+public interface IOnConVarValueChanged
+```
+
+## Properties
+
+### ConVarName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnConVarValueChanged.cs#L11" />
+
+The name of the ConVar that changed.
+
+```csharp
+string ConVarName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### NewValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnConVarValueChanged.cs#L21" />
+
+The old value of the ConVar in string format.
+
+```csharp
+string NewValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### OldValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnConVarValueChanged.cs#L26" />
+
+The new value of the ConVar in string format.
+
+```csharp
+string OldValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### PlayerId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnConVarValueChanged.cs#L16" />
+
+The player ID of the client that made the change.
+
+```csharp
+int PlayerId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

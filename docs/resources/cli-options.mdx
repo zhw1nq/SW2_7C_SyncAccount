@@ -1,0 +1,30 @@
+---
+title: CLI Options
+---
+
+SwiftlyS2 startup behavior can be configured with command-line options passed when launching the game server.
+
+## Startup Example
+
+```bash
+./game/bin/win64/cs2.exe -dedicated +map de_dust2 \
+	-sw_path addons/swiftlys2 \
+	-sw_logpath addons/swiftlys2/logs \
+	-sw_hide_logs_in_console 1 \
+	-sw_loglevel WARNING
+```
+
+## Options Reference
+
+| Option | Example | Details |
+| ------ | ------- | ------- |
+| `-sw_path` | `-sw_path addons/swiftlys2` | Relative path from `game/csgo` where SwiftlyS2 is located. Default: `addons/swiftlys2`. |
+| `-sw_logpath` | `-sw_logpath addons/swiftlys2/logs` | Relative path from `game/csgo` where logs are stored. Default: `addons/swiftlys2/logs`. |
+| `-sw_hide_logs_in_console` | `-sw_hide_logs_in_console 1` | Disables plugin logs in console. Accepted values: `1`, `TRUE`, `YES`. |
+| `-sw_loglevel` | `-sw_loglevel WARNING` | Minimum log level shown in console. Default: all. Accepted values: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `OFF`. |
+
+## Notes
+
+- `-sw_path` and `-sw_logpath` are relative to the `game/csgo` directory.
+- Use `-sw_hide_logs_in_console` when you want plugin logs to remain in files but not in console output.
+- Use `-sw_loglevel` to reduce console noise while preserving higher-severity logs.

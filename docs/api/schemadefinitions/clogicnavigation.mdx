@@ -1,0 +1,58 @@
+---
+title: CLogicNavigation
+---
+
+# Interface CLogicNavigation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CLogicNavigation.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CLogicNavigation : CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CServerOnlyEntity>, ISchemaClass<CLogicalEntity>, ISchemaClass<CLogicNavigation>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CLogicalEntity](/docs/api/schemadefinitions/clogicalentity)
+- [CServerOnlyEntity](/docs/api/schemadefinitions/cserveronlyentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CServerOnlyEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLogicalEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLogicNavigation\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### IsOn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CLogicNavigation.cs#L18" />
+
+```csharp
+ref bool IsOn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NavProperty
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CLogicNavigation.cs#L20" />
+
+```csharp
+ref navproperties_t NavProperty { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="navproperties_t" typeHref="/docs/api/schemadefinitions/navproperties_t" />
+

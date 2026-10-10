@@ -1,0 +1,61 @@
+---
+title: Dependency Injection
+---
+
+`Dependency Injection` is a design pattern of C#.
+
+When developing a SwiftlyS2 plugin, we strongly recommend you to use `Dependency Injection` to manage your plugin design.
+
+## Example
+
+```csharp
+public override void Load(bool hotReload) {
+  ServiceCollection services = new();
+
+  services
+    .AddSwiftly(Core)
+    .AddSingleton<TestService>();
+
+
+  var provider = services.BuildServiceProvider();
+
+  provider.GetRequiredService<TestService>(); // This execute TestService constructor with dependencies it needs.
+}
+```
+
+For `TestService`:
+
+```csharp
+// TestService.cs
+public class TestService {
+
+  private ISwiftlyCore Core { get; init; }
+
+  public TestService(ISwiftlyCore core, ILogger<TestService> logger, IOptionsMonitor<TestConfig> config) {
+    Core = core;
+    logger.LogInformation("TestService created");
+    logger.LogInformation("Config: {Config}", config.CurrentValue.Age);
+
+    core.Registrator.Register(this);
+  }
+
+
+  [Command("test")]
+  public void TestCommand(ICommandContext context)
+  {
+    Core.NetMessage.Send<CUserMessageShake>(um => {
+      um.Frequency = 1f;
+
+      
+      um.Recipients.AddAllPlayers();
+    });
+    context.Reply("Test command");
+  }
+}
+```
+
+Notice that `ISwiftlyCore` and `ILogger<TestService>` from core are injected through constructor.
+
+For more information, please see [MSLearn](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection).
+
+You will also need to add `Microsoft.Extensions.DependencyInjection` to your plugin.

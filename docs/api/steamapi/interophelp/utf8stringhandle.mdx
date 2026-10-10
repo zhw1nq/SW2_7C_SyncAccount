@@ -1,0 +1,81 @@
+---
+title: InteropHelp.UTF8StringHandle
+---
+
+# Class InteropHelp.UTF8StringHandle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/InteropHelp.cs#L10" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public class InteropHelp.UTF8StringHandle : SafeHandleZeroOrMinusOneIsInvalid, IDisposable
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [CriticalFinalizerObject](https://learn.microsoft.com/dotnet/api/system.runtime.constrainedexecution.criticalfinalizerobject)
+- [SafeHandle](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle)
+- [SafeHandleZeroOrMinusOneIsInvalid](https://learn.microsoft.com/dotnet/api/microsoft.win32.safehandles.safehandlezeroorminusoneisinvalid)
+- [InteropHelp.UTF8StringHandle](/docs/api/steamapi/interophelp/utf8stringhandle)
+
+#### Implements
+
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+#### Inherited Members
+
+- [SafeHandleZeroOrMinusOneIsInvalid.IsInvalid](https://learn.microsoft.com/dotnet/api/microsoft.win32.safehandles.safehandlezeroorminusoneisinvalid.isinvalid)
+- [SafeHandle.handle](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.handle)
+- [SafeHandle.Close()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.close)
+- [SafeHandle.DangerousAddRef(ref bool)](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.dangerousaddref)
+- [SafeHandle.DangerousGetHandle()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.dangerousgethandle)
+- [SafeHandle.DangerousRelease()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.dangerousrelease)
+- [SafeHandle.Dispose()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.dispose#system-runtime-interopservices-safehandle-dispose)
+- [SafeHandle.Dispose(bool)](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.dispose#system-runtime-interopservices-safehandle-dispose(system-boolean))
+- [SafeHandle.ReleaseHandle()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.releasehandle)
+- [SafeHandle.SetHandle(nint)](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.sethandle)
+- [SafeHandle.SetHandleAsInvalid()](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.sethandleasinvalid)
+- [SafeHandle.IsClosed](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.isclosed)
+- [SafeHandle.IsInvalid](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle.isinvalid)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### UTF8StringHandle(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/InteropHelp.cs#L12" />
+
+```csharp
+public UTF8StringHandle(string str)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### ReleaseHandle()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/InteropHelp.cs#L30" />
+
+When overridden in a derived class, executes the code required to free the handle.
+
+```csharp
+protected override bool ReleaseHandle()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the handle is released successfully; otherwise, in the event of a catastrophic failure, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. In this case, it generates a releaseHandleFailed Managed Debugging Assistant.
+

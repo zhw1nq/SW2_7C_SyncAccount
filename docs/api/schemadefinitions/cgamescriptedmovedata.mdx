@@ -1,0 +1,241 @@
+---
+title: CGameScriptedMoveData
+---
+
+# Interface CGameScriptedMoveData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CGameScriptedMoveData : ISchemaClass<CGameScriptedMoveData>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CGameScriptedMoveData\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AccumulatedRootMotion
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L18" />
+
+```csharp
+ref Vector AccumulatedRootMotion { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### AccumulatedRootMotionRotation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L20" />
+
+```csharp
+ref QAngle AccumulatedRootMotionRotation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### Active
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L36" />
+
+```csharp
+ref bool Active { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AngRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L30" />
+
+```csharp
+ref float AngRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Current
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L26" />
+
+```csharp
+ref QAngle Current { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### Dest
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L48" />
+
+```csharp
+ref Vector Dest { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### DestEntity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L52" />
+
+```csharp
+ref CHandle<CBaseEntity> DestEntity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### Dst
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L50" />
+
+```csharp
+ref QAngle Dst { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### Duration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L32" />
+
+```csharp
+ref float Duration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ForcedCrouchState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L44" />
+
+```csharp
+ref ForcedCrouchState_t ForcedCrouchState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ForcedCrouchState_t" typeHref="/docs/api/schemadefinitions/forcedcrouchstate_t" />
+
+### IgnoreCollisions
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L46" />
+
+```csharp
+ref bool IgnoreCollisions { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IgnoreRotation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L40" />
+
+```csharp
+ref bool IgnoreRotation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LockedSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L28" />
+
+```csharp
+ref float LockedSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Src
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L22" />
+
+```csharp
+ref Vector Src { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Src1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L24" />
+
+```csharp
+ref QAngle Src1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### StartTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L34" />
+
+```csharp
+GameTime_t StartTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### Success
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L42" />
+
+```csharp
+ref bool Success { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TeleportOnEnd
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CGameScriptedMoveData.cs#L38" />
+
+```csharp
+ref bool TeleportOnEnd { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

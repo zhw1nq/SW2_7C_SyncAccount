@@ -1,0 +1,271 @@
+---
+title: IConVar
+---
+
+# Interface IConVar
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Convars](/docs/api/convars)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IConVar
+```
+
+## Properties
+
+### DefaultValueAsString
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L45" />
+
+The default value of the convar in string.
+
+[Thrown when the string value can't be parsed.](https://learn.microsoft.com/dotnet/api/system.argumentexception)
+
+```csharp
+string DefaultValueAsString { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L65" />
+
+The flags of the convar.
+
+```csharp
+ConvarFlags Flags { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ConvarFlags" typeHref="/docs/api/convars/convarflags" />
+
+### HasDefaultValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L50" />
+
+Whether the convar has a default value.
+
+```csharp
+bool HasDefaultValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasMaxValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L60" />
+
+Whether the convar has a max value.
+
+```csharp
+bool HasMaxValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasMinValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L55" />
+
+Whether the convar has a min value.
+
+```csharp
+bool HasMinValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HelpText
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L13" />
+
+The help text of the convar.
+
+```csharp
+string HelpText { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### MaxValueAsString
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L31" />
+
+The max value of the convar in string.
+
+[Thrown when the string value can't be parsed.](https://learn.microsoft.com/dotnet/api/system.argumentexception)
+
+```csharp
+string MaxValueAsString { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### MinValueAsString
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L38" />
+
+The min value of the convar in string.
+
+[Thrown when the string value can't be parsed.](https://learn.microsoft.com/dotnet/api/system.argumentexception)
+
+```csharp
+string MinValueAsString { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L8" />
+
+The convar name.
+
+```csharp
+string Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### ValueAsString
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L24" />
+
+The string value of the convar.
+When setting, if the convar can be replicated, it will automatically replicate to all clients.
+Also, setting value with this method will internally put it into a set queue,
+Which means that for some special case ( e.g. setting sv_enablebunnyhopping inside a hook ) it won't work,
+in such cases you should use the SetInternal method instead.
+
+[Thrown when the string value can't be parsed.](https://learn.microsoft.com/dotnet/api/system.argumentexception)
+
+```csharp
+string ValueAsString { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### QueryClient(int, Action\<string\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L86" />
+
+Query the value of the convar from specified client.
+
+```csharp
+void QueryClient(int clientId, Action<string> callback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="clientId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="callback" type="Action&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to execute with the value.
+
+### ReplicateToClientAsString(int, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L79" />
+
+Replicate the value of the convar to specified client.
+
+```csharp
+void ReplicateToClientAsString(int clientId, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="clientId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The client id to replicate to.
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to replicate.
+
+### SetInternalAsString(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L72" />
+
+Internally set the value of the convar.
+Won't replicate the change to clients.
+
+```csharp
+void SetInternalAsString(string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to set.
+
+### TryGetDefaultValueAsString(out string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L93" />
+
+Try to get the default value of the convar.
+
+```csharp
+bool TryGetDefaultValueAsString(out string defaultValue)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="defaultValue" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The default value of the convar.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the default value is found, false otherwise.
+
+### TryGetMaxValueAsString(out string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L107" />
+
+Try to get the max value of the convar.
+
+```csharp
+bool TryGetMaxValueAsString(out string maxValue)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="maxValue" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The max value of the convar.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the max value is found, false otherwise.
+
+### TryGetMinValueAsString(out string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Convars/IConVar.cs#L100" />
+
+Try to get the min value of the convar.
+
+```csharp
+bool TryGetMinValueAsString(out string minValue)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="minValue" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The min value of the convar.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the min value is found, false otherwise.
+

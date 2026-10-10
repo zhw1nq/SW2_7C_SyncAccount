@@ -1,0 +1,735 @@
+---
+title: CVariant
+---
+
+# Struct CVariant
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L138" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct CVariant<TAllocator> : IDisposable where TAllocator : IVariantAllocator
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="TAllocator" />
+
+#### Implements
+
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### CVariant()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L149" />
+
+```csharp
+public CVariant()
+```
+
+### CVariant(object?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L155" />
+
+```csharp
+public CVariant(object? value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="object?" typeHref="https://learn.microsoft.com/dotnet/api/system.object" />
+
+## Fields
+
+### DataType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L143" />
+
+```csharp
+public VariantFieldType DataType
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="VariantFieldType" typeHref="/docs/api/natives/variantfieldtype" />
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L145" />
+
+```csharp
+public CVFlags Flags
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="CVFlags" typeHref="/docs/api/natives/cvflags" />
+
+## Methods
+
+### Dispose()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L670" />
+
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+
+```csharp
+public void Dispose()
+```
+
+### Free()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L594" />
+
+```csharp
+public void Free()
+```
+
+### IsVoid()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L160" />
+
+```csharp
+public readonly bool IsVoid()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Set\<T\>(T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L297" />
+
+```csharp
+public void Set<T>(T value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="T" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### SetBool(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L165" />
+
+```csharp
+public void SetBool(bool value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetChar(char)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L171" />
+
+```csharp
+public void SetChar(char value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="char" typeHref="https://learn.microsoft.com/dotnet/api/system.char" />
+
+### SetColor(Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L290" />
+
+```csharp
+public void SetColor(Color value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Color" typeHref="/docs/api/natives/color" />
+
+### SetDouble(double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L219" />
+
+```csharp
+public void SetDouble(double value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+### SetFloat(float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L213" />
+
+```csharp
+public void SetFloat(float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SetHScript(HSCRIPT)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L237" />
+
+```csharp
+public void SetHScript(HSCRIPT value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="HSCRIPT" typeHref="/docs/api/natives/hscript" />
+
+### SetHandle(ICHandle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L243" />
+
+```csharp
+public void SetHandle(ICHandle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ICHandle" typeHref="/docs/api/natives/ichandle" />
+
+### SetInt(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L189" />
+
+```csharp
+public void SetInt(int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetLong(long)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L201" />
+
+```csharp
+public void SetLong(long value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+### SetQAngle(QAngle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L278" />
+
+```csharp
+public void SetQAngle(QAngle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### SetQuaternion(Quaternion)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L284" />
+
+```csharp
+public void SetQuaternion(Quaternion value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Quaternion" typeHref="/docs/api/natives/quaternion" />
+
+### SetResourceHandle(ResourceHandle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L225" />
+
+```csharp
+public void SetResourceHandle(ResourceHandle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ResourceHandle" typeHref="/docs/api/natives/resourcehandle" />
+
+### SetShort(short)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L177" />
+
+```csharp
+public void SetShort(short value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### SetString(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L249" />
+
+```csharp
+public void SetString(string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetUInt(uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L195" />
+
+```csharp
+public void SetUInt(uint value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### SetULong(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L207" />
+
+```csharp
+public void SetULong(ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### SetUShort(ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L183" />
+
+```csharp
+public void SetUShort(ushort value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### SetUtlStringToken(CUtlStringToken)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L231" />
+
+```csharp
+public void SetUtlStringToken(CUtlStringToken value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="CUtlStringToken" typeHref="/docs/api/natives/cutlstringtoken" />
+
+### SetVector(Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L266" />
+
+```csharp
+public void SetVector(Vector value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector" typeHref="/docs/api/natives/vector" />
+
+### SetVector2D(Vector2D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L260" />
+
+```csharp
+public void SetVector2D(Vector2D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+### SetVector4D(Vector4D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L272" />
+
+```csharp
+public void SetVector4D(Vector4D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector4D" typeHref="/docs/api/natives/vector4d" />
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L505" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override string? ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+
+### TryGetBool(out bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L396" />
+
+```csharp
+public bool TryGetBool(out bool value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetCHandle\<T\>(out CHandle\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L448" />
+
+```csharp
+public bool TryGetCHandle<T>(out CHandle<T> value) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="CHandle&lt;T&gt;" typeHref="/docs/api/natives/chandlet" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### TryGetChar(out char)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L400" />
+
+```csharp
+public bool TryGetChar(out char value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="char" typeHref="https://learn.microsoft.com/dotnet/api/system.char" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetColor(out Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L487" />
+
+```csharp
+public bool TryGetColor(out Color value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Color" typeHref="/docs/api/natives/color" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetDouble(out double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L432" />
+
+```csharp
+public bool TryGetDouble(out double value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetFloat(out float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L428" />
+
+```csharp
+public bool TryGetFloat(out float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetHScript(out HSCRIPT)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L444" />
+
+```csharp
+public bool TryGetHScript(out HSCRIPT value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="HSCRIPT" typeHref="/docs/api/natives/hscript" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetInt16(out short)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L404" />
+
+```csharp
+public bool TryGetInt16(out short value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetInt32(out int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L412" />
+
+```csharp
+public bool TryGetInt32(out int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetInt64(out long)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L420" />
+
+```csharp
+public bool TryGetInt64(out long value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="long" typeHref="https://learn.microsoft.com/dotnet/api/system.int64" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetQAngle(out QAngle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L479" />
+
+```csharp
+public bool TryGetQAngle(out QAngle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetQuaternion(out Quaternion)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L483" />
+
+```csharp
+public bool TryGetQuaternion(out Quaternion value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Quaternion" typeHref="/docs/api/natives/quaternion" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetResourceHandle(out ResourceHandle)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L436" />
+
+```csharp
+public bool TryGetResourceHandle(out ResourceHandle value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ResourceHandle" typeHref="/docs/api/natives/resourcehandle" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetString(out string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L491" />
+
+```csharp
+public bool TryGetString(out string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetUInt16(out ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L408" />
+
+```csharp
+public bool TryGetUInt16(out ushort value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetUInt32(out uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L416" />
+
+```csharp
+public bool TryGetUInt32(out uint value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetUInt64(out ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L424" />
+
+```csharp
+public bool TryGetUInt64(out ulong value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetUtlStringToken(out CUtlStringToken)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L440" />
+
+```csharp
+public bool TryGetUtlStringToken(out CUtlStringToken value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="CUtlStringToken" typeHref="/docs/api/natives/cutlstringtoken" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetVector(out Vector)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L471" />
+
+```csharp
+public bool TryGetVector(out Vector value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector" typeHref="/docs/api/natives/vector" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetVector2D(out Vector2D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L467" />
+
+```csharp
+public bool TryGetVector2D(out Vector2D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TryGetVector4D(out Vector4D)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CVariant.cs#L475" />
+
+```csharp
+public bool TryGetVector4D(out Vector4D value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="Vector4D" typeHref="/docs/api/natives/vector4d" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

@@ -1,0 +1,57 @@
+---
+title: EventTeamScore
+---
+
+# Interface EventTeamScore
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventTeamScore.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "team_score"
+team score changed
+
+```csharp
+public interface EventTeamScore : IGameEvent<EventTeamScore>
+```
+
+#### Implements
+
+- [IGameEvent\<EventTeamScore\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Score
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventTeamScore.cs#L33" />
+
+total team score
+<br />
+type: short
+
+```csharp
+short Score { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### TeamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventTeamScore.cs#L26" />
+
+team id
+<br />
+type: byte
+
+```csharp
+byte TeamID { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+

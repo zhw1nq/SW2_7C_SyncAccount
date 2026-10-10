@@ -1,0 +1,28 @@
+---
+title: IAllocableNativeHandle
+---
+
+# Interface IAllocableNativeHandle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/IAllocableNativeHandle.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Allocated handle from swiftly c++ native side.
+We are using native for now to allocate objects to make use of the hl2sdk and memoverride.\
+
+TODO: Not sure if it's a good idea to have an interface for this, because ideally there shouldn't be any difference 
+between this and the `INativeHandle` from users' perspective, as allocation and destruction should be for internal use only 
+and handled within the core.
+
+```csharp
+public interface IAllocableNativeHandle : INativeHandle, IDisposable
+```
+
+#### Implements
+
+- [INativeHandle](/docs/api/natives/inativehandle)
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+

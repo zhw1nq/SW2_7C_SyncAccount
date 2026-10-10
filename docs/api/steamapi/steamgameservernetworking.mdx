@@ -1,0 +1,619 @@
+---
+title: SteamGameServerNetworking
+---
+
+# Class SteamGameServerNetworking
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class SteamGameServerNetworking
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [SteamGameServerNetworking](/docs/api/steamapi/steamgameservernetworking)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### AcceptP2PSessionWithUser(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L56" />
+
+AcceptP2PSessionWithUser() should only be called in response to a P2PSessionRequest_t callback
+
+P2PSessionRequest_t will be posted if another user tries to send you a packet that you haven't talked to yet
+
+if you don't want to talk to the user, just ignore the request
+
+if the user continues to send you packets, another P2PSessionRequest_t will be posted periodically
+
+this may be called multiple times for a single user
+
+(if you've called SendP2PPacket() on the other user, this implicitly accepts the session request)
+
+```csharp
+public static bool AcceptP2PSessionWithUser(CSteamID steamIDRemote)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AllowP2PPacketRelay(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L99" />
+
+Allow P2P connections to fall back to being relayed through the Steam servers if a direct connection
+
+or NAT-traversal cannot be established. Only applies to connections created after setting this value,
+
+or to existing connections that need to automatically reconnect after this value is set.
+
+P2P packet relay is allowed by default
+
+NOTE: This function is deprecated and may be removed in a future version of the SDK. For
+
+security purposes, we may decide to relay the traffic to certain peers, even if you pass false
+
+to this function, to prevent revealing the client's IP address top another peer.
+
+```csharp
+public static bool AllowP2PPacketRelay(bool bAllow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="bAllow" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CloseP2PChannelWithUser(CSteamID, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L75" />
+
+call CloseP2PChannelWithUser() when you're done talking to a user on a specific channel. Once all channels
+
+open channels to a user have been closed, the open session to the user will be closed and new data from this
+
+user will trigger a P2PSessionRequest_t callback
+
+```csharp
+public static bool CloseP2PChannelWithUser(CSteamID steamIDRemote, int nChannel)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="nChannel" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CloseP2PSessionWithUser(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L65" />
+
+call CloseP2PSessionWithUser() when you're done talking to a user, will free up resources under-the-hood
+
+if the remote user tries to send data to you again, another P2PSessionRequest_t callback will be posted
+
+```csharp
+public static bool CloseP2PSessionWithUser(CSteamID steamIDRemote)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CreateConnectionSocket(SteamIPAddress_t, ushort, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L142" />
+
+```csharp
+public static SNetSocket_t CreateConnectionSocket(SteamIPAddress_t nIP, ushort nPort, int nTimeoutSec)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="nIP" type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+- <ApiParam name="nPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="nTimeoutSec" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+### CreateListenSocket(int, SteamIPAddress_t, ushort, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L126" />
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+LISTEN / CONNECT connection-oriented interface functions
+
+These functions are more like a client-server TCP API. One side is the "server"
+
+and "listens" for incoming connections, which then must be "accepted." The "client"
+
+initiates a connection by "connecting." Sending and receiving is done through a
+
+connection handle.
+
+For a more UDP-style interface, where you do not track connection handles but
+
+simply send messages to a SteamID, use the UDP-style functions above.
+
+Both methods can send both reliable and unreliable methods.
+
+These APIs are deprecated, and may be removed in a future version of the Steamworks
+
+SDK. See ISteamNetworkingSockets.
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+creates a socket and listens others to connect
+
+will trigger a SocketStatusCallback_t callback on another client connecting
+
+nVirtualP2PPort is the unique ID that the client will connect to, in case you have multiple ports
+
+this can usually just be 0 unless you want multiple sets of connections
+
+unIP is the local IP address to bind to
+
+pass in 0 if you just want the default local IP
+
+unPort is the port to use
+
+pass in 0 if you don't want users to be able to connect via IP/Port, but expect to be always peer-to-peer connections only
+
+```csharp
+public static SNetListenSocket_t CreateListenSocket(int nVirtualP2PPort, SteamIPAddress_t nIP, ushort nPort, bool bAllowUseOfPacketRelay)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="nVirtualP2PPort" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="nIP" type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+- <ApiParam name="nPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="bAllowUseOfPacketRelay" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SNetListenSocket_t" typeHref="/docs/api/steamapi/snetlistensocket_t" />
+
+### CreateP2PConnectionSocket(CSteamID, int, int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L137" />
+
+creates a socket and begin connection to a remote destination
+
+can connect via a known steamID (client or game server), or directly to an IP
+
+on success will trigger a SocketStatusCallback_t callback
+
+on failure or timeout will trigger a SocketStatusCallback_t callback with a failure code in m_eSNetSocketState
+
+```csharp
+public static SNetSocket_t CreateP2PConnectionSocket(CSteamID steamIDTarget, int nVirtualPort, int nTimeoutSec, bool bAllowUseOfPacketRelay)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDTarget" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="nVirtualPort" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="nTimeoutSec" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="bAllowUseOfPacketRelay" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+### DestroyListenSocket(SNetListenSocket_t, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L160" />
+
+destroying a listen socket will automatically kill all the regular sockets generated from it
+
+```csharp
+public static bool DestroyListenSocket(SNetListenSocket_t hSocket, bool bNotifyRemoteEnd)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetListenSocket_t" typeHref="/docs/api/steamapi/snetlistensocket_t" />
+- <ApiParam name="bNotifyRemoteEnd" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestroySocket(SNetSocket_t, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L152" />
+
+disconnects the connection to the socket, if any, and invalidates the handle
+
+any unread data on the socket will be thrown away
+
+if bNotifyRemoteEnd is set, socket will not be completely destroyed until the remote end acknowledges the disconnect
+
+```csharp
+public static bool DestroySocket(SNetSocket_t hSocket, bool bNotifyRemoteEnd)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+- <ApiParam name="bNotifyRemoteEnd" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetListenSocketInfo(SNetListenSocket_t, out SteamIPAddress_t, out ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L234" />
+
+returns which local port the listen socket is bound to
+
+*pnIP and *pnPort will be 0 if the socket is set to listen for P2P connections only
+
+```csharp
+public static bool GetListenSocketInfo(SNetListenSocket_t hListenSocket, out SteamIPAddress_t pnIP, out ushort pnPort)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hListenSocket" type="SNetListenSocket_t" typeHref="/docs/api/steamapi/snetlistensocket_t" />
+- <ApiParam name="pnIP" type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+- <ApiParam name="pnPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetMaxPacketSize(SNetSocket_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L250" />
+
+max packet size, in bytes
+
+```csharp
+public static int GetMaxPacketSize(SNetSocket_t hSocket)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetP2PSessionState(CSteamID, out P2PSessionState_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L85" />
+
+fills out P2PSessionState_t structure with details about the underlying connection to the user
+
+should only needed for debugging purposes
+
+returns false if no connection exists to the specified user
+
+```csharp
+public static bool GetP2PSessionState(CSteamID steamIDRemote, out P2PSessionState_t pConnectionState)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pConnectionState" type="P2PSessionState_t" typeHref="/docs/api/steamapi/p2psessionstate_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetSocketConnectionType(SNetSocket_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L242" />
+
+returns true to describe how the socket ended up connecting
+
+```csharp
+public static ESNetSocketConnectionType GetSocketConnectionType(SNetSocket_t hSocket)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ESNetSocketConnectionType" typeHref="/docs/api/steamapi/esnetsocketconnectiontype" />
+
+### GetSocketInfo(SNetSocket_t, out CSteamID, out int, out SteamIPAddress_t, out ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L225" />
+
+returns information about the specified socket, filling out the contents of the pointers
+
+```csharp
+public static bool GetSocketInfo(SNetSocket_t hSocket, out CSteamID pSteamIDRemote, out int peSocketStatus, out SteamIPAddress_t punIPRemote, out ushort punPortRemote)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+- <ApiParam name="pSteamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="peSocketStatus" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="punIPRemote" type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+- <ApiParam name="punPortRemote" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsDataAvailable(SNetListenSocket_t, out uint, out SNetSocket_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L204" />
+
+checks for data from any socket that has been connected off this listen socket
+
+returns false if there is no data remaining
+
+fills out *pcubMsgSize with the size of the next message, in bytes
+
+fills out *phSocket with the socket that data is available on
+
+```csharp
+public static bool IsDataAvailable(SNetListenSocket_t hListenSocket, out uint pcubMsgSize, out SNetSocket_t phSocket)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hListenSocket" type="SNetListenSocket_t" typeHref="/docs/api/steamapi/snetlistensocket_t" />
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="phSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsDataAvailableOnSocket(SNetSocket_t, out uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L182" />
+
+receiving data
+
+returns false if there is no data remaining
+
+fills out *pcubMsgSize with the size of the next message, in bytes
+
+```csharp
+public static bool IsDataAvailableOnSocket(SNetSocket_t hSocket, out uint pcubMsgSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsP2PPacketAvailable(out uint, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L32" />
+
+returns true if any data is available for read, and the amount of data that will need to be read
+
+```csharp
+public static bool IsP2PPacketAvailable(out uint pcubMsgSize, int nChannel = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="nChannel" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ReadP2PPacket(byte[], uint, out uint, out CSteamID, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L43" />
+
+reads in a packet that has been sent from another user via SendP2PPacket()
+
+returns the size of the message and the steamID of the user who sent it in the last two parameters
+
+if the buffer passed in is too small, the message will be truncated
+
+this call is not blocking, and will return false if no data is available
+
+```csharp
+public static bool ReadP2PPacket(byte[] pubDest, uint cubDest, out uint pcubMsgSize, out CSteamID psteamIDRemote, int nChannel = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pubDest" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubDest" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="psteamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="nChannel" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RetrieveData(SNetListenSocket_t, byte[], uint, out uint, out SNetSocket_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L217" />
+
+retrieves data from any socket that has been connected off this listen socket
+
+fills in pubDest with the contents of the message
+
+messages are always complete, of the same size as was sent (i.e. packetized, not streaming)
+
+if *pcubMsgSize < cubDest, only partial data is written
+
+returns false if no data is available
+
+fills out *phSocket with the socket that data is available on
+
+```csharp
+public static bool RetrieveData(SNetListenSocket_t hListenSocket, byte[] pubDest, uint cubDest, out uint pcubMsgSize, out SNetSocket_t phSocket)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hListenSocket" type="SNetListenSocket_t" typeHref="/docs/api/steamapi/snetlistensocket_t" />
+- <ApiParam name="pubDest" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubDest" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="phSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RetrieveDataFromSocket(SNetSocket_t, byte[], uint, out uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L193" />
+
+fills in pubDest with the contents of the message
+
+messages are always complete, of the same size as was sent (i.e. packetized, not streaming)
+
+if *pcubMsgSize < cubDest, only partial data is written
+
+returns false if no data is available
+
+```csharp
+public static bool RetrieveDataFromSocket(SNetSocket_t hSocket, byte[] pubDest, uint cubDest, out uint pcubMsgSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+- <ApiParam name="pubDest" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubDest" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pcubMsgSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SendDataOnSocket(SNetSocket_t, byte[], uint, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L172" />
+
+sending data
+
+must be a handle to a connected socket
+
+data is all sent via UDP, and thus send sizes are limited to 1200 bytes; after this, many routers will start dropping packets
+
+use the reliable flag with caution; although the resend rate is pretty aggressive,
+
+it can still cause stalls in receiving data (like TCP)
+
+```csharp
+public static bool SendDataOnSocket(SNetSocket_t hSocket, byte[] pubData, uint cubData, bool bReliable)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hSocket" type="SNetSocket_t" typeHref="/docs/api/steamapi/snetsocket_t" />
+- <ApiParam name="pubData" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubData" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="bReliable" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SendP2PPacket(CSteamID, byte[], uint, EP2PSend, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameservernetworking.cs#L24" />
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+UDP-style (connectionless) networking interface. These functions send messages using
+
+an API organized around the destination. Reliable and unreliable messages are supported.
+
+For a more TCP-style interface (meaning you have a connection handle), see the functions below.
+
+Both interface styles can send both reliable and unreliable messages.
+
+Automatically establishes NAT-traversing or Relay server connections
+
+These APIs are deprecated, and may be removed in a future version of the Steamworks
+
+SDK. See ISteamNetworkingMessages.
+
+Sends a P2P packet to the specified user
+
+UDP-like, unreliable and a max packet size of 1200 bytes
+
+the first packet send may be delayed as the NAT-traversal code runs
+
+if we can't get through to the user, an error will be posted via the callback P2PSessionConnectFail_t
+
+see EP2PSend enum above for the descriptions of the different ways of sending packets
+
+nChannel is a routing number you can use to help route message to different systems - you'll have to call ReadP2PPacket()
+
+with the same channel number in order to retrieve the data on the other end
+
+using different channels to talk to the same user will still use the same underlying p2p connection, saving on resources
+
+```csharp
+public static bool SendP2PPacket(CSteamID steamIDRemote, byte[] pubData, uint cubData, EP2PSend eP2PSendType, int nChannel = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDRemote" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pubData" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubData" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="eP2PSendType" type="EP2PSend" typeHref="/docs/api/steamapi/ep2psend" />
+- <ApiParam name="nChannel" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

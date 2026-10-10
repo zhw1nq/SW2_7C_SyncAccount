@@ -1,0 +1,73 @@
+---
+title: CInButtonState
+---
+
+# Interface CInButtonState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CInButtonState.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CInButtonState : ISchemaClass<CInButtonState>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CInButtonState\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ButtonChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CInButtonState.cs#L9" />
+
+```csharp
+GameButtonFlags ButtonChanged { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameButtonFlags" typeHref="/docs/api/events/gamebuttonflags" />
+
+### ButtonPressed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CInButtonState.cs#L7" />
+
+```csharp
+GameButtonFlags ButtonPressed { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameButtonFlags" typeHref="/docs/api/events/gamebuttonflags" />
+
+### ButtonScroll
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CInButtonState.cs#L11" />
+
+```csharp
+GameButtonFlags ButtonScroll { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameButtonFlags" typeHref="/docs/api/events/gamebuttonflags" />
+
+### ButtonStates
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CInButtonState.cs#L18" />
+
+```csharp
+ISchemaFixedArray<ulong> ButtonStates { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;ulong&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+

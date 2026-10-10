@@ -1,0 +1,205 @@
+---
+title: PostProcessingResource_t
+---
+
+# Interface PostProcessingResource_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface PostProcessingResource_t : ISchemaClass<PostProcessingResource_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<PostProcessingResource_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BloomParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L24" />
+
+```csharp
+PostProcessingBloomParameters_t BloomParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingBloomParameters_t" typeHref="/docs/api/schemadefinitions/postprocessingbloomparameters_t" />
+
+### ColorCorrectionVolumeData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L36" />
+
+```csharp
+ref CUtlBinaryBlock ColorCorrectionVolumeData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlBinaryBlock" typeHref="/docs/api/natives/cutlbinaryblock" />
+
+### ColorCorrectionVolumeDim
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L34" />
+
+```csharp
+ref int ColorCorrectionVolumeDim { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### FogScatteringParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L42" />
+
+```csharp
+PostProcessingFogScatteringParameters_t FogScatteringParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingFogScatteringParameters_t" typeHref="/docs/api/schemadefinitions/postprocessingfogscatteringparameters_t" />
+
+### HasBloomParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L22" />
+
+```csharp
+ref bool HasBloomParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasColorCorrection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L38" />
+
+```csharp
+ref bool HasColorCorrection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasFogScatteringParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L40" />
+
+```csharp
+ref bool HasFogScatteringParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasLocalContrastParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L30" />
+
+```csharp
+ref bool HasLocalContrastParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasLocalExposureParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L44" />
+
+```csharp
+ref bool HasLocalExposureParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasTonemapParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L18" />
+
+```csharp
+ref bool HasTonemapParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasVignetteParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L26" />
+
+```csharp
+ref bool HasVignetteParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LocalConstrastParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L32" />
+
+```csharp
+PostProcessingLocalContrastParameters_t LocalConstrastParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingLocalContrastParameters_t" typeHref="/docs/api/schemadefinitions/postprocessinglocalcontrastparameters_t" />
+
+### LocalExposureParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L46" />
+
+```csharp
+PostProcessingLocalExposureParameters_t LocalExposureParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingLocalExposureParameters_t" typeHref="/docs/api/schemadefinitions/postprocessinglocalexposureparameters_t" />
+
+### ToneMapParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L20" />
+
+```csharp
+PostProcessingTonemapParameters_t ToneMapParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingTonemapParameters_t" typeHref="/docs/api/schemadefinitions/postprocessingtonemapparameters_t" />
+
+### VignetteParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PostProcessingResource_t.cs#L28" />
+
+```csharp
+PostProcessingVignetteParameters_t VignetteParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PostProcessingVignetteParameters_t" typeHref="/docs/api/schemadefinitions/postprocessingvignetteparameters_t" />
+

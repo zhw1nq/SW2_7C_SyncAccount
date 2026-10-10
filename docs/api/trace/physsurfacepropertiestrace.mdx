@@ -1,0 +1,189 @@
+---
+title: PhysSurfacePropertiesTrace
+---
+
+# Class PhysSurfacePropertiesTrace
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L146" />
+
+**Namespace**: [SwiftlyS2.Shared.Trace](/docs/api/trace)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public class PhysSurfacePropertiesTrace
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [PhysSurfacePropertiesTrace](/docs/api/trace/physsurfacepropertiestrace)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Properties
+
+### AudioParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L187" />
+
+The audio processing parameters for this surface.
+
+```csharp
+public PhysSurfacePropertiesAudioTrace? AudioParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PhysSurfacePropertiesAudioTrace?" typeHref="/docs/api/trace/physsurfacepropertiesaudiotrace" />
+
+### AudioSounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L183" />
+
+The sound names associated with interactions on this surface.
+
+```csharp
+public PhysSurfacePropertiesSoundNamesTrace? AudioSounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PhysSurfacePropertiesSoundNamesTrace?" typeHref="/docs/api/trace/physsurfacepropertiessoundnamestrace" />
+
+### BaseListIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L167" />
+
+The index of the base surface in the material list.
+
+```csharp
+public int BaseListIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### BaseNameHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L159" />
+
+The hashed value of the base surface name this surface is derived from.
+
+```csharp
+public uint BaseNameHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### Description
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L175" />
+
+The description of this surface and its properties.
+
+```csharp
+public string Description { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Hidden
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L171" />
+
+Indicates whether this surface is hidden or internal.
+
+```csharp
+public bool Hidden { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ListIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L163" />
+
+The index of this surface in the material list.
+
+```csharp
+public int ListIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L151" />
+
+The name of the surface.
+
+```csharp
+public string Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### NameHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L155" />
+
+The hashed value of the surface name for faster lookup.
+
+```csharp
+public uint NameHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### Physics
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L179" />
+
+The physics properties of this surface.
+
+```csharp
+public PhysSurfacePropertiesPhysicsTrace? Physics { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PhysSurfacePropertiesPhysicsTrace?" typeHref="/docs/api/trace/physsurfacepropertiesphysicstrace" />
+
+## Methods
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultPhysics.cs#L189" />
+
+Returns a string that represents the current object.
+
+```csharp
+public override string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — A string that represents the current object.
+

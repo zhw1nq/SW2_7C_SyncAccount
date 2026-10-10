@@ -1,0 +1,109 @@
+---
+title: CSceneObjectData
+---
+
+# Interface CSceneObjectData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSceneObjectData : ISchemaClass<CSceneObjectData>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSceneObjectData\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### DrawBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L24" />
+
+```csharp
+ref CUtlLeanVector<AABB_t, int> DrawBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;AABB_t, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### DrawCalls
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L22" />
+
+```csharp
+ref CUtlLeanVector<CMaterialDrawDescriptor, int> DrawCalls { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CMaterialDrawDescriptor, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### MaxBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L20" />
+
+```csharp
+ref Vector MaxBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Meshlets
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L26" />
+
+```csharp
+ref CUtlLeanVector<CMeshletDescriptor, int> Meshlets { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CMeshletDescriptor, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### MinBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L18" />
+
+```csharp
+ref Vector MinBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### RtProxyDrawCalls
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L28" />
+
+```csharp
+ref CUtlLeanVector<CSceneObjectData__RTProxyDrawDescriptor_t, int> RtProxyDrawCalls { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CSceneObjectData__RTProxyDrawDescriptor_t, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### TintColor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSceneObjectData.cs#L30" />
+
+```csharp
+ref Vector4D TintColor { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector4D" typeHref="/docs/api/natives/vector4d" />
+

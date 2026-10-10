@@ -1,0 +1,185 @@
+---
+title: CFollowPathUpdateNode
+---
+
+# Interface CFollowPathUpdateNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CFollowPathUpdateNode : CUnaryUpdateNode, CAnimUpdateNodeBase, ISchemaClass<CAnimUpdateNodeBase>, ISchemaClass<CUnaryUpdateNode>, ISchemaClass<CFollowPathUpdateNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CUnaryUpdateNode](/docs/api/schemadefinitions/cunaryupdatenode)
+- [CAnimUpdateNodeBase](/docs/api/schemadefinitions/canimupdatenodebase)
+- [ISchemaClass\<CAnimUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CUnaryUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CFollowPathUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendOutTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L18" />
+
+```csharp
+ref float BlendOutTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### BlockNonPathMovement
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L20" />
+
+```csharp
+ref bool BlockNonPathMovement { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### FacingTarget
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L36" />
+
+```csharp
+ref AnimValueSource FacingTarget { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimValueSource" typeHref="/docs/api/schemadefinitions/animvaluesource" />
+
+### MaxAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L30" />
+
+```csharp
+ref float MaxAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L28" />
+
+```csharp
+ref float MinAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Param
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L38" />
+
+```csharp
+CAnimParamHandle Param { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### Scale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L26" />
+
+```csharp
+ref float Scale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ScaleSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L24" />
+
+```csharp
+ref bool ScaleSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SpeedScaleBlending
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L32" />
+
+```csharp
+ref float SpeedScaleBlending { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### StopFeetAtGoal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L22" />
+
+```csharp
+ref bool StopFeetAtGoal { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TurnDamping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L34" />
+
+```csharp
+CAnimInputDamping TurnDamping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### TurnToFace
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L42" />
+
+```csharp
+ref bool TurnToFace { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TurnToFaceOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CFollowPathUpdateNode.cs#L40" />
+
+```csharp
+ref float TurnToFaceOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

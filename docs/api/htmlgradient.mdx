@@ -1,0 +1,152 @@
+---
+title: HtmlGradient
+---
+
+# Class HtmlGradient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared](/docs/api)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Provides utility methods for generating HTML text with gradient color effects.
+
+```csharp
+public static class HtmlGradient
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [HtmlGradient](/docs/api/htmlgradient)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### GenerateGradientText(string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L15" />
+
+Generates gradient colored text by interpolating between two colors.
+
+```csharp
+public static string GenerateGradientText(string text, string startColor, string endColor)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="startColor" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The starting color in hex format (e.g., "#FF0000").
+- <ApiParam name="endColor" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ending color in hex format (e.g., "#0000FF").
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+
+### GenerateGradientText(string, params string[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L42" />
+
+Generates gradient colored text by interpolating across multiple color stops.
+
+```csharp
+public static string GenerateGradientText(string text, params string[] colors)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="colors" type="string[]" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Array of color stops in hex format (e.g., "#FF0000", "#00FF00", "#0000FF").
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+
+### GenerateGradientText(string, Color, Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L56" />
+
+Generates gradient colored text by interpolating between two SwiftlyS2 native colors.
+
+```csharp
+public static string GenerateGradientText(string text, Color startColor, Color endColor)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="startColor" type="Color" typeHref="/docs/api/natives/color" /> — The starting SwiftlyS2 native color.
+- <ApiParam name="endColor" type="Color" typeHref="/docs/api/natives/color" /> — The ending SwiftlyS2 native color.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+
+### GenerateGradientText(string, Color, Color)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L68" />
+
+Generates gradient colored text by interpolating between two System.Drawing colors.
+
+```csharp
+public static string GenerateGradientText(string text, Color startColor, Color endColor)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="startColor" type="Color" typeHref="https://learn.microsoft.com/dotnet/api/system.drawing.color" /> — The starting System.Drawing color.
+- <ApiParam name="endColor" type="Color" typeHref="https://learn.microsoft.com/dotnet/api/system.drawing.color" /> — The ending System.Drawing color.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+
+### GenerateGradientText(string, params Color[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L79" />
+
+Generates gradient colored text by interpolating across multiple SwiftlyS2 native color stops.
+
+```csharp
+public static string GenerateGradientText(string text, params Color[] colors)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="colors" type="Color[]" typeHref="/docs/api/natives/color" /> — Array of SwiftlyS2 native color stops.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+
+### GenerateGradientText(string, params Color[])
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/HtmlGradient.cs#L90" />
+
+Generates gradient colored text by interpolating across multiple System.Drawing color stops.
+
+```csharp
+public static string GenerateGradientText(string text, params Color[] colors)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The plain text to apply gradient to. Must not contain any HTML tags.
+- <ApiParam name="colors" type="Color[]" typeHref="https://learn.microsoft.com/dotnet/api/system.drawing.color" /> — Array of System.Drawing color stops.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — HTML string with each character wrapped in a colored font tag.
+

@@ -1,0 +1,185 @@
+---
+title: COrientationWarpUpdateNode
+---
+
+# Interface COrientationWarpUpdateNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface COrientationWarpUpdateNode : CUnaryUpdateNode, CAnimUpdateNodeBase, ISchemaClass<CAnimUpdateNodeBase>, ISchemaClass<CUnaryUpdateNode>, ISchemaClass<COrientationWarpUpdateNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CUnaryUpdateNode](/docs/api/schemadefinitions/cunaryupdatenode)
+- [CAnimUpdateNodeBase](/docs/api/schemadefinitions/canimupdatenodebase)
+- [ISchemaClass\<CAnimUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CUnaryUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<COrientationWarpUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Damping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L32" />
+
+```csharp
+CAnimInputDamping Damping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### EnablePreferredRotationDirection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L38" />
+
+```csharp
+ref bool EnablePreferredRotationDirection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### FallbackTargetPositionParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L24" />
+
+```csharp
+CAnimParamHandle FallbackTargetPositionParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### MaxRootMotionScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L36" />
+
+```csharp
+ref float MaxRootMotionScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Mode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L18" />
+
+```csharp
+ref OrientationWarpMode_t Mode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="OrientationWarpMode_t" typeHref="/docs/api/schemadefinitions/orientationwarpmode_t" />
+
+### PreferredRotationDirection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L40" />
+
+```csharp
+ref AnimValueSource PreferredRotationDirection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimValueSource" typeHref="/docs/api/schemadefinitions/animvaluesource" />
+
+### PreferredRotationThreshold
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L42" />
+
+```csharp
+ref float PreferredRotationThreshold { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### RootMotionSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L34" />
+
+```csharp
+ref OrientationWarpRootMotionSource_t RootMotionSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="OrientationWarpRootMotionSource_t" typeHref="/docs/api/schemadefinitions/orientationwarprootmotionsource_t" />
+
+### TargetOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L28" />
+
+```csharp
+ref float TargetOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TargetOffsetMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L26" />
+
+```csharp
+ref OrientationWarpTargetOffsetMode_t TargetOffsetMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="OrientationWarpTargetOffsetMode_t" typeHref="/docs/api/schemadefinitions/orientationwarptargetoffsetmode_t" />
+
+### TargetOffsetParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L30" />
+
+```csharp
+CAnimParamHandle TargetOffsetParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### TargetParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L20" />
+
+```csharp
+CAnimParamHandle TargetParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### TargetPositionParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/COrientationWarpUpdateNode.cs#L22" />
+
+```csharp
+CAnimParamHandle TargetPositionParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+

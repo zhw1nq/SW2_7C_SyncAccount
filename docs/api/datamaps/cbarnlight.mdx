@@ -1,0 +1,103 @@
+---
+title: CBarnLight
+---
+
+# CBarnLight
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `enabled` | `m_bEnabled` | `FIELD_BOOLEAN` |
+| `precomputed_vis_clusters` | `m_VisClusters` | `FIELD_CUSTOM` |
+| `colormode` | `m_nColorMode` | `FIELD_INT32` |
+| `color` | `m_Color` | `FIELD_COLOR32` |
+| `colortemperature` | `m_flColorTemperature` | `FIELD_FLOAT32` |
+| `brightness` | `m_flBrightness` | `FIELD_FLOAT32` |
+| `brightnessscale` | `m_flBrightnessScale` | `FIELD_FLOAT32` |
+| `directlight` | `m_nDirectLight` | `FIELD_INT32` |
+| `bakedshadowindex` | `m_nBakedShadowIndex` | `FIELD_INT32` |
+| `light_path_uniqueid` | `m_nLightPathUniqueId` | `FIELD_INT32` |
+| `light_map_uniqueid` | `m_nLightMapUniqueId` | `FIELD_INT32` |
+| `luminaire_shape` | `m_nLuminaireShape` | `FIELD_INT32` |
+| `luminaire_size` | `m_flLuminaireSize` | `FIELD_FLOAT32` |
+| `luminaire_anisotropy` | `m_flLuminaireAnisotropy` | `FIELD_FLOAT32` |
+| `light_style` | `m_LightStyleString` | `FIELD_UTLSTRING` |
+| `OnStyleEvent%u` | `m_StyleEvent` | `FIELD_CUSTOM` |
+| `lightcookie` | `m_hLightCookie` | `FIELD_HRENDERTEXTURE` |
+| `shape` | `m_flShape` | `FIELD_FLOAT32` |
+| `soft_x` | `m_flSoftX` | `FIELD_FLOAT32` |
+| `soft_y` | `m_flSoftY` | `FIELD_FLOAT32` |
+| `skirt` | `m_flSkirt` | `FIELD_FLOAT32` |
+| `skirt_near` | `m_flSkirtNear` | `FIELD_FLOAT32` |
+| `size_params` | `m_vSizeParams` | `FIELD_VECTOR` |
+| `range` | `m_flRange` | `FIELD_FLOAT32` |
+| `shear` | `m_vShear` | `FIELD_VECTOR` |
+| `bakespeculartocubemaps` | `m_nBakeSpecularToCubemaps` | `FIELD_INT32` |
+| `bakespeculartocubemaps_size` | `m_vBakeSpecularToCubemapsSize` | `FIELD_VECTOR` |
+| `castshadows` | `m_nCastShadows` | `FIELD_INT32` |
+| `shadowmapsize` | `m_nShadowMapSize` | `FIELD_INT32` |
+| `shadowpriority` | `m_nShadowPriority` | `FIELD_INT32` |
+| `contactshadow` | `m_bContactShadow` | `FIELD_BOOLEAN` |
+| `dynamicbounce` | `m_bDynamicBounce` | `FIELD_BOOLEAN` |
+| `forceshadowsenabled` | `m_bForceShadowsEnabled` | `FIELD_BOOLEAN` |
+| `bouncelight` | `m_nBounceLight` | `FIELD_INT32` |
+| `bouncescale` | `m_flBounceScale` | `FIELD_FLOAT32` |
+| `minroughness` | `m_flMinRoughness` | `FIELD_FLOAT32` |
+| `altcolor` | `m_vAlternateColor` | `FIELD_VECTOR` |
+| `altcolorbrightness` | `m_fAlternateColorBrightness` | `FIELD_FLOAT32` |
+| `fog` | `m_nFog` | `FIELD_INT32` |
+| `fogstrength` | `m_flFogStrength` | `FIELD_FLOAT32` |
+| `fogscale` | `m_flFogScale` | `FIELD_FLOAT32` |
+| `fogshadows` | `m_nFogShadows` | `FIELD_INT32` |
+| `fogmixedshadows` | `m_bFogMixedShadows` | `FIELD_BOOLEAN` |
+| `fade_size_start` | `m_flFadeSizeStart` | `FIELD_FLOAT32` |
+| `fade_size_end` | `m_flFadeSizeEnd` | `FIELD_FLOAT32` |
+| `shadowfade_size_start` | `m_flShadowFadeSizeStart` | `FIELD_FLOAT32` |
+| `shadowfade_size_end` | `m_flShadowFadeSizeEnd` | `FIELD_FLOAT32` |
+| `precomputedfieldsvalid` | `m_bPrecomputedFieldsValid` | `FIELD_BOOLEAN` |
+| `precomputedboundsmins` | `m_vPrecomputedBoundsMins` | `FIELD_POSITION_VECTOR` |
+| `precomputedboundsmaxs` | `m_vPrecomputedBoundsMaxs` | `FIELD_POSITION_VECTOR` |
+| `precomputedobborigin` | `m_vPrecomputedOBBOrigin` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles` | `m_vPrecomputedOBBAngles` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent` | `m_vPrecomputedOBBExtent` | `FIELD_VECTOR` |
+| `precomputedsubfrusta` | `m_nPrecomputedSubFrusta` | `FIELD_INT32` |
+| `precomputedobborigin0` | `m_vPrecomputedOBBOrigin0` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles0` | `m_vPrecomputedOBBAngles0` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent0` | `m_vPrecomputedOBBExtent0` | `FIELD_VECTOR` |
+| `precomputedobborigin1` | `m_vPrecomputedOBBOrigin1` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles1` | `m_vPrecomputedOBBAngles1` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent1` | `m_vPrecomputedOBBExtent1` | `FIELD_VECTOR` |
+| `precomputedobborigin2` | `m_vPrecomputedOBBOrigin2` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles2` | `m_vPrecomputedOBBAngles2` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent2` | `m_vPrecomputedOBBExtent2` | `FIELD_VECTOR` |
+| `precomputedobborigin3` | `m_vPrecomputedOBBOrigin3` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles3` | `m_vPrecomputedOBBAngles3` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent3` | `m_vPrecomputedOBBExtent3` | `FIELD_VECTOR` |
+| `precomputedobborigin4` | `m_vPrecomputedOBBOrigin4` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles4` | `m_vPrecomputedOBBAngles4` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent4` | `m_vPrecomputedOBBExtent4` | `FIELD_VECTOR` |
+| `precomputedobborigin5` | `m_vPrecomputedOBBOrigin5` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles5` | `m_vPrecomputedOBBAngles5` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent5` | `m_vPrecomputedOBBExtent5` | `FIELD_VECTOR` |
+| `pvs_modify_entity` | `m_bPvsModifyEntity` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `CastDynamicShadows` | `FIELD_BOOLEAN` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBarnLightThink_SetNextQueuedLightStyle` |
+| `CBarnLightThink_ApplyLightStylesToTargets` |
+| `CBarnLightThink_LightStyleEvent` |

@@ -1,0 +1,279 @@
+---
+title: Convars
+---
+
+SwiftlyS2 provides a complete convar system that allows you to create convars, find existing game convars, replicate values to clients, and query client-side values.
+
+## Accessing Convar Service
+
+The convar service is available through `Core.ConVar`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    var convarService = Core.ConVar;
+}
+```
+
+## Supported Generic Types
+
+The generic parameter `T` used by `IConVar&lt;T&gt;`, `Create&lt;T&gt;`, `CreateOrFind&lt;T&gt;`, and `Find&lt;T&gt;` supports these types:
+
+- `bool`
+- `short`
+- `ushort`
+- `int`
+- `uint`
+- `long`
+- `ulong`
+- `float`
+- `double`
+- `Color`
+- `QAngle`
+- `Vector`
+- `Vector2D`
+- `Vector4D`
+- `string`
+
+## Creating Convars
+
+Convars can be created with a default value, or with min/max limits for unmanaged numeric-like types.
+
+### Basic Create
+
+```c#
+IConVar<bool> enabled = Core.ConVar.Create(
+    "sw_plugin_enabled",
+    "Enable or disable the plugin.",
+    true,
+    ConvarFlags.NONE
+);
+```
+
+The `Create` function signature is:
+
+```c#
+IConVar&lt;T&gt; Create&lt;T&gt;(string name, string helpMessage, T defaultValue, ConvarFlags flags = ConvarFlags.NONE)
+```
+
+### Create with Min/Max
+
+```c#
+IConVar<int> maxBots = Core.ConVar.Create(
+    "sw_plugin_max_bots",
+    "Maximum amount of bots allowed.",
+    6,
+    0,
+    20,
+    ConvarFlags.NONE
+);
+```
+
+The min/max overload signature is:
+
+```c#
+IConVar&lt;T&gt; Create&lt;T&gt;(string name, string helpMessage, T defaultValue, T? minValue, T? maxValue, ConvarFlags flags = ConvarFlags.NONE)
+    where T : unmanaged
+```
+
+## Create Or Find
+
+If you want to avoid duplicate registration errors, use `CreateOrFind`.
+
+```c#
+IConVar<bool> feature = Core.ConVar.CreateOrFind(
+    "sw_plugin_feature",
+    "Enable feature X.",
+    true,
+    ConvarFlags.NONE
+);
+```
+
+It also supports the min/max overload:
+
+```c#
+IConVar&lt;T&gt; CreateOrFind&lt;T&gt;(string name, string helpMessage, T defaultValue, T? minValue, T? maxValue, ConvarFlags flags = ConvarFlags.NONE)
+    where T : unmanaged
+```
+
+## Finding Existing Convars
+
+### Typed Find
+
+Use `Find&lt;T&gt;` when you know the convar type.
+
+```c#
+IConVar<bool>? cheats = Core.ConVar.Find<bool>("sv_cheats");
+
+if (cheats == null)
+{
+    Console.WriteLine("sv_cheats was not found.");
+}
+```
+
+### Find as String
+
+Use `FindAsString` when you only need string-level access.
+
+```c#
+IConVar? hostname = Core.ConVar.FindAsString("hostname");
+
+if (hostname != null)
+{
+    Console.WriteLine($"hostname = {hostname.ValueAsString}");
+}
+```
+
+## Working with IConVar&lt;T&gt;
+
+### Setting and Getting Values
+
+```c#
+enabled.Value = false;
+Console.WriteLine(enabled.Value);
+```
+
+### Setting Value Internally
+
+Setting `Value` goes through the normal set queue. In special cases where you need an immediate internal change, use `SetInternal`.
+
+```c#
+enabled.SetInternal(true);
+```
+
+### Replicate to a Specific Client
+
+```c#
+enabled.ReplicateToClient(0, true);
+```
+
+### Query Value from a Client
+
+```c#
+enabled.QueryClient(0, valueAsString =>
+{
+    Console.WriteLine($"Client replied with: {valueAsString}");
+});
+```
+
+### Reading Min/Max/Default Safely
+
+```c#
+if (maxBots.TryGetMinValue(out var min))
+{
+    Console.WriteLine($"Min value: {min}");
+}
+
+if (maxBots.TryGetMaxValue(out var max))
+{
+    Console.WriteLine($"Max value: {max}");
+}
+
+if (maxBots.TryGetDefaultValue(out var defaultValue))
+{
+    Console.WriteLine($"Default value: {defaultValue}");
+}
+```
+
+## Working with IConVar (String API)
+
+When you do not have or do not want a generic type, use `IConVar` members like `ValueAsString` and `SetInternalAsString`.
+
+```c#
+IConVar? anyConvar = Core.ConVar.FindAsString("sv_cheats");
+
+if (anyConvar != null)
+{
+    anyConvar.SetInternalAsString("1");
+    anyConvar.ReplicateToClientAsString(0, "1");
+}
+```
+
+## Service-Level Replication
+
+You can replicate values even for convars that do not exist on the server by using service-level replication.
+
+```c#
+Core.ConVar.ReplicateToClient(0, "cl_showfps", "1");
+Core.ConVar.ReplicateToAll("cl_teamid_overhead_mode", "2");
+```
+
+## Tracking ConVar Changes
+
+You can track convar changes by listening to `Core.Event.OnConVarValueChanged`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    Core.Event.OnConVarValueChanged += OnConVarValueChanged;
+}
+
+public override void Unload(bool hotReload)
+{
+    Core.Event.OnConVarValueChanged -= OnConVarValueChanged;
+}
+
+private void OnConVarValueChanged(IOnConVarValueChanged @event)
+{
+    if (!@event.ConVarName.StartsWith("sw_"))
+    {
+        return;
+    }
+
+    Console.WriteLine(
+        $"ConVar '{@event.ConVarName}' changed by player #{@event.PlayerId}: '{@event.OldValue}' -> '{@event.NewValue}'"
+    );
+}
+```
+
+This is useful for audit logging, debugging, and reacting to runtime configuration changes.
+
+This method is very useful when you want to use convar values in hot paths.
+
+## Complete Example
+
+```c#
+[PluginMetadata(Id = "MyPlugin", Version = "1.0.0", Name = "My Own Plugin", Author = "myself", Description = "i created this plugin")]
+public partial class MyPlugin : BasePlugin
+{
+    private IConVar<bool>? _enabled;
+    private IConVar<int>? _maxBots;
+
+    public override void Load(bool hotReload)
+    {
+        _enabled = Core.ConVar.CreateOrFind(
+            "sw_plugin_enabled",
+            "Enable or disable this plugin.",
+            true,
+            ConvarFlags.NONE
+        );
+
+        _maxBots = Core.ConVar.CreateOrFind(
+            "sw_plugin_max_bots",
+            "Maximum amount of bots.",
+            6,
+            0,
+            20,
+            ConvarFlags.NONE
+        );
+
+        _enabled.Value = true;
+        _maxBots.SetInternal(10);
+
+        _enabled.QueryClient(0, value =>
+        {
+            Console.WriteLine($"Client #0 sees sw_plugin_enabled={value}");
+        });
+    }
+}
+```
+
+## Reference
+
+See [ConvarFlags](/docs/api/convars/convarflags/).
+
+See [IConVar](/docs/api/convars/iconvar/).
+
+See [IConVar&lt;T&gt;](/docs/api/convars/iconvart/).
+
+See [IConVarService](/docs/api/convars/iconvarservice/).

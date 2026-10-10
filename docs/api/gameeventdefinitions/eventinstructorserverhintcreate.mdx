@@ -1,0 +1,561 @@
+---
+title: EventInstructorServerHintCreate
+---
+
+# Interface EventInstructorServerHintCreate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "instructor_server_hint_create"
+create a hint using data supplied entirely by the server/map. Intended for hints to smooth playtests before content is ready to make the hint unneccessary. NOT INTENDED AS A SHIPPABLE CRUTCH
+
+```csharp
+public interface EventInstructorServerHintCreate : IGameEvent<EventInstructorServerHintCreate>
+```
+
+#### Implements
+
+- [IGameEvent\<EventInstructorServerHintCreate\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### HintActivatorCaption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L132" />
+
+the hint caption that only the activator sees e.g. "#YouPushedItGood"
+<br />
+type: string
+
+```csharp
+string HintActivatorCaption { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintActivatorUserid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L97" />
+
+playerslot of the activator
+<br />
+type: player_controller
+
+```csharp
+int HintActivatorUserid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### HintActivatorUseridController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L79" />
+
+playerslot of the activator
+<br />
+type: player_controller
+
+```csharp
+CCSPlayerController HintActivatorUseridController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### HintActivatorUseridPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L86" />
+
+playerslot of the activator
+<br />
+type: player_controller
+
+```csharp
+CCSPlayerPawn HintActivatorUseridPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### HintActivatorUseridPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L89" />
+
+```csharp
+IPlayer? HintActivatorUseridPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+### HintAllowNodrawTarget
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L174" />
+
+if false, the hint will dissappear if the target entity is invisible
+<br />
+type: bool
+
+```csharp
+bool HintAllowNodrawTarget { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HintBinding
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L167" />
+
+bindings to use when use_binding is the onscreen icon
+<br />
+type: string
+
+```csharp
+string HintBinding { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintCaption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L125" />
+
+the hint caption. e.g. "#ThisIsDangerous"
+<br />
+type: string
+
+```csharp
+string HintCaption { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintColor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L139" />
+
+the hint color in "r,g,b" format where each component is 0-255
+<br />
+type: string
+
+```csharp
+string HintColor { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintEntindex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L51" />
+
+entity id of the env_instructor_hint that fired the event
+<br />
+type: long
+
+```csharp
+int HintEntindex { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### HintFlags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L160" />
+
+hint flags
+<br />
+type: long
+
+```csharp
+int HintFlags { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### HintForcecaption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L188" />
+
+if true, the hint caption will show even if the hint is occluded
+<br />
+type: bool
+
+```csharp
+bool HintForcecaption { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HintGamepadBinding
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L251" />
+
+gamepad bindings to use when use_binding is the onscreen icon
+<br />
+type: string
+
+```csharp
+string HintGamepadBinding { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintIconOffscreen
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L118" />
+
+the hint icon to use when the hint is offscreen. e.g. "icon_alert"
+<br />
+type: string
+
+```csharp
+string HintIconOffscreen { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintIconOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L146" />
+
+how far on the z axis to offset the hint from entity origin
+<br />
+type: float
+
+```csharp
+float HintIconOffset { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintIconOnscreen
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L111" />
+
+the hint icon to use when the hint is onscreen. e.g. "icon_alert_red"
+<br />
+type: string
+
+```csharp
+string HintIconOnscreen { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintLayoutfile
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L209" />
+
+Path for Panorama layout file
+<br />
+type: string
+
+```csharp
+string HintLayoutfile { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintLocalPlayerOnly
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L195" />
+
+if true, only the local player will see the hint
+<br />
+type: bool
+
+```csharp
+bool HintLocalPlayerOnly { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HintName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L58" />
+
+what to name the hint. For referencing it again later (e.g. a kill command for the hint instead of a timeout)
+<br />
+type: string
+
+```csharp
+string HintName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintNooffscreen
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L181" />
+
+if true, the hint will not show when outside the player view
+<br />
+type: bool
+
+```csharp
+bool HintNooffscreen { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HintRange
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L153" />
+
+range before the hint is culled
+<br />
+type: float
+
+```csharp
+float HintRange { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintReplaceKey
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L65" />
+
+type name so that messages of the same type will replace each other
+<br />
+type: string
+
+```csharp
+string HintReplaceKey { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintStartSound
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L202" />
+
+Game sound to play
+<br />
+type: string
+
+```csharp
+string HintStartSound { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### HintTarget
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L72" />
+
+entity id that the hint should display at
+<br />
+type: long
+
+```csharp
+int HintTarget { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### HintTimeout
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L104" />
+
+how long in seconds until the hint automatically times out, 0 = never
+<br />
+type: short
+
+```csharp
+short HintTimeout { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### HintVrHeightOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L223" />
+
+Height offset for attached panels
+<br />
+type: float
+
+```csharp
+float HintVrHeightOffset { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintVrOffsetX
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L230" />
+
+offset for attached panels
+<br />
+type: float
+
+```csharp
+float HintVrOffsetX { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintVrOffsetY
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L237" />
+
+offset for attached panels
+<br />
+type: float
+
+```csharp
+float HintVrOffsetY { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintVrOffsetZ
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L244" />
+
+offset for attached panels
+<br />
+type: float
+
+```csharp
+float HintVrOffsetZ { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HintVrPanelType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L216" />
+
+Attachment type for the Panorama panel
+<br />
+type: short
+
+```csharp
+short HintVrPanelType { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### UserId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L44" />
+
+user ID of the player that triggered the hint
+<br />
+type: player_controller
+
+```csharp
+int UserId { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserIdController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L26" />
+
+user ID of the player that triggered the hint
+<br />
+type: player_controller
+
+```csharp
+CCSPlayerController UserIdController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### UserIdPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L33" />
+
+user ID of the player that triggered the hint
+<br />
+type: player_controller
+
+```csharp
+CCSPlayerPawn UserIdPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### UserIdPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventInstructorServerHintCreate.cs#L36" />
+
+```csharp
+IPlayer? UserIdPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

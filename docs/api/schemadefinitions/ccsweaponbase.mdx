@@ -1,0 +1,924 @@
+---
+title: CCSWeaponBase
+---
+
+# Interface CCSWeaponBase
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSWeaponBase : CBasePlayerWeapon, CEconEntity, CBaseAnimGraph, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseAnimGraph>, ISchemaClass<CEconEntity>, ISchemaClass<CBasePlayerWeapon>, ISchemaClass<CCSWeaponBase>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBasePlayerWeapon](/docs/api/schemadefinitions/cbaseplayerweapon)
+- [CEconEntity](/docs/api/schemadefinitions/ceconentity)
+- [CBaseAnimGraph](/docs/api/schemadefinitions/cbaseanimgraph)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraph\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CEconEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBasePlayerWeapon\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CCSWeaponBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AccuracyPenalty
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L48" />
+
+```csharp
+ref float AccuracyPenalty { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### AccuracySmoothedForZoom
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L52" />
+
+```csharp
+ref float AccuracySmoothedForZoom { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### BurstMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L58" />
+
+```csharp
+ref bool BurstMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CanBePickedUp
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L86" />
+
+```csharp
+ref bool CanBePickedUp { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DeployTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L66" />
+
+```csharp
+GameTick_t DeployTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTick_t" typeHref="/docs/api/schemadefinitions/gametick_t" />
+
+### Donated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L102" />
+
+```csharp
+ref bool Donated { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DropTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L98" />
+
+```csharp
+GameTick_t DropTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTick_t" typeHref="/docs/api/schemadefinitions/gametick_t" />
+
+### DroppedAtTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L68" />
+
+```csharp
+GameTime_t DroppedAtTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### DroppedNearBuyZone
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L82" />
+
+```csharp
+ref bool DroppedNearBuyZone { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### FireOnEmpty
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L36" />
+
+```csharp
+ref bool FireOnEmpty { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### InReload
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L64" />
+
+```csharp
+ref bool InReload { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### InspectCancelCompleteTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L28" />
+
+```csharp
+GameTime_t InspectCancelCompleteTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### InspectPending
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L30" />
+
+```csharp
+ref bool InspectPending { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### InspectShouldLoop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L32" />
+
+```csharp
+ref bool InspectShouldLoop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IronSightController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L112" />
+
+```csharp
+CIronSightController IronSightController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CIronSightController" typeHref="/docs/api/schemadefinitions/cironsightcontroller" />
+
+### IronSightMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L114" />
+
+```csharp
+ref int IronSightMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### IsHauledBack
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L70" />
+
+```csharp
+ref bool IsHauledBack { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LastAccuracyUpdateTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L50" />
+
+```csharp
+GameTime_t LastAccuracyUpdateTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastEmptySoundCmdNum
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L34" />
+
+```csharp
+ref int LastEmptySoundCmdNum { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LastLOSTraceFailureTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L116" />
+
+```csharp
+GameTime_t LastLOSTraceFailureTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastShakeTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L120" />
+
+```csharp
+GameTime_t LastShakeTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastShotTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L104" />
+
+```csharp
+GameTime_t LastShotTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### MostRecentTeamNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L80" />
+
+```csharp
+ref int MostRecentTeamNumber { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### NextAttackRenderTimeOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L84" />
+
+```csharp
+ref float NextAttackRenderTimeOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### NextOwnerTouchTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L90" />
+
+```csharp
+GameTime_t NextOwnerTouchTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### NextPrevOwnerTouchTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L92" />
+
+```csharp
+GameTime_t NextPrevOwnerTouchTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### NextPrevOwnerUseTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L94" />
+
+```csharp
+GameTime_t NextPrevOwnerUseTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### NumRemoveUnownedWeaponThink
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L110" />
+
+```csharp
+ref int NumRemoveUnownedWeaponThink { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### OnPlayerPickup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L38" />
+
+```csharp
+ref CEntityIOOutput OnPlayerPickup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### OriginalTeamNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L78" />
+
+```csharp
+ref int OriginalTeamNumber { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### PlayerAmmoStockOnPickup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L20" />
+
+```csharp
+ref bool PlayerAmmoStockOnPickup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### PostponeFireReadyFrac
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L62" />
+
+```csharp
+ref float PostponeFireReadyFrac { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PostponeFireReadyTicks
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L60" />
+
+```csharp
+GameTick_t PostponeFireReadyTicks { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTick_t" typeHref="/docs/api/schemadefinitions/gametick_t" />
+
+### PrevOwner
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L96" />
+
+```csharp
+ref CHandle<CCSPlayerPawn> PrevOwner { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerPawn&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### RecoilIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L54" />
+
+```csharp
+ref int RecoilIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### RecoilIndex1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L56" />
+
+```csharp
+ref float RecoilIndex1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Removeable
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L18" />
+
+```csharp
+ref bool Removeable { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RequireUseToTouch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L22" />
+
+```csharp
+ref bool RequireUseToTouch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SilencerOn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L72" />
+
+```csharp
+ref bool SilencerOn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TimeSilencerSwitchComplete
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L74" />
+
+```csharp
+GameTime_t TimeSilencerSwitchComplete { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### TurningInaccuracy
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L46" />
+
+```csharp
+ref float TurningInaccuracy { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TurningInaccuracyDelta
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L42" />
+
+```csharp
+ref float TurningInaccuracyDelta { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TurningInaccuracyEyeDirLast
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L44" />
+
+```csharp
+ref Vector TurningInaccuracyEyeDirLast { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### UseCanOverrideNextOwnerTouchTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L88" />
+
+```csharp
+ref bool UseCanOverrideNextOwnerTouchTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### WasActiveWeaponWhenDropped
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L100" />
+
+```csharp
+ref bool WasActiveWeaponWhenDropped { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### WasOwnedByCT
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L106" />
+
+```csharp
+ref bool WasOwnedByCT { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### WasOwnedByTerrorist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L108" />
+
+```csharp
+ref bool WasOwnedByTerrorist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### WatTickOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L118" />
+
+```csharp
+ref float WatTickOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### WeaponActionPlaybackRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L76" />
+
+```csharp
+ref float WeaponActionPlaybackRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### WeaponBaseVData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSWeaponBase.cs#L5" />
+
+```csharp
+CCSWeaponBaseVData WeaponBaseVData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSWeaponBaseVData" typeHref="/docs/api/schemadefinitions/ccsweaponbasevdata" />
+
+### WeaponGameplayAnimState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L24" />
+
+```csharp
+ref WeaponGameplayAnimState WeaponGameplayAnimState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="WeaponGameplayAnimState" typeHref="/docs/api/schemadefinitions/weapongameplayanimstate" />
+
+### WeaponGameplayAnimStateTimestamp
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L26" />
+
+```csharp
+GameTime_t WeaponGameplayAnimStateTimestamp { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### WeaponMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L40" />
+
+```csharp
+ref CSWeaponMode WeaponMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSWeaponMode" typeHref="/docs/api/schemadefinitions/csweaponmode" />
+
+## Methods
+
+### AccuracyPenaltyUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L128" />
+
+```csharp
+void AccuracyPenaltyUpdated()
+```
+
+### BurstModeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L131" />
+
+```csharp
+void BurstModeUpdated()
+```
+
+### CanBePickedUpUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L144" />
+
+```csharp
+void CanBePickedUpUpdated()
+```
+
+### DeployTickUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L135" />
+
+```csharp
+void DeployTickUpdated()
+```
+
+### DropTickUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L147" />
+
+```csharp
+void DropTickUpdated()
+```
+
+### DroppedAtTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L136" />
+
+```csharp
+void DroppedAtTimeUpdated()
+```
+
+### DroppedNearBuyZoneUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L143" />
+
+```csharp
+void DroppedNearBuyZoneUpdated()
+```
+
+### InReloadUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L134" />
+
+```csharp
+void InReloadUpdated()
+```
+
+### InspectCancelCompleteTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L124" />
+
+```csharp
+void InspectCancelCompleteTimeUpdated()
+```
+
+### InspectPendingUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L125" />
+
+```csharp
+void InspectPendingUpdated()
+```
+
+### InspectShouldLoopUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L126" />
+
+```csharp
+void InspectShouldLoopUpdated()
+```
+
+### IronSightModeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L150" />
+
+```csharp
+void IronSightModeUpdated()
+```
+
+### IsHauledBackUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L137" />
+
+```csharp
+void IsHauledBackUpdated()
+```
+
+### LastShakeTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L152" />
+
+```csharp
+void LastShakeTimeUpdated()
+```
+
+### LastShotTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L149" />
+
+```csharp
+void LastShotTimeUpdated()
+```
+
+### MostRecentTeamNumberUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L142" />
+
+```csharp
+void MostRecentTeamNumberUpdated()
+```
+
+### NextPrevOwnerUseTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L145" />
+
+```csharp
+void NextPrevOwnerUseTimeUpdated()
+```
+
+### OriginalTeamNumberUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L141" />
+
+```csharp
+void OriginalTeamNumberUpdated()
+```
+
+### PostponeFireReadyFracUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L133" />
+
+```csharp
+void PostponeFireReadyFracUpdated()
+```
+
+### PostponeFireReadyTicksUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L132" />
+
+```csharp
+void PostponeFireReadyTicksUpdated()
+```
+
+### PrevOwnerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L146" />
+
+```csharp
+void PrevOwnerUpdated()
+```
+
+### RecoilIndex1Updated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L130" />
+
+```csharp
+void RecoilIndex1Updated()
+```
+
+### RecoilIndexUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L129" />
+
+```csharp
+void RecoilIndexUpdated()
+```
+
+### SilencerOnUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L138" />
+
+```csharp
+void SilencerOnUpdated()
+```
+
+### TimeSilencerSwitchCompleteUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L139" />
+
+```csharp
+void TimeSilencerSwitchCompleteUpdated()
+```
+
+### WasActiveWeaponWhenDroppedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L148" />
+
+```csharp
+void WasActiveWeaponWhenDroppedUpdated()
+```
+
+### WatTickOffsetUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L151" />
+
+```csharp
+void WatTickOffsetUpdated()
+```
+
+### WeaponActionPlaybackRateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L140" />
+
+```csharp
+void WeaponActionPlaybackRateUpdated()
+```
+
+### WeaponGameplayAnimStateTimestampUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L123" />
+
+```csharp
+void WeaponGameplayAnimStateTimestampUpdated()
+```
+
+### WeaponGameplayAnimStateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L122" />
+
+```csharp
+void WeaponGameplayAnimStateUpdated()
+```
+
+### WeaponModeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSWeaponBase.cs#L127" />
+
+```csharp
+void WeaponModeUpdated()
+```
+

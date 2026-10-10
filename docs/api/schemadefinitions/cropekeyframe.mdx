@@ -1,0 +1,414 @@
+---
+title: CRopeKeyframe
+---
+
+# Interface CRopeKeyframe
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CRopeKeyframe : CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CRopeKeyframe>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CRopeKeyframe\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ChangeCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L38" />
+
+```csharp
+ref byte ChangeCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### ConstrainBetweenEndpoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L30" />
+
+```csharp
+ref bool ConstrainBetweenEndpoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CreatedFromMapFile
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L44" />
+
+```csharp
+ref bool CreatedFromMapFile { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### EndAttachment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L58" />
+
+```csharp
+AttachmentHandle_t EndAttachment { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AttachmentHandle_t" typeHref="/docs/api/schemadefinitions/attachmenthandle_t" />
+
+### EndPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L54" />
+
+```csharp
+ref CHandle<CBaseEntity> EndPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### EndPointValid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L50" />
+
+```csharp
+ref bool EndPointValid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LockedPoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L42" />
+
+```csharp
+ref byte LockedPoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### NextLinkName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L20" />
+
+```csharp
+string NextLinkName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### RopeFlags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L18" />
+
+```csharp
+ref ushort RopeFlags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### RopeLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L40" />
+
+```csharp
+ref short RopeLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### RopeMaterialModelIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L34" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIMaterial2> RopeMaterialModelIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIMaterial2&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### ScrollSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L46" />
+
+```csharp
+ref float ScrollSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Segments
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L28" />
+
+```csharp
+ref byte Segments { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### Slack
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L22" />
+
+```csharp
+ref short Slack { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### StartAttachment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L56" />
+
+```csharp
+AttachmentHandle_t StartAttachment { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AttachmentHandle_t" typeHref="/docs/api/schemadefinitions/attachmenthandle_t" />
+
+### StartPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L52" />
+
+```csharp
+ref CHandle<CBaseEntity> StartPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### StartPointValid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L48" />
+
+```csharp
+ref bool StartPointValid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### StrRopeMaterialModel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L32" />
+
+```csharp
+string StrRopeMaterialModel { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Subdiv
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L36" />
+
+```csharp
+ref byte Subdiv { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### TextureScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L26" />
+
+```csharp
+ref float TextureScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Width
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L24" />
+
+```csharp
+ref float Width { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+## Methods
+
+### ChangeCountUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L68" />
+
+```csharp
+void ChangeCountUpdated()
+```
+
+### ConstrainBetweenEndpointsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L65" />
+
+```csharp
+void ConstrainBetweenEndpointsUpdated()
+```
+
+### EndAttachmentUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L75" />
+
+```csharp
+void EndAttachmentUpdated()
+```
+
+### EndPointUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L73" />
+
+```csharp
+void EndPointUpdated()
+```
+
+### LockedPointsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L70" />
+
+```csharp
+void LockedPointsUpdated()
+```
+
+### RopeFlagsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L60" />
+
+```csharp
+void RopeFlagsUpdated()
+```
+
+### RopeLengthUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L69" />
+
+```csharp
+void RopeLengthUpdated()
+```
+
+### RopeMaterialModelIndexUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L66" />
+
+```csharp
+void RopeMaterialModelIndexUpdated()
+```
+
+### ScrollSpeedUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L71" />
+
+```csharp
+void ScrollSpeedUpdated()
+```
+
+### SegmentsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L64" />
+
+```csharp
+void SegmentsUpdated()
+```
+
+### SlackUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L61" />
+
+```csharp
+void SlackUpdated()
+```
+
+### StartAttachmentUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L74" />
+
+```csharp
+void StartAttachmentUpdated()
+```
+
+### StartPointUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L72" />
+
+```csharp
+void StartPointUpdated()
+```
+
+### SubdivUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L67" />
+
+```csharp
+void SubdivUpdated()
+```
+
+### TextureScaleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L63" />
+
+```csharp
+void TextureScaleUpdated()
+```
+
+### WidthUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRopeKeyframe.cs#L62" />
+
+```csharp
+void WidthUpdated()
+```
+

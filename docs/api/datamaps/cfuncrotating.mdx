@@ -1,0 +1,51 @@
+---
+title: CFuncRotating
+---
+
+# CFuncRotating
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `maxspeed` | `m_flMaxSpeed` | `FIELD_FLOAT32` |
+| `dmg` | `m_flBlockDamage` | `FIELD_FLOAT32` |
+| `message` | `m_NoiseRunning` | `FIELD_SOUNDNAME` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetSpeed` | `FIELD_FLOAT32` |
+| `Start` | `FIELD_VOID` |
+| `Stop` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `Reverse` | `FIELD_VOID` |
+| `StartForward` | `FIELD_VOID` |
+| `StartBackward` | `FIELD_VOID` |
+| `StopAtStartPos` | `FIELD_VOID` |
+| `SnapToStartPos` | `FIELD_VOID` |
+| `SetStartPos` | `FIELD_VECTOR` |
+| `EnableAccelDecel` | `FIELD_VOID` |
+| `DisableAccelDecel` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnStopped` | `FIELD_CUSTOM` |
+| `OnStarted` | `FIELD_CUSTOM` |
+| `OnReachedStart` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncRotatingSpinUpMove` |
+| `CFuncRotatingSpinDownMove` |
+| `CFuncRotatingHurtTouch` |
+| `CFuncRotatingRotatingUse` |
+| `CFuncRotatingRotateMove` |
+| `CFuncRotatingReverseMove` |

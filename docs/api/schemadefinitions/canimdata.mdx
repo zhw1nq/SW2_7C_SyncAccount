@@ -1,0 +1,85 @@
+---
+title: CAnimData
+---
+
+# Interface CAnimData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimData : ISchemaClass<CAnimData>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CAnimData\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AnimArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L20" />
+
+```csharp
+ref CUtlVector<CAnimDesc> AnimArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### DecoderArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L22" />
+
+```csharp
+ref CUtlVector<CAnimDecoder> DecoderArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimDecoder&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### MaxUniqueFrameIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L24" />
+
+```csharp
+ref int MaxUniqueFrameIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L18" />
+
+```csharp
+ref CBufferString Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBufferString" typeHref="/docs/api/natives/cbufferstring" />
+
+### SegmentArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimData.cs#L26" />
+
+```csharp
+ref CUtlVector<CAnimFrameSegment> SegmentArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimFrameSegment&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

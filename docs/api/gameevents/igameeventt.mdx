@@ -1,0 +1,48 @@
+---
+title: IGameEvent
+---
+
+# Interface IGameEvent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEvent.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEvents](/docs/api/gameevents)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameEvent<T> where T : IGameEvent<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+## Properties
+
+### Accessor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEvent.cs#L5" />
+
+```csharp
+IGameEventAccessor Accessor { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameEventAccessor" typeHref="/docs/api/gameevents/igameeventaccessor" />
+
+### DontBroadcast
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEvent.cs#L14" />
+
+When true, the event will not be broadcast to clients.
+
+```csharp
+bool DontBroadcast { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

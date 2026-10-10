@@ -1,0 +1,694 @@
+---
+title: VectorWS
+---
+
+# Struct VectorWS
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L13" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+3-Dimensional vector at world scale (?) for source 2.
+
+No more cssharp chaos.
+
+```csharp
+public struct VectorWS
+```
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### VectorWS(float, float, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L21" />
+
+```csharp
+public VectorWS(float x, float y, float z)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="x" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="y" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="z" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### VectorWS(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L28" />
+
+```csharp
+public VectorWS(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+## Fields
+
+### X
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L16" />
+
+```csharp
+public float X
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Y
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L17" />
+
+```csharp
+public float Y
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Z
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L18" />
+
+```csharp
+public float Z
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+## Properties
+
+### One
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L132" />
+
+```csharp
+public static VectorWS One { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### Zero
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L131" />
+
+```csharp
+public static VectorWS Zero { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+## Methods
+
+### Cross(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L52" />
+
+```csharp
+public readonly VectorWS Cross(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### Deconstruct(out float, out float, out float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L83" />
+
+```csharp
+public readonly void Deconstruct(out float x, out float y, out float z)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="x" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="y" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="z" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Deserialize(string, IFormatProvider?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L194" />
+
+Deserializes the vector from a string.
+Example input: "100 200 300"
+
+```csharp
+public static VectorWS Deserialize(string input, IFormatProvider? formatProvider = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="input" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Serialized vector in string.
+- <ApiParam name="formatProvider" type="IFormatProvider?" typeHref="https://learn.microsoft.com/dotnet/api/system.iformatprovider" /> — Format provider to use for the string. Null for default provider.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" /> — Deserialized vector.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="FormatException" typeHref="https://learn.microsoft.com/dotnet/api/system.formatexception" /> — Thrown when the input string is not in the correct format.
+
+### Distance(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L46" />
+
+```csharp
+public readonly float Distance(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Distance2D(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L249" />
+
+```csharp
+public readonly float Distance2D(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Distance2DSquared(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L255" />
+
+```csharp
+public readonly float Distance2DSquared(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DistanceSquared(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L49" />
+
+```csharp
+public readonly float DistanceSquared(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Dot(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L55" />
+
+```csharp
+public readonly float Dot(VectorWS other)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="other" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Dot(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L134" />
+
+```csharp
+public static float Dot(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Equals(object?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L126" />
+
+Indicates whether this instance and a specified object are equal.
+
+```csharp
+public override readonly bool Equals(object? obj)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="obj" type="object?" typeHref="https://learn.microsoft.com/dotnet/api/system.object" /> — The object to compare with the current instance.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+
+### FromBuiltin(Vector3)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L130" />
+
+```csharp
+public static VectorWS FromBuiltin(Vector3 vector)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="vector" type="Vector3" typeHref="https://learn.microsoft.com/dotnet/api/system.numerics.vector3" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### GetHashCode()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L127" />
+
+Returns the hash code for this instance.
+
+```csharp
+public override readonly int GetHashCode()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — A 32-bit signed integer that is the hash code for this instance.
+
+### Length()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L40" />
+
+```csharp
+public readonly float Length()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Length2D()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L261" />
+
+```csharp
+public readonly float Length2D()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Length2DSquared()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L267" />
+
+```csharp
+public readonly float Length2DSquared()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### LengthSquared()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L43" />
+
+```csharp
+public readonly float LengthSquared()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Normalize()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L58" />
+
+```csharp
+public void Normalize()
+```
+
+### Normalize2D()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L273" />
+
+```csharp
+public void Normalize2D()
+```
+
+### Normalized()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L71" />
+
+```csharp
+public readonly VectorWS Normalized()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### Normalized2D()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L285" />
+
+```csharp
+public readonly VectorWS Normalized2D()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### Serialize(IFormatProvider?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L181" />
+
+Serializes the vector to a string.
+Example return: "100 200 300"
+
+```csharp
+public readonly string Serialize(IFormatProvider? formatProvider = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="formatProvider" type="IFormatProvider?" typeHref="https://learn.microsoft.com/dotnet/api/system.iformatprovider" /> — Format provider to use for the string. Null for default provider.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Serialized vector in string.
+
+### ToBuiltin()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L35" />
+
+```csharp
+public readonly Vector3 ToBuiltin()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector3" typeHref="https://learn.microsoft.com/dotnet/api/system.numerics.vector3" />
+
+### ToQAngles()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L95" />
+
+Converts this forward vector into Euler QAngles (pitch, yaw, roll).
+Usage: `forward.ToQAngles(out var angles);`
+
+```csharp
+public readonly QAngle ToQAngles()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" /> — Resulting SwiftlyS2.Shared.Natives.QAngle.
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L128" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override readonly string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+
+### ToVector()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L124" />
+
+```csharp
+public readonly Vector ToVector()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### TryDeserialize(string?, out VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L214" />
+
+Tries to deserialize the vector from a string.
+Example input: "100 200 300"
+
+```csharp
+public static bool TryDeserialize(string? input, out VectorWS vector)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="input" type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Serialized vector in string.
+- <ApiParam name="vector" type="VectorWS" typeHref="/docs/api/natives/vectorws" /> — Deserialized vector.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the deserialization was successful, false otherwise.
+
+### TryDeserialize(string?, IFormatProvider?, out VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L227" />
+
+Tries to deserialize the vector from a string.
+Example input: "100 200 300"
+
+```csharp
+public static bool TryDeserialize(string? input, IFormatProvider? formatProvider, out VectorWS vector)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="input" type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Serialized vector in string.
+- <ApiParam name="formatProvider" type="IFormatProvider?" typeHref="https://learn.microsoft.com/dotnet/api/system.iformatprovider" /> — Format provider to use for the string. Null for default provider.
+- <ApiParam name="vector" type="VectorWS" typeHref="/docs/api/natives/vectorws" /> — Deserialized vector.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the deserialization was successful, false otherwise.
+
+## Operators
+
+### operator +(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L137" />
+
+```csharp
+public static VectorWS operator +(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator /(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L146" />
+
+```csharp
+public static VectorWS operator /(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator /(VectorWS, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L155" />
+
+```csharp
+public static VectorWS operator /(VectorWS a, float b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator ==(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L169" />
+
+```csharp
+public static bool operator ==(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### operator !=(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L172" />
+
+```csharp
+public static bool operator !=(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### operator *(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L143" />
+
+```csharp
+public static VectorWS operator *(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator *(VectorWS, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L149" />
+
+```csharp
+public static VectorWS operator *(VectorWS a, float b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator *(float, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L152" />
+
+```csharp
+public static VectorWS operator *(float b, VectorWS a)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="b" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator -(VectorWS, VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L140" />
+
+```csharp
+public static VectorWS operator -(VectorWS a, VectorWS b)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+- <ApiParam name="b" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+### operator -(VectorWS)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/VectorWS.cs#L166" />
+
+```csharp
+public static VectorWS operator -(VectorWS a)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="a" type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="VectorWS" typeHref="/docs/api/natives/vectorws" />
+

@@ -1,0 +1,452 @@
+---
+title: IGameService
+---
+
+# Interface IGameService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.Services](/docs/api/services)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameService
+```
+
+## Properties
+
+### MatchData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L13" />
+
+Gets a read-only reference to the current match data.
+
+```csharp
+ref readonly CCSMatch MatchData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSMatch" typeHref="/docs/api/natives/ccsmatch" />
+
+## Methods
+
+### AddCTBonusPoints(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L54" />
+
+Adds bonus points to the Counter-Terrorist team.
+
+```csharp
+void AddCTBonusPoints(int points)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="points" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Bonus points to add.
+
+### AddCTScore(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L66" />
+
+Adds score to the Counter-Terrorist team.
+
+```csharp
+void AddCTScore(int score)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="score" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Score to add.
+
+### AddCTWins(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L36" />
+
+Adds wins to the Counter-Terrorist team.
+
+```csharp
+void AddCTWins(int numWins)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="numWins" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Number of wins to add.
+
+### AddTerroristBonusPoints(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L48" />
+
+Adds bonus points to the Terrorist team.
+
+```csharp
+void AddTerroristBonusPoints(int points)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="points" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Bonus points to add.
+
+### AddTerroristScore(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L60" />
+
+Adds score to the Terrorist team.
+
+```csharp
+void AddTerroristScore(int score)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="score" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Score to add.
+
+### AddTerroristWins(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L30" />
+
+Adds wins to the Terrorist team.
+
+```csharp
+void AddTerroristWins(int numWins)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="numWins" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Number of wins to add.
+
+### EmitDecoy(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L214" />
+
+Creates a decoy grenade projectile.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+CDecoyProjectile EmitDecoy(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the decoy grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the decoy grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the decoy grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the decoy grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CDecoyProjectile" typeHref="/docs/api/schemadefinitions/cdecoyprojectile" /> — The created decoy grenade projectile.
+
+### EmitDecoyAsync(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L225" />
+
+Creates a decoy grenade projectile asynchronously.
+
+```csharp
+Task<CDecoyProjectile> EmitDecoyAsync(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the decoy grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the decoy grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the decoy grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the decoy grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;CDecoyProjectile&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" /> — The created decoy grenade projectile.
+
+### EmitFlashbang(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L137" />
+
+Creates a flashbang grenade projectile.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+CFlashbangProjectile EmitFlashbang(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the flashbang grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the flashbang grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the flashbang grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the flashbang grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CFlashbangProjectile" typeHref="/docs/api/schemadefinitions/cflashbangprojectile" /> — The created flashbang grenade projectile.
+
+### EmitFlashbangAsync(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L148" />
+
+Creates a flashbang grenade projectile asynchronously.
+
+```csharp
+Task<CFlashbangProjectile> EmitFlashbangAsync(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the flashbang grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the flashbang grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the flashbang grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the flashbang grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;CFlashbangProjectile&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" /> — The created flashbang grenade projectile.
+
+### EmitHEGrenade(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L114" />
+
+Creates a HE grenade projectile.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+CHEGrenadeProjectile EmitHEGrenade(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the HE grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the HE grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the HE grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the HE grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CHEGrenadeProjectile" typeHref="/docs/api/schemadefinitions/chegrenadeprojectile" /> — The created HE grenade projectile.
+
+### EmitHEGrenadeAsync(Vector, QAngle, Vector, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L125" />
+
+Creates a HE grenade projectile asynchronously.
+
+```csharp
+Task<CHEGrenadeProjectile> EmitHEGrenadeAsync(Vector pos, QAngle angle, Vector velocity, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the HE grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the HE grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the HE grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the HE grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;CHEGrenadeProjectile&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" /> — The created HE grenade projectile.
+
+### EmitMolotov(Vector, QAngle, Vector, Team, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L188" />
+
+Creates a molotov grenade projectile.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+CMolotovProjectile EmitMolotov(Vector pos, QAngle angle, Vector velocity, Team team, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the molotov grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the molotov grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the molotov grenade projectile.
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team of the molotov grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the molotov grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CMolotovProjectile" typeHref="/docs/api/schemadefinitions/cmolotovprojectile" /> — The created molotov grenade projectile.
+
+### EmitMolotovAsync(Vector, QAngle, Vector, Team, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L201" />
+
+Creates a molotov grenade projectile asynchronously.
+
+```csharp
+Task<CMolotovProjectile> EmitMolotovAsync(Vector pos, QAngle angle, Vector velocity, Team team, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the molotov grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the molotov grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the molotov grenade projectile.
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team of the molotov grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the molotov grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;CMolotovProjectile&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" /> — The created molotov grenade projectile.
+
+### EmitSmokeGrenade(Vector, QAngle, Vector, Team, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L161" />
+
+Creates a smoke grenade projectile.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+CSmokeGrenadeProjectile EmitSmokeGrenade(Vector pos, QAngle angle, Vector velocity, Team team, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the smoke grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the smoke grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the smoke grenade projectile.
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team associated with the smoke grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the smoke grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CSmokeGrenadeProjectile" typeHref="/docs/api/schemadefinitions/csmokegrenadeprojectile" /> — The created smoke grenade projectile.
+
+### EmitSmokeGrenadeAsync(Vector, QAngle, Vector, Team, CBasePlayerPawn?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L174" />
+
+Creates a smoke grenade projectile asynchronously.
+
+```csharp
+Task<CSmokeGrenadeProjectile> EmitSmokeGrenadeAsync(Vector pos, QAngle angle, Vector velocity, Team team, CBasePlayerPawn? owner)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pos" type="Vector" typeHref="/docs/api/natives/vector" /> — The position where the smoke grenade projectile will be created.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The angle at which the smoke grenade projectile will be created.
+- <ApiParam name="velocity" type="Vector" typeHref="/docs/api/natives/vector" /> — The velocity of the smoke grenade projectile.
+- <ApiParam name="team" type="Team" typeHref="/docs/api/players/team" /> — The team associated with the smoke grenade projectile.
+- <ApiParam name="owner" type="CBasePlayerPawn?" typeHref="/docs/api/schemadefinitions/cbaseplayerpawn" /> — The owner of the smoke grenade projectile.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task&lt;CSmokeGrenadeProjectile&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" /> — The created smoke grenade projectile.
+
+### GetWinningTeam()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L88" />
+
+Gets the winning team ID.
+
+```csharp
+int GetWinningTeam()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Team ID of the winner, or 0 if tie.
+
+### GoToIntermission(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L102" />
+
+Go to the intermission phase of the game.
+
+```csharp
+void GoToIntermission(bool abortedMatch = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="abortedMatch" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Indicates whether the match was aborted
+
+### GoToOvertime(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L72" />
+
+Enters overtime mode.
+
+```csharp
+void GoToOvertime(int numOvertimesToAdd = 1)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="numOvertimesToAdd" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Number of overtime periods to add.
+
+### IncrementRound(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L42" />
+
+Increments the round count.
+
+```csharp
+void IncrementRound(int numRounds = 1)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="numRounds" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Number of rounds to increment.
+
+### Reset()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L18" />
+
+Resets all match data to initial state.
+
+```csharp
+void Reset()
+```
+
+### SetPhase(GamePhase)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L24" />
+
+Sets the current game phase.
+
+```csharp
+void SetPhase(GamePhase phase)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="phase" type="GamePhase" typeHref="/docs/api/misc/gamephase" /> — The game phase to set.
+
+### SwapTeamScores()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L77" />
+
+Swaps the team scores between Terrorist and Counter-Terrorist.
+
+```csharp
+void SwapTeamScores()
+```
+
+### TerminateRound(RoundEndReason, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Game/IGameService.cs#L95" />
+
+Ends the current round with the specified reason after an optional delay
+
+```csharp
+void TerminateRound(RoundEndReason reason, float delay)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="reason" type="RoundEndReason" typeHref="/docs/api/natives/roundendreason" /> — The reason for ending the round
+- <ApiParam name="delay" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The delay before ending the round
+

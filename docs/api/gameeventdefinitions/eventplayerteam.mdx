@@ -1,0 +1,176 @@
+---
+title: EventPlayerTeam
+---
+
+# Interface EventPlayerTeam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "player_team"
+
+```csharp
+public interface EventPlayerTeam : IGameEvent<EventPlayerTeam>
+```
+
+#### Implements
+
+- [IGameEvent\<EventPlayerTeam\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Disconnect
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L64" />
+
+team change because player disconnects
+<br />
+type: bool
+
+```csharp
+bool Disconnect { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsBot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L81" />
+
+true if player is a bot
+<br />
+type: bool
+
+```csharp
+bool IsBot { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L74" />
+
+type: string
+
+```csharp
+string Name { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### OldTeam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L57" />
+
+old team id
+<br />
+type: byte
+
+```csharp
+byte OldTeam { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### Silent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L69" />
+
+type: bool
+
+```csharp
+bool Silent { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Team
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L50" />
+
+team id
+<br />
+type: byte
+
+```csharp
+byte Team { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### UserId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L43" />
+
+player
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int UserId { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserIdController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L25" />
+
+player
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController UserIdController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### UserIdPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L32" />
+
+player
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn UserIdPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### UserIdPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerTeam.cs#L35" />
+
+```csharp
+IPlayer? UserIdPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

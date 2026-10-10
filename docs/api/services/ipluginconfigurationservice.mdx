@@ -1,0 +1,164 @@
+---
+title: IPluginConfigurationService
+---
+
+# Interface IPluginConfigurationService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Services](/docs/api/services)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IPluginConfigurationService
+```
+
+## Properties
+
+### BasePath
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L12" />
+
+Get the base path of plugin configuration.
+
+```csharp
+string BasePath { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### BasePathExists
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L62" />
+
+Whether the base path exists in the file system.
+
+```csharp
+bool BasePathExists { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Manager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L57" />
+
+Get the configuration root.
+
+```csharp
+IConfigurationManager Manager { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IConfigurationManager" typeHref="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfigurationmanager" />
+
+## Methods
+
+### Configure(Action\<IConfigurationBuilder\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L51" />
+
+Configure the internal configuration manager.
+
+```csharp
+IPluginConfigurationService Configure(Action<IConfigurationBuilder> configure)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configure" type="Action&lt;IConfigurationBuilder&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the configuration manager.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IPluginConfigurationService" typeHref="/docs/api/services/ipluginconfigurationservice" /> — The plugin configuration service.
+
+### GetConfigPath(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L20" />
+
+Get the path to the configuration file.
+
+```csharp
+string GetConfigPath(string name)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the configuration file, including the extension.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The path to the configuration file.
+
+### InitializeJsonWithModel\<T\>(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L36" />
+
+Initialize the json configuration file with a class as template.
+
+```csharp
+IPluginConfigurationService InitializeJsonWithModel<T>(string name, string sectionName) where T : class, new()
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the configuration file.
+- <ApiParam name="sectionName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the section in the configuration file.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IPluginConfigurationService" typeHref="/docs/api/services/ipluginconfigurationservice" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The type of the configuration model.
+
+### InitializeTomlWithModel\<T\>(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L44" />
+
+Initialize the TOML configuration file with a class as template.
+
+```csharp
+IPluginConfigurationService InitializeTomlWithModel<T>(string name, string sectionName) where T : class, new()
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the configuration file.
+- <ApiParam name="sectionName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the section in the configuration file.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IPluginConfigurationService" typeHref="/docs/api/services/ipluginconfigurationservice" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The type of the configuration model.
+
+### InitializeWithTemplate(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Services/IPluginConfigurationService.cs#L28" />
+
+Initialize the configuration file with a template.
+To use this, you must package a templates folder in the plugin, with the template file in it.
+
+```csharp
+IPluginConfigurationService InitializeWithTemplate(string name, string templateName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the configuration file.
+- <ApiParam name="templateName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the template file.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IPluginConfigurationService" typeHref="/docs/api/services/ipluginconfigurationservice" />
+

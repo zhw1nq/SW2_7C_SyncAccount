@@ -1,0 +1,67 @@
+---
+title: CDynamicProp
+---
+
+# CDynamicProp
+
+Inherited from [CBreakableProp](/docs/api/datamaps/cbreakableprop)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `IdleAnim` | `m_iszIdleAnim` | `FIELD_STRING` |
+| `StartDisabled` | `m_bStartDisabled` | `FIELD_BOOLEAN` |
+| `use_animgraph` | `m_bUseAnimGraph` | `FIELD_BOOLEAN` |
+| `randomizecycle` | `m_bRandomizeCycle` | `FIELD_BOOLEAN` |
+| `IdleAnimationLoopMode` | `m_nIdleAnimLoopMode` | `FIELD_INT32` |
+| `glowstate` | `m_iInitialGlowState` | `FIELD_INT32` |
+| `glowrange` | `m_nGlowRange` | `FIELD_INT32` |
+| `glowrangemin` | `m_nGlowRangeMin` | `FIELD_INT32` |
+| `glowcolor` | `m_glowColor` | `FIELD_COLOR32` |
+| `glowteam` | `m_nGlowTeam` | `FIELD_INT32` |
+| `forcenpcexclude` | `m_bForceNpcExclude` | `FIELD_BOOLEAN` |
+| `CreateNavObstacle` | `m_bCreateNavObstacle` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetAnimationLooping` | `FIELD_STRING` |
+| `SetAnimationNoResetLooping` | `FIELD_STRING` |
+| `SetIdleAnimationLooping` | `FIELD_STRING` |
+| `SetAnimationNotLooping` | `FIELD_STRING` |
+| `SetAnimationNoResetNotLooping` | `FIELD_STRING` |
+| `SetIdleAnimationNotLooping` | `FIELD_STRING` |
+| `SetAnimation` | `FIELD_STRING` |
+| `SetAnimationNoReset` | `FIELD_STRING` |
+| `SetDefaultAnimation` | `FIELD_STRING` |
+| `SetDefaultAnimationLooping` | `FIELD_STRING` |
+| `SetDefaultAnimationNotLooping` | `FIELD_STRING` |
+| `TurnOn` | `FIELD_VOID` |
+| `TurnOff` | `FIELD_VOID` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+| `EnableCollision` | `FIELD_VOID` |
+| `DisableCollision` | `FIELD_VOID` |
+| `SetPlaybackRate` | `FIELD_FLOAT32` |
+| `StartGlowing` | `FIELD_VOID` |
+| `StopGlowing` | `FIELD_VOID` |
+| `SetGlowOverride` | `FIELD_VECTOR` |
+| `SetGlowRange` | `FIELD_INT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnAnimationBegun` | `FIELD_CUSTOM` |
+| `OnAnimationDone` | `FIELD_CUSTOM` |
+| `OnAnimationLoopCycleDone` | `FIELD_CUSTOM` |
+| `OnAnimationReachedStart` | `FIELD_CUSTOM` |
+| `OnAnimationReachedEnd` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CDynamicPropAnimThink` |

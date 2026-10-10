@@ -1,0 +1,564 @@
+---
+title: EventPlayerDeath
+---
+
+# Interface EventPlayerDeath
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "player_death"
+a game event, name may be 32 charaters long
+
+```csharp
+public interface EventPlayerDeath : IGameEvent<EventPlayerDeath>
+```
+
+#### Implements
+
+- [IGameEvent\<EventPlayerDeath\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### ActualDmgArmor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L231" />
+
+damage done to armor
+<br />
+type: int
+
+```csharp
+int ActualDmgArmor { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ActualDmgHealth
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L214" />
+
+damage done to health
+<br />
+type: int
+
+```csharp
+int ActualDmgHealth { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ActualHitGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L248" />
+
+hitgroup that was damaged
+<br />
+type: HitGroup_t
+
+```csharp
+HitGroup_t ActualHitGroup { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### AssistedFlash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L101" />
+
+assister helped with a flash
+<br />
+type: bool
+
+```csharp
+bool AssistedFlash { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Assister
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L94" />
+
+player who assisted in the kill
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int Assister { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### AssisterController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L76" />
+
+player who assisted in the kill
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController AssisterController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### AssisterPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L83" />
+
+player who assisted in the kill
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn AssisterPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### AssisterPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L86" />
+
+```csharp
+IPlayer? AssisterPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+### Attacker
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L69" />
+
+user ID who killed
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int Attacker { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### AttackerBlind
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L190" />
+
+attacker was blind from flashbang
+<br />
+type: bool
+
+```csharp
+bool AttackerBlind { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AttackerController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L51" />
+
+user ID who killed
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController AttackerController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### AttackerInAir
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L255" />
+
+attacker was in midair
+<br />
+type: bool
+
+```csharp
+bool AttackerInAir { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### AttackerPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L58" />
+
+user ID who killed
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn AttackerPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### AttackerPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L61" />
+
+```csharp
+IPlayer? AttackerPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+### Distance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L197" />
+
+distance to victim in meters
+<br />
+type: float
+
+```csharp
+float Distance { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DmgArmor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L223" />
+
+damage done to armor
+<br />
+type: byte
+<br />
+See SwiftlyS2.Shared.GameEventDefinitions.EventPlayerDeath.ActualDmgArmor.
+
+```csharp
+[Obsolete("The declared type may not match the actual value. Use ActualDmgArmor instead.")]
+byte DmgArmor { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### DmgHealth
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L206" />
+
+damage done to health
+<br />
+type: short
+<br />
+See SwiftlyS2.Shared.GameEventDefinitions.EventPlayerDeath.ActualDmgHealth.
+
+```csharp
+[Obsolete("The declared type may not match the actual value. Use ActualDmgHealth instead.")]
+short DmgHealth { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Dominated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L141" />
+
+did killer dominate victim with this kill
+<br />
+type: short
+
+```csharp
+short Dominated { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Headshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L134" />
+
+singals a headshot
+<br />
+type: bool
+
+```csharp
+bool Headshot { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HitGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L240" />
+
+hitgroup that was damaged
+<br />
+type: byte
+<br />
+See SwiftlyS2.Shared.GameEventDefinitions.EventPlayerDeath.ActualHitGroup.
+
+```csharp
+[Obsolete("The declared type may not match the actual value. Use ActualHitGroup instead.")]
+byte HitGroup { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### NoReplay
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L169" />
+
+if replay data is unavailable, this will be present and set to false
+<br />
+type: bool
+
+```csharp
+bool NoReplay { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NoScope
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L176" />
+
+kill happened without a scope, used for death notice icon
+<br />
+type: bool
+
+```csharp
+bool NoScope { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Penetrated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L162" />
+
+number of objects shot penetrated before killing target
+<br />
+type: short
+
+```csharp
+short Penetrated { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Revenge
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L148" />
+
+did killer get revenge on victim with this kill
+<br />
+type: short
+
+```csharp
+short Revenge { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### ThruSmoke
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L183" />
+
+hitscan weapon went through smoke grenade
+<br />
+type: bool
+
+```csharp
+bool ThruSmoke { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### UserId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L44" />
+
+user ID who died
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int UserId { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserIdController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L26" />
+
+user ID who died
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController UserIdController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### UserIdPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L33" />
+
+user ID who died
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn UserIdPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### UserIdPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L36" />
+
+```csharp
+IPlayer? UserIdPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+### Weapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L108" />
+
+weapon name killer used
+<br />
+type: string
+
+```csharp
+string Weapon { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponFauxitemid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L122" />
+
+faux item id of weapon killer used
+<br />
+type: string
+
+```csharp
+string WeaponFauxitemid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponItemid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L115" />
+
+inventory item id of weapon killer used
+<br />
+type: string
+
+```csharp
+string WeaponItemid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponOriginalownerXuid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L127" />
+
+type: string
+
+```csharp
+string WeaponOriginalownerXuid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Wipe
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventPlayerDeath.cs#L155" />
+
+is the kill resulting in squad wipe
+<br />
+type: short
+
+```csharp
+short Wipe { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+

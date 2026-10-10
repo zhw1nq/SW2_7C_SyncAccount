@@ -1,0 +1,37 @@
+---
+title: CTriggerLook
+---
+
+# CTriggerLook
+
+Inherited from [CTriggerOnce](/docs/api/datamaps/ctriggeronce)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `timeout` | `m_flTimeoutDuration` | `FIELD_FLOAT32` |
+| `FOV2D` | `m_b2DFOV` | `FIELD_BOOLEAN` |
+| `test_occlusion` | `m_bTestOcclusion` | `FIELD_BOOLEAN` |
+| `test_visible_occlusion` | `m_bTestAllVisibleOcclusion` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `FieldOfView` | `FIELD_FLOAT32` |
+| `LookTime` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnTimeout` | `FIELD_CUSTOM` |
+| `OnStartLook` | `FIELD_CUSTOM` |
+| `OnEndLook` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CTriggerLookTimeoutThink` |

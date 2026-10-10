@@ -1,0 +1,61 @@
+---
+title: CMotionSearchDB
+---
+
+# Interface CMotionSearchDB
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchDB.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CMotionSearchDB : ISchemaClass<CMotionSearchDB>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CMotionSearchDB\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### CodeIndices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchDB.cs#L22" />
+
+```csharp
+ref CUtlVector<MotionDBIndex> CodeIndices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;MotionDBIndex&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ResidualQuantizer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchDB.cs#L20" />
+
+```csharp
+CProductQuantizer ResidualQuantizer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CProductQuantizer" typeHref="/docs/api/schemadefinitions/cproductquantizer" />
+
+### RootNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchDB.cs#L18" />
+
+```csharp
+CMotionSearchNode RootNode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CMotionSearchNode" typeHref="/docs/api/schemadefinitions/cmotionsearchnode" />
+

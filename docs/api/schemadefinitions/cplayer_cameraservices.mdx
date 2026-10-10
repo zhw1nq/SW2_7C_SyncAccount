@@ -1,0 +1,245 @@
+---
+title: CPlayer_CameraServices
+---
+
+# Interface CPlayer_CameraServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPlayer_CameraServices : CPlayerPawnComponent, ISchemaClass<CPlayerPawnComponent>, ISchemaClass<CPlayer_CameraServices>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPlayerPawnComponent](/docs/api/schemadefinitions/cplayerpawncomponent)
+- [ISchemaClass\<CPlayerPawnComponent\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPlayer_CameraServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Audio
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L32" />
+
+```csharp
+audioparams_t Audio { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="audioparams_t" typeHref="/docs/api/schemadefinitions/audioparams_t" />
+
+### ColorCorrectionCtrl
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L26" />
+
+```csharp
+ref CHandle<CColorCorrection> ColorCorrectionCtrl { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CColorCorrection&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### CsViewPunchAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L18" />
+
+```csharp
+ref QAngle CsViewPunchAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### CsViewPunchAngleTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L20" />
+
+```csharp
+GameTick_t CsViewPunchAngleTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTick_t" typeHref="/docs/api/schemadefinitions/gametick_t" />
+
+### CsViewPunchAngleTickRatio
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L22" />
+
+```csharp
+ref float CsViewPunchAngleTickRatio { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### OldPlayerViewOffsetZ
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L38" />
+
+```csharp
+ref float OldPlayerViewOffsetZ { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### OldPlayerZ
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L36" />
+
+```csharp
+ref float OldPlayerZ { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PlayerFog
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L24" />
+
+```csharp
+fogplayerparams_t PlayerFog { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="fogplayerparams_t" typeHref="/docs/api/schemadefinitions/fogplayerparams_t" />
+
+### PostProcessingVolumes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L34" />
+
+```csharp
+ref CUtlVector<CHandle<CPostProcessingVolume>> PostProcessingVolumes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CPostProcessingVolume&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### TonemapController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L30" />
+
+```csharp
+ref CHandle<CTonemapController2> TonemapController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CTonemapController2&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TriggerSoundscapeList
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L40" />
+
+```csharp
+ref CUtlVector<CHandle<CEnvSoundscapeTriggerable>> TriggerSoundscapeList { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CEnvSoundscapeTriggerable&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ViewEntity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L28" />
+
+```csharp
+ref CHandle<CBaseEntity> ViewEntity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+## Methods
+
+### AudioUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L49" />
+
+```csharp
+void AudioUpdated()
+```
+
+### ColorCorrectionCtrlUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L46" />
+
+```csharp
+void ColorCorrectionCtrlUpdated()
+```
+
+### CsViewPunchAngleTickRatioUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L44" />
+
+```csharp
+void CsViewPunchAngleTickRatioUpdated()
+```
+
+### CsViewPunchAngleTickUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L43" />
+
+```csharp
+void CsViewPunchAngleTickUpdated()
+```
+
+### CsViewPunchAngleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L42" />
+
+```csharp
+void CsViewPunchAngleUpdated()
+```
+
+### PlayerFogUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L45" />
+
+```csharp
+void PlayerFogUpdated()
+```
+
+### PostProcessingVolumesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L50" />
+
+```csharp
+void PostProcessingVolumesUpdated()
+```
+
+### TonemapControllerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L48" />
+
+```csharp
+void TonemapControllerUpdated()
+```
+
+### ViewEntityUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayer_CameraServices.cs#L47" />
+
+```csharp
+void ViewEntityUpdated()
+```
+

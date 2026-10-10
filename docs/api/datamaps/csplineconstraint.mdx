@@ -1,0 +1,40 @@
+---
+title: CSplineConstraint
+---
+
+# CSplineConstraint
+
+Inherited from [CPhysConstraint](/docs/api/datamaps/cphysconstraint)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `enablelateralconstraint` | `m_bEnableLateralConstraint` | `FIELD_BOOLEAN` |
+| `enableverticalconstraint` | `m_bEnableVerticalConstraint` | `FIELD_BOOLEAN` |
+| `enableangularconstraint` | `m_bEnableAngularConstraint` | `FIELD_BOOLEAN` |
+| `enablelimit` | `m_bEnableLimit` | `FIELD_BOOLEAN` |
+| `jointfriction` | `m_flJointFriction` | `FIELD_FLOAT32` |
+| `linearfrequency` | `m_flLinearFrequency` | `FIELD_FLOAT32` |
+| `lineardampingratio` | `m_flLinarDampingRatio` | `FIELD_FLOAT32` |
+| `transitiontime` | `m_flTransitionTime` | `FIELD_FLOAT32` |
+| `fireeventsonpath` | `m_bFireEventsOnPath` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetTransitionTime` | `FIELD_FLOAT32` |
+| `SetSplineEntity` | `FIELD_STRING` |
+| `EnableLimit` | `FIELD_VOID` |
+| `DisableLimit` | `FIELD_VOID` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CSplineConstraintTransitionThink` |

@@ -1,0 +1,92 @@
+---
+title: CLightComponent
+---
+
+# CLightComponent
+
+Inherited from [CEntityComponent](/docs/api/datamaps/centitycomponent)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `color` | `m_Color` | `FIELD_COLOR32` |
+| `secondary_color` | `m_SecondaryColor` | `FIELD_COLOR32` |
+| `brightness` | `m_flBrightness` | `FIELD_FLOAT32` |
+| `brightnessscale` | `m_flBrightnessScale` | `FIELD_FLOAT32` |
+| `range` | `m_flRange` | `FIELD_FLOAT32` |
+| `falloff` | `m_flFalloff` | `FIELD_FLOAT32` |
+| `attenuation0` | `m_flAttenuation0` | `FIELD_FLOAT32` |
+| `attenuation1` | `m_flAttenuation1` | `FIELD_FLOAT32` |
+| `attenuation2` | `m_flAttenuation2` | `FIELD_FLOAT32` |
+| `innerconeangle` | `m_flTheta` | `FIELD_FLOAT32` |
+| `outerconeangle` | `m_flPhi` | `FIELD_FLOAT32` |
+| `lightcookie` | `m_hLightCookie` | `FIELD_HRENDERTEXTURE` |
+| `numcascades` | `m_nCascades` | `FIELD_INT32` |
+| `cascaderenderstaticobj` | `m_nCascadeRenderStaticObjects` | `FIELD_INT32` |
+| `cascadecrossfade` | `m_flShadowCascadeCrossFade` | `FIELD_FLOAT32` |
+| `cascadedistancefade` | `m_flShadowCascadeDistanceFade` | `FIELD_FLOAT32` |
+| `shadowcascadedistance0` | `m_flShadowCascadeDistance0` | `FIELD_FLOAT32` |
+| `shadowcascadedistance1` | `m_flShadowCascadeDistance1` | `FIELD_FLOAT32` |
+| `shadowcascadedistance2` | `m_flShadowCascadeDistance2` | `FIELD_FLOAT32` |
+| `shadowcascadedistance3` | `m_flShadowCascadeDistance3` | `FIELD_FLOAT32` |
+| `shadowcascaderesolution0` | `m_nShadowCascadeResolution0` | `FIELD_INT32` |
+| `shadowcascaderesolution1` | `m_nShadowCascadeResolution1` | `FIELD_INT32` |
+| `shadowcascaderesolution2` | `m_nShadowCascadeResolution2` | `FIELD_INT32` |
+| `shadowcascaderesolution3` | `m_nShadowCascadeResolution3` | `FIELD_INT32` |
+| `castshadows` | `m_nCastShadows` | `FIELD_INT32` |
+| `shadowtexturewidth` | `m_nShadowWidth` | `FIELD_INT32` |
+| `shadowtextureheight` | `m_nShadowHeight` | `FIELD_INT32` |
+| `baked_light_indexing` | `m_bUsesBakedShadowing` | `FIELD_BOOLEAN` |
+| `shadowpriority` | `m_nShadowPriority` | `FIELD_INT32` |
+| `bakedshadowindex` | `m_nBakedShadowIndex` | `FIELD_INT32` |
+| `light_path_uniqueid` | `m_nLightPathUniqueId` | `FIELD_INT32` |
+| `light_map_uniqueid` | `m_nLightMapUniqueId` | `FIELD_INT32` |
+| `renderdiffuse` | `m_bRenderDiffuse` | `FIELD_BOOLEAN` |
+| `renderspecular` | `m_nRenderSpecular` | `FIELD_INT32` |
+| `rendertransmissive` | `m_bRenderTransmissive` | `FIELD_BOOLEAN` |
+| `ortholightwidth` | `m_flOrthoLightWidth` | `FIELD_FLOAT32` |
+| `ortholightheight` | `m_flOrthoLightHeight` | `FIELD_FLOAT32` |
+| `style` | `m_nStyle` | `FIELD_INT32` |
+| `pattern` | `m_Pattern` | `FIELD_UTLSTRING` |
+| `directlight` | `m_nDirectLight` | `FIELD_INT32` |
+| `indirectlight` | `m_nIndirectLight` | `FIELD_INT32` |
+| `dynamicbounce` | `m_bDynamicBounce` | `FIELD_BOOLEAN` |
+| `fademindist` | `m_flFadeMinDist` | `FIELD_FLOAT32` |
+| `fademaxdist` | `m_flFadeMaxDist` | `FIELD_FLOAT32` |
+| `shadowfademindist` | `m_flShadowFadeMinDist` | `FIELD_FLOAT32` |
+| `shadowfademaxdist` | `m_flShadowFadeMaxDist` | `FIELD_FLOAT32` |
+| `enabled` | `m_bEnabled` | `FIELD_BOOLEAN` |
+| `rendertocubemaps` | `m_bRenderToCubemaps` | `FIELD_BOOLEAN` |
+| `flicker` | `m_bFlicker` | `FIELD_BOOLEAN` |
+| `precomputedfieldsvalid` | `m_bPrecomputedFieldsValid` | `FIELD_BOOLEAN` |
+| `precomputedboundsmins` | `m_vPrecomputedBoundsMins` | `FIELD_POSITION_VECTOR` |
+| `precomputedboundsmaxs` | `m_vPrecomputedBoundsMaxs` | `FIELD_POSITION_VECTOR` |
+| `precomputedmaxrange` | `m_flPrecomputedMaxRange` | `FIELD_FLOAT32` |
+| `precomputedobborigin` | `m_vPrecomputedOBBOrigin` | `FIELD_POSITION_VECTOR` |
+| `precomputedobbangles` | `m_vPrecomputedOBBAngles` | `FIELD_QANGLE_WORLDSPACE` |
+| `precomputedobbextent` | `m_vPrecomputedOBBExtent` | `FIELD_VECTOR` |
+| `fog_lighting` | `m_nFogLightingMode` | `FIELD_INT32` |
+| `fogcontributionstrength` | `m_flFogContributionStength` | `FIELD_FLOAT32` |
+| `nearclipplane` | `m_flNearClipPlane` | `FIELD_FLOAT32` |
+| `skycolor` | `m_SkyColor` | `FIELD_COLOR32` |
+| `skyintensity` | `m_flSkyIntensity` | `FIELD_FLOAT32` |
+| `skyambientbouncOe` | `m_SkyAmbientBounce` | `FIELD_COLOR32` |
+| `use_secondary_color` | `m_bUseSecondaryColor` | `FIELD_BOOLEAN` |
+| `capsule_length` | `m_flCapsuleLength` | `FIELD_FLOAT32` |
+| `mixedshadows` | `m_bMixedShadows` | `FIELD_BOOLEAN` |
+| `minroughness` | `m_flMinRoughness` | `FIELD_FLOAT32` |
+| `allow_sst_generation` | `m_bAllowSSTGeneration` | `FIELD_BOOLEAN` |
+| `pvs_modify_entity` | `m_bPvsModifyEntity` | `FIELD_BOOLEAN` |
+
+## Input
+
+_No Entry_
+
+## Output
+
+_No Entry_
+
+## Functions
+
+_No Entry_

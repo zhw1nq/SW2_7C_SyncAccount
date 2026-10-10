@@ -1,0 +1,211 @@
+---
+title: CCSPlayer_WeaponServices
+---
+
+# Interface CCSPlayer_WeaponServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSPlayer_WeaponServices : CPlayer_WeaponServices, CPlayerPawnComponent, ISchemaClass<CPlayerPawnComponent>, ISchemaClass<CPlayer_WeaponServices>, ISchemaClass<CCSPlayer_WeaponServices>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPlayer_WeaponServices](/docs/api/schemadefinitions/cplayer_weaponservices)
+- [CPlayerPawnComponent](/docs/api/schemadefinitions/cplayerpawncomponent)
+- [ISchemaClass\<CPlayerPawnComponent\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPlayer_WeaponServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CCSPlayer_WeaponServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlockInspectUntilNextGraphUpdate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L42" />
+
+```csharp
+ref bool BlockInspectUntilNextGraphUpdate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DisableAutoDeploy
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L36" />
+
+```csharp
+ref bool DisableAutoDeploy { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsBeingGivenItem
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L30" />
+
+```csharp
+ref bool IsBeingGivenItem { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsPickingUpGroundWeapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L38" />
+
+```csharp
+ref bool IsPickingUpGroundWeapon { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsPickingUpItemWithUse
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L32" />
+
+```csharp
+ref bool IsPickingUpItemWithUse { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NetworkAnimTiming
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L40" />
+
+```csharp
+ref CUtlVector<byte> NetworkAnimTiming { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;byte&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### NextAttack
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L18" />
+
+```csharp
+GameTime_t NextAttack { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### PickedUpWeapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L34" />
+
+```csharp
+ref bool PickedUpWeapon { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SavedWeapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L20" />
+
+```csharp
+ref CHandle<CBasePlayerWeapon> SavedWeapon { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBasePlayerWeapon&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TimeToMelee
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L22" />
+
+```csharp
+ref int TimeToMelee { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TimeToPrimary
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L26" />
+
+```csharp
+ref int TimeToPrimary { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TimeToSecondary
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L24" />
+
+```csharp
+ref int TimeToSecondary { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TimeToSniperRifle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L28" />
+
+```csharp
+ref int TimeToSniperRifle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+## Methods
+
+### BlockInspectUntilNextGraphUpdateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L46" />
+
+```csharp
+void BlockInspectUntilNextGraphUpdateUpdated()
+```
+
+### NetworkAnimTimingUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L45" />
+
+```csharp
+void NetworkAnimTimingUpdated()
+```
+
+### NextAttackUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_WeaponServices.cs#L44" />
+
+```csharp
+void NextAttackUpdated()
+```
+

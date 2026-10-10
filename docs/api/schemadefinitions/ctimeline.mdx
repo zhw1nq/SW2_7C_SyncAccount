@@ -1,0 +1,111 @@
+---
+title: CTimeline
+---
+
+# Interface CTimeline
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CTimeline : IntervalTimer, ISchemaClass<IntervalTimer>, ISchemaClass<CTimeline>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [IntervalTimer](/docs/api/schemadefinitions/intervaltimer)
+- [ISchemaClass\<IntervalTimer\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CTimeline\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BucketCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L22" />
+
+```csharp
+ref int BucketCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### CompressionType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L28" />
+
+```csharp
+ref TimelineCompression_t CompressionType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TimelineCompression_t" typeHref="/docs/api/schemadefinitions/timelinecompression_t" />
+
+### FinalValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L26" />
+
+```csharp
+ref float FinalValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Interval
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L24" />
+
+```csharp
+ref float Interval { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Stopped
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L30" />
+
+```csharp
+ref bool Stopped { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ValueCounts
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L20" />
+
+```csharp
+ISchemaFixedArray<int> ValueCounts { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;int&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### Values
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CTimeline.cs#L18" />
+
+```csharp
+ISchemaFixedArray<float> Values { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;float&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+

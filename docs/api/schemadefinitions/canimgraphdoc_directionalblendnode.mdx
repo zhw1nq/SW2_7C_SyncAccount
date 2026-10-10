@@ -1,0 +1,123 @@
+---
+title: CAnimGraphDoc_DirectionalBlendNode
+---
+
+# Interface CAnimGraphDoc_DirectionalBlendNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimGraphDoc_DirectionalBlendNode : CAnimGraphDoc_Node, ISchemaClass<CAnimGraphDoc_Node>, ISchemaClass<CAnimGraphDoc_DirectionalBlendNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_Node](/docs/api/schemadefinitions/canimgraphdoc_node)
+- [ISchemaClass\<CAnimGraphDoc_Node\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CAnimGraphDoc_DirectionalBlendNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AnimNamePrefix
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L18" />
+
+```csharp
+string AnimNamePrefix { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### BlendValueSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L20" />
+
+```csharp
+ref AnimValueSource BlendValueSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimValueSource" typeHref="/docs/api/schemadefinitions/animvaluesource" />
+
+### Damping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L32" />
+
+```csharp
+CAnimInputDamping Damping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### LockBlendOnReset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L28" />
+
+```csharp
+ref bool LockBlendOnReset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Loop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L26" />
+
+```csharp
+ref bool Loop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Param
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L24" />
+
+```csharp
+AnimParamID Param { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### ParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L22" />
+
+```csharp
+string ParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### PlaybackSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_DirectionalBlendNode.cs#L30" />
+
+```csharp
+ref float PlaybackSpeed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

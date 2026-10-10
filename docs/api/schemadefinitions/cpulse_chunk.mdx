@@ -1,0 +1,61 @@
+---
+title: CPulse_Chunk
+---
+
+# Interface CPulse_Chunk
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulse_Chunk.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPulse_Chunk : ISchemaClass<CPulse_Chunk>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CPulse_Chunk\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### InstructionDebugInfos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulse_Chunk.cs#L22" />
+
+```csharp
+ref CUtlLeanVector<CPulse_InstructionDebug, int> InstructionDebugInfos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CPulse_InstructionDebug, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### Instructions
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulse_Chunk.cs#L18" />
+
+```csharp
+ref CUtlLeanVector<PGDInstruction_t, int> Instructions { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;PGDInstruction_t, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### Registers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulse_Chunk.cs#L20" />
+
+```csharp
+ref CUtlLeanVector<CPulse_RegisterInfo, int> Registers { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CPulse_RegisterInfo, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+

@@ -1,0 +1,48 @@
+---
+title: IOnClientPutInServerEvent
+---
+
+# Interface IOnClientPutInServerEvent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnClientPutInServerEvent.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Events](/docs/api/events)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Called when a client is put in the server.
+
+```csharp
+public interface IOnClientPutInServerEvent
+```
+
+## Properties
+
+### Kind
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnClientPutInServerEvent.cs#L16" />
+
+The kind of client that was put in the server.
+
+```csharp
+ClientKind Kind { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ClientKind" typeHref="/docs/api/events/clientkind" />
+
+### PlayerId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnClientPutInServerEvent.cs#L11" />
+
+The player ID of the client that was put in the server.
+
+```csharp
+int PlayerId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

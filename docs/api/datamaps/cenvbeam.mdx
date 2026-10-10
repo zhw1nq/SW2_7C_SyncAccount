@@ -1,0 +1,49 @@
+---
+title: CEnvBeam
+---
+
+# CEnvBeam
+
+Inherited from [CBeam](/docs/api/datamaps/cbeam)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `ClipStyle` | `m_nClipStyle` | `FIELD_INT32` |
+| `LightningStart` | `m_iszStartEntity` | `FIELD_STRING` |
+| `LightningEnd` | `m_iszEndEntity` | `FIELD_STRING` |
+| `targetpoint` | `m_vEndPointWorld` | `FIELD_POSITION_VECTOR` |
+| `life` | `m_life` | `FIELD_FLOAT32` |
+| `BoltWidth` | `m_boltWidth` | `FIELD_FLOAT32` |
+| `NoiseAmplitude` | `m_noiseAmplitude` | `FIELD_FLOAT32` |
+| `TextureScroll` | `m_speed` | `FIELD_INT32` |
+| `StrikeTime` | `m_restrike` | `FIELD_FLOAT32` |
+| `texture` | `m_iszSpriteName` | `FIELD_STRING` |
+| `framestart` | `m_frameStart` | `FIELD_INT32` |
+| `Radius` | `m_radius` | `FIELD_FLOAT32` |
+| `TouchType` | `m_TouchType` | `FIELD_INT32` |
+| `filtername` | `m_iFilterName` | `FIELD_STRING` |
+| `decalname` | `m_iszDecal` | `FIELD_STRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `TurnOn` | `FIELD_VOID` |
+| `TurnOff` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `StrikeOnce` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnTouchedByEntity` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CEnvBeamStrikeThink` |
+| `CEnvBeamUpdateThink` |

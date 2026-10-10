@@ -1,0 +1,102 @@
+---
+title: IGameHookEntities
+---
+
+# Interface IGameHookEntities
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameHookEntities
+```
+
+## Properties
+
+### AcceptInput
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L28" />
+
+Hook triggered when an entity accepts an input.
+
+```csharp
+IAcceptInputEntityHook AcceptInput { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IAcceptInputEntityHook" typeHref="/docs/api/gamehooks/iacceptinputentityhook" />
+
+### EndTouch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L23" />
+
+Hook triggered when an entity stops touching another entity.
+
+```csharp
+IEndTouchEntityHook EndTouch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IEndTouchEntityHook" typeHref="/docs/api/gamehooks/iendtouchentityhook" />
+
+### FireOutput
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L33" />
+
+Hook triggered when an entity fires an output.
+
+```csharp
+IFireOutputEntityHook FireOutput { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IFireOutputEntityHook" typeHref="/docs/api/gamehooks/ifireoutputentityhook" />
+
+### StartTouch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L13" />
+
+Hook triggered when an entity starts touching another entity.
+
+```csharp
+IStartTouchEntityHook StartTouch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IStartTouchEntityHook" typeHref="/docs/api/gamehooks/istarttouchentityhook" />
+
+### TakeDamage
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L8" />
+
+Hook triggered when an entity takes damage.
+
+```csharp
+ITakeDamageEntityHook TakeDamage { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ITakeDamageEntityHook" typeHref="/docs/api/gamehooks/itakedamageentityhook" />
+
+### Touch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Entities/IEntities.cs#L18" />
+
+Hook triggered while an entity is touching another entity.
+
+```csharp
+ITouchEntityHook Touch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ITouchEntityHook" typeHref="/docs/api/gamehooks/itouchentityhook" />
+

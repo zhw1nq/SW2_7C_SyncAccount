@@ -1,0 +1,65 @@
+---
+title: CNmGraphDocTargetOffsetNode
+---
+
+# Interface CNmGraphDocTargetOffsetNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTargetOffsetNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CNmGraphDocTargetOffsetNode : CNmGraphDocFlowNode, CNmGraphDocNode, ISchemaClass<CNmGraphDocNode>, ISchemaClass<CNmGraphDocFlowNode>, ISchemaClass<CNmGraphDocTargetOffsetNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CNmGraphDocFlowNode](/docs/api/schemadefinitions/cnmgraphdocflownode)
+- [CNmGraphDocNode](/docs/api/schemadefinitions/cnmgraphdocnode)
+- [ISchemaClass\<CNmGraphDocNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocFlowNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocTargetOffsetNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### IsBoneSpaceOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTargetOffsetNode.cs#L18" />
+
+```csharp
+ref bool IsBoneSpaceOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RotationOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTargetOffsetNode.cs#L20" />
+
+```csharp
+ref QAngle RotationOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### TranslationOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTargetOffsetNode.cs#L22" />
+
+```csharp
+ref Vector TranslationOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+

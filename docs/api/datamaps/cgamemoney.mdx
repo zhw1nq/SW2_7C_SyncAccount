@@ -1,0 +1,35 @@
+---
+title: CGameMoney
+---
+
+# CGameMoney
+
+Inherited from [CRulePointEntity](/docs/api/datamaps/crulepointentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `Money` | `m_nMoney` | `FIELD_INT32` |
+| `AwardText` | `m_strAwardText` | `FIELD_UTLSTRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetMoneyAmount` | `FIELD_INT32` |
+| `AddTeamMoneyTerrorist` | `FIELD_VOID` |
+| `AddTeamMoneyCT` | `FIELD_VOID` |
+| `AddMoneyPlayer` | `FIELD_VOID` |
+| `SpendMoneyFromPlayer` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnMoneySpent` | `FIELD_CUSTOM` |
+| `OnMoneySpentFail` | `FIELD_CUSTOM` |
+
+## Functions
+
+_No Entry_

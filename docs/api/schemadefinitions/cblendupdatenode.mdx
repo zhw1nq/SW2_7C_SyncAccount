@@ -1,0 +1,183 @@
+---
+title: CBlendUpdateNode
+---
+
+# Interface CBlendUpdateNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CBlendUpdateNode : CAnimUpdateNodeBase, ISchemaClass<CAnimUpdateNodeBase>, ISchemaClass<CBlendUpdateNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimUpdateNodeBase](/docs/api/schemadefinitions/canimupdatenodebase)
+- [ISchemaClass\<CAnimUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBlendUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendKeyType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L32" />
+
+```csharp
+ref BlendKeyType BlendKeyType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="BlendKeyType" typeHref="/docs/api/schemadefinitions/blendkeytype" />
+
+### BlendValueSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L24" />
+
+```csharp
+ref AnimValueSource BlendValueSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimValueSource" typeHref="/docs/api/schemadefinitions/animvaluesource" />
+
+### Children
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L18" />
+
+```csharp
+ref CUtlVector<CAnimUpdateNodeRef> Children { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimUpdateNodeRef&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Damping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L30" />
+
+```csharp
+CAnimInputDamping Damping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### IsAngle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L42" />
+
+```csharp
+ref bool IsAngle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LinearRootMotionBlendMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L26" />
+
+```csharp
+ref LinearRootMotionBlendMode_t LinearRootMotionBlendMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="LinearRootMotionBlendMode_t" typeHref="/docs/api/schemadefinitions/linearrootmotionblendmode_t" />
+
+### LockBlendOnReset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L34" />
+
+```csharp
+ref bool LockBlendOnReset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LockWhenWaning
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L40" />
+
+```csharp
+ref bool LockWhenWaning { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Loop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L38" />
+
+```csharp
+ref bool Loop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ParamIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L28" />
+
+```csharp
+CAnimParamHandle ParamIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### SortedOrder
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L20" />
+
+```csharp
+ref CUtlVector<byte> SortedOrder { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;byte&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SyncCycles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L36" />
+
+```csharp
+ref bool SyncCycles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TargetValues
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBlendUpdateNode.cs#L22" />
+
+```csharp
+ref CUtlVector<float> TargetValues { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

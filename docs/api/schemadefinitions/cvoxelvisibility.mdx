@@ -1,0 +1,181 @@
+---
+title: CVoxelVisibility
+---
+
+# Interface CVoxelVisibility
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CVoxelVisibility : ISchemaClass<CVoxelVisibility>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CVoxelVisibility\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BaseClusterCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L18" />
+
+```csharp
+ref uint BaseClusterCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### EnclosedClusterListBlock
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L36" />
+
+```csharp
+VoxelVisBlockOffset_t EnclosedClusterListBlock { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+
+### EnclosedClustersBlock
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L38" />
+
+```csharp
+VoxelVisBlockOffset_t EnclosedClustersBlock { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+
+### GridSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L26" />
+
+```csharp
+ref float GridSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MasksBlock
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L40" />
+
+```csharp
+VoxelVisBlockOffset_t MasksBlock { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+
+### MaxBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L24" />
+
+```csharp
+ref Vector MaxBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### MinBounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L22" />
+
+```csharp
+ref Vector MinBounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### NodeBlock
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L32" />
+
+```csharp
+VoxelVisBlockOffset_t NodeBlock { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+
+### PVSBytesPerCluster
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L20" />
+
+```csharp
+ref uint PVSBytesPerCluster { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### RegionBlock
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L34" />
+
+```csharp
+VoxelVisBlockOffset_t RegionBlock { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+
+### SkyVisibilityCluster
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L28" />
+
+```csharp
+ref uint SkyVisibilityCluster { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### SunVisibilityCluster
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L30" />
+
+```csharp
+ref uint SunVisibilityCluster { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### VisBlocks
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CVoxelVisibility.cs#L42" />
+
+```csharp
+VoxelVisBlockOffset_t VisBlocks { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="VoxelVisBlockOffset_t" typeHref="/docs/api/schemadefinitions/voxelvisblockoffset_t" />
+

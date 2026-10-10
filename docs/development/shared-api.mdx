@@ -1,0 +1,188 @@
+---
+title: Shared API
+---
+
+Shared API lets plugins expose typed interfaces that other plugins can consume at runtime.
+
+## Shared Interface Lifecycle
+
+Shared API integration usually happens in three plugin callbacks:
+
+- `ConfigureSharedInterface(IInterfaceManager)`: register interfaces your plugin provides
+- `UseSharedInterface(IInterfaceManager)`: retrieve interfaces from other plugins
+- `OnSharedInterfaceInjected(IInterfaceManager)`: react after shared interfaces are injected
+
+```c#
+public override void ConfigureSharedInterface(IInterfaceManager interfaceManager)
+{
+    // Register provider interfaces here.
+}
+
+public override void UseSharedInterface(IInterfaceManager interfaceManager)
+{
+    // Resolve dependencies from other plugins here.
+}
+
+public override void OnSharedInterfaceInjected(IInterfaceManager interfaceManager)
+{
+    // Optional: react when shared interfaces are re-injected.
+}
+```
+
+## Providing Shared Interfaces
+
+Use `AddSharedInterface<TInterface, TImpl>` in `ConfigureSharedInterface`.
+
+```c#
+public override void ConfigureSharedInterface(IInterfaceManager interfaceManager)
+{
+    var economyApi = new EconomyApi();
+
+    interfaceManager.AddSharedInterface<IEconomyApi, EconomyApi>(
+        "Economy.Api.v1",
+        economyApi
+    );
+}
+```
+
+<Callout type="info">
+    The provider plugin will provide to users a Contract assembly which will be used by consumer plugins as regular packages for the plugin.
+    The provider plugin will also need to add the Contract assembly file to the `resources/exports`.
+</Callout>
+
+## Consuming Shared Interfaces
+
+### Preferred: TryGetSharedInterface
+
+Use `TryGetSharedInterface<TInterface>` for optional dependencies.
+
+```c#
+private IEconomyApi? _economyApi;
+
+public override void UseSharedInterface(IInterfaceManager interfaceManager)
+{
+    if (!interfaceManager.TryGetSharedInterface<IEconomyApi>("Economy.Api.v1", out var economyApi))
+    {
+        Console.WriteLine("Economy API not available. Economy features disabled.");
+        _economyApi = null;
+        return;
+    }
+
+    _economyApi = economyApi;
+}
+```
+
+### Required Dependency
+
+If the dependency is mandatory, you can use `GetSharedInterface<TInterface>` directly.
+
+```c#
+IEconomyApi economyApi = interfaceManager.GetSharedInterface<IEconomyApi>("Economy.Api.v1");
+```
+
+### Availability Check
+
+`HasSharedInterface` is useful when you only need a quick presence check.
+
+```c#
+bool hasEconomy = interfaceManager.HasSharedInterface("Economy.Api.v1");
+```
+
+## Complete Example
+
+### Shared Contract
+
+```c#
+namespace MyPlugin.Contracts;
+
+public interface IEconomyApi
+{
+    int GetBalance(ulong steamId);
+    bool TrySpend(ulong steamId, int amount);
+}
+```
+
+### Provider Plugin
+
+```c#
+using MyPlugin.Contracts;
+
+public sealed class EconomyApi : IEconomyApi
+{
+    private readonly Dictionary<ulong, int> _balances = new();
+
+    public int GetBalance(ulong steamId)
+    {
+        return _balances.TryGetValue(steamId, out int balance) ? balance : 0;
+    }
+
+    public bool TrySpend(ulong steamId, int amount)
+    {
+        int current = GetBalance(steamId);
+        if (current < amount)
+        {
+            return false;
+        }
+
+        _balances[steamId] = current - amount;
+        return true;
+    }
+}
+
+public class EconomyPlugin : BasePlugin
+{
+    private readonly EconomyApi _api = new();
+
+    public override void ConfigureSharedInterface(IInterfaceManager interfaceManager)
+    {
+        interfaceManager.AddSharedInterface<IEconomyApi, EconomyApi>("Economy.Api.v1", _api);
+    }
+}
+```
+
+### Consumer Plugin
+
+```c#
+using MyPlugin.Contracts;
+
+public class ShopPlugin : BasePlugin
+{
+    private IEconomyApi? _economyApi;
+
+    public override void UseSharedInterface(IInterfaceManager interfaceManager)
+    {
+        interfaceManager.TryGetSharedInterface<IEconomyApi>("Economy.Api.v1", out _economyApi);
+    }
+
+    public void TryBuy(IPlayer player, int cost)
+    {
+        if (_economyApi == null)
+        {
+            player.PrintToChat("Economy service is unavailable.");
+            return;
+        }
+
+        if (!_economyApi.TrySpend(player.SteamID, cost))
+        {
+            player.PrintToChat("Not enough balance.");
+            return;
+        }
+
+        player.PrintToChat("Purchase successful.");
+    }
+}
+```
+
+## Best Practices
+
+- Use stable, descriptive keys such as `PluginName.ServiceName.v1`.
+- Version keys for breaking changes, for example `Economy.Api.v1` -> `Economy.Api.v2`.
+- Prefer `TryGetSharedInterface` for optional dependencies.
+- Keep shared contracts small and implementation-agnostic.
+- If your shared API exposes events, reset or recreate provider instances on reconfiguration to avoid duplicate subscriptions.
+
+## Reference
+
+See [IInterfaceManager](/docs/api/iinterfacemanager/) for shared interface manager methods.
+
+See [IPlugin](/docs/api/plugins/iplugin/) and [BasePlugin](/docs/api/plugins/baseplugin/) for plugin lifecycle callbacks.

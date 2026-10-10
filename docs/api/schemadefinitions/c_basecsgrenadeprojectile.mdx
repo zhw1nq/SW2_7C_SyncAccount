@@ -1,0 +1,228 @@
+---
+title: C_BaseCSGrenadeProjectile
+---
+
+# Interface C_BaseCSGrenadeProjectile
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_BaseCSGrenadeProjectile : C_BaseGrenade, CBaseAnimGraph, CBaseModelEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaClass<CBaseAnimGraph>, ISchemaClass<C_BaseGrenade>, ISchemaClass<C_BaseCSGrenadeProjectile>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [C_BaseGrenade](/docs/api/schemadefinitions/c_basegrenade)
+- [CBaseAnimGraph](/docs/api/schemadefinitions/cbaseanimgraph)
+- [CBaseModelEntity](/docs/api/schemadefinitions/cbasemodelentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraph\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BaseGrenade\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_BaseCSGrenadeProjectile\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Bounces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L22" />
+
+```csharp
+ref int Bounces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### CanCreateGrenadeTrail
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L38" />
+
+```csharp
+ref bool CanCreateGrenadeTrail { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ExplodeEffectBegan
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L36" />
+
+```csharp
+ref bool ExplodeEffectBegan { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ExplodeEffectIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L24" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSystemDefinition> ExplodeEffectIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSystemDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### ExplodeEffectOrigin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L28" />
+
+```csharp
+ref Vector ExplodeEffectOrigin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ExplodeEffectTickBegin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L26" />
+
+```csharp
+ref int ExplodeEffectTickBegin { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### InitialPosition
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L18" />
+
+```csharp
+ref Vector InitialPosition { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### InitialVelocity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L20" />
+
+```csharp
+ref Vector InitialVelocity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### LastTrailLinePos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L32" />
+
+```csharp
+ref Vector LastTrailLinePos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### NextTrailLineTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L34" />
+
+```csharp
+GameTime_t NextTrailLineTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### SnapshotTrajectoryEffectIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L40" />
+
+```csharp
+ParticleIndex_t SnapshotTrajectoryEffectIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleIndex_t" typeHref="/docs/api/schemadefinitions/particleindex_t" />
+
+### SnapshotTrajectoryParticleSnapshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L42" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeIParticleSnapshot> SnapshotTrajectoryParticleSnapshot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeIParticleSnapshot&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### SpawnTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L30" />
+
+```csharp
+GameTime_t SpawnTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### TrajectoryTrailEffectCreationTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L48" />
+
+```csharp
+ref float TrajectoryTrailEffectCreationTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TrajectoryTrailPointCreationTimes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L46" />
+
+```csharp
+ref CUtlVector<float> TrajectoryTrailPointCreationTimes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### TrajectoryTrailPoints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_BaseCSGrenadeProjectile.cs#L44" />
+
+```csharp
+ref CUtlVector<Vector> TrajectoryTrailPoints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;Vector&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

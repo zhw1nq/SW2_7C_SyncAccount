@@ -1,0 +1,178 @@
+---
+title: CPointTemplate
+---
+
+# Interface CPointTemplate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPointTemplate : CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CServerOnlyEntity>, ISchemaClass<CLogicalEntity>, ISchemaClass<CPointTemplate>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CLogicalEntity](/docs/api/schemadefinitions/clogicalentity)
+- [CServerOnlyEntity](/docs/api/schemadefinitions/cserveronlyentity)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CServerOnlyEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLogicalEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPointTemplate\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AsynchronouslySpawnEntities
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L26" />
+
+```csharp
+ref bool AsynchronouslySpawnEntities { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ClientOnlyEntityBehavior
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L28" />
+
+```csharp
+ref PointTemplateClientOnlyEntityBehavior_t ClientOnlyEntityBehavior { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PointTemplateClientOnlyEntityBehavior_t" typeHref="/docs/api/schemadefinitions/pointtemplateclientonlyentitybehavior_t" />
+
+### CreatedSpawnGroupHandles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L32" />
+
+```csharp
+ref CUtlVector<uint> CreatedSpawnGroupHandles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;uint&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EntityFilterName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L22" />
+
+```csharp
+string EntityFilterName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### OnEntitySpawned
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L41" />
+
+```csharp
+SchemaUntypedField OnEntitySpawned { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### OwnerSpawnGroupType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L30" />
+
+```csharp
+ref PointTemplateOwnerSpawnGroupType_t OwnerSpawnGroupType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PointTemplateOwnerSpawnGroupType_t" typeHref="/docs/api/schemadefinitions/pointtemplateownerspawngrouptype_t" />
+
+### ScriptCallbackScope
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L38" />
+
+```csharp
+ref HSCRIPTHandler ScriptCallbackScope { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HSCRIPTHandler" typeHref="/docs/api/natives/hscripthandler" />
+
+### ScriptSpawnCallback
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L36" />
+
+```csharp
+ref HSCRIPTHandler ScriptSpawnCallback { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HSCRIPTHandler" typeHref="/docs/api/natives/hscripthandler" />
+
+### Source2EntityLumpName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L20" />
+
+```csharp
+string Source2EntityLumpName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SpawnedEntityHandles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L34" />
+
+```csharp
+ref CUtlVector<CHandle<CEntityInstance>> SpawnedEntityHandles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CEntityInstance&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### TimeoutInterval
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L24" />
+
+```csharp
+ref float TimeoutInterval { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### WorldName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPointTemplate.cs#L18" />
+
+```csharp
+string WorldName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

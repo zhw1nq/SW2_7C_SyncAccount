@@ -1,0 +1,133 @@
+---
+title: INetChannel
+---
+
+# Interface INetChannel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Engine](/docs/api/engine)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface INetChannel : INetChannelInfo
+```
+
+#### Implements
+
+- [INetChannelInfo](/docs/api/engine/inetchannelinfo)
+
+## Properties
+
+### CanPacket
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L5" />
+
+```csharp
+bool CanPacket { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasPendingReliableData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L7" />
+
+```csharp
+bool HasPendingReliableData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsOverflowed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L6" />
+
+```csharp
+bool IsOverflowed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsSuppressingTransmit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L14" />
+
+```csharp
+bool IsSuppressingTransmit { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsTimedOut
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L12" />
+
+```csharp
+bool IsTimedOut { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+## Methods
+
+### SetMaxDataRate(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L10" />
+
+```csharp
+void SetMaxDataRate(int rate)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="rate" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetMinDataRate(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L9" />
+
+```csharp
+void SetMinDataRate(int rate)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="rate" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetTimeout(float, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L11" />
+
+```csharp
+void SetTimeout(float seconds, bool forceExact = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="seconds" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="forceExact" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SuppressTransmit(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannel.cs#L13" />
+
+```csharp
+void SuppressTransmit(bool suppress)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="suppress" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

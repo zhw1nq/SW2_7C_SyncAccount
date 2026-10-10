@@ -1,0 +1,207 @@
+---
+title: TraceCollisionAttributes
+---
+
+# Struct TraceCollisionAttributes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Trace](/docs/api/trace)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct TraceCollisionAttributes
+```
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### TraceCollisionAttributes()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L7" />
+
+```csharp
+public TraceCollisionAttributes()
+```
+
+## Properties
+
+### CollisionFunctionMask
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L53" />
+
+The collision function mask that determines which collision functions apply.
+
+```csharp
+public readonly CollisionFunctionMask_t CollisionFunctionMask { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CollisionFunctionMask_t" typeHref="/docs/api/natives/collisionfunctionmask_t" />
+
+### CollisionGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L49" />
+
+The collision group that defines the collision behavior for these attributes.
+
+```csharp
+public readonly CollisionGroup CollisionGroup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CollisionGroup" typeHref="/docs/api/natives/collisiongroup" />
+
+### DetailLayerMask
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L37" />
+
+The detail layer mask that defines which detail layers are included in collision detection.
+
+```csharp
+public readonly ushort DetailLayerMask { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### DetailLayerMaskType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L41" />
+
+The type of detail layer mask being used.
+
+```csharp
+public readonly byte DetailLayerMaskType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### EntityId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L25" />
+
+The entity ID associated with these collision attributes.
+
+```csharp
+public readonly uint EntityId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### HierarchyId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L33" />
+
+The hierarchy ID associated with these collision attributes.
+
+```csharp
+public readonly ushort HierarchyId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### InteractsAs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L13" />
+
+The interaction layer mask defining the types of surfaces or entities that this object interacts as during collision.
+
+```csharp
+public readonly ulong InteractsAs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### InteractsExclude
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L21" />
+
+The interaction layer mask defining the types of surfaces or entities that this object excludes from interaction during collision.
+
+```csharp
+public readonly ulong InteractsExclude { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### InteractsWith
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L17" />
+
+The interaction layer mask defining the types of surfaces or entities that this object interacts with during collision.
+
+```csharp
+public readonly ulong InteractsWith { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### OwnerId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L29" />
+
+The owner entity ID associated with these collision attributes. This is typically the ID of the entity that owns or created this object.
+
+```csharp
+public readonly uint OwnerId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### TargetDetailLayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L45" />
+
+The target detail layer for collision detection.
+
+```csharp
+public readonly byte TargetDetailLayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+## Methods
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResultCollisionAttribute.cs#L55" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+

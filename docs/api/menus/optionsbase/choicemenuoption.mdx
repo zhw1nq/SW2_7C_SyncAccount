@@ -1,0 +1,202 @@
+---
+title: ChoiceMenuOption
+---
+
+# Class ChoiceMenuOption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Core.Menus.OptionsBase](/docs/api/menus/optionsbase)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Represents a menu option that cycles through a list of choices.
+
+```csharp
+public sealed class ChoiceMenuOption : MenuOptionBase, IMenuOption, IDisposable
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [MenuOptionBase](/docs/api/menus/optionsbase/menuoptionbase)
+- [ChoiceMenuOption](/docs/api/menus/optionsbase/choicemenuoption)
+
+#### Implements
+
+- [IMenuOption](/docs/api/menus/imenuoption)
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+#### Inherited Members
+
+- [MenuOptionBase.Dispose()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Dispose)
+- [MenuOptionBase.PauseTextAnimation()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_PauseTextAnimation)
+- [MenuOptionBase.ResumeTextAnimation()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_ResumeTextAnimation)
+- [MenuOptionBase.Menu](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Menu)
+- [MenuOptionBase.LineCount](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_LineCount)
+- [MenuOptionBase.BindingText](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_BindingText)
+- [MenuOptionBase.Text](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Text)
+- [MenuOptionBase.Comment](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Comment)
+- [MenuOptionBase.MaxWidth](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_MaxWidth)
+- [MenuOptionBase.Visible](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Visible)
+- [MenuOptionBase.Enabled](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Enabled)
+- [MenuOptionBase.CloseAfterClick](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_CloseAfterClick)
+- [MenuOptionBase.Tag](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Tag)
+- [MenuOptionBase.TextSize](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextSize)
+- [MenuOptionBase.TextStyle](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextStyle)
+- [MenuOptionBase.PlaySound](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_PlaySound)
+- [MenuOptionBase.VisibilityChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_VisibilityChanged)
+- [MenuOptionBase.EnabledChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_EnabledChanged)
+- [MenuOptionBase.TextChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextChanged)
+- [MenuOptionBase.Validating](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Validating)
+- [MenuOptionBase.Click](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Click)
+- [MenuOptionBase.BeforeFormat](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_BeforeFormat)
+- [MenuOptionBase.AfterFormat](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_AfterFormat)
+- [MenuOptionBase.IsClickTaskCompleted(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_IsClickTaskCompleted_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.GetVisible(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetVisible_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.SetVisible(IPlayer, bool)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_SetVisible_SwiftlyS2_Shared_Players_IPlayer_System_Boolean_)
+- [MenuOptionBase.GetEnabled(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetEnabled_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.SetEnabled(IPlayer, bool)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_SetEnabled_SwiftlyS2_Shared_Players_IPlayer_System_Boolean_)
+- [MenuOptionBase.GetDisplayText(IPlayer, int)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetDisplayText_SwiftlyS2_Shared_Players_IPlayer_System_Int32_)
+- [MenuOptionBase.OnValidatingAsync(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_OnValidatingAsync_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.OnClickAsync(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_OnClickAsync_SwiftlyS2_Shared_Players_IPlayer_)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### ChoiceMenuOption(IEnumerable\<string\>, string?, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L38" />
+
+Creates an instance of SwiftlyS2.Core.Menus.OptionsBase.ChoiceMenuOption with a list of choices.
+
+```csharp
+public ChoiceMenuOption(IEnumerable<string> choices, string? defaultChoice = null, int updateIntervalMs = 120, int pauseIntervalMs = 1000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="choices" type="IEnumerable&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — The list of available choices.
+- <ApiParam name="defaultChoice" type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The default choice to select. If null or not found, defaults to first choice.
+- <ApiParam name="updateIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The interval in milliseconds between text updates. Defaults to 120ms.
+- <ApiParam name="pauseIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The pause duration in milliseconds before starting the next text update cycle. Defaults to 1000ms.
+
+<ApiLabel>Remarks</ApiLabel>
+
+When using this constructor, the SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.Text property must be manually set to specify the initial text.
+
+### ChoiceMenuOption(string, IEnumerable\<string\>, string?, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L67" />
+
+Creates an instance of SwiftlyS2.Core.Menus.OptionsBase.ChoiceMenuOption with a list of choices.
+
+```csharp
+public ChoiceMenuOption(string text, IEnumerable<string> choices, string? defaultChoice = null, int updateIntervalMs = 120, int pauseIntervalMs = 1000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The text content to display.
+- <ApiParam name="choices" type="IEnumerable&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — The list of available choices.
+- <ApiParam name="defaultChoice" type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The default choice to select. If null or not found, defaults to first choice.
+- <ApiParam name="updateIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The interval in milliseconds between text updates. Defaults to 120ms.
+- <ApiParam name="pauseIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The pause duration in milliseconds before starting the next text update cycle. Defaults to 1000ms.
+
+## Properties
+
+### Choices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L21" />
+
+Gets the read-only list of available choices.
+
+```csharp
+public IReadOnlyList<string> Choices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IReadOnlyList&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1" />
+
+## Methods
+
+### GetDisplayText(IPlayer, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L77" />
+
+Gets the display text for this option as it should appear to the specified player.
+
+```csharp
+public override string GetDisplayText(IPlayer player, int displayLine = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player requesting the display text.
+- <ApiParam name="displayLine" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The display line index of the option.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The formatted display text for the option.
+
+<ApiLabel>Remarks</ApiLabel>
+
+- When `LineCount=1`: The `displayLine` parameter is not needed; return the HTML-formatted string directly.
+  - `displayLine=0`: Return all content
+  - `displayLine=1`: Return only the first line content
+  - `displayLine=2`: Return only the second line content
+  - And so on...
+
+### GetSelectedChoice(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L90" />
+
+Gets the currently selected choice for the specified player.
+
+```csharp
+public string GetSelectedChoice(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose selected choice to retrieve.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The currently selected choice string.
+
+### SetSelectedChoice(IPlayer, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L101" />
+
+Sets the selected choice for the specified player.
+
+```csharp
+public void SetSelectedChoice(IPlayer player, string choice)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose choice to set.
+- <ApiParam name="choice" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The choice to select. Must exist in the SwiftlyS2.Core.Menus.OptionsBase.ChoiceMenuOption.Choices list.
+
+### ValueChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/ChoiceMenuOption.cs#L26" />
+
+Occurs when the selected choice changes for a player.
+
+```csharp
+public event EventHandler<MenuOptionValueChangedEventArgs<string>>? ValueChanged
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionValueChangedEventArgs&lt;string&gt;&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+

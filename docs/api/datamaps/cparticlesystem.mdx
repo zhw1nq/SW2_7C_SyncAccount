@@ -1,0 +1,50 @@
+---
+title: CParticleSystem
+---
+
+# CParticleSystem
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `start_active` | `m_bStartActive` | `FIELD_BOOLEAN` |
+| `pre_sim_time` | `m_flPreSimTime` | `FIELD_FLOAT32` |
+| `effect_name` | `m_iszEffectName` | `FIELD_STRING` |
+| `no_save` | `m_bNoSave` | `FIELD_BOOLEAN` |
+| `no_freeze` | `m_bNoFreeze` | `FIELD_BOOLEAN` |
+| `no_ramp` | `m_bNoRamp` | `FIELD_BOOLEAN` |
+| `snapshot_file` | `m_szSnapshotFileName` | `FIELD_CHARACTER` |
+| `cpoint%d` | `m_iszControlPointNames` | `FIELD_STRING` |
+| `AnimateDuringGameplayPause` | `m_bAnimateDuringGameplayPause` | `FIELD_BOOLEAN` |
+| `data_cp` | `m_nDataCP` | `FIELD_INT32` |
+| `data_cp_value` | `m_vecDataCPValue` | `FIELD_VECTOR` |
+| `tint_cp` | `m_nTintCP` | `FIELD_INT32` |
+| `tint_cp_color` | `m_clrTint` | `FIELD_COLOR32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Start` | `FIELD_VOID` |
+| `Stop` | `FIELD_VOID` |
+| `Freeze` | `FIELD_FLOAT32` |
+| `Thaw` | `FIELD_FLOAT32` |
+| `StopPlayEndCap` | `FIELD_VOID` |
+| `DestroyImmediately` | `FIELD_VOID` |
+| `SetControlPoint` | `FIELD_STRING` |
+| `SetDataControlPointX` | `FIELD_FLOAT32` |
+| `SetDataControlPointY` | `FIELD_FLOAT32` |
+| `SetDataControlPointZ` | `FIELD_FLOAT32` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CParticleSystemStartParticleSystemThink` |

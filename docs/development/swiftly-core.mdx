@@ -1,0 +1,146 @@
+---
+title: Swiftly Core
+---
+
+`ISwiftlyCore` is the central entry point for all plugin services in SwiftlyS2.
+
+In development docs, `Core` refers to the protected `ISwiftlyCore` instance exposed by `BasePlugin`.
+
+## How Core Is Provided
+
+`BasePlugin` receives `ISwiftlyCore` in its constructor and exposes it through `Core`.
+
+```c#
+public sealed class MyPlugin : BasePlugin
+{
+    public MyPlugin(ISwiftlyCore core) : base(core)
+    {
+    }
+
+    public override void Load(bool hotReload)
+    {
+        Core.Logger.LogInformation("Plugin loaded. Hot reload: {HotReload}", hotReload);
+    }
+
+    public override void Unload()
+    {
+        Core.Logger.LogInformation("Plugin unloaded.");
+    }
+}
+```
+
+<Callout type="info">
+  Prefer passing `ISwiftlyCore` (or specific services from it) into helper classes instead of using global/static access.
+</Callout>
+
+## Core Services at a Glance
+
+| Property | Purpose |
+| --- | --- |
+| `Core.Event` | Core event subscription (`IEventSubscriber`) |
+| `Core.GameEvent` | Generated game-event fire/hook APIs |
+| `Core.NetMessage` | Typed protobuf net-message send/hook APIs |
+| `Core.Command` | Command registration and chat/command hooks |
+| `Core.EntitySystem` | Entity creation, query, input/output hooks |
+| `Core.ConVar` | ConVar registration and value access |
+| `Core.Scheduler` | Main-thread dispatch, timers, and delayed work |
+| `Core.PlayerManager` | Player lookup and player manager features |
+| `Core.Permission` | Permission checks and assignment |
+| `Core.Translation`, `Core.Localizer` | Player and server localization |
+| `Core.Database` | Database service |
+| `Core.Profiler` | Profiling context and timers |
+| `Core.Datamap`, `Core.StringTable` | Datamap and string-table services |
+| `Core.PluginManager` | Plugin discovery and management |
+| `Core.Registrator` | Attribute-based handler registration for instances |
+| `Core.Logger`, `Core.LoggerFactory` | Logging APIs |
+
+## Runtime and File-System Paths
+
+Use these properties when resolving plugin/game directories:
+
+| Property | Meaning |
+| --- | --- |
+| `Core.PluginPath` | Absolute path to current plugin directory |
+| `Core.PluginDataDirectory` | Plugin data path (ensured to exist) |
+| `Core.CSGODirectory` | Absolute path to `game/csgo` |
+| `Core.GameDirectory` | Absolute path to game root |
+
+## Thread Awareness
+
+`Core.IsGameThread` tells you whether execution is currently on the game thread.
+
+```c#
+public void EnsureMainThreadAction(Action action)
+{
+    if (Core.IsGameThread)
+    {
+        action();
+        return;
+    }
+
+    Core.Scheduler.NextTick(action);
+}
+```
+
+<Callout type="warning">
+  Many game-facing APIs are thread-unsafe. If you are not on the game thread, hand work back using `Core.Scheduler` before touching entities, players, net messages, or engine state.
+</Callout>
+
+## Working with Additional Handler Classes
+
+When attributes are used outside your main plugin class, register that instance through `Core.Registrator`.
+
+```c#
+public sealed class ChatHandlers
+{
+    [ClientChatHookHandler]
+    public HookResult OnClientChat(int playerId, string text, bool teamonly)
+    {
+        return HookResult.Continue;
+    }
+}
+
+public override void Load(bool hotReload)
+{
+    Core.Registrator.Register(new ChatHandlers());
+}
+```
+
+## Complete Example
+
+```c#
+private EventDelegates.OnClientConnected? _onClientConnected;
+
+public override void Load(bool hotReload)
+{
+    Core.Logger.LogInformation("Plugin path: {Path}", Core.PluginPath);
+    Core.Logger.LogInformation("Data path: {Path}", Core.PluginDataDirectory);
+
+    _onClientConnected = OnClientConnected;
+    Core.Event.OnClientConnected += _onClientConnected;
+}
+
+public override void Unload()
+{
+    if (_onClientConnected != null)
+    {
+        Core.Event.OnClientConnected -= _onClientConnected;
+    }
+}
+
+private void OnClientConnected(IOnClientConnectedEvent @event)
+{
+    Core.Scheduler.NextTick(() =>
+    {
+        Core.Logger.LogInformation("Client connected: {PlayerId}", @event.PlayerId);
+    });
+}
+```
+
+## Reference
+
+See [ISwiftlyCore](/docs/api/iswiftlycore/) for complete property definitions.
+
+See [BasePlugin](/docs/api/plugins/baseplugin/) for plugin lifecycle and `Core` access.
+
+See [IRegistratorService](/docs/api/services/iregistratorservice/) for instance registration used by attribute handlers.

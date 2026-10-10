@@ -1,0 +1,165 @@
+---
+title: IPermissionManager
+---
+
+# Interface IPermissionManager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Permissions](/docs/api/permissions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IPermissionManager
+```
+
+## Methods
+
+### AddPermission(ulong, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L29" />
+
+Adds a permission to a player.
+
+```csharp
+void AddPermission(ulong steamId, string permission)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+- <ApiParam name="permission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The permission to add.
+
+### AddSubPermission(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L43" />
+
+Adds a sub-permission to a permission.
+
+```csharp
+void AddSubPermission(string permission, string subPermission)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="permission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The permission to add the sub-permission to.
+- <ApiParam name="subPermission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The sub-permission to add.
+
+### ClearPermission(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L59" />
+
+Clears all permissions from a player (both base and temporary).
+
+```csharp
+[Obsolete("Use ClearPermissions instead.")]
+void ClearPermission(ulong steamId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+
+### ClearPermissions(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L56" />
+
+Clears all permissions from a player (both base and temporary).
+
+```csharp
+void ClearPermissions(ulong steamId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+
+### GetPlayerPermissions(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L66" />
+
+Gets all permissions of a player, including inherited permissions from sub-permissions.
+
+```csharp
+IEnumerable<string> GetPlayerPermissions(ulong steamId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IEnumerable&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" />
+
+### PlayerHasPermission(ulong, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L13" />
+
+Checks if a player has a permission.
+Support 'xxx.*' for wildcard permissions.
+
+```csharp
+bool PlayerHasPermission(ulong steamId, string permission)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+- <ApiParam name="permission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The permission to check.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the player has the permission, false otherwise.
+
+### PlayerHasPermissions(ulong, IEnumerable\<string\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L22" />
+
+Checks if a player has all permissions in the list.
+Support 'xxx.*' for wildcard permissions.
+
+```csharp
+bool PlayerHasPermissions(ulong steamId, IEnumerable<string> permissions)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+- <ApiParam name="permissions" type="IEnumerable&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — The list of permissions to check.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the player has all the permissions, false otherwise.
+
+### RemovePermission(ulong, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L36" />
+
+Removes a permission from a player.
+
+```csharp
+void RemovePermission(ulong steamId, string permission)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamId" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The Steam ID of the player.
+- <ApiParam name="permission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The permission to remove.
+
+### RemoveSubPermission(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Permissions/IPermissionManager.cs#L50" />
+
+Removes a sub-permission from a permission.
+
+```csharp
+void RemoveSubPermission(string permission, string subPermission)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="permission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The permission to remove the sub-permission from.
+- <ApiParam name="subPermission" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The sub-permission to remove.
+

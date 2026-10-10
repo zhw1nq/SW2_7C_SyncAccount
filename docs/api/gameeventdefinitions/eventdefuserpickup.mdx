@@ -1,0 +1,100 @@
+---
+title: EventDefuserPickup
+---
+
+# Interface EventDefuserPickup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "defuser_pickup"
+
+```csharp
+public interface EventDefuserPickup : IGameEvent<EventDefuserPickup>
+```
+
+#### Implements
+
+- [IGameEvent\<EventDefuserPickup\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### EntityID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L25" />
+
+defuser's entity ID
+<br />
+type: long
+
+```csharp
+int EntityID { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L50" />
+
+player who picked up the defuser
+<br />
+type: player_controller_and_pawn
+
+```csharp
+int UserId { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### UserIdController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L32" />
+
+player who picked up the defuser
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerController UserIdController { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerController" typeHref="/docs/api/schemadefinitions/ccsplayercontroller" />
+
+### UserIdPawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L39" />
+
+player who picked up the defuser
+<br />
+type: player_controller_and_pawn
+
+```csharp
+CCSPlayerPawn UserIdPawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayerPawn" typeHref="/docs/api/schemadefinitions/ccsplayerpawn" />
+
+### UserIdPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDefuserPickup.cs#L42" />
+
+```csharp
+IPlayer? UserIdPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

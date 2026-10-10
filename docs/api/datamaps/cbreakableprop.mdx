@@ -1,0 +1,52 @@
+---
+title: CBreakableProp
+---
+
+# CBreakableProp
+
+Inherited from [CBaseProp](/docs/api/datamaps/cbaseprop)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `ExplodeDamage` | `m_explodeDamage` | `FIELD_FLOAT32` |
+| `ExplodeRadius` | `m_explodeRadius` | `FIELD_FLOAT32` |
+| `minhealthdmg` | `m_iMinHealthDmg` | `FIELD_INT32` |
+| `PerformanceMode` | `m_PerformanceMode` | `FIELD_INT32` |
+| `puntsound` | `m_iszPuntSound` | `FIELD_STRING` |
+| `PressureDelay` | `m_flPressureDelay` | `FIELD_FLOAT32` |
+| `BurstScale` | `m_flDefBurstScale` | `FIELD_FLOAT32` |
+| `BurstLocation` | `m_vDefBurstOffset` | `FIELD_VECTOR` |
+| `BreakableContentsType` | `m_BreakableContentsType` | `FIELD_INT32` |
+| `BreakableContentsPropGroupOverride` | `m_strBreakableContentsPropGroupOverride` | `FIELD_UTLSTRING` |
+| `BreakableContentsParticleOverride` | `m_strBreakableContentsParticleOverride` | `FIELD_UTLSTRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Break` | `FIELD_VOID` |
+| `SetHealth` | `FIELD_INT32` |
+| `AddHealth` | `FIELD_INT32` |
+| `RemoveHealth` | `FIELD_INT32` |
+| `physdamagescale` | `FIELD_FLOAT32` |
+| `SetNavIgnore` | `FIELD_BOOLEAN` |
+| `EnablePuntSound` | `FIELD_VOID` |
+| `DisablePuntSound` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnStartDeath` | `FIELD_CUSTOM` |
+| `OnBreak` | `FIELD_CUSTOM` |
+| `OnHealthChanged` | `FIELD_CUSTOM` |
+| `OnTakeDamage` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBreakablePropBreakThink` |
+| `CBreakablePropRampToDefaultFadeScale` |

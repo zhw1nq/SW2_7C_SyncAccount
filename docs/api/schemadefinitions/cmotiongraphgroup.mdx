@@ -1,0 +1,85 @@
+---
+title: CMotionGraphGroup
+---
+
+# Interface CMotionGraphGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CMotionGraphGroup : ISchemaClass<CMotionGraphGroup>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CMotionGraphGroup\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### IsActiveScript
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L26" />
+
+```csharp
+AnimScriptHandle IsActiveScript { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimScriptHandle" typeHref="/docs/api/schemadefinitions/animscripthandle" />
+
+### MotionGraphConfigs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L22" />
+
+```csharp
+ref CUtlVector<CMotionGraphConfig> MotionGraphConfigs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CMotionGraphConfig&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### MotionGraphs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L20" />
+
+```csharp
+ref CUtlVector<SchemaUntypedField> MotionGraphs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SchemaUntypedField&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SampleToConfig
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L24" />
+
+```csharp
+ref CUtlVector<int> SampleToConfig { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;int&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SearchDB
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionGraphGroup.cs#L18" />
+
+```csharp
+CMotionSearchDB SearchDB { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CMotionSearchDB" typeHref="/docs/api/schemadefinitions/cmotionsearchdb" />
+

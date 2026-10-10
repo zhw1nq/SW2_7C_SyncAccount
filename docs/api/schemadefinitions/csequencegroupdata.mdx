@@ -1,0 +1,193 @@
+---
+title: CSequenceGroupData
+---
+
+# Interface CSequenceGroupData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSequenceGroupData : ISchemaClass<CSequenceGroupData>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSequenceGroupData\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L20" />
+
+```csharp
+ref uint Flags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### KeyValues
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L43" />
+
+```csharp
+SchemaUntypedField KeyValues { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### LocalBoneMaskArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L32" />
+
+```csharp
+ref CUtlVector<CSeqBoneMaskList> LocalBoneMaskArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqBoneMaskList&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalBoneNameArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L36" />
+
+```csharp
+ref CUtlVector<CBufferString> LocalBoneNameArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CBufferString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalCmdSeqDescArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L30" />
+
+```csharp
+ref CUtlVector<CSeqCmdSeqDesc> LocalCmdSeqDescArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqCmdSeqDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalIKAutoplayLockArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L45" />
+
+```csharp
+ref CUtlVector<CSeqIKLock> LocalIKAutoplayLockArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqIKLock&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalMultiSeqDescArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L26" />
+
+```csharp
+ref CUtlVector<CSeqS1SeqDesc> LocalMultiSeqDescArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqS1SeqDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalNodeName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L38" />
+
+```csharp
+ref CBufferString LocalNodeName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBufferString" typeHref="/docs/api/natives/cbufferstring" />
+
+### LocalPoseParamArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L40" />
+
+```csharp
+ref CUtlVector<CSeqPoseParamDesc> LocalPoseParamArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqPoseParamDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalS1SeqDescArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L24" />
+
+```csharp
+ref CUtlVector<CSeqS1SeqDesc> LocalS1SeqDescArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqS1SeqDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalScaleSetArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L34" />
+
+```csharp
+ref CUtlVector<CSeqScaleSet> LocalScaleSetArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqScaleSet&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalSequenceNameArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L22" />
+
+```csharp
+ref CUtlVector<CBufferString> LocalSequenceNameArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CBufferString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### LocalSynthAnimDescArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L28" />
+
+```csharp
+ref CUtlVector<CSeqSynthAnimDesc> LocalSynthAnimDescArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqSynthAnimDesc&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceGroupData.cs#L18" />
+
+```csharp
+ref CBufferString Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBufferString" typeHref="/docs/api/natives/cbufferstring" />
+

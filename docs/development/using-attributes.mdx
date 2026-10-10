@@ -1,0 +1,62 @@
+---
+title: Using attributes
+---
+
+SwiftlyS2 attributes let you register commands, listeners, and hooks declaratively on methods instead of wiring every handler manually.
+
+## Registration Scope
+
+Attribute discovery runs on registered object instances.
+
+- Your plugin class (the class that inherits `BasePlugin`) is registered by default.
+- For any additional class, call `Core.Registrator.Register(instance)`.
+
+```c#
+public sealed class ModerationHandlers
+{
+	[ClientChatHookHandler]
+	public HookResult OnClientChat(int playerId, string text, bool teamonly)
+	{
+		if (text.Contains("badword", StringComparison.OrdinalIgnoreCase))
+		{
+			return HookResult.Stop;
+		}
+
+		return HookResult.Continue;
+	}
+}
+
+public override void Load(bool hotReload)
+{
+	var handlers = new ModerationHandlers();
+	Core.Registrator.Register(handlers);
+}
+```
+
+<Callout type="warning">
+  Register each handler instance once. Registering the same instance repeatedly can cause duplicate callbacks.
+</Callout>
+
+## Signature Rules
+
+Attribute handlers must match the expected delegate signature exactly.
+
+- Same parameter order and types
+- Same return type (`void` vs `HookResult`)
+- Same generic event/message type where required
+
+If the method signature does not match, the handler will not behave as expected.
+
+## Reference
+
+See [IRegistratorService](/docs/api/services/iregistratorservice/) for registration behavior.
+
+See [Command](/docs/api/commands/command/) and [CommandAlias](/docs/api/commands/commandalias/) for command attributes.
+
+See [EventListener&lt;T&gt;](/docs/api/events/eventlistenert/) for core event attribute listeners.
+
+See [GameEventHandler](/docs/api/gameevents/gameeventhandler/) for game-event attribute hooks.
+
+See [ClientNetMessageHandler](/docs/api/netmessages/clientnetmessagehandler/), [ServerNetMessageHandler](/docs/api/netmessages/servernetmessagehandler/), and [ServerNetMessageInternalHandler](/docs/api/netmessages/servernetmessageinternalhandler/) for net-message attributes.
+
+See [EntityInputHandlerAttribute](/docs/api/entitysystem/entityinputhandlerattribute/) and [EntityOutputHandlerAttribute](/docs/api/entitysystem/entityoutputhandlerattribute/) for entity attribute hooks.

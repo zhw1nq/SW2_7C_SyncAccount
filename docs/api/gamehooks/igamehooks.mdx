@@ -1,0 +1,116 @@
+---
+title: IGameHooks
+---
+
+# Interface IGameHooks
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameHooks
+```
+
+## Properties
+
+### Controller
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L8" />
+
+Hooks related to controller.
+
+```csharp
+IGameHookController Controller { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookController" typeHref="/docs/api/gamehooks/igamehookcontroller" />
+
+### Datamaps
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L38" />
+
+Datamap (think/touch/use) function hooks, grouped by owning schema class.
+
+```csharp
+IGameHookDatamaps Datamaps { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookDatamaps" typeHref="/docs/api/gamehooks/igamehookdatamaps" />
+
+### Entities
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L33" />
+
+Hooks related to entities.
+
+```csharp
+IGameHookEntities Entities { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookEntities" typeHref="/docs/api/gamehooks/igamehookentities" />
+
+### Items
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L13" />
+
+Hooks related to items.
+
+```csharp
+IGameHookItem Items { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookItem" typeHref="/docs/api/gamehooks/igamehookitem" />
+
+### Movement
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L18" />
+
+Hooks related to movement.
+
+```csharp
+IGameHookMovement Movement { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookMovement" typeHref="/docs/api/gamehooks/igamehookmovement" />
+
+### Pawn
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L23" />
+
+Hooks related to player pawn.
+
+```csharp
+IGameHookPawn Pawn { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookPawn" typeHref="/docs/api/gamehooks/igamehookpawn" />
+
+### Weapons
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IGameHooks.cs#L28" />
+
+Hooks related to weapons.
+
+```csharp
+IGameHookWeapon Weapons { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IGameHookWeapon" typeHref="/docs/api/gamehooks/igamehookweapon" />
+

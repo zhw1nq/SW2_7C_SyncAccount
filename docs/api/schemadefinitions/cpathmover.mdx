@@ -1,0 +1,106 @@
+---
+title: CPathMover
+---
+
+# Interface CPathMover
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPathMover : CPathWithDynamicNodes, CPathSimple, CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CPathSimple>, ISchemaClass<CPathWithDynamicNodes>, ISchemaClass<CPathMover>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPathWithDynamicNodes](/docs/api/schemadefinitions/cpathwithdynamicnodes)
+- [CPathSimple](/docs/api/schemadefinitions/cpathsimple)
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPathSimple\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPathWithDynamicNodes\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPathMover\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### MoverRouter
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L24" />
+
+```csharp
+ref CHandle<CFuncMoverRouter> MoverRouter { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CFuncMoverRouter&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### MoverRouterName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L26" />
+
+```csharp
+string MoverRouterName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### MoverSpawnerName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L22" />
+
+```csharp
+string MoverSpawnerName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Movers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L18" />
+
+```csharp
+ref CUtlVector<CHandle<CFuncMover>> Movers { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CFuncMover&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SampleSpacing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L28" />
+
+```csharp
+ref float SampleSpacing { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Spawners
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPathMover.cs#L20" />
+
+```csharp
+ref CUtlVector<CHandle<CPathMoverEntitySpawner>> Spawners { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CPathMoverEntitySpawner&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

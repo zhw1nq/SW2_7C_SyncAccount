@@ -1,0 +1,66 @@
+---
+title: Core Configuration
+---
+
+Core configuration controls framework-wide behavior such as command parsing, plugin loading, menu input, console filtering, and Steam auth mode.
+
+## Config File
+
+Edit the following file:
+
+`addons/swiftlys2/configs/core.jsonc`
+
+## Global Settings
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `CommandPrefixes` | `string[]` | `["!"]` | Prefixes recognized for normal command execution. |
+| `CommandSilentPrefixes` | `string[]` | `["/"]` | Prefixes recognized for silent command execution. |
+| `AutoHotReload` | `boolean` | `true` | Enables automatic hot reload behavior. |
+| `ConsoleFilter` | `boolean` | `true` | Enables or disables console filtering globally. |
+| `FollowCS2ServerGuidelines` | `boolean` | `true` | Applies CS2 server guideline behavior. |
+| `Language` | `string` | `"en"` | Default language code used by the server. |
+| `ManualLoadPlugins` | `boolean` | `false` | Toggles manual plugin loading mode. |
+| `PluginLoadOrder` | `string[]` | `[]` | Plugin load order list used by the core loader. |
+| `DotnetCrashTracerLevel` | `number` | `0` or `1` | Crash tracer level. Supported values: `0`, `1`. |
+| `PatchesToPerform` | `string[]` | `[]` | Patch identifiers to perform on startup. |
+| `UsePlayerLanguage` | `boolean` | `true` | Uses player language when available. |
+
+## Menu Settings
+
+`Menu` controls input mode, navigation behavior, and menu sounds.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `AvailableInputModes` | `string[]` | `["button", "wasd"]` | Available menu input modes. |
+| `InputMode` | `string` | `"button"` | Active menu input mode. |
+| `NavigationPrefix` | `string` | `"➤"` | Prefix shown for the currently selected menu item. |
+| `ItemsPerPage` | `number` | `5` | Number of menu items shown per page. |
+
+### Menu Buttons
+
+| Key | Default |
+| --- | --- |
+| `Exit` | `"tab"` |
+| `Scroll` | `"shift"` |
+| `ScrollBack` | `"f"` |
+| `Use` | `"e"` |
+
+### Menu Sound
+
+`Menu.Sound` defines the sound played for menu actions.
+
+| Action | Name | Volume |
+| --- | --- | --- |
+| `Exit` | `"Vote.Failed"` | `0.75` |
+| `Scroll` | `"UI.ContractType"` | `0.75` |
+| `Use` | `"Vote.Cast.Yes"` | `0.75` |
+
+## SteamAuth Settings
+
+`SteamAuth` controls Steam authentication mode.
+
+| Key | Type | Default | Description |
+| --- | --- | --- | --- |
+| `AvailableModes` | `string[]` | `["flexible", "strict"]` | Available Steam auth modes. |
+| `Mode` | `string` | `"flexible"` | Active Steam auth mode. |

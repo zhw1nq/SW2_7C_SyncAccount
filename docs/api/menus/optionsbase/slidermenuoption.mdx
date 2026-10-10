@@ -1,0 +1,274 @@
+---
+title: SliderMenuOption
+---
+
+# Class SliderMenuOption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Core.Menus.OptionsBase](/docs/api/menus/optionsbase)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Represents a slider menu option that allows selecting a numeric value within a range.
+
+```csharp
+public sealed class SliderMenuOption : MenuOptionBase, IMenuOption, IDisposable
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [MenuOptionBase](/docs/api/menus/optionsbase/menuoptionbase)
+- [SliderMenuOption](/docs/api/menus/optionsbase/slidermenuoption)
+
+#### Implements
+
+- [IMenuOption](/docs/api/menus/imenuoption)
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+#### Inherited Members
+
+- [MenuOptionBase.Dispose()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Dispose)
+- [MenuOptionBase.PauseTextAnimation()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_PauseTextAnimation)
+- [MenuOptionBase.ResumeTextAnimation()](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_ResumeTextAnimation)
+- [MenuOptionBase.Menu](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Menu)
+- [MenuOptionBase.LineCount](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_LineCount)
+- [MenuOptionBase.BindingText](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_BindingText)
+- [MenuOptionBase.Text](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Text)
+- [MenuOptionBase.Comment](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Comment)
+- [MenuOptionBase.MaxWidth](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_MaxWidth)
+- [MenuOptionBase.Visible](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Visible)
+- [MenuOptionBase.Enabled](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Enabled)
+- [MenuOptionBase.CloseAfterClick](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_CloseAfterClick)
+- [MenuOptionBase.Tag](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Tag)
+- [MenuOptionBase.TextSize](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextSize)
+- [MenuOptionBase.TextStyle](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextStyle)
+- [MenuOptionBase.PlaySound](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_PlaySound)
+- [MenuOptionBase.VisibilityChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_VisibilityChanged)
+- [MenuOptionBase.EnabledChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_EnabledChanged)
+- [MenuOptionBase.TextChanged](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_TextChanged)
+- [MenuOptionBase.Validating](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Validating)
+- [MenuOptionBase.Click](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_Click)
+- [MenuOptionBase.BeforeFormat](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_BeforeFormat)
+- [MenuOptionBase.AfterFormat](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_AfterFormat)
+- [MenuOptionBase.IsClickTaskCompleted(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_IsClickTaskCompleted_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.GetVisible(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetVisible_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.SetVisible(IPlayer, bool)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_SetVisible_SwiftlyS2_Shared_Players_IPlayer_System_Boolean_)
+- [MenuOptionBase.GetEnabled(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetEnabled_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.SetEnabled(IPlayer, bool)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_SetEnabled_SwiftlyS2_Shared_Players_IPlayer_System_Boolean_)
+- [MenuOptionBase.GetDisplayText(IPlayer, int)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_GetDisplayText_SwiftlyS2_Shared_Players_IPlayer_System_Int32_)
+- [MenuOptionBase.OnValidatingAsync(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_OnValidatingAsync_SwiftlyS2_Shared_Players_IPlayer_)
+- [MenuOptionBase.OnClickAsync(IPlayer)](SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.html#SwiftlyS2_Core_Menus_OptionsBase_MenuOptionBase_OnClickAsync_SwiftlyS2_Shared_Players_IPlayer_)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### SliderMenuOption(float, float, float?, float, int, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L50" />
+
+Creates an instance of SwiftlyS2.Core.Menus.OptionsBase.SliderMenuOption.
+
+```csharp
+public SliderMenuOption(float min = 0, float max = 100, float? defaultValue = null, float step = 5, int totalBars = 10, int updateIntervalMs = 120, int pauseIntervalMs = 1000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="min" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The minimum value. Defaults to 0.
+- <ApiParam name="max" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The maximum value. Defaults to 100.
+- <ApiParam name="defaultValue" type="float?" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The default starting value. Defaults to the minimum value.
+- <ApiParam name="step" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The increment/decrement step. Defaults to 5.
+- <ApiParam name="totalBars" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The number of visual bars to display. Defaults to 10.
+- <ApiParam name="updateIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The interval in milliseconds between text updates. Defaults to 120ms.
+- <ApiParam name="pauseIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The pause duration in milliseconds before starting the next text update cycle. Defaults to 1000ms.
+
+<ApiLabel>Remarks</ApiLabel>
+
+When using this constructor, the SwiftlyS2.Core.Menus.OptionsBase.MenuOptionBase.Text property must be manually set to specify the initial text.
+
+### SliderMenuOption(string, float, float, float?, float, int, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L99" />
+
+Creates an instance of SwiftlyS2.Core.Menus.OptionsBase.SliderMenuOption.
+
+```csharp
+public SliderMenuOption(string text, float min = 0, float max = 100, float? defaultValue = null, float step = 5, int totalBars = 10, int updateIntervalMs = 120, int pauseIntervalMs = 1000)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The text content to display.
+- <ApiParam name="min" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The minimum value. Defaults to 0.
+- <ApiParam name="max" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The maximum value. Defaults to 100.
+- <ApiParam name="defaultValue" type="float?" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The default starting value. Defaults to the minimum value.
+- <ApiParam name="step" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The increment/decrement step. Defaults to 5.
+- <ApiParam name="totalBars" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The number of visual bars to display. Defaults to 10.
+- <ApiParam name="updateIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The interval in milliseconds between text updates. Defaults to 120ms.
+- <ApiParam name="pauseIntervalMs" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The pause duration in milliseconds before starting the next text update cycle. Defaults to 1000ms.
+
+## Properties
+
+### Max
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L25" />
+
+Gets the maximum value of the slider.
+
+```csharp
+public float Max { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Min
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L20" />
+
+Gets the minimum value of the slider.
+
+```csharp
+public float Min { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Step
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L30" />
+
+Gets the step increment/decrement value.
+
+```csharp
+public float Step { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+## Methods
+
+### DecrementValue(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L154" />
+
+Decrements the slider value by the step amount for the specified player.
+Wraps to Max if the value goes below Min.
+
+```csharp
+public ValueTask DecrementValue(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose value to decrement.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ValueTask" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask" />
+
+### GetDisplayText(IPlayer, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L112" />
+
+Gets the display text for this option as it should appear to the specified player.
+
+```csharp
+public override string GetDisplayText(IPlayer player, int displayLine = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player requesting the display text.
+- <ApiParam name="displayLine" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The display line index of the option.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The formatted display text for the option.
+
+<ApiLabel>Remarks</ApiLabel>
+
+- When `LineCount=1`: The `displayLine` parameter is not needed; return the HTML-formatted string directly.
+  - `displayLine=0`: Return all content
+  - `displayLine=1`: Return only the first line content
+  - `displayLine=2`: Return only the second line content
+  - And so on...
+
+### GetValue(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L133" />
+
+Gets the current slider value for the specified player.
+
+```csharp
+public float GetValue(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose value to retrieve.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The current slider value.
+
+### IncrementValue(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L184" />
+
+Increments the slider value by the step amount for the specified player.
+Wraps to Min if the value goes above Max.
+
+```csharp
+public ValueTask IncrementValue(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose value to increment.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ValueTask" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask" />
+
+### SetValue(IPlayer, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L143" />
+
+Sets the slider value for the specified player.
+
+```csharp
+public void SetValue(IPlayer player, float value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player whose value to set.
+- <ApiParam name="value" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The value to set. Will be clamped between Min and Max.
+
+### ValueChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Menus/OptionsBase/SliderMenuOption.cs#L35" />
+
+Occurs when the slider value changes for a player.
+
+```csharp
+public event EventHandler<MenuOptionValueChangedEventArgs<float>>? ValueChanged
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionValueChangedEventArgs&lt;float&gt;&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+

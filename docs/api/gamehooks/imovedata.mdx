@@ -1,0 +1,444 @@
+---
+title: IMoveData
+---
+
+# Interface IMoveData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L7" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IMoveData
+```
+
+## Properties
+
+### AbsOrigin
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L33" />
+
+```csharp
+Vector AbsOrigin { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### AbsViewAngles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L18" />
+
+```csharp
+QAngle AbsViewAngles { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### Acceleration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L42" />
+
+```csharp
+Vector Acceleration { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Address
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L9" />
+
+```csharp
+nint Address { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### Angles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L26" />
+
+```csharp
+QAngle Angles { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### AttackSubtickMoves
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L28" />
+
+```csharp
+CUtlVector<SubtickMove> AttackSubtickMoves { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SubtickMove&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ClientMaxSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L45" />
+
+```csharp
+float ClientMaxSpeed { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### CollisionNormal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L31" />
+
+```csharp
+Vector CollisionNormal { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ContinuousAcceleration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L43" />
+
+```csharp
+Vector ContinuousAcceleration { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ForwardMove
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L21" />
+
+```csharp
+float ForwardMove { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FrictionDecel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L46" />
+
+```csharp
+float FrictionDecel { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GameCodeMovedPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L49" />
+
+```csharp
+bool GameCodeMovedPlayer { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GroundNormal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L32" />
+
+```csharp
+Vector GroundNormal { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### HasSubtickInputs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L29" />
+
+```csharp
+bool HasSubtickInputs { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HasZeroFrametime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L13" />
+
+```csharp
+bool HasZeroFrametime { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### InAir
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L47" />
+
+```csharp
+bool InAir { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsLateCommand
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L15" />
+
+```csharp
+bool IsLateCommand { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LastMovementImpulses
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L20" />
+
+```csharp
+Vector LastMovementImpulses { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### MaxSpeed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L44" />
+
+```csharp
+float MaxSpeed { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### OldAngles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L40" />
+
+```csharp
+QAngle OldAngles { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### OutWishVel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L39" />
+
+```csharp
+Vector OutWishVel { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### PlayerHandle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L17" />
+
+```csharp
+CHandle<CCSPlayerPawn> PlayerHandle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CCSPlayerPawn&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### SideMove
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L23" />
+
+```csharp
+float SideMove { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SubtickEndFraction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L37" />
+
+```csharp
+float SubtickEndFraction { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SubtickMoves
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L27" />
+
+```csharp
+CUtlVector<SubtickMove> SubtickMoves { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SubtickMove&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SubtickStartFraction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L36" />
+
+```csharp
+float SubtickStartFraction { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TargetTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L35" />
+
+```csharp
+int TargetTick { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TickCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L34" />
+
+```csharp
+int TickCount { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TouchList
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L30" />
+
+```csharp
+CUtlVector<TouchListT> TouchList { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;TouchListT&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### TypedAddress
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L10" />
+
+```csharp
+CMoveData* TypedAddress { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CMoveData*" typeHref="/docs/api/natives/cmovedata" />
+
+### UpMove
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L24" />
+
+```csharp
+float UpMove { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Velocity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L25" />
+
+```csharp
+Vector Velocity { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### ViewAngles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L19" />
+
+```csharp
+QAngle ViewAngles { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### WalkWishedVelocity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L41" />
+
+```csharp
+Vector2D WalkWishedVelocity { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector2D" typeHref="/docs/api/natives/vector2d" />
+
+## Methods
+
+### From(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IMoveData.cs#L11" />
+
+```csharp
+public static IMoveData From(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IMoveData" typeHref="/docs/api/gamehooks/imovedata" />
+

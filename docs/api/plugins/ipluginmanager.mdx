@@ -1,0 +1,185 @@
+---
+title: IPluginManager
+---
+
+# Interface IPluginManager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.Plugins](/docs/api/plugins)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IPluginManager
+```
+
+## Methods
+
+### GetAllPluginMetadata()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L61" />
+
+Gets a dictionary of all plugin metadata, keyed by plugin ID.
+
+```csharp
+Dictionary<string, PluginMetadata> GetAllPluginMetadata()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Dictionary&lt;string, PluginMetadata&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" />
+
+### GetAllPluginStatuses()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L57" />
+
+Gets a dictionary of all plugin statuses, keyed by plugin ID.
+
+```csharp
+Dictionary<string, PluginStatus> GetAllPluginStatuses()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Dictionary&lt;string, PluginStatus&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" />
+
+### GetAllPlugins()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L65" />
+
+Gets a list of all plugin IDs.
+
+```csharp
+IEnumerable<string> GetAllPlugins()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IEnumerable&lt;string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" />
+
+### GetPluginMetadata(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L44" />
+
+Gets the metadata of the specified plugin.
+
+```csharp
+PluginMetadata? GetPluginMetadata(string pluginId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="PluginMetadata?" typeHref="/docs/api/pluginmetadata" />
+
+### GetPluginPath(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L49" />
+
+Gets the path of the specified plugin.
+
+```csharp
+string? GetPluginPath(string pluginId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### GetPluginPaths()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L53" />
+
+Gets a dictionary of all plugin paths, keyed by plugin ID.
+
+```csharp
+Dictionary<string, string> GetPluginPaths()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Dictionary&lt;string, string&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" />
+
+### GetPluginStatus(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L39" />
+
+Gets the status of the specified plugin.
+
+```csharp
+PluginStatus? GetPluginStatus(string pluginId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="PluginStatus?" typeHref="/docs/api/plugins/pluginstatus" />
+
+### LoadPlugin(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L20" />
+
+Loads the specified plugin.
+
+```csharp
+bool LoadPlugin(string pluginId, bool silent = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+- <ApiParam name="silent" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — If true, suppresses any error messages.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the plugin was loaded successfully, false otherwise.
+
+### ReloadPlugin(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L34" />
+
+Reloads the specified plugin.
+
+```csharp
+bool ReloadPlugin(string pluginId, bool silent = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+- <ApiParam name="silent" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — If true, suppresses any error messages.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the plugin was reloaded successfully, false otherwise.
+
+### UnloadPlugin(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Plugins/IPluginManager.cs#L27" />
+
+Unloads the specified plugin.
+
+```csharp
+bool UnloadPlugin(string pluginId, bool silent = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pluginId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The ID of the plugin.
+- <ApiParam name="silent" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — If true, suppresses any error messages.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the plugin was unloaded successfully, false otherwise.
+

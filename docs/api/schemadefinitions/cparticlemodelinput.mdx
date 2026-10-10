@@ -1,0 +1,63 @@
+---
+title: CParticleModelInput
+---
+
+# Interface CParticleModelInput
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleModelInput.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CParticleModelInput : CParticleInput, ISchemaClass<CParticleInput>, ISchemaClass<CParticleModelInput>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CParticleInput](/docs/api/schemadefinitions/cparticleinput)
+- [ISchemaClass\<CParticleInput\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleModelInput\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ControlPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleModelInput.cs#L23" />
+
+```csharp
+ref int ControlPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### NamedValue
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleModelInput.cs#L21" />
+
+```csharp
+SchemaUntypedField NamedValue { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### Type
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CParticleModelInput.cs#L18" />
+
+```csharp
+ref ParticleModelType_t Type { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleModelType_t" typeHref="/docs/api/schemadefinitions/particlemodeltype_t" />
+

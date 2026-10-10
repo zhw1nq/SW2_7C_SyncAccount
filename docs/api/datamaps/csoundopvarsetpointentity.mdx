@@ -1,0 +1,48 @@
+---
+title: CSoundOpvarSetPointEntity
+---
+
+# CSoundOpvarSetPointEntity
+
+Inherited from [CSoundOpvarSetPointBase](/docs/api/datamaps/csoundopvarsetpointbase)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `distanceMin` | `m_flDistanceMin` | `FIELD_FLOAT32` |
+| `distanceMax` | `m_flDistanceMax` | `FIELD_FLOAT32` |
+| `distanceMapMin` | `m_flDistanceMapMin` | `FIELD_FLOAT32` |
+| `distanceMapMax` | `m_flDistanceMapMax` | `FIELD_FLOAT32` |
+| `occlusionRadius` | `m_flOcclusionRadius` | `FIELD_FLOAT32` |
+| `occlusionMin` | `m_flOcclusionMin` | `FIELD_FLOAT32` |
+| `occlusionMax` | `m_flOcclusionMax` | `FIELD_FLOAT32` |
+| `simulationMode` | `m_nSimulationMode` | `FIELD_INT32` |
+| `visibilitySamples` | `m_nVisibilitySamples` | `FIELD_INT32` |
+| `dynamicEntityName` | `m_iszDynamicEntityName` | `FIELD_STRING` |
+| `dynamicProxyPoint` | `m_vDynamicProxyPoint` | `FIELD_VECTOR` |
+| `dynamicMaximumOcclusion` | `m_flDynamicMaximumOcclusion` | `FIELD_FLOAT32` |
+| `disabledValue` | `m_flValSetOnDisable` | `FIELD_FLOAT32` |
+| `setToValueOnDisable` | `m_bSetValueOnDisable` | `FIELD_BOOLEAN` |
+| `autoDisable` | `m_bAutoDisable` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetDisabledValue` | `FIELD_VOID` |
+| `SetDistanceMapMin` | `FIELD_FLOAT32` |
+| `SetDistanceMapMax` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnEnter` | `FIELD_CUSTOM` |
+| `OnExit` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CSoundOpvarSetPointEntitySetOpvarThink` |

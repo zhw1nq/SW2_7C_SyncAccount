@@ -1,0 +1,93 @@
+---
+title: TryPlayerMoveMovementParams
+---
+
+# Struct TryPlayerMoveMovementParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct TryPlayerMoveMovementParams
+```
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Properties
+
+### FirstDest
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L15" />
+
+The first destination vector. Wraps a native pointer — modifications are written back to native memory.
+
+```csharp
+public required Vector FirstDest { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### FirstTrace
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L19" />
+
+The first trace result. Read-only snapshot of the native CGameTrace.
+
+```csharp
+public required TraceResult FirstTrace { readonly get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TraceResult" typeHref="/docs/api/trace/traceresult" />
+
+### IsSurfing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L23" />
+
+Whether the player is surfing. Wraps a native pointer — modifications are written back to native memory.
+
+```csharp
+public required bool IsSurfing { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### MoveData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L11" />
+
+```csharp
+public required IMoveData MoveData { readonly get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IMoveData" typeHref="/docs/api/gamehooks/imovedata" />
+
+### Player
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Movement/ITryPlayerMove.cs#L10" />
+
+```csharp
+public required IPlayer Player { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer" typeHref="/docs/api/players/iplayer" />
+

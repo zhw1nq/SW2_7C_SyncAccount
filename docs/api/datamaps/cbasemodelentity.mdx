@@ -1,0 +1,66 @@
+---
+title: CBaseModelEntity
+---
+
+# CBaseModelEntity
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `rendercolor` | `m_clrRender` | `FIELD_COLOR32` |
+| `renderfx` | `m_nRenderFX` | `FIELD_UINT8` |
+| `rendermode` | `m_nRenderMode` | `FIELD_UINT8` |
+| `rendertocubemaps` | `m_bRenderToCubemaps` | `FIELD_BOOLEAN` |
+| `NoInterpolate` | `m_bNoInterpolate` | `FIELD_BOOLEAN` |
+| `glowbackfacemult` | `m_flGlowBackfaceMult` | `FIELD_FLOAT32` |
+| `fadescale` | `m_flFadeScale` | `FIELD_FLOAT32` |
+| `object_culling` | `m_nObjectCulling` | `FIELD_UINT8` |
+| `view_ofs` | `m_vecViewOffset` | `FIELD_NETWORK_QUANTIZED_VECTOR` |
+| `destructible_part_initial_state_destructed_1` | `m_nDestructiblePartInitialStateDestructed0` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_2` | `m_nDestructiblePartInitialStateDestructed1` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_3` | `m_nDestructiblePartInitialStateDestructed2` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_4` | `m_nDestructiblePartInitialStateDestructed3` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_5` | `m_nDestructiblePartInitialStateDestructed4` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_1_part_index` | `m_nDestructiblePartInitialStateDestructed0_PartIndex` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_2_part_index` | `m_nDestructiblePartInitialStateDestructed1_PartIndex` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_3_part_index` | `m_nDestructiblePartInitialStateDestructed2_PartIndex` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_4_part_index` | `m_nDestructiblePartInitialStateDestructed3_PartIndex` | `FIELD_INT32` |
+| `destructible_part_initial_state_destructed_5_part_index` | `m_nDestructiblePartInitialStateDestructed4_PartIndex` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `fademindist` | `FIELD_FLOAT32` |
+| `fademaxdist` | `FIELD_FLOAT32` |
+| `Alpha` | `FIELD_INT32` |
+| `Color` | `FIELD_COLOR32` |
+| `Skin` | `FIELD_INT32` |
+| `Ignite` | `FIELD_VOID` |
+| `IgniteLifetime` | `FIELD_FLOAT32` |
+| `IgniteNumHitboxFires` | `FIELD_INT32` |
+| `IgniteHitboxFireScale` | `FIELD_FLOAT32` |
+| `Extinguish` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnIgnite` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBaseModelEntitySUB_DissolveIfUncarried` |
+| `CBaseModelEntitySUB_StartFadeOut` |
+| `CBaseModelEntitySUB_StartFadeOutInstant` |
+| `CBaseModelEntitySUB_FadeOut` |
+| `CBaseModelEntitySUB_StartShadowFadeOut` |
+| `CBaseModelEntitySUB_PerformShadowFadeOut` |
+| `CBaseModelEntitySUB_StartShadowFadeIn` |
+| `CBaseModelEntitySUB_PerformShadowFadeIn` |
+| `CBaseModelEntitySUB_StopShadowFade` |

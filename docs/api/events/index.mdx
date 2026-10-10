@@ -1,0 +1,89 @@
+---
+title: Events
+---
+
+# Namespace SwiftlyS2.Shared.Events
+
+- <ApiParam type="EventDelegates" typeHref="/docs/api/events/eventdelegates" /> — Event delegates.
+- <ApiParam type="EventListener&lt;T&gt;" typeHref="/docs/api/events/eventlistenert" />
+
+- <ApiParam type="IEventSubscriber" typeHref="/docs/api/events/ieventsubscriber" /> — Custom event subscriber interface.
+- <ApiParam type="IOnClientConnectedEvent" typeHref="/docs/api/events/ionclientconnectedevent" /> — Called when a client connects to the server.
+- <ApiParam type="IOnClientDisconnectedEvent" typeHref="/docs/api/events/ionclientdisconnectedevent" /> — Called when a client disconnects from the server.
+- <ApiParam type="IOnClientKeyStateChangedEvent" typeHref="/docs/api/events/ionclientkeystatechangedevent" /> — Called when a client's key state changes.
+- <ApiParam type="IOnClientProcessUsercmdsEvent" typeHref="/docs/api/events/ionclientprocessusercmdsevent" /> — Called when a client processes user commands.
+This callback is a hot path, be careful with it and don't do anything expensive.
+- <ApiParam type="IOnClientPutInServerEvent" typeHref="/docs/api/events/ionclientputinserverevent" /> — Called when a client is put in the server.
+- <ApiParam type="IOnClientSteamAuthorizeEvent" typeHref="/docs/api/events/ionclientsteamauthorizeevent" /> — Called when a client is authorized via Steam.
+- <ApiParam type="IOnClientSteamAuthorizeFailEvent" typeHref="/docs/api/events/ionclientsteamauthorizefailevent" /> — Called when a client's Steam authorization fails.
+- <ApiParam type="IOnClientVoiceEvent" typeHref="/docs/api/events/ionclientvoiceevent" /> — Called when a client sends a voice packet.
+- <ApiParam type="IOnCommandExecuteHookEvent" typeHref="/docs/api/events/ioncommandexecutehookevent" /> — Called when a command is executed.
+- <ApiParam type="IOnConCommandCreated" typeHref="/docs/api/events/ionconcommandcreated" /> — Called when a ConVar is created.
+- <ApiParam type="IOnConVarCreated" typeHref="/docs/api/events/ionconvarcreated" /> — Called when a ConVar is created.
+- <ApiParam type="IOnConVarValueChanged" typeHref="/docs/api/events/ionconvarvaluechanged" /> — Called when a ConVar value is changed.
+- <ApiParam type="IOnConsoleOutputEvent" typeHref="/docs/api/events/ionconsoleoutputevent" /> — Called when a console output is received.
+- <ApiParam type="IOnCustomHudClickedEvent" typeHref="/docs/api/events/ioncustomhudclickedevent" /> — Custom hud element clicked event parameters.
+- <ApiParam type="IOnEntityCreatedEvent" typeHref="/docs/api/events/ionentitycreatedevent" /> — Called when an entity is created.
+- <ApiParam type="IOnEntityDeletedEvent" typeHref="/docs/api/events/ionentitydeletedevent" /> — Called when an entity is deleted.
+- <ApiParam type="IOnEntityEndTouchEvent" typeHref="/docs/api/events/ionentityendtouchevent" /> — Called when an entity ends touching another entity.
+- <ApiParam type="IOnEntityFireOutputHookEvent" typeHref="/docs/api/events/ionentityfireoutputhookevent" /> — Called when the entity identity fire outputs.
+- <ApiParam type="IOnEntityIdentityAcceptInputHookEvent" typeHref="/docs/api/events/ionentityidentityacceptinputhookevent" /> — Called when the entity identity accept input hook is triggered.
+- <ApiParam type="IOnEntityParentChangedEvent" typeHref="/docs/api/events/ionentityparentchangedevent" /> — Called when an entity's parent changes.
+- <ApiParam type="IOnEntitySpawnedEvent" typeHref="/docs/api/events/ionentityspawnedevent" /> — Called when an entity is spawned.
+- <ApiParam type="IOnEntityStartTouchEvent" typeHref="/docs/api/events/ionentitystarttouchevent" /> — Called when an entity starts touching another entity.
+- <ApiParam type="IOnEntityTakeDamageEvent" typeHref="/docs/api/events/ionentitytakedamageevent" /> — Called when an entity takes damage.
+- <ApiParam type="IOnEntityTouchEvent" typeHref="/docs/api/events/ionentitytouchevent" /> — Called when an entity is touching another entity.
+- <ApiParam type="IOnItemServicesCanAcquireHookEvent" typeHref="/docs/api/events/ionitemservicescanacquirehookevent" />
+- <ApiParam type="IOnMapLoadEvent" typeHref="/docs/api/events/ionmaploadevent" /> — Called when the map is loaded.
+- <ApiParam type="IOnMapUnloadEvent" typeHref="/docs/api/events/ionmapunloadevent" /> — Called when the map is unloaded.
+- <ApiParam type="IOnMovementServicesRunCommandHookEvent" typeHref="/docs/api/events/ionmovementservicesruncommandhookevent" /> — Called when the movement services run command hook is triggered.
+- <ApiParam type="IOnPlayerPawnPostThinkHookEvent" typeHref="/docs/api/events/ionplayerpawnpostthinkhookevent" /> — Called when the player pawn post think hook is triggered.
+- <ApiParam type="IOnPrecacheResourceEvent" typeHref="/docs/api/events/ionprecacheresourceevent" />
+- <ApiParam type="IOnWeaponServicesCanUseHookEvent" typeHref="/docs/api/events/ionweaponservicescanusehookevent" />
+- <ApiParam type="IOnWeaponServicesDropWeaponHook" typeHref="/docs/api/events/ionweaponservicesdropweaponhook" />
+
+- <ApiParam type="ClientKind" typeHref="/docs/api/events/clientkind" />
+- <ApiParam type="GameButtonFlags" typeHref="/docs/api/events/gamebuttonflags" />
+- <ApiParam type="GameButtons" typeHref="/docs/api/events/gamebuttons" />
+- <ApiParam type="KeyKind" typeHref="/docs/api/events/keykind" />
+
+- <ApiParam type="EventDelegates.OnClientConnected" typeHref="/docs/api/events/eventdelegates/onclientconnected" /> — Called when a client connects to the server.
+- <ApiParam type="EventDelegates.OnClientDisconnected" typeHref="/docs/api/events/eventdelegates/onclientdisconnected" /> — Called when a client disconnects from the server.
+- <ApiParam type="EventDelegates.OnClientKeyStateChanged" typeHref="/docs/api/events/eventdelegates/onclientkeystatechanged" /> — Called when a client's key state changes.
+- <ApiParam type="EventDelegates.OnClientProcessUsercmds" typeHref="/docs/api/events/eventdelegates/onclientprocessusercmds" /> — Called when a client processes user commands.
+This callback is a hot path, be careful with it and don't do anything expensive.
+- <ApiParam type="EventDelegates.OnClientPutInServer" typeHref="/docs/api/events/eventdelegates/onclientputinserver" /> — Called when a client is fully put in server.
+- <ApiParam type="EventDelegates.OnClientSteamAuthorize" typeHref="/docs/api/events/eventdelegates/onclientsteamauthorize" /> — Called when a client is authorized by Steam.
+- <ApiParam type="EventDelegates.OnClientSteamAuthorizeFail" typeHref="/docs/api/events/eventdelegates/onclientsteamauthorizefail" /> — Called when a client's Steam authorization fails.
+- <ApiParam type="EventDelegates.OnClientVoice" typeHref="/docs/api/events/eventdelegates/onclientvoice" /> — Called when a client sends a voice packet.
+- <ApiParam type="EventDelegates.OnCommandExecuteHook" typeHref="/docs/api/events/eventdelegates/oncommandexecutehook" /> — Called when a server command (ConCommand) is executed.
+- <ApiParam type="EventDelegates.OnConCommandCreated" typeHref="/docs/api/events/eventdelegates/onconcommandcreated" /> — Called when a ConCommand is created.
+- <ApiParam type="EventDelegates.OnConVarCreated" typeHref="/docs/api/events/eventdelegates/onconvarcreated" /> — Called when a ConVar is created.
+- <ApiParam type="EventDelegates.OnConVarValueChanged" typeHref="/docs/api/events/eventdelegates/onconvarvaluechanged" /> — Called when a ConVar value is changed.
+- <ApiParam type="EventDelegates.OnConsoleOutput" typeHref="/docs/api/events/eventdelegates/onconsoleoutput" /> — Called when a console output is received on the dedicated console dispatch thread.
+- <ApiParam type="EventDelegates.OnCustomHudClicked" typeHref="/docs/api/events/eventdelegates/oncustomhudclicked" /> — Called when a custom hud element is clicked.
+- <ApiParam type="EventDelegates.OnEntityCreated" typeHref="/docs/api/events/eventdelegates/onentitycreated" /> — Called when an entity is created.
+- <ApiParam type="EventDelegates.OnEntityDeleted" typeHref="/docs/api/events/eventdelegates/onentitydeleted" /> — Called when an entity is deleted.
+- <ApiParam type="EventDelegates.OnEntityEndTouch" typeHref="/docs/api/events/eventdelegates/onentityendtouch" /> — Called when an entity ends touching another entity.
+- <ApiParam type="EventDelegates.OnEntityFireOutputHookEvent" typeHref="/docs/api/events/eventdelegates/onentityfireoutputhookevent" /> — Called when an entity fires output.
+- <ApiParam type="EventDelegates.OnEntityIdentityAcceptInputHook" typeHref="/docs/api/events/eventdelegates/onentityidentityacceptinputhook" /> — Called when an entity identity accept input hook is triggered.
+- <ApiParam type="EventDelegates.OnEntityParentChanged" typeHref="/docs/api/events/eventdelegates/onentityparentchanged" /> — Called when an entity's parent changes.
+- <ApiParam type="EventDelegates.OnEntitySpawned" typeHref="/docs/api/events/eventdelegates/onentityspawned" /> — Called when an entity is spawned.
+- <ApiParam type="EventDelegates.OnEntityStartTouch" typeHref="/docs/api/events/eventdelegates/onentitystarttouch" /> — Called when an entity starts touching another entity.
+- <ApiParam type="EventDelegates.OnEntityTakeDamage" typeHref="/docs/api/events/eventdelegates/onentitytakedamage" /> — Called when an entity takes damage.
+- <ApiParam type="EventDelegates.OnEntityTouch" typeHref="/docs/api/events/eventdelegates/onentitytouch" /> — Called when an entity is touching another entity.
+- <ApiParam type="EventDelegates.OnItemServicesCanAcquireHook" typeHref="/docs/api/events/eventdelegates/onitemservicescanacquirehook" /> — Called when an item services can acquire hook is triggered.
+- <ApiParam type="EventDelegates.OnMapLoad" typeHref="/docs/api/events/eventdelegates/onmapload" /> — Called when a map is loaded.
+- <ApiParam type="EventDelegates.OnMapUnload" typeHref="/docs/api/events/eventdelegates/onmapunload" /> — Called when a map is unloaded.
+- <ApiParam type="EventDelegates.OnMovementServicesRunCommandHook" typeHref="/docs/api/events/eventdelegates/onmovementservicesruncommandhook" /> — Called when the movement services run command hook is triggered.
+- <ApiParam type="EventDelegates.OnPlayerPawnPostThink" typeHref="/docs/api/events/eventdelegates/onplayerpawnpostthink" /> — Called when the player pawn post think hook is triggered.
+- <ApiParam type="EventDelegates.OnPrecacheResource" typeHref="/docs/api/events/eventdelegates/onprecacheresource" /> — Called when the game is precaching resources.
+- <ApiParam type="EventDelegates.OnStartupServer" typeHref="/docs/api/events/eventdelegates/onstartupserver" /> — Called when the server is started.
+- <ApiParam type="EventDelegates.OnSteamAPIActivated" typeHref="/docs/api/events/eventdelegates/onsteamapiactivated" /> — Called when Steam API is activated.
+- <ApiParam type="EventDelegates.OnTick" typeHref="/docs/api/events/eventdelegates/ontick" /> — Called when game has processed a tick. Won't be called if the server is in hibernation.
+This callback is a hot path, be careful with it and don't do anything expensive.
+- <ApiParam type="EventDelegates.OnWeaponServicesCanUseHook" typeHref="/docs/api/events/eventdelegates/onweaponservicescanusehook" /> — Called when a weapon services can use hook is triggered.
+- <ApiParam type="EventDelegates.OnWeaponServicesDropWeaponHook" typeHref="/docs/api/events/eventdelegates/onweaponservicesdropweaponhook" /> — Called when a weapon services drop weapon hook is triggered.
+- <ApiParam type="EventDelegates.OnWorldUpdate" typeHref="/docs/api/events/eventdelegates/onworldupdate" /> — Called when the world is updated. This happens even in hibernation.
+This callback is a hot path, be careful with it and don't do anything expensive.
+

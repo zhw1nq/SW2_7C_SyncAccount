@@ -1,0 +1,79 @@
+---
+title: IOnEntityTakeDamageEvent
+---
+
+# Interface IOnEntityTakeDamageEvent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityTakeDamageEvent.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.Events](/docs/api/events)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Called when an entity takes damage.
+
+```csharp
+[Obsolete("This event is deprecated and will be removed in future versions. Use GameHooks.Entities.TakeDamage instead.")]
+public interface IOnEntityTakeDamageEvent
+```
+
+## Properties
+
+### DamageResult
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityTakeDamageEvent.cs#L29" />
+
+The damage result.
+Throws [System.InvalidOperationException](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception) when the native call did not provide a result.
+Use SwiftlyS2.Shared.GameHooks.IGameHooks.Entities to access the nullable native result.
+
+```csharp
+ref CTakeDamageResult DamageResult { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTakeDamageResult" typeHref="/docs/api/natives/ctakedamageresult" />
+
+### Entity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityTakeDamageEvent.cs#L17" />
+
+The entity that took damage.
+
+```csharp
+CEntityInstance Entity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityInstance" typeHref="/docs/api/schemadefinitions/centityinstance" />
+
+### Info
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityTakeDamageEvent.cs#L22" />
+
+The damage info.
+
+```csharp
+ref CTakeDamageInfo Info { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTakeDamageInfo" typeHref="/docs/api/natives/ctakedamageinfo" />
+
+### Result
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityTakeDamageEvent.cs#L34" />
+
+If return SwiftlyS2.Shared.Misc.HookResult.Stop or SwiftlyS2.Shared.Misc.HookResult.CancelOriginal, the damage will not be applied.
+
+```csharp
+HookResult Result { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HookResult" typeHref="/docs/api/misc/hookresult" />
+

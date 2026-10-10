@@ -1,0 +1,555 @@
+---
+title: CBaseAnimGraphController
+---
+
+# Interface CBaseAnimGraphController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CBaseAnimGraphController : CSkeletonAnimationController, ISkeletonAnimationController, ISchemaClass<ISkeletonAnimationController>, ISchemaClass<CSkeletonAnimationController>, ISchemaClass<CBaseAnimGraphController>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CSkeletonAnimationController](/docs/api/schemadefinitions/cskeletonanimationcontroller)
+- [ISkeletonAnimationController](/docs/api/schemadefinitions/iskeletonanimationcontroller)
+- [ISchemaClass\<ISkeletonAnimationController\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CSkeletonAnimationController\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseAnimGraphController\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ActiveIKChainMask
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L30" />
+
+```csharp
+ref uint ActiveIKChainMask { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### AnimGraph2Identifier
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L74" />
+
+```csharp
+ref CGlobalSymbol AnimGraph2Identifier { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlobalSymbol" typeHref="/docs/api/natives/cglobalsymbol" />
+
+### AnimLoopMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L38" />
+
+```csharp
+ref AnimLoopMode_t AnimLoopMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimLoopMode_t" typeHref="/docs/api/schemadefinitions/animloopmode_t" />
+
+### AnimationAlgorithm
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L18" />
+
+```csharp
+ref AnimationAlgorithm_t AnimationAlgorithm { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimationAlgorithm_t" typeHref="/docs/api/schemadefinitions/animationalgorithm_t" />
+
+### ExternalClipIds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L72" />
+
+```csharp
+ref CUtlVector<ResourceId_t> ExternalClipIds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ResourceId_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ExternalGraphIds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L70" />
+
+```csharp
+ref CUtlVector<ResourceId_t> ExternalGraphIds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ResourceId_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ExternalGraphs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L78" />
+
+```csharp
+CExternalAnimGraphList ExternalGraphs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CExternalAnimGraphList" typeHref="/docs/api/schemadefinitions/cexternalanimgraphlist" />
+
+### GraphDefinitionAG2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L54" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeCNmGraphDefinition> GraphDefinitionAG2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeCNmGraphDefinition&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### GraphInstanceAG2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L76" />
+
+```csharp
+CAnimGraph2InstancePtr GraphInstanceAG2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimGraph2InstancePtr" typeHref="/docs/api/schemadefinitions/canimgraph2instanceptr" />
+
+### LastUpdateSkipped
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L48" />
+
+```csharp
+ref bool LastUpdateSkipped { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NetworkedAnimationInputsChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L44" />
+
+```csharp
+ref bool NetworkedAnimationInputsChanged { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NetworkedSequenceChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L46" />
+
+```csharp
+ref bool NetworkedSequenceChanged { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NextExternalGraphHandle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L20" />
+
+```csharp
+ExternalAnimGraphHandle_t NextExternalGraphHandle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ExternalAnimGraphHandle_t" typeHref="/docs/api/schemadefinitions/externalanimgraphhandle_t" />
+
+### NotifyState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L42" />
+
+```csharp
+ref SequenceFinishNotifyState_t NotifyState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SequenceFinishNotifyState_t" typeHref="/docs/api/schemadefinitions/sequencefinishnotifystate_t" />
+
+### PlaybackRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L40" />
+
+```csharp
+ref CNetworkedQuantizedFloat PlaybackRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNetworkedQuantizedFloat" typeHref="/docs/api/natives/cnetworkedquantizedfloat" />
+
+### PrevAnimUpdateTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L52" />
+
+```csharp
+GameTick_t PrevAnimUpdateTick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTick_t" typeHref="/docs/api/schemadefinitions/gametick_t" />
+
+### PrimaryGraphId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L68" />
+
+```csharp
+ResourceId_t PrimaryGraphId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ResourceId_t" typeHref="/docs/api/schemadefinitions/resourceid_t" />
+
+### SecondarySkeletonMasterCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L26" />
+
+```csharp
+ref int SecondarySkeletonMasterCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SecondarySkeletonSlotIDs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L22" />
+
+```csharp
+ref CUtlVector<CGlobalSymbol> SecondarySkeletonSlotIDs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CGlobalSymbol&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SecondarySkeletons
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L24" />
+
+```csharp
+ref CUtlVector<CHandle<CBaseAnimGraph>> SecondarySkeletons { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CBaseAnimGraph&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SeqFixedCycle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L36" />
+
+```csharp
+ref float SeqFixedCycle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SeqStartTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L34" />
+
+```csharp
+GameTime_t SeqStartTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### Sequence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L32" />
+
+```csharp
+HSequence Sequence { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HSequence" typeHref="/docs/api/schemadefinitions/hsequence" />
+
+### SequenceFinished
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L50" />
+
+```csharp
+ref bool SequenceFinished { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SerializePoseRecipeAG2ActiveSlot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L60" />
+
+```csharp
+ref uint SerializePoseRecipeAG2ActiveSlot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### SerializePoseRecipeAG2Dynamic
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L58" />
+
+```csharp
+ref CUtlVector<byte> SerializePoseRecipeAG2Dynamic { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;byte&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SerializePoseRecipeAG2Slots
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L56" />
+
+```csharp
+ref CUtlVector<AnimGraph2SerializedPoseRecipeSlot_t> SerializePoseRecipeAG2Slots { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;AnimGraph2SerializedPoseRecipeSlot_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SerializePoseRecipeVersionAG2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L62" />
+
+```csharp
+ref int SerializePoseRecipeVersionAG2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ServerGraphInstanceIteration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L64" />
+
+```csharp
+ref int ServerGraphInstanceIteration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ServerSerializationContextIteration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L66" />
+
+```csharp
+ref int ServerSerializationContextIteration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SoundSyncTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L28" />
+
+```csharp
+ref float SoundSyncTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+## Methods
+
+### AnimLoopModeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L87" />
+
+```csharp
+void AnimLoopModeUpdated()
+```
+
+### AnimationAlgorithmUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L80" />
+
+```csharp
+void AnimationAlgorithmUpdated()
+```
+
+### ExternalClipIdsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L98" />
+
+```csharp
+void ExternalClipIdsUpdated()
+```
+
+### ExternalGraphIdsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L97" />
+
+```csharp
+void ExternalGraphIdsUpdated()
+```
+
+### GraphDefinitionAG2Updated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L89" />
+
+```csharp
+void GraphDefinitionAG2Updated()
+```
+
+### PlaybackRateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L88" />
+
+```csharp
+void PlaybackRateUpdated()
+```
+
+### PrimaryGraphIdUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L96" />
+
+```csharp
+void PrimaryGraphIdUpdated()
+```
+
+### SecondarySkeletonMasterCountUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L83" />
+
+```csharp
+void SecondarySkeletonMasterCountUpdated()
+```
+
+### SecondarySkeletonSlotIDsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L81" />
+
+```csharp
+void SecondarySkeletonSlotIDsUpdated()
+```
+
+### SecondarySkeletonsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L82" />
+
+```csharp
+void SecondarySkeletonsUpdated()
+```
+
+### SeqFixedCycleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L86" />
+
+```csharp
+void SeqFixedCycleUpdated()
+```
+
+### SeqStartTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L85" />
+
+```csharp
+void SeqStartTimeUpdated()
+```
+
+### SequenceUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L84" />
+
+```csharp
+void SequenceUpdated()
+```
+
+### SerializePoseRecipeAG2ActiveSlotUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L92" />
+
+```csharp
+void SerializePoseRecipeAG2ActiveSlotUpdated()
+```
+
+### SerializePoseRecipeAG2DynamicUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L91" />
+
+```csharp
+void SerializePoseRecipeAG2DynamicUpdated()
+```
+
+### SerializePoseRecipeAG2SlotsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L90" />
+
+```csharp
+void SerializePoseRecipeAG2SlotsUpdated()
+```
+
+### SerializePoseRecipeVersionAG2Updated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L93" />
+
+```csharp
+void SerializePoseRecipeVersionAG2Updated()
+```
+
+### ServerGraphInstanceIterationUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L94" />
+
+```csharp
+void ServerGraphInstanceIterationUpdated()
+```
+
+### ServerSerializationContextIterationUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseAnimGraphController.cs#L95" />
+
+```csharp
+void ServerSerializationContextIterationUpdated()
+```
+

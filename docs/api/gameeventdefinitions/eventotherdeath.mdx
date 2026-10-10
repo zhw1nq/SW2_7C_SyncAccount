@@ -1,0 +1,214 @@
+---
+title: EventOtherDeath
+---
+
+# Interface EventOtherDeath
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "other_death"
+
+```csharp
+public interface EventOtherDeath : IGameEvent<EventOtherDeath>
+```
+
+#### Implements
+
+- [IGameEvent\<EventOtherDeath\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Attacker
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L39" />
+
+user ID who killed
+<br />
+type: short
+
+```csharp
+short Attacker { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### AttackerBlind
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L100" />
+
+attacker was blind from flashbang
+<br />
+type: bool
+
+```csharp
+bool AttackerBlind { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Headshot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L72" />
+
+singals a headshot
+<br />
+type: bool
+
+```csharp
+bool Headshot { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NoScope
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L86" />
+
+kill happened without a scope, used for death notice icon
+<br />
+type: bool
+
+```csharp
+bool NoScope { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### OtherID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L25" />
+
+other entity ID who died
+<br />
+type: short
+
+```csharp
+short OtherID { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### OtherType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L32" />
+
+other entity type
+<br />
+type: string
+
+```csharp
+string OtherType { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Penetrated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L79" />
+
+number of objects shot penetrated before killing target
+<br />
+type: short
+
+```csharp
+short Penetrated { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### ThruSmoke
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L93" />
+
+hitscan weapon went through smoke grenade
+<br />
+type: bool
+
+```csharp
+bool ThruSmoke { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Weapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L46" />
+
+weapon name killer used
+<br />
+type: string
+
+```csharp
+string Weapon { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponFauxitemid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L60" />
+
+faux item id of weapon killer used
+<br />
+type: string
+
+```csharp
+string WeaponFauxitemid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponItemid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L53" />
+
+inventory item id of weapon killer used
+<br />
+type: string
+
+```csharp
+string WeaponItemid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### WeaponOriginalownerXuid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventOtherDeath.cs#L65" />
+
+type: string
+
+```csharp
+string WeaponOriginalownerXuid { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

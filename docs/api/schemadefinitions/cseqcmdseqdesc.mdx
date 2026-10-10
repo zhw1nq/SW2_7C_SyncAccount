@@ -1,0 +1,169 @@
+---
+title: CSeqCmdSeqDesc
+---
+
+# Interface CSeqCmdSeqDesc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSeqCmdSeqDesc : ISchemaClass<CSeqCmdSeqDesc>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSeqCmdSeqDesc\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ActivityArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L38" />
+
+```csharp
+ref CUtlVector<CAnimActivity> ActivityArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimActivity&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CmdLayerArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L34" />
+
+```csharp
+ref CUtlVector<CSeqCmdLayer> CmdLayerArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqCmdLayer&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EventArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L36" />
+
+```csharp
+ref CUtlVector<CAnimEventDefinition> EventArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimEventDefinition&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### FPS
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L28" />
+
+```csharp
+ref float FPS { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L20" />
+
+```csharp
+CSeqSeqDescFlag Flags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSeqSeqDescFlag" typeHref="/docs/api/schemadefinitions/cseqseqdescflag" />
+
+### FrameCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L26" />
+
+```csharp
+ref short FrameCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### FrameRangeSequence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L24" />
+
+```csharp
+ref short FrameRangeSequence { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L18" />
+
+```csharp
+ref CBufferString Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBufferString" typeHref="/docs/api/natives/cbufferstring" />
+
+### NumLocalResults
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L32" />
+
+```csharp
+ref short NumLocalResults { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### PoseSettingArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L40" />
+
+```csharp
+ref CUtlVector<CSeqPoseSetting> PoseSettingArray { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CSeqPoseSetting&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SubCycles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L30" />
+
+```csharp
+ref short SubCycles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Transition
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSeqCmdSeqDesc.cs#L22" />
+
+```csharp
+CSeqTransition Transition { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSeqTransition" typeHref="/docs/api/schemadefinitions/cseqtransition" />
+

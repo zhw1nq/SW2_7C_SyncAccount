@@ -1,0 +1,273 @@
+---
+title: C_OP_RenderTrails
+---
+
+# Interface C_OP_RenderTrails
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface C_OP_RenderTrails : CBaseTrailRenderer, CBaseRendererSource2, CParticleFunctionRenderer, CParticleFunction, ISchemaClass<CParticleFunction>, ISchemaClass<CParticleFunctionRenderer>, ISchemaClass<CBaseRendererSource2>, ISchemaClass<CBaseTrailRenderer>, ISchemaClass<C_OP_RenderTrails>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseTrailRenderer](/docs/api/schemadefinitions/cbasetrailrenderer)
+- [CBaseRendererSource2](/docs/api/schemadefinitions/cbaserenderersource2)
+- [CParticleFunctionRenderer](/docs/api/schemadefinitions/cparticlefunctionrenderer)
+- [CParticleFunction](/docs/api/schemadefinitions/cparticlefunction)
+- [ISchemaClass\<CParticleFunction\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CParticleFunctionRenderer\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseRendererSource2\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseTrailRenderer\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<C_OP_RenderTrails\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ConstrainRadiusToLengthRatio
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L32" />
+
+```csharp
+ref float ConstrainRadiusToLengthRatio { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### EnableFadingAndClamping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L18" />
+
+```csharp
+ref bool EnableFadingAndClamping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### EndFadeDot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L22" />
+
+```csharp
+ref float EndFadeDot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FlipUVBasedOnPitchYaw
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L56" />
+
+```csharp
+ref bool FlipUVBasedOnPitchYaw { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ForwardShift
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L54" />
+
+```csharp
+ref float ForwardShift { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HeadAlphaScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L42" />
+
+```csharp
+CPerParticleFloatInput HeadAlphaScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### HeadColorScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L40" />
+
+```csharp
+CParticleCollectionVecInput HeadColorScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParticleCollectionVecInput" typeHref="/docs/api/schemadefinitions/cparticlecollectionvecinput" />
+
+### HorizCropField
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L50" />
+
+```csharp
+ParticleAttributeIndex_t HorizCropField { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleAttributeIndex_t" typeHref="/docs/api/schemadefinitions/particleattributeindex_t" />
+
+### IgnoreDT
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L30" />
+
+```csharp
+ref bool IgnoreDT { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LengthFadeInTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L36" />
+
+```csharp
+ref float LengthFadeInTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### LengthScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L34" />
+
+```csharp
+ref float LengthScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MaxLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L26" />
+
+```csharp
+ref float MaxLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### MinLength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L28" />
+
+```csharp
+ref float MinLength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PrevPntSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L24" />
+
+```csharp
+ParticleAttributeIndex_t PrevPntSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleAttributeIndex_t" typeHref="/docs/api/schemadefinitions/particleattributeindex_t" />
+
+### RadiusHeadTaper
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L38" />
+
+```csharp
+CPerParticleFloatInput RadiusHeadTaper { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### RadiusTaper
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L44" />
+
+```csharp
+CPerParticleFloatInput RadiusTaper { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### StartFadeDot
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L20" />
+
+```csharp
+ref float StartFadeDot { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TailAlphaScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L48" />
+
+```csharp
+CPerParticleFloatInput TailAlphaScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPerParticleFloatInput" typeHref="/docs/api/schemadefinitions/cperparticlefloatinput" />
+
+### TailColorScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L46" />
+
+```csharp
+CParticleCollectionVecInput TailColorScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParticleCollectionVecInput" typeHref="/docs/api/schemadefinitions/cparticlecollectionvecinput" />
+
+### VertCropField
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/C_OP_RenderTrails.cs#L52" />
+
+```csharp
+ParticleAttributeIndex_t VertCropField { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ParticleAttributeIndex_t" typeHref="/docs/api/schemadefinitions/particleattributeindex_t" />
+

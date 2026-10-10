@@ -1,0 +1,77 @@
+---
+title: CNmGraphDocGraphEventConditionNode
+---
+
+# Interface CNmGraphDocGraphEventConditionNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocGraphEventConditionNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CNmGraphDocGraphEventConditionNode : CNmGraphDocFlowNode, CNmGraphDocNode, ISchemaClass<CNmGraphDocNode>, ISchemaClass<CNmGraphDocFlowNode>, ISchemaClass<CNmGraphDocGraphEventConditionNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CNmGraphDocFlowNode](/docs/api/schemadefinitions/cnmgraphdocflownode)
+- [CNmGraphDocNode](/docs/api/schemadefinitions/cnmgraphdocnode)
+- [ISchemaClass\<CNmGraphDocNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocFlowNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocGraphEventConditionNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Conditions
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocGraphEventConditionNode.cs#L24" />
+
+```csharp
+ref CUtlVector<CNmGraphDocGraphEventConditionNode__Condition_t> Conditions { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CNmGraphDocGraphEventConditionNode__Condition_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### IgnoreInactiveBranchEvents
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocGraphEventConditionNode.cs#L22" />
+
+```csharp
+ref bool IgnoreInactiveBranchEvents { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LimitSearchToSourceState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocGraphEventConditionNode.cs#L20" />
+
+```csharp
+ref bool LimitSearchToSourceState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Operator
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocGraphEventConditionNode.cs#L18" />
+
+```csharp
+ref NmEventConditionOperator_t Operator { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="NmEventConditionOperator_t" typeHref="/docs/api/schemadefinitions/nmeventconditionoperator_t" />
+

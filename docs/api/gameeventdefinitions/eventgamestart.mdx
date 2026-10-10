@@ -1,0 +1,89 @@
+---
+title: EventGameStart
+---
+
+# Interface EventGameStart
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameStart.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "game_start"
+a new game starts
+
+```csharp
+public interface EventGameStart : IGameEvent<EventGameStart>
+```
+
+#### Implements
+
+- [IGameEvent\<EventGameStart\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### FragLimit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameStart.cs#L40" />
+
+frag limit
+<br />
+type: long
+
+```csharp
+int FragLimit { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Objective
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameStart.cs#L47" />
+
+round objective
+<br />
+type: string
+
+```csharp
+string Objective { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### RoundsLimit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameStart.cs#L26" />
+
+max round
+<br />
+type: long
+
+```csharp
+int RoundsLimit { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TimeLimit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventGameStart.cs#L33" />
+
+time limit
+<br />
+type: long
+
+```csharp
+int TimeLimit { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

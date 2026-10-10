@@ -1,0 +1,36 @@
+---
+title: ITranslationService
+---
+
+# Interface ITranslationService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Translations/ITranslationService.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Translation](/docs/api/translation)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ITranslationService
+```
+
+## Methods
+
+### GetPlayerLocalizer(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Translations/ITranslationService.cs#L12" />
+
+Gets the localizer for the specified player.
+
+```csharp
+ILocalizer GetPlayerLocalizer(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to get the localizer for.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ILocalizer" typeHref="/docs/api/translation/ilocalizer" /> — The localizer for the specified player.
+

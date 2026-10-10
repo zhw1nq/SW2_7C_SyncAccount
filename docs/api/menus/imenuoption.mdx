@@ -1,0 +1,468 @@
+---
+title: IMenuOption
+---
+
+# Interface IMenuOption
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L134" />
+
+**Namespace**: [SwiftlyS2.Shared.Menus](/docs/api/menus)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Represents a menu option that can be displayed and interacted with by players.
+
+```csharp
+public interface IMenuOption : IDisposable
+```
+
+#### Implements
+
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+## Properties
+
+### CloseAfterClick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L190" />
+
+Gets a value indicating whether the menu should be closed after handling the click.
+
+```csharp
+bool CloseAfterClick { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Comment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L164" />
+
+Gets or sets the comment content displayed for this menu option.
+
+```csharp
+string Comment { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Remarks</ApiLabel>
+
+This is a global property. Changing it will affect what all players see.
+
+### Enabled
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L185" />
+
+Gets or sets a value indicating whether this option can be interacted with.
+
+```csharp
+bool Enabled { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Remarks</ApiLabel>
+
+This is a global property. Changing it will affect what all players see.
+
+### LineCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L148" />
+
+Gets the number of lines this option requests to occupy in the menu.
+
+```csharp
+int LineCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MaxWidth
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L169" />
+
+The maximum display width for menu option text in relative units.
+
+```csharp
+float MaxWidth { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Menu
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L143" />
+
+Gets the menu that this option belongs to.
+
+```csharp
+IMenuAPI? Menu { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IMenuAPI?" typeHref="/docs/api/menus/imenuapi" />
+
+<ApiLabel>Remarks</ApiLabel>
+
+This property will be null until the option is added to a menu via SwiftlyS2.Shared.Menus.IMenuAPI.AddOption(SwiftlyS2.Shared.Menus.IMenuOption).
+When implementing custom menu options, avoid accessing this property in the constructor as it will not be set yet.
+
+### PlaySound
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L210" />
+
+Gets or sets a value indicating whether a sound should play when this option is selected.
+
+```csharp
+bool PlaySound { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Tag
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L195" />
+
+Gets or sets an object that contains data about this option.
+
+```csharp
+object? Tag { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="object?" typeHref="https://learn.microsoft.com/dotnet/api/system.object" />
+
+### Text
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L156" />
+
+Gets or sets the text content displayed for this menu option.
+
+```csharp
+string Text { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Remarks</ApiLabel>
+
+This is a global property. Changing it will affect what all players see.
+
+### TextSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L200" />
+
+Gets or sets the text size for this option.
+
+```csharp
+MenuOptionTextSize TextSize { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="MenuOptionTextSize" typeHref="/docs/api/menus/menuoptiontextsize" />
+
+### TextStyle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L205" />
+
+Gets or sets the text overflow style for this option.
+
+```csharp
+MenuOptionTextStyle TextStyle { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="MenuOptionTextStyle" typeHref="/docs/api/menus/menuoptiontextstyle" />
+
+### Visible
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L177" />
+
+Gets or sets a value indicating whether this option is visible in the menu.
+
+```csharp
+bool Visible { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Remarks</ApiLabel>
+
+This is a global property. Changing it will affect what all players see.
+
+## Methods
+
+### GetDisplayText(IPlayer, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L328" />
+
+Gets the display text for this option as it should appear to the specified player.
+
+```csharp
+string GetDisplayText(IPlayer player, int displayLine = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player requesting the display text.
+- <ApiParam name="displayLine" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The display line index of the option.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The formatted display text for the option.
+
+<ApiLabel>Remarks</ApiLabel>
+
+- When `LineCount=1`: The `displayLine` parameter is not needed; return the HTML-formatted string directly.
+  - `displayLine=0`: Return all content
+  - `displayLine=1`: Return only the first line content
+  - `displayLine=2`: Return only the second line content
+  - And so on...
+
+### GetEnabled(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L281" />
+
+Determines whether this option is enabled for the specified player.
+
+```csharp
+bool GetEnabled(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to check enabled state for.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the option is enabled for the player, otherwise, false.
+
+### GetVisible(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L264" />
+
+Determines whether this option is visible to the specified player.
+
+```csharp
+bool GetVisible(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to check visibility for.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the option is visible to the player, otherwise, false.
+
+### IsClickTaskCompleted(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L257" />
+
+Determines whether the click task for the specified player is completed.
+
+```csharp
+bool IsClickTaskCompleted(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to check.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the click task is completed; otherwise, false.
+
+### OnClickAsync(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L350" />
+
+Handles the click action for this option.
+
+```csharp
+ValueTask OnClickAsync(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player who clicked the option.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ValueTask" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask" /> — A task that represents the asynchronous operation.
+
+### OnValidatingAsync(IPlayer)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L335" />
+
+Validates whether the specified player can interact with this option.
+
+```csharp
+ValueTask<bool> OnValidatingAsync(IPlayer player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to validate.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ValueTask&lt;bool&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1" /> — A task that represents the asynchronous operation. The task result is true if validation succeeds; otherwise, false.
+
+### SetEnabled(IPlayer, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L291" />
+
+Sets the enabled state of this option for a specific player.
+
+```csharp
+void SetEnabled(IPlayer player, bool enabled)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to set enabled state for.
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True to enable the option for the player; false to disable it.
+
+<ApiLabel>Remarks</ApiLabel>
+
+The per-player enabled state has lower priority than the global SwiftlyS2.Shared.Menus.IMenuOption.Enabled property.
+
+### SetVisible(IPlayer, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L274" />
+
+Sets the visibility of this option for a specific player.
+
+```csharp
+void SetVisible(IPlayer player, bool visible)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer" typeHref="/docs/api/players/iplayer" /> — The player to set visibility for.
+- <ApiParam name="visible" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True to make the option visible to the player; false to hide it.
+
+<ApiLabel>Remarks</ApiLabel>
+
+The per-player visibility has lower priority than the global SwiftlyS2.Shared.Menus.IMenuOption.Visible property.
+
+### AfterFormat
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L250" />
+
+Occurs after HTML markup is assembled, allowing customization of the final HTML output.
+
+```csharp
+event EventHandler<MenuOptionFormattingEventArgs>? AfterFormat
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionFormattingEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+
+### BeforeFormat
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L245" />
+
+Occurs before HTML markup is assembled, allowing customization of the text content.
+
+```csharp
+event EventHandler<MenuOptionFormattingEventArgs>? BeforeFormat
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionFormattingEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+
+### Click
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L235" />
+
+Occurs when the option is clicked by a player.
+
+```csharp
+event AsyncEventHandler<MenuOptionClickEventArgs>? Click
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="AsyncEventHandler&lt;MenuOptionClickEventArgs&gt;?" typeHref="/docs/api/menus/asynceventhandlert" />
+
+### EnabledChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L220" />
+
+Occurs when the enabled state of the option changes.
+
+```csharp
+event EventHandler<MenuOptionEventArgs>? EnabledChanged
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+
+### TextChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L225" />
+
+Occurs when the text of the option changes.
+
+```csharp
+event EventHandler<MenuOptionEventArgs>? TextChanged
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+
+### Validating
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L230" />
+
+Occurs before a SwiftlyS2.Shared.Menus.IMenuOption.Click event is processed, allowing validation and cancellation.
+
+```csharp
+event EventHandler<MenuOptionValidatingEventArgs>? Validating
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionValidatingEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+
+### VisibilityChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L215" />
+
+Occurs when the visibility of the option changes.
+
+```csharp
+event EventHandler<MenuOptionEventArgs>? VisibilityChanged
+```
+
+<ApiLabel>Event Type</ApiLabel>
+
+- <ApiParam type="EventHandler&lt;MenuOptionEventArgs&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" />
+

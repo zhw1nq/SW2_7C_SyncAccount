@@ -1,0 +1,67 @@
+---
+title: CFuncTrackTrain
+---
+
+# CFuncTrackTrain
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `wheels` | `m_length` | `FIELD_FLOAT32` |
+| `height` | `m_height` | `FIELD_FLOAT32` |
+| `startspeed` | `m_maxSpeed` | `FIELD_FLOAT32` |
+| `bank` | `m_flBank` | `FIELD_FLOAT32` |
+| `dmg` | `m_flBlockDamage` | `FIELD_FLOAT32` |
+| `MoveSound` | `m_iszSoundMove` | `FIELD_SOUNDNAME` |
+| `MovePingSound` | `m_iszSoundMovePing` | `FIELD_SOUNDNAME` |
+| `StartSound` | `m_iszSoundStart` | `FIELD_SOUNDNAME` |
+| `StopSound` | `m_iszSoundStop` | `FIELD_SOUNDNAME` |
+| `MoveSoundMinPitch` | `m_flMoveSoundMinPitch` | `FIELD_FLOAT32` |
+| `MoveSoundMaxPitch` | `m_flMoveSoundMaxPitch` | `FIELD_FLOAT32` |
+| `MoveSoundMinTime` | `m_flMoveSoundMinDuration` | `FIELD_FLOAT32` |
+| `MoveSoundMaxTime` | `m_flMoveSoundMaxDuration` | `FIELD_FLOAT32` |
+| `velocitytype` | `m_eVelocityType` | `FIELD_INT32` |
+| `orientationtype` | `m_eOrientationType` | `FIELD_INT32` |
+| `ManualSpeedChanges` | `m_bManualSpeedChanges` | `FIELD_BOOLEAN` |
+| `ManualAccelSpeed` | `m_flAccelSpeed` | `FIELD_FLOAT32` |
+| `ManualDecelSpeed` | `m_flDecelSpeed` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Stop` | `FIELD_VOID` |
+| `StartForward` | `FIELD_VOID` |
+| `StartBackward` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `Resume` | `FIELD_VOID` |
+| `Reverse` | `FIELD_VOID` |
+| `SetSpeed` | `FIELD_FLOAT32` |
+| `SetSpeedDir` | `FIELD_FLOAT32` |
+| `SetSpeedReal` | `FIELD_FLOAT32` |
+| `SetMaxSpeed` | `FIELD_FLOAT32` |
+| `SetSpeedDirAccel` | `FIELD_FLOAT32` |
+| `MoveToPathNode` | `FIELD_STRING` |
+| `TeleportToPathNode` | `FIELD_STRING` |
+| `LockOrientation` | `FIELD_VOID` |
+| `UnlockOrientation` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnStart` | `FIELD_CUSTOM` |
+| `OnNextPoint` | `FIELD_CUSTOM` |
+| `OnArrivedAtDestinationNode` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncTrackTrainNext` |
+| `CFuncTrackTrainFind` |
+| `CFuncTrackTrainNearestPath` |
+| `CFuncTrackTrainDeadEnd` |

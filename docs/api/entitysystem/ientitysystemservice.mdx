@@ -1,0 +1,474 @@
+---
+title: IEntitySystemService
+---
+
+# Interface IEntitySystemService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L9" />
+
+**Namespace**: [SwiftlyS2.Shared.EntitySystem](/docs/api/entitysystem)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IEntitySystemService
+```
+
+## Methods
+
+### CreateEntity\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L32" />
+
+Create an entity by class.
+
+```csharp
+T CreateEntity<T>() where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — Created entity.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown when failed to create entity by class or class doesn't have a designer name.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### CreateEntity\<T\>(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L43" />
+
+Create an entity by class.
+
+```csharp
+T CreateEntity<T>(int forcedIndex) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="forcedIndex" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Forced entity index.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — Created entity.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown when failed to create entity by class or class doesn't have a designer name.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### CreateEntityByDesignerName\<T\>(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L53" />
+
+Create an entity by designer name.
+
+```csharp
+T CreateEntityByDesignerName<T>(string designerName) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Designer name.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — Created entity.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown when failed to create entity by designer name or designer name is invalid.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### CreateEntityByDesignerName\<T\>(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L64" />
+
+Create an entity by designer name.
+
+```csharp
+T CreateEntityByDesignerName<T>(string designerName, int forcedIndex) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Designer name.
+- <ApiParam name="forcedIndex" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Forced entity index.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — Created entity.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown when failed to create entity by designer name or designer name is invalid.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetAllEntities()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L87" />
+
+Get all entities.
+
+```csharp
+IEnumerable<CEntityInstance> GetAllEntities()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IEnumerable&lt;CEntityInstance&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — All entities.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetAllEntitiesByClass\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L95" />
+
+Get all entities by class.
+
+```csharp
+IEnumerable<T> GetAllEntitiesByClass<T>() where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IEnumerable&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — All entities by class.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetAllEntitiesByDesignerName\<T\>(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L104" />
+
+Get all entities by designer name, and cast to type T.
+
+```csharp
+IEnumerable<T> GetAllEntitiesByDesignerName<T>(string designerName) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — Designer name.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IEnumerable&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1" /> — All entities by designer name.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetEntityByAddress\<T\>(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L133" />
+
+Get an entity by address.
+
+```csharp
+T? GetEntityByAddress<T>(nint address) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — Entity address.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T?" /> — Entity by address. Nullable.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when the entity is not of type T.
+
+### GetEntityByAddress(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L141" />
+
+Get an entity by address.
+
+```csharp
+CEntityInstance? GetEntityByAddress(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — Entity address.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CEntityInstance?" typeHref="/docs/api/schemadefinitions/centityinstance" /> — Entity by address. Nullable.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetEntityByIndex\<T\>(uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L114" />
+
+Get an entity by index.
+
+```csharp
+T? GetEntityByIndex<T>(uint index) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" /> — Entity index.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T?" /> — Entity by index. Nullable.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when the entity is not of type T.
+
+### GetEntityByIndex(uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L123" />
+
+Get an entity by index.
+The object return will have the actual type of the entity. You can cast it to the actual type.
+
+```csharp
+CEntityInstance? GetEntityByIndex(uint index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" /> — Entity index.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CEntityInstance?" typeHref="/docs/api/schemadefinitions/centityinstance" /> — Entity by index. Nullable.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetGameRules()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L80" />
+
+Get the game rules entity.
+
+```csharp
+CCSGameRules? GetGameRules()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CCSGameRules?" typeHref="/docs/api/schemadefinitions/ccsgamerules" /> — Game rules entity. Nullable.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### GetRefEHandle\<T\>(T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L73" />
+
+Get a reference handle to the entity.
+
+```csharp
+CHandle<T> GetRefEHandle<T>(T entity) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entity" type="T" /> — Entity instance.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CHandle&lt;T&gt;" typeHref="/docs/api/natives/chandlet" /> — Reference entity handle to the entity.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Entity type.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="InvalidOperationException" typeHref="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception" /> — Thrown when called too early that entity system is not valid at this moment.
+
+### HookEntityInput\<T\>(string, EntityInputEventHandler)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L181" />
+
+Hooks an input of the specified entity type to a callback function.
+
+```csharp
+Guid HookEntityInput<T>(string inputName, IEntitySystemService.EntityInputEventHandler callback) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="inputName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the input to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="callback" type="IEntitySystemService.EntityInputEventHandler" typeHref="/docs/api/entitysystem/ientitysystemservice" /> — The callback function to invoke when the input is accepted. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A [System.Guid](https://learn.microsoft.com/dotnet/api/system.guid) that uniquely identifies the hook. This identifier can be used to remove the hook.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The type of the entity, which must implement SwiftlyS2.Shared.Schemas.ISchemaClass%601.
+
+<ApiLabel>Remarks</ApiLabel>
+
+This method allows you to attach a handler to a specific input of an entity. The callback will
+    be invoked whenever the input is accepted.
+
+### HookEntityInput(string, string, EntityInputEventHandler)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L192" />
+
+Hooks an input of the specified entity type to a callback function.
+
+```csharp
+Guid HookEntityInput(string designerName, string inputName, IEntitySystemService.EntityInputEventHandler callback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The designer name of the entity to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="inputName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the input to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="callback" type="IEntitySystemService.EntityInputEventHandler" typeHref="/docs/api/entitysystem/ientitysystemservice" /> — The callback function to invoke when the input is accepted. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A [System.Guid](https://learn.microsoft.com/dotnet/api/system.guid) that uniquely identifies the hook. This identifier can be used to remove the hook.
+
+<ApiLabel>Remarks</ApiLabel>
+
+This method allows you to attach a handler to a specific input of an entity. The callback will
+    be invoked whenever the input is accepted.
+
+### HookEntityOutput\<T\>(string, EntityOutputEventHandler)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L152" />
+
+Hooks an output of the specified entity type to a callback function.
+
+```csharp
+Guid HookEntityOutput<T>(string outputName, IEntitySystemService.EntityOutputEventHandler callback) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="outputName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the output to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="callback" type="IEntitySystemService.EntityOutputEventHandler" typeHref="/docs/api/entitysystem/ientitysystemservice" /> — The callback function to invoke when the output is triggered. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A [System.Guid](https://learn.microsoft.com/dotnet/api/system.guid) that uniquely identifies the hook. This identifier can be used to remove the hook.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The type of the entity, which must implement SwiftlyS2.Shared.Schemas.ISchemaClass%601.
+
+<ApiLabel>Remarks</ApiLabel>
+
+This method allows you to attach a handler to a specific output of an entity. The callback will
+    be invoked whenever the output is triggered.
+
+### HookEntityOutput(string, string, EntityOutputEventHandler)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L163" />
+
+Hooks an output of the specified entity type to a callback function.
+
+```csharp
+Guid HookEntityOutput(string designerName, string outputName, IEntitySystemService.EntityOutputEventHandler callback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The designer name of the entity to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="outputName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the output to hook. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.
+- <ApiParam name="callback" type="IEntitySystemService.EntityOutputEventHandler" typeHref="/docs/api/entitysystem/ientitysystemservice" /> — The callback function to invoke when the output is triggered. This value cannot be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A [System.Guid](https://learn.microsoft.com/dotnet/api/system.guid) that uniquely identifies the hook. This identifier can be used to remove the hook.
+
+<ApiLabel>Remarks</ApiLabel>
+
+This method allows you to attach a handler to a specific output of an entity. The callback will
+    be invoked whenever the output is triggered.
+
+### UnhookEntityInput(Guid)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L199" />
+
+Removes the association between the specified entity input and its handler.
+
+```csharp
+bool UnhookEntityInput(Guid guid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="guid" type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The unique identifier of the entity input to unhook.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the hook was successfully removed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+
+### UnhookEntityOutput(Guid)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/EntitySystem/IEntitySystem.cs#L170" />
+
+Removes the association between the specified entity output and its handler.
+
+```csharp
+bool UnhookEntityOutput(Guid guid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="guid" type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The unique identifier of the entity output to unhook.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the hook was successfully removed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+

@@ -1,0 +1,155 @@
+---
+title: CCSPlayerBase_CameraServices
+---
+
+# Interface CCSPlayerBase_CameraServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSPlayerBase_CameraServices : CPlayer_CameraServices, CPlayerPawnComponent, ISchemaClass<CPlayerPawnComponent>, ISchemaClass<CPlayer_CameraServices>, ISchemaClass<CCSPlayerBase_CameraServices>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPlayer_CameraServices](/docs/api/schemadefinitions/cplayer_cameraservices)
+- [CPlayerPawnComponent](/docs/api/schemadefinitions/cplayerpawncomponent)
+- [ISchemaClass\<CPlayerPawnComponent\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPlayer_CameraServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CCSPlayerBase_CameraServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### FOV
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L18" />
+
+```csharp
+ref uint FOV { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### FOVRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L24" />
+
+```csharp
+ref float FOVRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FOVStart
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L20" />
+
+```csharp
+ref uint FOVStart { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### FOVTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L22" />
+
+```csharp
+GameTime_t FOVTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### LastFogTrigger
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L30" />
+
+```csharp
+ref CHandle<CBaseEntity> LastFogTrigger { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### TriggerFogList
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L28" />
+
+```csharp
+ref CUtlVector<CHandle<CBaseEntity>> TriggerFogList { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CHandle&lt;CBaseEntity&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ZoomOwner
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L26" />
+
+```csharp
+ref CHandle<CBaseEntity> ZoomOwner { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+## Methods
+
+### FOVRateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L35" />
+
+```csharp
+void FOVRateUpdated()
+```
+
+### FOVStartUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L33" />
+
+```csharp
+void FOVStartUpdated()
+```
+
+### FOVTimeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L34" />
+
+```csharp
+void FOVTimeUpdated()
+```
+
+### FOVUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L32" />
+
+```csharp
+void FOVUpdated()
+```
+
+### ZoomOwnerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayerBase_CameraServices.cs#L36" />
+
+```csharp
+void ZoomOwnerUpdated()
+```
+

@@ -1,0 +1,207 @@
+---
+title: CAnimGraphDoc_SelectorNode
+---
+
+# Interface CAnimGraphDoc_SelectorNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimGraphDoc_SelectorNode : CAnimGraphDoc_Node, ISchemaClass<CAnimGraphDoc_Node>, ISchemaClass<CAnimGraphDoc_SelectorNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_Node](/docs/api/schemadefinitions/canimgraphdoc_node)
+- [ISchemaClass\<CAnimGraphDoc_Node\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CAnimGraphDoc_SelectorNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendCurve
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L46" />
+
+```csharp
+CBlendCurve BlendCurve { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CBlendCurve" typeHref="/docs/api/schemadefinitions/cblendcurve" />
+
+### BlendDuration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L36" />
+
+```csharp
+CFloatAnimValue BlendDuration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CFloatAnimValue" typeHref="/docs/api/schemadefinitions/cfloatanimvalue" />
+
+### BoolParamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L28" />
+
+```csharp
+AnimParamID BoolParamID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### BoolParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L26" />
+
+```csharp
+string BoolParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Children
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L18" />
+
+```csharp
+ref CUtlVector<CAnimGraphDoc_NodeConnection> Children { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAnimGraphDoc_NodeConnection&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EnumParamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L32" />
+
+```csharp
+AnimParamID EnumParamID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### EnumParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L30" />
+
+```csharp
+string EnumParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### FallbackChild
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L20" />
+
+```csharp
+CAnimGraphDoc_NodeConnection FallbackChild { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimGraphDoc_NodeConnection" typeHref="/docs/api/schemadefinitions/canimgraphdoc_nodeconnection" />
+
+### LockWhenWaning
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L44" />
+
+```csharp
+ref bool LockWhenWaning { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ResetOnChange
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L40" />
+
+```csharp
+ref bool ResetOnChange { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SelectionSource
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L24" />
+
+```csharp
+ref SelectionSource_t SelectionSource { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SelectionSource_t" typeHref="/docs/api/schemadefinitions/selectionsource_t" />
+
+### SyncCyclesOnChange
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L42" />
+
+```csharp
+ref bool SyncCyclesOnChange { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### TagBehavior
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L38" />
+
+```csharp
+ref SelectorTagBehavior_t TagBehavior { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SelectorTagBehavior_t" typeHref="/docs/api/schemadefinitions/selectortagbehavior_t" />
+
+### TagID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L34" />
+
+```csharp
+AnimTagID TagID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimTagID" typeHref="/docs/api/schemadefinitions/animtagid" />
+
+### Tags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_SelectorNode.cs#L22" />
+
+```csharp
+ref CUtlVector<AnimTagID> Tags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;AnimTagID&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

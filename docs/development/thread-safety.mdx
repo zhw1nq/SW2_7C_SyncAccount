@@ -1,0 +1,103 @@
+---
+title: Thread Safety
+---
+
+Some framework APIs are thread-unsafe. Calling them from non-main-thread contexts can cause undefined behavior or crashes.
+
+<Callout type="warning">
+  If an API is marked thread-unsafe, do not call it directly from background tasks. Use its async counterpart or schedule execution on the main loop.
+</Callout>
+
+## Core Rule
+
+- Thread-unsafe APIs must run on the main thread.
+- Prefer `Async` variants when they exist.
+- Async variants return `Task` (or `Task&lt;T&gt;`) so they can be awaited in async flows.
+
+In practice, async variants typically execute immediately when already on the main thread, and otherwise are scheduled safely for main-thread execution.
+
+## How to Identify Thread-Unsafe APIs
+
+In API reference pages, thread-unsafe methods are annotated with `[ThreadUnsafe]` and typically include a note like:
+
+`Thread unsafe, use async variant instead for non-main thread context.`
+
+See [ThreadUnsafeAttribute](/docs/api/misc/threadunsafeattribute/) for the marker used in API docs.
+
+## Safe Usage Patterns
+
+### Prefer Async Counterparts
+
+```c#
+public async Task NotifyPlayerAsync(IPlayer player)
+{
+    await player.SendChatAsync("Hello from async flow.");
+    await player.ExecuteCommandAsync("play buttons/blip1");
+}
+```
+
+### Emit Sound Safely in Async Flows
+
+```c#
+using var sound = new SoundEvent("UI.CounterBeep", volume: 1.0f, pitch: 1.0f);
+sound.Recipients.AddAllPlayers();
+
+await sound.EmitAsync();
+```
+
+### Schedule Explicitly on the Main Loop
+
+If you are in a background flow and need to invoke a sync-only path, schedule it with the scheduler:
+
+```c#
+public async Task NotifyOnMainThreadAsync(IPlayer player)
+{
+		await Core.Scheduler.NextTickAsync(() =>
+		{
+				player.SendChat("Executed on main thread via scheduler.");
+		});
+}
+```
+
+<Callout type="warning">
+	Do not use scheduler overloads that accept `Func<Task...>` for `NextTick`/`NextWorldUpdate`; those overloads are obsolete and documented as unsafe.
+</Callout>
+
+## Common Thread-Unsafe APIs
+
+| Thread-Unsafe API | Async / Safe Alternative |
+| --- | --- |
+| `SoundEvent.Emit()` | `SoundEvent.EmitAsync()` |
+| `ICommandContext.Reply(string)` | `ICommandContext.ReplyAsync(string)` |
+| `IPlayer.SendChat(string)` | `IPlayer.SendChatAsync(string)` |
+| `IPlayer.SendMessage(...)` | `IPlayer.SendMessageAsync(...)` |
+| `IPlayer.Kick(...)` | `IPlayer.KickAsync(...)` |
+| `IPlayer.ExecuteCommand(string)` | `IPlayer.ExecuteCommandAsync(string)` |
+| `IPlayer.Teleport(...)` | `IPlayer.TeleportAsync(...)` |
+| `IGameEventService.Fire*` | `IGameEventService.FireAsync*` |
+| `IEngineService.ExecuteCommand(string)` | `IEngineService.ExecuteCommandAsync(string)` |
+| `IEngineService.ExecuteCommandWithBuffer(...)` | `IEngineService.ExecuteCommandWithBufferAsync(...)` |
+| `IEngineService.DispatchParticleEffect(...)` | `IEngineService.DispatchParticleEffectAsync(...)` |
+| `CEntityInstance.AcceptInput&lt;T&gt;(...)` | `CEntityInstance.AcceptInputAsync&lt;T&gt;(...)` |
+| `CEntityInstance.AddEntityIOEvent&lt;T&gt;(...)` | `CEntityInstance.AddEntityIOEventAsync&lt;T&gt;(...)` |
+| `CEntityInstance.DispatchSpawn(...)` | `CEntityInstance.DispatchSpawnAsync(...)` |
+| `CEntityInstance.Despawn()` | `CEntityInstance.DespawnAsync()` |
+| `CBaseModelEntity.SetModel(string)` | `CBaseModelEntity.SetModelAsync(string)` |
+| `CBaseModelEntity.SetBodygroupByName(string, int)` | `CBaseModelEntity.SetBodygroupByNameAsync(string, int)` |
+| `CCSPlayerController.Respawn()` | `CCSPlayerController.RespawnAsync()` |
+| `*Projectile.EmitGrenade(...)` | `*Projectile.EmitGrenadeAsync(...)` |
+
+## Migration Checklist
+
+1. Find sync calls to APIs marked thread-unsafe.
+2. Replace them with async variants and `await` the returned task.
+3. If no async variant exists, schedule the call with `Core.Scheduler.NextTick` or `Core.Scheduler.NextWorldUpdate`.
+4. Avoid fire-and-forget calls for gameplay-critical operations.
+
+## Reference
+
+See [ThreadUnsafeAttribute](/docs/api/misc/threadunsafeattribute/) for the thread-unsafe marker.
+
+See [ISchedulerService](/docs/api/scheduler/ischedulerservice/) for safe main-loop scheduling.
+
+See [IPlayer](/docs/api/players/iplayer/), [IGameEventService](/docs/api/gameevents/igameeventservice/), [IEngineService](/docs/api/services/iengineservice/), [CEntityInstance](/docs/api/schemadefinitions/centityinstance/), and [SoundEvent](/docs/api/sounds/soundevent/) for sync/async method pairs.

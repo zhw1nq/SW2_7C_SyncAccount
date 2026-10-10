@@ -1,0 +1,99 @@
+---
+title: CPlayerInputAnimMotorUpdater
+---
+
+# Interface CPlayerInputAnimMotorUpdater
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPlayerInputAnimMotorUpdater : CAnimMotorUpdaterBase, ISchemaClass<CAnimMotorUpdaterBase>, ISchemaClass<CPlayerInputAnimMotorUpdater>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimMotorUpdaterBase](/docs/api/schemadefinitions/canimmotorupdaterbase)
+- [ISchemaClass\<CAnimMotorUpdaterBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPlayerInputAnimMotorUpdater\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AnticipationDistance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L22" />
+
+```csharp
+ref float AnticipationDistance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### AnticipationHeadingParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L26" />
+
+```csharp
+CAnimParamHandle AnticipationHeadingParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### AnticipationPosParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L24" />
+
+```csharp
+CAnimParamHandle AnticipationPosParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimParamHandle" typeHref="/docs/api/schemadefinitions/canimparamhandle" />
+
+### SampleTimes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L18" />
+
+```csharp
+ref CUtlVector<float> SampleTimes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SpringConstant
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L20" />
+
+```csharp
+ref float SpringConstant { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### UseAcceleration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPlayerInputAnimMotorUpdater.cs#L28" />
+
+```csharp
+ref bool UseAcceleration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

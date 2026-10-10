@@ -1,0 +1,78 @@
+---
+title: MenuOptionFormattingEventArgs
+---
+
+# Class MenuOptionFormattingEventArgs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L36" />
+
+**Namespace**: [SwiftlyS2.Shared.Menus](/docs/api/menus)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Provides event data for menu option HTML formatting events.
+
+```csharp
+public sealed class MenuOptionFormattingEventArgs : EventArgs
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [EventArgs](https://learn.microsoft.com/dotnet/api/system.eventargs)
+- [MenuOptionFormattingEventArgs](/docs/api/menus/menuoptionformattingeventargs)
+
+#### Inherited Members
+
+- [EventArgs.Empty](https://learn.microsoft.com/dotnet/api/system.eventargs.empty)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Properties
+
+### CustomText
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L51" />
+
+Gets or sets custom text to use instead of the default text during HTML assembly.
+
+```csharp
+public string? CustomText { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Option
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L46" />
+
+The menu option being formatted.
+
+```csharp
+public required IMenuOption Option { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IMenuOption" typeHref="/docs/api/menus/imenuoption" />
+
+### Player
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuOption.cs#L41" />
+
+The player for whom the option is being formatted.
+
+```csharp
+public required IPlayer Player { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer" typeHref="/docs/api/players/iplayer" />
+

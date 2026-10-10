@@ -1,0 +1,207 @@
+---
+title: CAnimGraphDoc_TwoBoneIKNode
+---
+
+# Interface CAnimGraphDoc_TwoBoneIKNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAnimGraphDoc_TwoBoneIKNode : CAnimGraphDoc_Node, ISchemaClass<CAnimGraphDoc_Node>, ISchemaClass<CAnimGraphDoc_TwoBoneIKNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_Node](/docs/api/schemadefinitions/canimgraphdoc_node)
+- [ISchemaClass\<CAnimGraphDoc_Node\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CAnimGraphDoc_TwoBoneIKNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AttachmentName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L30" />
+
+```csharp
+string AttachmentName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### AutoDetectHingeAxis
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L22" />
+
+```csharp
+ref bool AutoDetectHingeAxis { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ConstrainTwist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L44" />
+
+```csharp
+ref bool ConstrainTwist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### EndEffectorAttachmentName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L26" />
+
+```csharp
+string EndEffectorAttachmentName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### EndEffectorType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L24" />
+
+```csharp
+ref IkEndEffectorType EndEffectorType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IkEndEffectorType" typeHref="/docs/api/schemadefinitions/ikendeffectortype" />
+
+### IkChainName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L20" />
+
+```csharp
+string IkChainName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### InputConnection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L18" />
+
+```csharp
+CAnimGraphDoc_NodeConnection InputConnection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimGraphDoc_NodeConnection" typeHref="/docs/api/schemadefinitions/canimgraphdoc_nodeconnection" />
+
+### MatchTargetOrientation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L38" />
+
+```csharp
+ref bool MatchTargetOrientation { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### MaxTwist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L46" />
+
+```csharp
+ref float MaxTwist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### RotationParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L42" />
+
+```csharp
+AnimParamID RotationParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### RotationParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L40" />
+
+```csharp
+string RotationParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### TargetBoneName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L32" />
+
+```csharp
+string TargetBoneName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### TargetParam
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L36" />
+
+```csharp
+AnimParamID TargetParam { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AnimParamID" typeHref="/docs/api/schemadefinitions/animparamid" />
+
+### TargetParamName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L34" />
+
+```csharp
+string TargetParamName { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### TargetType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAnimGraphDoc_TwoBoneIKNode.cs#L28" />
+
+```csharp
+ref IkTargetType TargetType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IkTargetType" typeHref="/docs/api/schemadefinitions/iktargettype" />
+

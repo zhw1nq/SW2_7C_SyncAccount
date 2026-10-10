@@ -1,0 +1,85 @@
+---
+title: CGenericConstraint
+---
+
+# CGenericConstraint
+
+Inherited from [CPhysConstraint](/docs/api/datamaps/cphysconstraint)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `linear_motion_x` | `m_nLinearMotionX` | `FIELD_INT32` |
+| `linear_motion_y` | `m_nLinearMotionY` | `FIELD_INT32` |
+| `linear_motion_z` | `m_nLinearMotionZ` | `FIELD_INT32` |
+| `linear_frequency_x` | `m_flLinearFrequencyX` | `FIELD_FLOAT32` |
+| `linear_frequency_y` | `m_flLinearFrequencyY` | `FIELD_FLOAT32` |
+| `linear_frequency_z` | `m_flLinearFrequencyZ` | `FIELD_FLOAT32` |
+| `linear_damping_ratio_x` | `m_flLinearDampingRatioX` | `FIELD_FLOAT32` |
+| `linear_damping_ratio_y` | `m_flLinearDampingRatioY` | `FIELD_FLOAT32` |
+| `linear_damping_ratio_z` | `m_flLinearDampingRatioZ` | `FIELD_FLOAT32` |
+| `forcelimit_x` | `m_flMaxLinearImpulseX` | `FIELD_FLOAT32` |
+| `forcelimit_y` | `m_flMaxLinearImpulseY` | `FIELD_FLOAT32` |
+| `forcelimit_z` | `m_flMaxLinearImpulseZ` | `FIELD_FLOAT32` |
+| `notifyforce_x` | `m_flNotifyForceX` | `FIELD_FLOAT32` |
+| `notifyforce_y` | `m_flNotifyForceY` | `FIELD_FLOAT32` |
+| `notifyforce_z` | `m_flNotifyForceZ` | `FIELD_FLOAT32` |
+| `breakaftertime_x` | `m_flBreakAfterTimeX` | `FIELD_FLOAT32` |
+| `breakaftertime_y` | `m_flBreakAfterTimeY` | `FIELD_FLOAT32` |
+| `breakaftertime_z` | `m_flBreakAfterTimeZ` | `FIELD_FLOAT32` |
+| `breakaftertimethreshold_x` | `m_flBreakAfterTimeThresholdX` | `FIELD_FLOAT32` |
+| `breakaftertimethreshold_y` | `m_flBreakAfterTimeThresholdY` | `FIELD_FLOAT32` |
+| `breakaftertimethreshold_z` | `m_flBreakAfterTimeThresholdZ` | `FIELD_FLOAT32` |
+| `notifyforcemintime_x` | `m_flNotifyForceMinTimeX` | `FIELD_FLOAT32` |
+| `notifyforcemintime_y` | `m_flNotifyForceMinTimeY` | `FIELD_FLOAT32` |
+| `notifyforcemintime_z` | `m_flNotifyForceMinTimeZ` | `FIELD_FLOAT32` |
+| `angular_motion_x` | `m_nAngularMotionX` | `FIELD_INT32` |
+| `angular_motion_y` | `m_nAngularMotionY` | `FIELD_INT32` |
+| `angular_motion_z` | `m_nAngularMotionZ` | `FIELD_INT32` |
+| `angular_frequency_x` | `m_flAngularFrequencyX` | `FIELD_FLOAT32` |
+| `angular_frequency_y` | `m_flAngularFrequencyY` | `FIELD_FLOAT32` |
+| `angular_frequency_z` | `m_flAngularFrequencyZ` | `FIELD_FLOAT32` |
+| `angular_damping_ratio_x` | `m_flAngularDampingRatioX` | `FIELD_FLOAT32` |
+| `angular_damping_ratio_y` | `m_flAngularDampingRatioY` | `FIELD_FLOAT32` |
+| `angular_damping_ratio_z` | `m_flAngularDampingRatioZ` | `FIELD_FLOAT32` |
+| `torquelimit_x` | `m_flMaxAngularImpulseX` | `FIELD_FLOAT32` |
+| `torquelimit_y` | `m_flMaxAngularImpulseY` | `FIELD_FLOAT32` |
+| `torquelimit_z` | `m_flMaxAngularImpulseZ` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetLinearMotionLockedX` | `FIELD_BOOLEAN` |
+| `SetLinearMotionLockedY` | `FIELD_BOOLEAN` |
+| `SetLinearMotionLockedZ` | `FIELD_BOOLEAN` |
+| `SetLinearFrequencyX` | `FIELD_FLOAT32` |
+| `SetLinearFrequencyY` | `FIELD_FLOAT32` |
+| `SetLinearFrequencyZ` | `FIELD_FLOAT32` |
+| `SetLinearDampingRatioX` | `FIELD_FLOAT32` |
+| `SetLinearDampingRatioY` | `FIELD_FLOAT32` |
+| `SetLinearDampingRatioZ` | `FIELD_FLOAT32` |
+| `SetAngularMotionLockedX` | `FIELD_BOOLEAN` |
+| `SetAngularMotionLockedY` | `FIELD_BOOLEAN` |
+| `SetAngularMotionLockedZ` | `FIELD_BOOLEAN` |
+| `SetAngularFrequencyX` | `FIELD_FLOAT32` |
+| `SetAngularFrequencyY` | `FIELD_FLOAT32` |
+| `SetAngularFrequencyZ` | `FIELD_FLOAT32` |
+| `SetAngularDampingRatioX` | `FIELD_FLOAT32` |
+| `SetAngularDampingRatioY` | `FIELD_FLOAT32` |
+| `SetAngularDampingRatioZ` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `NotifyForceReachedX` | `FIELD_CUSTOM` |
+| `NotifyForceReachedY` | `FIELD_CUSTOM` |
+| `NotifyForceReachedZ` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CGenericConstraintUpdateThink` |

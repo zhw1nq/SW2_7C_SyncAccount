@@ -1,0 +1,46 @@
+---
+title: IGameHookController
+---
+
+# Interface IGameHookController
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Controller/IController.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameHookController
+```
+
+## Properties
+
+### ProcessUsercmds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Controller/IController.cs#L8" />
+
+Hook triggered when processing user commands.
+
+```csharp
+IProcessUsercmdsHook ProcessUsercmds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IProcessUsercmdsHook" typeHref="/docs/api/gamehooks/iprocessusercmdshook" />
+
+### SimulateUserCommands
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Controller/IController.cs#L13" />
+
+Hook triggered when simulating user commands.
+
+```csharp
+ISimulateUserCommandsHook SimulateUserCommands { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISimulateUserCommandsHook" typeHref="/docs/api/gamehooks/isimulateusercommandshook" />
+

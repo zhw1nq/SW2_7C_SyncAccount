@@ -1,0 +1,43 @@
+---
+title: CSoundOpvarSetPointBase
+---
+
+# CSoundOpvarSetPointBase
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `stackName` | `m_iszStackName` | `FIELD_STRING` |
+| `operatorName` | `m_iszOperatorName` | `FIELD_STRING` |
+| `opvarName` | `m_iszOpvarName` | `FIELD_STRING` |
+| `opvarUseAutoCompare` | `m_bUseAutoCompare` | `FIELD_BOOLEAN` |
+| `opvarArrayIndex` | `m_iOpvarIndex` | `FIELD_INT32` |
+| `entityUseFastRefreshRate` | `m_bFastRefresh` | `FIELD_BOOLEAN` |
+| `sourceEntityName` | `m_iszSourceEntityName` | `FIELD_STRING` |
+| `startDisabled` | `m_bDisabled` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetSoundEventGUID` | `FIELD_UINT64` |
+| `SetStackName` | `FIELD_STRING` |
+| `SetOperatorName` | `FIELD_STRING` |
+| `SetOpvarName` | `FIELD_STRING` |
+| `SetOpvarIndex` | `FIELD_STRING` |
+| `SetSourceEntity` | `FIELD_STRING` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CSoundOpvarSetPointBaseSetOpvarThink` |

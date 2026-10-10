@@ -1,0 +1,229 @@
+---
+title: VPhysXAggregateData_t
+---
+
+# Interface VPhysXAggregateData_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface VPhysXAggregateData_t : ISchemaClass<VPhysXAggregateData_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<VPhysXAggregateData_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BindPose
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L30" />
+
+```csharp
+ref CUtlVector<matrix3x4_t> BindPose { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;matrix3x4_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### BoneNames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L24" />
+
+```csharp
+ref CUtlVector<CUtlString> BoneNames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### BoneParents
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L42" />
+
+```csharp
+ref CUtlVector<ushort> BoneParents { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ushort&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### BonesHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L22" />
+
+```csharp
+ref CUtlVector<uint> BonesHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;uint&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CollisionAttributes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L46" />
+
+```csharp
+ref CUtlVector<VPhysXCollisionAttributes_t> CollisionAttributes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;VPhysXCollisionAttributes_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Constraints2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L36" />
+
+```csharp
+ref CUtlVector<VPhysXConstraint2_t> Constraints2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;VPhysXConstraint2_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### DebugPartNames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L48" />
+
+```csharp
+ref CUtlVector<CUtlString> DebugPartNames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### EmbeddedKeyvalues
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L50" />
+
+```csharp
+string EmbeddedKeyvalues { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### FeModel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L40" />
+
+```csharp
+PhysFeModelDesc_t? FeModel { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PhysFeModelDesc_t?" typeHref="/docs/api/schemadefinitions/physfemodeldesc_t" />
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L18" />
+
+```csharp
+ref ushort Flags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### IndexHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L28" />
+
+```csharp
+ref CUtlVector<ushort> IndexHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ushort&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### IndexNames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L26" />
+
+```csharp
+ref CUtlVector<ushort> IndexNames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ushort&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Joints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L38" />
+
+```csharp
+ref CUtlVector<VPhysXJoint_t> Joints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;VPhysXJoint_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Parts
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L32" />
+
+```csharp
+ref CUtlVector<VPhysXBodyPart_t> Parts { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;VPhysXBodyPart_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### RefCounter
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L20" />
+
+```csharp
+ref ushort RefCounter { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### ShapeMarkups
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L34" />
+
+```csharp
+ref CUtlVector<PhysShapeMarkup_t> ShapeMarkups { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PhysShapeMarkup_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SurfacePropertyHashes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/VPhysXAggregateData_t.cs#L44" />
+
+```csharp
+ref CUtlVector<uint> SurfacePropertyHashes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;uint&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

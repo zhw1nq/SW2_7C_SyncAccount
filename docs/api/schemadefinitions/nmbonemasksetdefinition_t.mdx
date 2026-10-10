@@ -1,0 +1,61 @@
+---
+title: NmBoneMaskSetDefinition_t
+---
+
+# Interface NmBoneMaskSetDefinition_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/NmBoneMaskSetDefinition_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface NmBoneMaskSetDefinition_t : ISchemaClass<NmBoneMaskSetDefinition_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<NmBoneMaskSetDefinition_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/NmBoneMaskSetDefinition_t.cs#L18" />
+
+```csharp
+ref CGlobalSymbol ID { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlobalSymbol" typeHref="/docs/api/natives/cglobalsymbol" />
+
+### PrimaryWeightList
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/NmBoneMaskSetDefinition_t.cs#L20" />
+
+```csharp
+CNmBoneWeightList PrimaryWeightList { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNmBoneWeightList" typeHref="/docs/api/schemadefinitions/cnmboneweightlist" />
+
+### SecondaryWeightLists
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/NmBoneMaskSetDefinition_t.cs#L22" />
+
+```csharp
+ref CUtlLeanVector<CNmBoneWeightList, int> SecondaryWeightLists { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CNmBoneWeightList, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+

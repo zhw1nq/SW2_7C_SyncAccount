@@ -1,0 +1,109 @@
+---
+title: CRenderMesh
+---
+
+# Interface CRenderMesh
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CRenderMesh : ISchemaClass<CRenderMesh>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CRenderMesh\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Constraints
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L21" />
+
+```csharp
+ref CUtlLeanVector<PointerTo<CBaseConstraint>, int> Constraints { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;PointerTo&lt;CBaseConstraint&gt;, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### EmbeddedMapMesh
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L27" />
+
+```csharp
+ref bool EmbeddedMapMesh { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GroomData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L31" />
+
+```csharp
+CRenderGroom? GroomData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CRenderGroom?" typeHref="/docs/api/schemadefinitions/crendergroom" />
+
+### MeshDeformParams
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L29" />
+
+```csharp
+DynamicMeshDeformParams_t MeshDeformParams { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="DynamicMeshDeformParams_t" typeHref="/docs/api/schemadefinitions/dynamicmeshdeformparams_t" />
+
+### SceneObjects
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L19" />
+
+```csharp
+SchemaUntypedField SceneObjects { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### Skeleton
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L23" />
+
+```csharp
+CRenderSkeleton Skeleton { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CRenderSkeleton" typeHref="/docs/api/schemadefinitions/crenderskeleton" />
+
+### UseUV2ForCharting
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CRenderMesh.cs#L25" />
+
+```csharp
+ref bool UseUV2ForCharting { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

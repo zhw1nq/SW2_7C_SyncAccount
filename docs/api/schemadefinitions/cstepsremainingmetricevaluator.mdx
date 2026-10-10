@@ -1,0 +1,51 @@
+---
+title: CStepsRemainingMetricEvaluator
+---
+
+# Interface CStepsRemainingMetricEvaluator
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CStepsRemainingMetricEvaluator.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CStepsRemainingMetricEvaluator : CMotionMetricEvaluator, ISchemaClass<CMotionMetricEvaluator>, ISchemaClass<CStepsRemainingMetricEvaluator>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CMotionMetricEvaluator](/docs/api/schemadefinitions/cmotionmetricevaluator)
+- [ISchemaClass\<CMotionMetricEvaluator\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CStepsRemainingMetricEvaluator\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### FootIndices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CStepsRemainingMetricEvaluator.cs#L18" />
+
+```csharp
+ref CUtlVector<int> FootIndices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;int&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### MinStepsRemaining
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CStepsRemainingMetricEvaluator.cs#L20" />
+
+```csharp
+ref float MinStepsRemaining { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

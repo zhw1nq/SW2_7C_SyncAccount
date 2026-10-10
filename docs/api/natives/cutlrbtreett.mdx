@@ -1,0 +1,875 @@
+---
+title: CUtlRBTree
+---
+
+# Struct CUtlRBTree
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L14" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct CUtlRBTree<TValue, TKey> : IDisposable where TKey : unmanaged, IBinaryInteger<TKey>, IMinMaxValue<TKey>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="TValue" />
+- <ApiParam name="TKey" />
+
+#### Implements
+
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### CUtlRBTree(TKey, TKey, LessFunc)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L27" />
+
+```csharp
+public CUtlRBTree(TKey growSize, TKey initSize, CUtlRBTree<TValue, TKey>.LessFunc func)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="growSize" type="TKey" />
+- <ApiParam name="initSize" type="TKey" />
+- <ApiParam name="func" type="CUtlRBTree&lt;TValue, TKey&gt;.LessFunc" typeHref="/docs/api/natives/cutlrbtreett" />
+
+### CUtlRBTree(LessFunc)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L37" />
+
+```csharp
+public CUtlRBTree(CUtlRBTree<TValue, TKey>.LessFunc func)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="func" type="CUtlRBTree&lt;TValue, TKey&gt;.LessFunc" typeHref="/docs/api/natives/cutlrbtreett" />
+
+## Fields
+
+### Elements
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L21" />
+
+```csharp
+public CUtlLeanVector<CUtlRBTreeNode<TKey, TValue>, TKey> Elements
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CUtlRBTreeNode&lt;TKey, TValue&gt;, TKey&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### FirstFree
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L24" />
+
+```csharp
+public TKey FirstFree
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### LFunc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L20" />
+
+```csharp
+public nint LFunc
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### LastAlloc
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L25" />
+
+```csharp
+public CUtlLeanVector<CUtlRBTreeNode<TKey, TValue>, TKey>.Iterator_t LastAlloc
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CUtlRBTreeNode&lt;TKey, TValue&gt;, TKey&gt;.Iterator_t" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### NumElements
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L23" />
+
+```csharp
+public TKey NumElements
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### Root
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L22" />
+
+```csharp
+public TKey Root
+```
+
+<ApiLabel>Field Value</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+## Properties
+
+### Count
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L716" />
+
+```csharp
+public readonly uint Count { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### MaxElement
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L717" />
+
+```csharp
+public TKey MaxElement { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### this
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L715" />
+
+```csharp
+public ref TValue this[TKey i] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TValue" />
+
+## Methods
+
+### Color(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L81" />
+
+```csharp
+public NodeColor_t Color(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="NodeColor_t" typeHref="/docs/api/natives/nodecolor_t" />
+
+### Depth()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L65" />
+
+```csharp
+public int Depth()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Dispose()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L511" />
+
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+
+```csharp
+public void Dispose()
+```
+
+### EnsureCapacity(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L47" />
+
+```csharp
+public void EnsureCapacity(TKey num)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="num" type="TKey" />
+
+### Find(TValue)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L454" />
+
+```csharp
+public TKey Find(TValue value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="TValue" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### FindInsertionPosition(TValue, out TKey, out bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L410" />
+
+```csharp
+public void FindInsertionPosition(TValue val, out TKey parent, out bool leftchild)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="val" type="TValue" />
+- <ApiParam name="parent" type="TKey" />
+- <ApiParam name="leftchild" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### FirstInorder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L516" />
+
+```csharp
+public TKey FirstInorder()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### FirstPostorder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L636" />
+
+```csharp
+public TKey FirstPostorder()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### FirstPreorder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L586" />
+
+```csharp
+public TKey FirstPreorder()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### FreeNode(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L102" />
+
+```csharp
+public void FreeNode(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+### Insert(TValue)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L697" />
+
+```csharp
+public TKey Insert(TValue val)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="val" type="TValue" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### InsertAt(TKey, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L247" />
+
+```csharp
+public TKey InsertAt(TKey parent, bool leftchild)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="parent" type="TKey" />
+- <ApiParam name="leftchild" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### InsertIfNotFound(TValue)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L706" />
+
+```csharp
+public TKey InsertIfNotFound(TValue val)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="val" type="TValue" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### InsertRebalance(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L165" />
+
+```csharp
+public void InsertRebalance(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### InvalidIndex()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L64" />
+
+```csharp
+public TKey InvalidIndex()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### IsBlack(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L80" />
+
+```csharp
+public bool IsBlack(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsLeaf(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L59" />
+
+```csharp
+public bool IsLeaf(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsLeftChild(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L56" />
+
+```csharp
+public bool IsLeftChild(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsRed(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L79" />
+
+```csharp
+public bool IsRed(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsRightChild(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L57" />
+
+```csharp
+public bool IsRightChild(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsRoot(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L58" />
+
+```csharp
+public bool IsRoot(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsValid()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L687" />
+
+```csharp
+public bool IsValid()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsValidIndex(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L60" />
+
+```csharp
+public bool IsValidIndex(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LastInorder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L574" />
+
+```csharp
+public TKey LastInorder()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### LastPreorder()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L617" />
+
+```csharp
+public TKey LastPreorder()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### LeftChild(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L54" />
+
+```csharp
+public ref TKey LeftChild(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### Link(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L400" />
+
+```csharp
+public void Link(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### LinkToParent(TKey, TKey, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L225" />
+
+```csharp
+public void LinkToParent(TKey i, TKey parent, bool isLeft)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+- <ApiParam name="parent" type="TKey" />
+- <ApiParam name="isLeft" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Links(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L51" />
+
+```csharp
+public ref CUtlRBTreeLinks<TKey> Links(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CUtlRBTreeLinks&lt;TKey&gt;" typeHref="/docs/api/natives/cutlrbtreelinkst" />
+
+### NewNode()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L84" />
+
+```csharp
+public TKey NewNode()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### NextInorder(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L528" />
+
+```csharp
+public TKey NextInorder(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### NextPostorder(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L653" />
+
+```csharp
+public TKey NextPostorder(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### NextPreorder(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L591" />
+
+```csharp
+public TKey NextPreorder(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### Parent(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L53" />
+
+```csharp
+public ref TKey Parent(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### PrevInorder(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L551" />
+
+```csharp
+public TKey PrevInorder(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### PrevPreorder(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L615" />
+
+```csharp
+public TKey PrevPreorder(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### Purge()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L503" />
+
+```csharp
+public void Purge()
+```
+
+### Reinsert(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L678" />
+
+```csharp
+public void Reinsert(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+### Remove(TValue)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L445" />
+
+```csharp
+public bool Remove(TValue value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="TValue" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RemoveAll()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L480" />
+
+```csharp
+public void RemoveAll()
+```
+
+### RemoveAt(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L435" />
+
+```csharp
+public void RemoveAt(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### RemoveRebalance(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L255" />
+
+```csharp
+public void RemoveRebalance(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### RightChild(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L55" />
+
+```csharp
+public ref TKey RightChild(TKey i)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TKey" />
+
+### RotateLeft(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L112" />
+
+```csharp
+public void RotateLeft(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### RotateRight(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L138" />
+
+```csharp
+public void RotateRight(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+
+### SetColor(TKey, NodeColor_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L82" />
+
+```csharp
+public void SetColor(TKey i, NodeColor_t c)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+- <ApiParam name="c" type="NodeColor_t" typeHref="/docs/api/natives/nodecolor_t" />
+
+### SetLeftChild(TKey, TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L77" />
+
+```csharp
+public void SetLeftChild(TKey i, TKey l)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+- <ApiParam name="l" type="TKey" />
+
+### SetLessFunc(LessFunc)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L692" />
+
+```csharp
+public void SetLessFunc(CUtlRBTree<TValue, TKey>.LessFunc func)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="func" type="CUtlRBTree&lt;TValue, TKey&gt;.LessFunc" typeHref="/docs/api/natives/cutlrbtreett" />
+
+### SetParent(TKey, TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L76" />
+
+```csharp
+public void SetParent(TKey i, TKey p)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+- <ApiParam name="p" type="TKey" />
+
+### SetRightChild(TKey, TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L78" />
+
+```csharp
+public void SetRightChild(TKey i, TKey r)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="i" type="TKey" />
+- <ApiParam name="r" type="TKey" />
+
+### Unlink(TKey)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlRBTree.cs#L337" />
+
+```csharp
+public void Unlink(TKey elem)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="elem" type="TKey" />
+

@@ -1,0 +1,87 @@
+---
+title: CMovementComponent
+---
+
+# Interface CMovementComponent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CMovementComponent : CAnimGraphDoc_Component, ISchemaClass<CAnimGraphDoc_Component>, ISchemaClass<CMovementComponent>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CAnimGraphDoc_Component](/docs/api/schemadefinitions/canimgraphdoc_component)
+- [ISchemaClass\<CAnimGraphDoc_Component\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CMovementComponent\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### FacingDamping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L22" />
+
+```csharp
+CAnimInputDamping FacingDamping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAnimInputDamping" typeHref="/docs/api/schemadefinitions/caniminputdamping" />
+
+### Motors
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L18" />
+
+```csharp
+ref CUtlVector<SchemaUntypedField> Motors { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SchemaUntypedField&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### NetworkFacing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L24" />
+
+```csharp
+ref bool NetworkFacing { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### NetworkPath
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L20" />
+
+```csharp
+ref bool NetworkPath { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ParamIDs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMovementComponent.cs#L26" />
+
+```csharp
+ISchemaClassFixedArray<AnimParamID> ParamIDs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaClassFixedArray&lt;AnimParamID&gt;" typeHref="/docs/api/schemas/ischemaclassfixedarrayt" />
+

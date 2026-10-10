@@ -1,0 +1,155 @@
+---
+title: CNetworkedSequenceOperation
+---
+
+# Interface CNetworkedSequenceOperation
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CNetworkedSequenceOperation : ISchemaClass<CNetworkedSequenceOperation>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CNetworkedSequenceOperation\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Cycle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L22" />
+
+```csharp
+ref float Cycle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Discontinuity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L28" />
+
+```csharp
+ref bool Discontinuity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### PrevCycle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L20" />
+
+```csharp
+ref float PrevCycle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PrevCycleForAnimEventDetection
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L32" />
+
+```csharp
+ref float PrevCycleForAnimEventDetection { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PrevCycleFromDiscontinuity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L30" />
+
+```csharp
+ref float PrevCycleFromDiscontinuity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Sequence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L18" />
+
+```csharp
+HSequence Sequence { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HSequence" typeHref="/docs/api/schemadefinitions/hsequence" />
+
+### SequenceChangeNetworked
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L26" />
+
+```csharp
+ref bool SequenceChangeNetworked { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Weight
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L24" />
+
+```csharp
+ref CNetworkedQuantizedFloat Weight { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNetworkedQuantizedFloat" typeHref="/docs/api/natives/cnetworkedquantizedfloat" />
+
+## Methods
+
+### CycleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L36" />
+
+```csharp
+void CycleUpdated()
+```
+
+### PrevCycleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L35" />
+
+```csharp
+void PrevCycleUpdated()
+```
+
+### SequenceUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L34" />
+
+```csharp
+void SequenceUpdated()
+```
+
+### WeightUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNetworkedSequenceOperation.cs#L37" />
+
+```csharp
+void WeightUpdated()
+```
+

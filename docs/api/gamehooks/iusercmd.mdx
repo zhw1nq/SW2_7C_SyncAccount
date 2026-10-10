@@ -1,0 +1,84 @@
+---
+title: IUserCmd
+---
+
+# Interface IUserCmd
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L7" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IUserCmd
+```
+
+## Properties
+
+### Address
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L9" />
+
+```csharp
+nint Address { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### ButtonState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L15" />
+
+```csharp
+CInButtonState ButtonState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CInButtonState" typeHref="/docs/api/schemadefinitions/cinbuttonstate" />
+
+### CSGOUserCmd
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L13" />
+
+```csharp
+CSGOUserCmdPB CSGOUserCmd { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSGOUserCmdPB" typeHref="/docs/api/protobufdefinitions/csgousercmdpb" />
+
+### CommandNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L11" />
+
+```csharp
+uint CommandNumber { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+## Methods
+
+### From(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/IUserCmd.cs#L17" />
+
+```csharp
+public static IUserCmd From(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IUserCmd" typeHref="/docs/api/gamehooks/iusercmd" />
+

@@ -1,0 +1,55 @@
+---
+title: CPulseCell_WaitForCursorsWithTagBase
+---
+
+# Interface CPulseCell_WaitForCursorsWithTagBase
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_WaitForCursorsWithTagBase.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPulseCell_WaitForCursorsWithTagBase : CPulseCell_BaseYieldingInflow, CPulseCell_BaseFlow, CPulseCell_Base, ISchemaClass<CPulseCell_Base>, ISchemaClass<CPulseCell_BaseFlow>, ISchemaClass<CPulseCell_BaseYieldingInflow>, ISchemaClass<CPulseCell_WaitForCursorsWithTagBase>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPulseCell_BaseYieldingInflow](/docs/api/schemadefinitions/cpulsecell_baseyieldinginflow)
+- [CPulseCell_BaseFlow](/docs/api/schemadefinitions/cpulsecell_baseflow)
+- [CPulseCell_Base](/docs/api/schemadefinitions/cpulsecell_base)
+- [ISchemaClass\<CPulseCell_Base\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_BaseFlow\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_BaseYieldingInflow\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_WaitForCursorsWithTagBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### CursorsAllowedToWait
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_WaitForCursorsWithTagBase.cs#L18" />
+
+```csharp
+ref int CursorsAllowedToWait { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### WaitComplete
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_WaitForCursorsWithTagBase.cs#L20" />
+
+```csharp
+CPulse_ResumePoint WaitComplete { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPulse_ResumePoint" typeHref="/docs/api/schemadefinitions/cpulse_resumepoint" />
+

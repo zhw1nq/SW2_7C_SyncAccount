@@ -1,0 +1,78 @@
+---
+title: IProtobufRepeatedFieldSubMessageType
+---
+
+# Interface IProtobufRepeatedFieldSubMessageType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufRepeatedField.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.NetMessages](/docs/api/netmessages)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IProtobufRepeatedFieldSubMessageType<T> : IRepeatedField, IEnumerable<T>, IEnumerable where T : ITypedProtobuf<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+#### Implements
+
+- [IRepeatedField](/docs/api/netmessages/irepeatedfield)
+- [IEnumerable\<T\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1)
+- [IEnumerable](https://learn.microsoft.com/dotnet/api/system.collections.ienumerable)
+
+## Properties
+
+### Count
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufRepeatedField.cs#L13" />
+
+```csharp
+int Count { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+## Methods
+
+### Add()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufRepeatedField.cs#L16" />
+
+```csharp
+T Add()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" />
+
+### Clear()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufRepeatedField.cs#L17" />
+
+```csharp
+void Clear()
+```
+
+### Get(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/IProtobufRepeatedField.cs#L15" />
+
+```csharp
+T Get(int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" />
+

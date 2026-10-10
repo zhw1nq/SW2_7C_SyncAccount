@@ -1,0 +1,199 @@
+---
+title: ITraceManager
+---
+
+# Interface ITraceManager
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.Services](/docs/api/services)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ITraceManager
+```
+
+## Methods
+
+### SimpleTrace(Vector, Vector, RayType_t, RnQueryObjectSet, MaskTrace, MaskTrace, MaskTrace, CollisionGroup, ref CGameTrace, CBaseEntity?, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L85" />
+
+Performs a simple trace shape operation from the specified start point to the end point, using the provided
+object query and trace mask. The result of the trace is stored in the provided trace object.
+
+```csharp
+[Obsolete("Use other TraceShape methods instead.")]
+void SimpleTrace(Vector start, Vector end, RayType_t rayKind, RnQueryObjectSet objectQuery, MaskTrace interactWith, MaskTrace interactExclude, MaskTrace interactAs, CollisionGroup collision, ref CGameTrace trace, CBaseEntity? filterEntity = null, CBaseEntity? filterSecondEntity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — The starting position of the trace, represented as a vector.
+- <ApiParam name="end" type="Vector" typeHref="/docs/api/natives/vector" /> — The ending position of the trace, represented as a vector.
+- <ApiParam name="rayKind" type="RayType_t" typeHref="/docs/api/natives/raytype_t" /> — The type of ray used for the trace.
+- <ApiParam name="objectQuery" type="RnQueryObjectSet" typeHref="/docs/api/natives/rnqueryobjectset" /> — The object query specifying which objects to consider during the trace.
+- <ApiParam name="interactWith" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to include in the trace.
+- <ApiParam name="interactExclude" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to exclude from the trace.
+- <ApiParam name="interactAs" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to interact as during the trace.
+- <ApiParam name="collision" type="CollisionGroup" typeHref="/docs/api/natives/collisiongroup" /> — The collision group defining the collision behavior during the trace.
+- <ApiParam name="trace" type="CGameTrace" typeHref="/docs/api/natives/cgametrace" /> — A reference to a CGameTrace structure that receives the results of the trace, including hit information and
+    surface details.
+- <ApiParam name="filterEntity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — An optional entity to exclude from the trace.
+- <ApiParam name="filterSecondEntity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — An optional second entity to exclude from the trace.
+
+### SimpleTrace(Vector, QAngle, RayType_t, RnQueryObjectSet, MaskTrace, MaskTrace, MaskTrace, CollisionGroup, ref CGameTrace, CBaseEntity?, CBaseEntity?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L104" />
+
+Performs a simple trace shape operation from the specified start point in the direction defined by the given angle,
+using the provided object query and trace mask. The result of the trace is stored in the provided trace object.
+
+```csharp
+[Obsolete("Use other TraceShape methods instead.")]
+void SimpleTrace(Vector start, QAngle angle, RayType_t rayKind, RnQueryObjectSet objectQuery, MaskTrace interactWith, MaskTrace interactExclude, MaskTrace interactAs, CollisionGroup collision, ref CGameTrace trace, CBaseEntity? filterEntity = null, CBaseEntity? filterSecondEntity = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — The starting position of the trace, represented as a vector.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — The direction of the trace, represented as a QAngle.
+- <ApiParam name="rayKind" type="RayType_t" typeHref="/docs/api/natives/raytype_t" /> — The type of ray used for the trace.
+- <ApiParam name="objectQuery" type="RnQueryObjectSet" typeHref="/docs/api/natives/rnqueryobjectset" /> — The object query specifying which objects to consider during the trace.
+- <ApiParam name="interactWith" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to include in the trace.
+- <ApiParam name="interactExclude" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to exclude from the trace.
+- <ApiParam name="interactAs" type="MaskTrace" typeHref="/docs/api/natives/masktrace" /> — The interaction layer defining the types of surfaces or entities to interact as during the trace.
+- <ApiParam name="collision" type="CollisionGroup" typeHref="/docs/api/natives/collisiongroup" /> — The collision group defining the collision behavior during the trace.
+- <ApiParam name="trace" type="CGameTrace" typeHref="/docs/api/natives/cgametrace" /> — A reference to a CGameTrace structure that receives the results of the trace, including hit information and
+    surface details.
+- <ApiParam name="filterEntity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — An optional entity to exclude from the trace.
+- <ApiParam name="filterSecondEntity" type="CBaseEntity?" typeHref="/docs/api/schemadefinitions/cbaseentity" /> — An optional second entity to exclude from the trace.
+
+### TracePlayerBBox(Vector, Vector, BBox_t, CTraceFilter, ref CGameTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L21" />
+
+Performs a collision trace of a player-sized bounding box from the specified start position to the end position,
+using the given filter and bounding box dimensions. The result of the trace is stored in the provided trace
+object.
+
+```csharp
+[Obsolete("Use TracePlayerBBox method with TraceParams instead.")]
+void TracePlayerBBox(Vector start, Vector end, BBox_t bounds, CTraceFilter filter, ref CGameTrace trace)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — The starting position of the trace, typically representing the player's initial location.
+- <ApiParam name="end" type="Vector" typeHref="/docs/api/natives/vector" /> — The ending position of the trace, representing the target location for the bounding box movement.
+- <ApiParam name="bounds" type="BBox_t" typeHref="/docs/api/natives/bbox_t" /> — The dimensions of the player's bounding box to be traced.
+- <ApiParam name="filter" type="CTraceFilter" typeHref="/docs/api/natives/ctracefilter" /> — The trace filter used to determine which entities or surfaces are considered during the trace operation.
+- <ApiParam name="trace" type="CGameTrace" typeHref="/docs/api/natives/cgametrace" /> — A reference to a CGameTrace object that receives the results of the trace, including collision information and
+    hit details.
+
+### TracePlayerBBox(in Vector, in Vector, in BBox_t, in TraceParams?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L29" />
+
+Performs a collision trace of a player-sized bounding box from the specified start position to the end position,
+using the given filter and bounding box dimensions. The result of the trace is stored in the provided trace
+object.
+
+```csharp
+TraceResult TracePlayerBBox(in Vector start, in Vector end, in BBox_t bounds, in TraceParams? param = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="end" type="Vector" typeHref="/docs/api/natives/vector" />
+- <ApiParam name="bounds" type="BBox_t" typeHref="/docs/api/natives/bbox_t" />
+- <ApiParam name="param" type="TraceParams?" typeHref="/docs/api/trace/traceparams" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceResult" typeHref="/docs/api/trace/traceresult" />
+
+### TraceShape(Vector, Vector, Ray_t, CTraceFilter, ref CGameTrace)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L66" />
+
+Performs a trace operation from the specified start point to the end point using the given ray and filter, and
+populates the trace result with collision information.
+
+```csharp
+[Obsolete("Use TraceShapeLine method with TraceParams instead.")]
+void TraceShape(Vector start, Vector end, Ray_t ray, CTraceFilter filter, ref CGameTrace trace)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — The starting position of the trace, represented as a vector.
+- <ApiParam name="end" type="Vector" typeHref="/docs/api/natives/vector" /> — The ending position of the trace, represented as a vector.
+- <ApiParam name="ray" type="Ray_t" typeHref="/docs/api/natives/ray_t" /> — The ray definition used for the trace, specifying direction and other ray properties.
+- <ApiParam name="filter" type="CTraceFilter" typeHref="/docs/api/natives/ctracefilter" /> — The filter that determines which entities or surfaces are considered during the trace.
+- <ApiParam name="trace" type="CGameTrace" typeHref="/docs/api/natives/cgametrace" /> — A reference to a CGameTrace structure that receives the results of the trace, including hit information and
+    surface details.
+
+### TraceShapeAngle(in Vector, in QAngle, in TraceParams?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L45" />
+
+Traces from <code class="paramref">start</code> towards <code class="paramref">angle</code> with the provided shape options.
+
+```csharp
+TraceResult TraceShapeAngle(in Vector start, in QAngle angle, in TraceParams? param = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — Trace start position.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — Trace direction.
+- <ApiParam name="param" type="TraceParams?" typeHref="/docs/api/trace/traceparams" /> — Optional trace params for ray type and filtering.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceResult" typeHref="/docs/api/trace/traceresult" />
+
+### TraceShapeAngle(in Vector, in QAngle, float, in TraceParams?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L54" />
+
+Traces from <code class="paramref">start</code> towards <code class="paramref">angle</code> with the provided shape options.
+
+```csharp
+TraceResult TraceShapeAngle(in Vector start, in QAngle angle, float maxDistance = 8192, in TraceParams? param = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — Trace start position.
+- <ApiParam name="angle" type="QAngle" typeHref="/docs/api/natives/qangle" /> — Trace direction.
+- <ApiParam name="maxDistance" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — Maximum distance to trace.
+- <ApiParam name="param" type="TraceParams?" typeHref="/docs/api/trace/traceparams" /> — Optional trace params for ray type and filtering.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceResult" typeHref="/docs/api/trace/traceresult" />
+
+### TraceShapeLine(in Vector, in Vector, in TraceParams?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/ITraceManager.cs#L37" />
+
+Traces from <code class="paramref">start</code> to <code class="paramref">end</code> with the provided shape options.
+
+```csharp
+TraceResult TraceShapeLine(in Vector start, in Vector end, in TraceParams? param = null)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="start" type="Vector" typeHref="/docs/api/natives/vector" /> — Trace start position.
+- <ApiParam name="end" type="Vector" typeHref="/docs/api/natives/vector" /> — Trace end position.
+- <ApiParam name="param" type="TraceParams?" typeHref="/docs/api/trace/traceparams" /> — Optional trace params for ray type and filtering.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="TraceResult" typeHref="/docs/api/trace/traceresult" />
+

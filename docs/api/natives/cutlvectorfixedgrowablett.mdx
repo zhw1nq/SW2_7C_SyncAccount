@@ -1,0 +1,133 @@
+---
+title: CUtlVectorFixedGrowable
+---
+
+# Struct CUtlVectorFixedGrowable
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct CUtlVectorFixedGrowable<T, TBuffer> where T : unmanaged where TBuffer : unmanaged
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+- <ApiParam name="TBuffer" />
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### CUtlVectorFixedGrowable(int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L14" />
+
+```csharp
+public CUtlVectorFixedGrowable(int maxSize, int growSize = 0)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="maxSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="growSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+## Properties
+
+### Base
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L56" />
+
+```csharp
+public readonly nint Base { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### Count
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L55" />
+
+```csharp
+public readonly int Count { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### MaxSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L53" />
+
+```csharp
+public readonly int MaxSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### this
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L42" />
+
+```csharp
+public ref T this[int index] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="T" />
+
+## Methods
+
+### AddToTail(T)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L30" />
+
+```csharp
+public int AddToTail(T value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="value" type="T" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### RemoveAll()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L25" />
+
+```csharp
+public void RemoveAll()
+```
+
+### SetSize(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlVectorFixedGrowable.cs#L20" />
+
+```csharp
+public void SetSize(int size)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="size" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

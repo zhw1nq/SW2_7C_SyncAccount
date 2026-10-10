@@ -1,0 +1,35 @@
+---
+title: IOnEntityCreatedEvent
+---
+
+# Interface IOnEntityCreatedEvent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityCreatedEvent.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.Events](/docs/api/events)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Called when an entity is created.
+
+```csharp
+public interface IOnEntityCreatedEvent
+```
+
+## Properties
+
+### Entity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnEntityCreatedEvent.cs#L14" />
+
+The entity that was created.
+The entity is not fully initialized when this event is called, better do things on next tick and also add a validity check there.
+
+```csharp
+CEntityInstance Entity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityInstance" typeHref="/docs/api/schemadefinitions/centityinstance" />
+

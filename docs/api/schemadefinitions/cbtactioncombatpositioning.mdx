@@ -1,0 +1,75 @@
+---
+title: CBtActionCombatPositioning
+---
+
+# Interface CBtActionCombatPositioning
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBtActionCombatPositioning.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CBtActionCombatPositioning : CBtNode, ISchemaClass<CBtNode>, ISchemaClass<CBtActionCombatPositioning>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBtNode](/docs/api/schemadefinitions/cbtnode)
+- [ISchemaClass\<CBtNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBtActionCombatPositioning\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ActionTimer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBtActionCombatPositioning.cs#L22" />
+
+```csharp
+CountdownTimer ActionTimer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CountdownTimer" typeHref="/docs/api/schemadefinitions/countdowntimer" />
+
+### Crouching
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBtActionCombatPositioning.cs#L24" />
+
+```csharp
+ref bool Crouching { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsAttackingKey
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBtActionCombatPositioning.cs#L20" />
+
+```csharp
+string IsAttackingKey { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SensorInputKey
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBtActionCombatPositioning.cs#L18" />
+
+```csharp
+string SensorInputKey { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

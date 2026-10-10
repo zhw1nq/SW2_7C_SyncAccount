@@ -1,0 +1,49 @@
+---
+title: CFuncMoveLinear
+---
+
+# CFuncMoveLinear
+
+Inherited from [CBaseToggle](/docs/api/datamaps/cbasetoggle)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `movedir` | `m_angMoveEntitySpace` | `FIELD_QANGLE` |
+| `StartSound` | `m_soundStart` | `FIELD_SOUNDNAME` |
+| `StopSound` | `m_soundStop` | `FIELD_SOUNDNAME` |
+| `BlockDamage` | `m_flBlockDamage` | `FIELD_FLOAT32` |
+| `StartPosition` | `m_flStartPosition` | `FIELD_FLOAT32` |
+| `CreateNavObstacle` | `m_bCreateNavObstacle` | `FIELD_BOOLEAN` |
+| `CreateMovableNavMesh` | `m_bCreateMovableNavMesh` | `FIELD_BOOLEAN` |
+| `AllowMovableNavMeshDockingOnEntireEntity` | `m_bAllowMovableNavMeshDockingOnEntireEntity` | `FIELD_BOOLEAN` |
+| `authoredposition` | `m_authoredPosition` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Open` | `FIELD_VOID` |
+| `Close` | `FIELD_VOID` |
+| `SetPosition` | `FIELD_FLOAT32` |
+| `SetSpeed` | `FIELD_FLOAT32` |
+| `TeleportToTarget` | `FIELD_STRING` |
+| `ResetPosition` | `FIELD_FLOAT32` |
+| `SetMoveDistanceFromStart` | `FIELD_FLOAT32` |
+| `SetMoveDistanceFromEnd` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnFullyOpen` | `FIELD_CUSTOM` |
+| `OnFullyClosed` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncMoveLinearNavObstacleThink` |
+| `CFuncMoveLinearNavMovableThink` |
+| `CFuncMoveLinearStopMoveSound` |

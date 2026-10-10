@@ -1,0 +1,67 @@
+---
+title: IUnmanagedMemory
+---
+
+# Interface IUnmanagedMemory
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IUnmanagedMemory.cs#L52" />
+
+**Namespace**: [SwiftlyS2.Shared.Memory](/docs/api/memory)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IUnmanagedMemory
+```
+
+## Properties
+
+### Address
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IUnmanagedMemory.cs#L57" />
+
+The address of the unmanaged pointer.
+
+```csharp
+nint Address { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+## Methods
+
+### AddHook(MidHookDelegate)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IUnmanagedMemory.cs#L64" />
+
+Hook a native function at the specified address with a managed callback.
+The callback receives a context structure that allows reading and modifying CPU registers.
+
+```csharp
+Guid AddHook(MidHookDelegate callback)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="MidHookDelegate" typeHref="/docs/api/memory/midhookdelegate" /> — The callback to call when the code reaches that address.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" />
+
+### RemoveHook(Guid)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IUnmanagedMemory.cs#L70" />
+
+Unhook a hook by its id.
+
+```csharp
+void RemoveHook(Guid id)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="id" type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The id of the hook to unhook.
+

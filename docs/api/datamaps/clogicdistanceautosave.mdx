@@ -1,0 +1,33 @@
+---
+title: CLogicDistanceAutosave
+---
+
+# CLogicDistanceAutosave
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `TargetEntityName` | `m_iszTargetEntity` | `FIELD_STRING` |
+| `DistanceToPlayer` | `m_flDistanceToPlayer` | `FIELD_FLOAT32` |
+| `NewLevelUnit` | `m_bForceNewLevelUnit` | `FIELD_BOOLEAN` |
+| `CheckCough` | `m_bCheckCough` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Save` | `FIELD_VOID` |
+| `SaveDangerous` | `FIELD_FLOAT32` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CLogicDistanceAutosaveSaveThink` |

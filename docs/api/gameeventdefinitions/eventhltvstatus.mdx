@@ -1,0 +1,89 @@
+---
+title: EventHltvStatus
+---
+
+# Interface EventHltvStatus
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvStatus.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "hltv_status"
+general HLTV status
+
+```csharp
+public interface EventHltvStatus : IGameEvent<EventHltvStatus>
+```
+
+#### Implements
+
+- [IGameEvent\<EventHltvStatus\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Clients
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvStatus.cs#L26" />
+
+number of HLTV spectators
+<br />
+type: long
+
+```csharp
+int Clients { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Master
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvStatus.cs#L47" />
+
+disptach master IP:port
+<br />
+type: string
+
+```csharp
+string Master { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Proxies
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvStatus.cs#L40" />
+
+number of HLTV proxies
+<br />
+type: short
+
+```csharp
+short Proxies { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### Slots
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvStatus.cs#L33" />
+
+number of HLTV slots
+<br />
+type: long
+
+```csharp
+int Slots { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

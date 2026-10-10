@@ -1,0 +1,61 @@
+---
+title: CSoundContainerReferenceArray
+---
+
+# Interface CSoundContainerReferenceArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSoundContainerReferenceArray.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSoundContainerReferenceArray : ISchemaClass<CSoundContainerReferenceArray>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSoundContainerReferenceArray\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Sounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSoundContainerReferenceArray.cs#L20" />
+
+```csharp
+ref CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>> Sounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CStrongHandle&lt;InfoForResourceTypeCVoiceContainerBase&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Sounds1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSoundContainerReferenceArray.cs#L22" />
+
+```csharp
+ref CUtlVector<PointerTo<CVoiceContainerBase>> Sounds1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CVoiceContainerBase&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### UseReference
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSoundContainerReferenceArray.cs#L18" />
+
+```csharp
+ref bool UseReference { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

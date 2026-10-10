@@ -1,0 +1,45 @@
+---
+title: CPhysBox
+---
+
+# CPhysBox
+
+Inherited from [CBreakable](/docs/api/datamaps/cbreakable)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `Damagetype` | `m_damageType` | `FIELD_INT32` |
+| `damagetoenablemotion` | `m_damageToEnableMotion` | `FIELD_INT32` |
+| `forcetoenablemotion` | `m_flForceToEnableMotion` | `FIELD_FLOAT32` |
+| `hoverposeflags` | `m_nHoverPoseFlags` | `FIELD_UINT8` |
+| `hoverposeposition` | `m_vHoverPosePosition` | `FIELD_VECTOR` |
+| `hoverposeangles` | `m_angHoverPoseAngles` | `FIELD_QANGLE` |
+| `notsolid` | `m_bNotSolidToWorld` | `FIELD_BOOLEAN` |
+| `touchoutputperentitydelay` | `m_flTouchOutputPerEntityDelay` | `FIELD_FLOAT32` |
+| `enableuseoutput` | `m_bEnableUseOutput` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Wake` | `FIELD_VOID` |
+| `Sleep` | `FIELD_VOID` |
+| `EnableMotion` | `FIELD_VOID` |
+| `DisableMotion` | `FIELD_VOID` |
+| `ForceDrop` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnDamaged` | `FIELD_CUSTOM` |
+| `OnAwakened` | `FIELD_CUSTOM` |
+| `OnMotionEnabled` | `FIELD_CUSTOM` |
+| `OnPlayerUse` | `FIELD_CUSTOM` |
+| `OnStartTouch` | `FIELD_CUSTOM` |
+
+## Functions
+
+_No Entry_

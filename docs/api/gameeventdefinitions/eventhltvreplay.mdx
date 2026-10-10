@@ -1,0 +1,56 @@
+---
+title: EventHltvReplay
+---
+
+# Interface EventHltvReplay
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvReplay.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "hltv_replay"
+
+```csharp
+public interface EventHltvReplay : IGameEvent<EventHltvReplay>
+```
+
+#### Implements
+
+- [IGameEvent\<EventHltvReplay\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### Delay
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvReplay.cs#L25" />
+
+number of seconds in killer replay delay
+<br />
+type: long
+
+```csharp
+int Delay { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Reason
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvReplay.cs#L32" />
+
+reason for replay	(ReplayEventType_t)
+<br />
+type: long
+
+```csharp
+int Reason { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

@@ -1,0 +1,39 @@
+---
+title: CTriggerLerpObject
+---
+
+# CTriggerLerpObject
+
+Inherited from [CBaseTrigger](/docs/api/datamaps/cbasetrigger)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `lerp_target` | `m_iszLerpTarget` | `FIELD_STRING` |
+| `lerp_target_attachment` | `m_iszLerpTargetAttachment` | `FIELD_STRING` |
+| `lerp_duration` | `m_flLerpDuration` | `FIELD_FLOAT32` |
+| `lerp_restore_movetype` | `m_bLerpRestoreMoveType` | `FIELD_BOOLEAN` |
+| `attach_touching_object` | `m_bAttachTouchingObject` | `FIELD_BOOLEAN` |
+| `lerp_effect` | `m_iszLerpEffect` | `FIELD_STRING` |
+| `lerp_sound` | `m_iszLerpSound` | `FIELD_STRING` |
+
+## Input
+
+_No Entry_
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnLerpStarted` | `FIELD_CUSTOM` |
+| `OnLerpFinished` | `FIELD_CUSTOM` |
+| `OnDetached` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CTriggerLerpObjectLerpThink` |
+| `CTriggerLerpObjectUnsetWaitForEntity` |
+| `CTriggerLerpObjectAttachedEntityThink` |

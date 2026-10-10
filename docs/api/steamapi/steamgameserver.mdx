@@ -1,0 +1,814 @@
+---
+title: SteamGameServer
+---
+
+# Class SteamGameServer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class SteamGameServer
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [SteamGameServer](/docs/api/steamapi/steamgameserver)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### AssociateWithClan(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L370" />
+
+Server clan association
+
+associate this game server with this clan for the purposes of computing player compat
+
+```csharp
+public static SteamAPICall_t AssociateWithClan(CSteamID steamIDClan)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDClan" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamAPICall_t" typeHref="/docs/api/steamapi/steamapicall_t" />
+
+### BLoggedOn()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L87" />
+
+status functions
+
+```csharp
+public static bool BLoggedOn()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BSecure()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L92" />
+
+```csharp
+public static bool BSecure()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BUpdateUserData(CSteamID, string, uint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L428" />
+
+Update the data to be displayed in the server browser and matchmaking interfaces for a user
+
+currently connected to the server. For regular users you must call this after you receive a
+
+GSUserValidationSuccess callback.
+
+Return Value: true if successful, false if failure (ie, steamIDUser wasn't for an active player)
+
+```csharp
+public static bool BUpdateUserData(CSteamID steamIDUser, string pchPlayerName, uint uScore)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="pchPlayerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="uScore" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BeginAuthSession(byte[], int, CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L276" />
+
+Authenticate ticket ( from GetAuthSessionTicket ) from entity steamID to be sure it is valid and isnt reused
+
+Registers for callbacks if the entity goes offline or cancels the ticket ( see ValidateAuthTicketResponse_t callback and EAuthSessionResponse )
+
+```csharp
+public static EBeginAuthSessionResult BeginAuthSession(byte[] pAuthTicket, int cbAuthTicket, CSteamID steamID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pAuthTicket" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cbAuthTicket" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="steamID" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="EBeginAuthSessionResult" typeHref="/docs/api/steamapi/ebeginauthsessionresult" />
+
+### CancelAuthTicket(HAuthTicket)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L292" />
+
+Cancel auth ticket from GetAuthSessionTicket, called when no longer playing game with the entity you gave the ticket to
+
+```csharp
+public static void CancelAuthTicket(HAuthTicket hAuthTicket)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hAuthTicket" type="HAuthTicket" typeHref="/docs/api/steamapi/hauthticket" />
+
+### ClearAllKeyValues()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L193" />
+
+/ Call this to clear the whole list of key/values that are sent in rules queries.
+
+```csharp
+public static void ClearAllKeyValues()
+```
+
+### ComputeNewPlayerCompatibility(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L378" />
+
+ask if any of the current players dont want to play with this new player - or vice versa
+
+```csharp
+public static SteamAPICall_t ComputeNewPlayerCompatibility(CSteamID steamIDNewPlayer)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDNewPlayer" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamAPICall_t" typeHref="/docs/api/steamapi/steamapicall_t" />
+
+### CreateUnauthenticatedUserConnection()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L405" />
+
+Creates a fake user (ie, a bot) which will be listed as playing on the server, but skips validation.
+
+Return Value: Returns a SteamID for the user to be tracked with, you should call EndAuthSession()
+
+when this user leaves the server just like you would for a real user.
+
+```csharp
+public static CSteamID CreateUnauthenticatedUserConnection()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+### EndAuthSession(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L284" />
+
+Stop tracking started by BeginAuthSession - called when no longer playing game with this entity
+
+```csharp
+public static void EndAuthSession(CSteamID steamID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamID" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+### GetAuthSessionTicket(byte[], int, out uint, ref SteamNetworkingIdentity)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L267" />
+
+Player list management / authentication.
+
+Retrieve ticket to be sent to the entity who wishes to authenticate you ( using BeginAuthSession API ).
+
+pcbTicket retrieves the length of the actual ticket.
+
+SteamNetworkingIdentity is an optional parameter to hold the public IP address of the entity you are connecting to
+
+if an IP address is passed Steam will only allow the ticket to be used by an entity with that IP address
+
+```csharp
+public static HAuthTicket GetAuthSessionTicket(byte[] pTicket, int cbMaxTicket, out uint pcbTicket, ref SteamNetworkingIdentity pSnid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pTicket" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cbMaxTicket" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="pcbTicket" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pSnid" type="SteamNetworkingIdentity" typeHref="/docs/api/steamapi/steamnetworkingidentity" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HAuthTicket" typeHref="/docs/api/steamapi/hauthticket" />
+
+### GetGameplayStats()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L319" />
+
+these two functions s are deprecated, and will not return results
+
+they will be removed in a future version of the SDK
+
+```csharp
+public static void GetGameplayStats()
+```
+
+### GetNextOutgoingPacket(byte[], int, out uint, out ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L361" />
+
+AFTER calling HandleIncomingPacket for any packets that came in that frame, call this.
+
+This gets a packet that the master server updater needs to send out on UDP.
+
+It returns the length of the packet it wants to send, or 0 if there are no more packets to send.
+
+Call this each frame until it returns 0.
+
+```csharp
+public static int GetNextOutgoingPacket(byte[] pOut, int cbMaxOut, out uint pNetAdr, out ushort pPort)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pOut" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cbMaxOut" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="pNetAdr" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetPublicIP()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L334" />
+
+Returns the public IP of the server according to Steam, useful when the server is
+
+behind NAT and you want to advertise its IP in a lobby for other clients to directly
+
+connect to
+
+```csharp
+public static SteamIPAddress_t GetPublicIP()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamIPAddress_t" typeHref="/docs/api/steamapi/steamipaddress_t" />
+
+### GetServerReputation()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L324" />
+
+```csharp
+public static SteamAPICall_t GetServerReputation()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="SteamAPICall_t" typeHref="/docs/api/steamapi/steamapicall_t" />
+
+### GetSteamID()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L97" />
+
+```csharp
+public static CSteamID GetSteamID()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+### HandleIncomingPacket(byte[], int, uint, ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L350" />
+
+Server browser related query packet processing for shared socket mode. These are used
+
+when you pass STEAMGAMESERVER_QUERY_PORT_SHARED as the query port to SteamGameServer_Init.
+
+IP address and port are in host order, i.e 127.0.0.1 == 0x7f000001
+
+These are used when you've elected to multiplex the game server's UDP socket
+
+rather than having the master server updater use its own sockets.
+
+Source games use this to simplify the job of the server admins, so they
+
+don't have to open up more ports on their firewalls.
+
+Call this when a packet that starts with 0xFFFFFFFF comes in. That means
+
+it's for us.
+
+```csharp
+public static bool HandleIncomingPacket(byte[] pData, int cbData, uint srcIP, ushort srcPort)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pData" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cbData" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="srcIP" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="srcPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LogOff()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L79" />
+
+/ Begin process of logging game server out of steam
+
+```csharp
+public static void LogOff()
+```
+
+### LogOn(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L58" />
+
+Login
+
+/ Begin process to login to a persistent game server account
+
+/
+
+/ You need to register for callbacks to determine the result of this operation.
+
+/ @see SteamServersConnected_t
+
+/ @see SteamServerConnectFailure_t
+
+/ @see SteamServersDisconnected_t
+
+```csharp
+public static void LogOn(string pszToken)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszToken" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### LogOnAnonymous()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L71" />
+
+/ Login to a generic, anonymous account.
+
+/
+
+/ Note: in previous versions of the SDK, this was automatically called within SteamGameServer_Init,
+
+/ but this is no longer the case.
+
+```csharp
+public static void LogOnAnonymous()
+```
+
+### RequestUserGroupStatus(CSteamID, CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L310" />
+
+Ask if a user in in the specified group, results returns async by GSUserGroupStatus_t
+
+returns false if we're not connected to the steam servers and thus cannot ask
+
+```csharp
+public static bool RequestUserGroupStatus(CSteamID steamIDUser, CSteamID steamIDGroup)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="steamIDGroup" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SendUserConnectAndAuthenticate_DEPRECATED(uint, byte[], uint, out CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L395" />
+
+Handles receiving a new connection from a Steam user. This call will ask the Steam
+
+servers to validate the users identity, app ownership, and VAC status. If the Steam servers
+
+are off-line, then it will validate the cached ticket itself which will validate app ownership
+
+and identity. The AuthBlob here should be acquired on the game client using SteamUser()->InitiateGameConnection()
+
+and must then be sent up to the game server for authentication.
+
+Return Value: returns true if the users ticket passes basic checks. pSteamIDUser will contain the Steam ID of this user. pSteamIDUser must NOT be NULL
+
+If the call succeeds then you should expect a GSClientApprove_t or GSClientDeny_t callback which will tell you whether authentication
+
+for the user has succeeded or failed (the steamid in the callback will match the one returned by this call)
+
+DEPRECATED! This function will be removed from the SDK in an upcoming version.
+
+Please migrate to BeginAuthSession and related functions.
+
+```csharp
+public static bool SendUserConnectAndAuthenticate_DEPRECATED(uint unIPClient, byte[] pvAuthBlob, uint cubAuthBlobSize, out CSteamID pSteamIDUser)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="unIPClient" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pvAuthBlob" type="byte[]" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+- <ApiParam name="cubAuthBlobSize" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="pSteamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SendUserDisconnect_DEPRECATED(CSteamID)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L417" />
+
+Should be called whenever a user leaves our game server, this lets Steam internally
+
+track which users are currently on which servers for the purposes of preventing a single
+
+account being logged into multiple servers, showing who is currently on a server, etc.
+
+DEPRECATED! This function will be removed from the SDK in an upcoming version.
+
+Please migrate to BeginAuthSession and related functions.
+
+```csharp
+public static void SendUserDisconnect_DEPRECATED(CSteamID steamIDUser)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamIDUser" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+### SetAdvertiseServerActive(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L255" />
+
+/ Indicate whether you wish to be listed on the master server list
+
+/ and/or respond to server browser / LAN discovery packets.
+
+/ The server starts with this value set to false. You should set all
+
+/ relevant server parameters before enabling advertisement on the server.
+
+/
+
+/ (This function used to be named EnableHeartbeats, so if you are wondering
+
+/ where that function went, it's right here. It does the same thing as before,
+
+/ the old name was just confusing.)
+
+```csharp
+public static void SetAdvertiseServerActive(bool bActive)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="bActive" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetBotPlayerCount(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L123" />
+
+/ Number of bots. Default value is zero
+
+```csharp
+public static void SetBotPlayerCount(int cBotplayers)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="cBotplayers" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetDedicatedServer(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L44" />
+
+/ Is this is a dedicated server? The default value is false.
+
+```csharp
+public static void SetDedicatedServer(bool bDedicated)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="bDedicated" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetGameData(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L228" />
+
+/ Sets a string defining the "gamedata" for this server, this is optional, but if it is set
+
+/ it allows users to filter in the matchmaking/server-browser interfaces based on the value
+
+/
+
+/ @see k_cbMaxGameServerGameData
+
+```csharp
+public static void SetGameData(string pchGameData)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pchGameData" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetGameDescription(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L21" />
+
+/ Description of the game. This is a required field and is displayed in the steam server browser....for now.
+
+/ This is a required field, but it will go away eventually, as the data should be determined from the AppID.
+
+```csharp
+public static void SetGameDescription(string pszGameDescription)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszGameDescription" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetGameTags(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L215" />
+
+/ Sets a string defining the "gametags" for this server, this is optional, but if it is set
+
+/ it allows users to filter in the matchmaking/server-browser interfaces based on the value
+
+/
+
+/ @see k_cbMaxGameServerTags
+
+```csharp
+public static void SetGameTags(string pchGameTags)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pchGameTags" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetKeyValue(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L201" />
+
+/ Call this to add/update a key/value pair.
+
+```csharp
+public static void SetKeyValue(string pKey, string pValue)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pKey" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="pValue" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetMapName(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L145" />
+
+/ Set name of map to report in the server browser
+
+/
+
+/ @see k_cbMaxGameServerMapName
+
+```csharp
+public static void SetMapName(string pszMapName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszMapName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetMaxPlayerCount(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L115" />
+
+Server state. These properties may be changed at any time.
+
+/ Max player count that will be reported to server browser and client queries
+
+```csharp
+public static void SetMaxPlayerCount(int cPlayersMax)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="cPlayersMax" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetModDir(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L34" />
+
+/ If your game is a "mod," pass the string that identifies it. The default is an empty string, meaning
+
+/ this application is the original game, not a mod.
+
+/
+
+/ @see k_cbMaxGameServerGameDir
+
+```csharp
+public static void SetModDir(string pszModDir)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszModDir" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetPasswordProtected(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L155" />
+
+/ Let people know if your server will require a password
+
+```csharp
+public static void SetPasswordProtected(bool bPasswordProtected)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="bPasswordProtected" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetProduct(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L10" />
+
+/ Game product identifier. This is currently used by the master server for version checking purposes.
+
+/ It's a required field, but will eventually will go away, and the AppID will be used for this purpose.
+
+```csharp
+public static void SetProduct(string pszProduct)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszProduct" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetRegion(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L238" />
+
+/ Region identifier. This is an optional field, the default value is empty, meaning the "world" region
+
+```csharp
+public static void SetRegion(string pszRegion)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszRegion" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetServerName(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L133" />
+
+/ Set the name of server as it will appear in the server browser
+
+/
+
+/ @see k_cbMaxGameServerName
+
+```csharp
+public static void SetServerName(string pszServerName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszServerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### SetSpectatorPort(ushort)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L173" />
+
+/ Spectator server port to advertise. The default value is zero, meaning the
+
+/ service is not used. If your server receives any info requests on the LAN,
+
+/ this is the value that will be placed into the reply for such local queries.
+
+/
+
+/ This is also the value that will be advertised by the master server.
+
+/ The only exception is if your server is using a FakeIP. Then then the second
+
+/ fake port number (index 1) assigned to your server will be listed on the master
+
+/ server as the spectator port, if you set this value to any nonzero value.
+
+/
+
+/ This function merely controls the values that are advertised -- it's up to you to
+
+/ configure the server to actually listen on this port and handle any spectator traffic
+
+```csharp
+public static void SetSpectatorPort(ushort unSpectatorPort)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="unSpectatorPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### SetSpectatorServerName(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L183" />
+
+/ Name of the spectator server. (Only used if spectator port is nonzero.)
+
+/
+
+/ @see k_cbMaxGameServerMapName
+
+```csharp
+public static void SetSpectatorServerName(string pszSpectatorServerName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pszSpectatorServerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### UserHasLicenseForApp(CSteamID, AppId_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L301" />
+
+After receiving a user's authentication data, and passing it to SendUserConnectAndAuthenticate, use this function
+
+to determine if the user owns downloadable content specified by the provided AppID.
+
+```csharp
+public static EUserHasLicenseForAppResult UserHasLicenseForApp(CSteamID steamID, AppId_t appID)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="steamID" type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+- <ApiParam name="appID" type="AppId_t" typeHref="/docs/api/steamapi/appid_t" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="EUserHasLicenseForAppResult" typeHref="/docs/api/steamapi/euserhaslicenseforappresult" />
+
+### WasRestartRequested()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/SteamAPI/isteamgameserver.cs#L106" />
+
+/ Returns true if the master server has requested a restart.
+
+/ Only returns true once per request.
+
+```csharp
+public static bool WasRestartRequested()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

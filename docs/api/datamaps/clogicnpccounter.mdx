@@ -1,0 +1,78 @@
+---
+title: CLogicNPCCounter
+---
+
+# CLogicNPCCounter
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `minCountAll` | `m_nMinCountAll` | `FIELD_INT32` |
+| `maxCountAll` | `m_nMaxCountAll` | `FIELD_INT32` |
+| `minFactorAll` | `m_nMinFactorAll` | `FIELD_INT32` |
+| `maxFactorAll` | `m_nMaxFactorAll` | `FIELD_INT32` |
+| `NPCType1` | `m_iszNPCClassname_1` | `FIELD_STRING` |
+| `NPCState1` | `m_nNPCState_1` | `FIELD_INT32` |
+| `invertState1` | `m_bInvertState_1` | `FIELD_BOOLEAN` |
+| `minCount1` | `m_nMinCount_1` | `FIELD_INT32` |
+| `maxCount1` | `m_nMaxCount_1` | `FIELD_INT32` |
+| `minFactor1` | `m_nMinFactor_1` | `FIELD_INT32` |
+| `maxFactor1` | `m_nMaxFactor_1` | `FIELD_INT32` |
+| `defaultDist1` | `m_flDefaultDist_1` | `FIELD_FLOAT32` |
+| `NPCType2` | `m_iszNPCClassname_2` | `FIELD_STRING` |
+| `NPCState2` | `m_nNPCState_2` | `FIELD_INT32` |
+| `invertState2` | `m_bInvertState_2` | `FIELD_BOOLEAN` |
+| `minCount2` | `m_nMinCount_2` | `FIELD_INT32` |
+| `maxCount2` | `m_nMaxCount_2` | `FIELD_INT32` |
+| `minFactor2` | `m_nMinFactor_2` | `FIELD_INT32` |
+| `maxFactor2` | `m_nMaxFactor_2` | `FIELD_INT32` |
+| `defaultDist2` | `m_flDefaultDist_2` | `FIELD_FLOAT32` |
+| `NPCType3` | `m_iszNPCClassname_3` | `FIELD_STRING` |
+| `NPCState3` | `m_nNPCState_3` | `FIELD_INT32` |
+| `invertState3` | `m_bInvertState_3` | `FIELD_BOOLEAN` |
+| `minCount3` | `m_nMinCount_3` | `FIELD_INT32` |
+| `maxCount3` | `m_nMaxCount_3` | `FIELD_INT32` |
+| `minFactor3` | `m_nMinFactor_3` | `FIELD_INT32` |
+| `maxFactor3` | `m_nMaxFactor_3` | `FIELD_INT32` |
+| `defaultDist3` | `m_flDefaultDist_3` | `FIELD_FLOAT32` |
+| `sourceEntityName` | `m_iszSourceEntityName` | `FIELD_STRING` |
+| `startDisabled` | `m_bDisabled` | `FIELD_BOOLEAN` |
+| `distanceMax` | `m_flDistanceMax` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetSourceEntity` | `FIELD_STRING` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnMinCountAll` | `FIELD_CUSTOM` |
+| `OnMaxCountAll` | `FIELD_CUSTOM` |
+| `OnFactorAll` | `FIELD_CUSTOM` |
+| `OnMinPlayerDistAll` | `FIELD_CUSTOM` |
+| `OnMinCount1` | `FIELD_CUSTOM` |
+| `OnMaxCount1` | `FIELD_CUSTOM` |
+| `OnFactor1` | `FIELD_CUSTOM` |
+| `OnMinPlayerDist1` | `FIELD_CUSTOM` |
+| `OnMinCount2` | `FIELD_CUSTOM` |
+| `OnMaxCount2` | `FIELD_CUSTOM` |
+| `OnFactor2` | `FIELD_CUSTOM` |
+| `OnMinPlayerDist2` | `FIELD_CUSTOM` |
+| `OnMinCount3` | `FIELD_CUSTOM` |
+| `OnMaxCount3` | `FIELD_CUSTOM` |
+| `OnFactor3` | `FIELD_CUSTOM` |
+| `OnMinPlayerDist3` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CLogicNPCCounterSetNPCCounterThink` |

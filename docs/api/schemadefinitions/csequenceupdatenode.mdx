@@ -1,0 +1,79 @@
+---
+title: CSequenceUpdateNode
+---
+
+# Interface CSequenceUpdateNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceUpdateNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSequenceUpdateNode : CSequenceUpdateNodeBase, CLeafUpdateNode, CAnimUpdateNodeBase, ISchemaClass<CAnimUpdateNodeBase>, ISchemaClass<CLeafUpdateNode>, ISchemaClass<CSequenceUpdateNodeBase>, ISchemaClass<CSequenceUpdateNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CSequenceUpdateNodeBase](/docs/api/schemadefinitions/csequenceupdatenodebase)
+- [CLeafUpdateNode](/docs/api/schemadefinitions/cleafupdatenode)
+- [CAnimUpdateNodeBase](/docs/api/schemadefinitions/canimupdatenodebase)
+- [ISchemaClass\<CAnimUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CLeafUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CSequenceUpdateNodeBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CSequenceUpdateNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Duration
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceUpdateNode.cs#L20" />
+
+```csharp
+ref float Duration { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ParamSpans
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceUpdateNode.cs#L22" />
+
+```csharp
+CParamSpanUpdater ParamSpans { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CParamSpanUpdater" typeHref="/docs/api/schemadefinitions/cparamspanupdater" />
+
+### Sequence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceUpdateNode.cs#L18" />
+
+```csharp
+HSequence Sequence { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HSequence" typeHref="/docs/api/schemadefinitions/hsequence" />
+
+### Tags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSequenceUpdateNode.cs#L24" />
+
+```csharp
+ref CUtlVector<TagSpan_t> Tags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;TagSpan_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

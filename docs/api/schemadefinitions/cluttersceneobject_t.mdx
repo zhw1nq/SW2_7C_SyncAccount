@@ -1,0 +1,157 @@
+---
+title: ClutterSceneObject_t
+---
+
+# Interface ClutterSceneObject_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ClutterSceneObject_t : ISchemaClass<ClutterSceneObject_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<ClutterSceneObject_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BeginCullSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L36" />
+
+```csharp
+ref float BeginCullSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Bounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L18" />
+
+```csharp
+AABB_t Bounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AABB_t" typeHref="/docs/api/schemadefinitions/aabb_t" />
+
+### EndCullSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L38" />
+
+```csharp
+ref float EndCullSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Flags
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L20" />
+
+```csharp
+ref ObjectTypeFlags_t Flags { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ObjectTypeFlags_t" typeHref="/docs/api/schemadefinitions/objecttypeflags_t" />
+
+### InstancePositions
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L24" />
+
+```csharp
+ref CUtlVector<Vector> InstancePositions { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;Vector&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### InstanceScales
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L26" />
+
+```csharp
+ref CUtlVector<float> InstanceScales { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;float&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### InstanceTintSrgb
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L28" />
+
+```csharp
+ref CUtlVector<Color> InstanceTintSrgb { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;Color&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Layer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L22" />
+
+```csharp
+ref short Layer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### MaterialGroup
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L34" />
+
+```csharp
+ref CUtlStringToken MaterialGroup { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlStringToken" typeHref="/docs/api/natives/cutlstringtoken" />
+
+### RenderableModel
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L32" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeCModel> RenderableModel { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeCModel&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### Tiles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/ClutterSceneObject_t.cs#L30" />
+
+```csharp
+ref CUtlVector<ClutterTile_t> Tiles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ClutterTile_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

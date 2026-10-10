@@ -1,0 +1,827 @@
+---
+title: CBaseModelEntity
+---
+
+# Interface CBaseModelEntity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CBaseModelEntity : CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CBaseModelEntity>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseModelEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AllowFadeInView
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L67" />
+
+```csharp
+ref bool AllowFadeInView { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### BodyGroupChoices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L94" />
+
+```csharp
+SchemaUntypedField BodyGroupChoices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### CHitboxComponent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L20" />
+
+```csharp
+CHitboxComponent CHitboxComponent { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHitboxComponent" typeHref="/docs/api/schemadefinitions/chitboxcomponent" />
+
+### CRenderComponent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L18" />
+
+```csharp
+CRenderComponent? CRenderComponent { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CRenderComponent?" typeHref="/docs/api/schemadefinitions/crendercomponent" />
+
+### ChoreoComponent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L22" />
+
+```csharp
+CChoreoComponent? ChoreoComponent { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CChoreoComponent?" typeHref="/docs/api/schemadefinitions/cchoreocomponent" />
+
+### Collision
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L77" />
+
+```csharp
+CCollisionProperty Collision { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCollisionProperty" typeHref="/docs/api/schemadefinitions/ccollisionproperty" />
+
+### DestructiblePartInitialStateDestructed0
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L24" />
+
+```csharp
+ref HitGroup_t DestructiblePartInitialStateDestructed0 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### DestructiblePartInitialStateDestructed0_GenerateBreakpieces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L44" />
+
+```csharp
+ref bool DestructiblePartInitialStateDestructed0_GenerateBreakpieces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestructiblePartInitialStateDestructed0_PartIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L34" />
+
+```csharp
+ref int DestructiblePartInitialStateDestructed0_PartIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DestructiblePartInitialStateDestructed1
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L26" />
+
+```csharp
+ref HitGroup_t DestructiblePartInitialStateDestructed1 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### DestructiblePartInitialStateDestructed1_GenerateBreakpieces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L46" />
+
+```csharp
+ref bool DestructiblePartInitialStateDestructed1_GenerateBreakpieces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestructiblePartInitialStateDestructed1_PartIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L36" />
+
+```csharp
+ref int DestructiblePartInitialStateDestructed1_PartIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DestructiblePartInitialStateDestructed2
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L28" />
+
+```csharp
+ref HitGroup_t DestructiblePartInitialStateDestructed2 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### DestructiblePartInitialStateDestructed2_GenerateBreakpieces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L48" />
+
+```csharp
+ref bool DestructiblePartInitialStateDestructed2_GenerateBreakpieces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestructiblePartInitialStateDestructed2_PartIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L38" />
+
+```csharp
+ref int DestructiblePartInitialStateDestructed2_PartIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DestructiblePartInitialStateDestructed3
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L30" />
+
+```csharp
+ref HitGroup_t DestructiblePartInitialStateDestructed3 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### DestructiblePartInitialStateDestructed3_GenerateBreakpieces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L50" />
+
+```csharp
+ref bool DestructiblePartInitialStateDestructed3_GenerateBreakpieces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestructiblePartInitialStateDestructed3_PartIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L40" />
+
+```csharp
+ref int DestructiblePartInitialStateDestructed3_PartIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DestructiblePartInitialStateDestructed4
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L32" />
+
+```csharp
+ref HitGroup_t DestructiblePartInitialStateDestructed4 { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitGroup_t" typeHref="/docs/api/schemadefinitions/hitgroup_t" />
+
+### DestructiblePartInitialStateDestructed4_GenerateBreakpieces
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L52" />
+
+```csharp
+ref bool DestructiblePartInitialStateDestructed4_GenerateBreakpieces { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### DestructiblePartInitialStateDestructed4_PartIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L42" />
+
+```csharp
+ref int DestructiblePartInitialStateDestructed4_PartIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DestructiblePartsSystemComponent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L54" />
+
+```csharp
+CDestructiblePartsComponent? DestructiblePartsSystemComponent { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CDestructiblePartsComponent?" typeHref="/docs/api/schemadefinitions/cdestructiblepartscomponent" />
+
+### DisabledHitGroups
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L98" />
+
+```csharp
+ISchemaFixedArray<uint> DisabledHitGroups { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ISchemaFixedArray&lt;uint&gt;" typeHref="/docs/api/schemas/ischemafixedarrayt" />
+
+### DissolveStartTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L59" />
+
+```csharp
+GameTime_t DissolveStartTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="GameTime_t" typeHref="/docs/api/schemadefinitions/gametime_t" />
+
+### FadeMaxDist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L85" />
+
+```csharp
+ref float FadeMaxDist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FadeMinDist
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L83" />
+
+```csharp
+ref float FadeMinDist { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### FadeScale
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L87" />
+
+```csharp
+ref float FadeScale { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Glow
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L79" />
+
+```csharp
+CGlowProperty Glow { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CGlowProperty" typeHref="/docs/api/schemadefinitions/cglowproperty" />
+
+### GlowBackfaceMult
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L81" />
+
+```csharp
+ref float GlowBackfaceMult { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### NoInterpolate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L75" />
+
+```csharp
+ref bool NoInterpolate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ObjectCulling
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L91" />
+
+```csharp
+ref byte ObjectCulling { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="byte" typeHref="https://learn.microsoft.com/dotnet/api/system.byte" />
+
+### OnDestructibleHitGroupDamageLevelChanged
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L57" />
+
+```csharp
+SchemaUntypedField OnDestructibleHitGroupDamageLevelChanged { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### OnIgnite
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L61" />
+
+```csharp
+ref CEntityIOOutput OnIgnite { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityIOOutput" typeHref="/docs/api/natives/centityiooutput" />
+
+### Render
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L69" />
+
+```csharp
+ref Color Render { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Color" typeHref="/docs/api/natives/color" />
+
+### RenderAttributes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L71" />
+
+```csharp
+ref CUtlVector<EntityRenderAttribute_t> RenderAttributes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;EntityRenderAttribute_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### RenderFX
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L65" />
+
+```csharp
+ref RenderFx_t RenderFX { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="RenderFx_t" typeHref="/docs/api/schemadefinitions/renderfx_t" />
+
+### RenderMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L63" />
+
+```csharp
+ref RenderMode_t RenderMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="RenderMode_t" typeHref="/docs/api/schemadefinitions/rendermode_t" />
+
+### RenderToCubemaps
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L73" />
+
+```csharp
+ref bool RenderToCubemaps { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ShadowStrength
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L89" />
+
+```csharp
+ref float ShadowStrength { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### ViewOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L96" />
+
+```csharp
+CNetworkViewOffsetVector ViewOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNetworkViewOffsetVector" typeHref="/docs/api/schemadefinitions/cnetworkviewoffsetvector" />
+
+## Methods
+
+### CHitboxComponentUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L100" />
+
+```csharp
+void CHitboxComponentUpdated()
+```
+
+### ChoreoComponentUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L101" />
+
+```csharp
+void ChoreoComponentUpdated()
+```
+
+### CollisionUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L109" />
+
+```csharp
+void CollisionUpdated()
+```
+
+### DestructiblePartsSystemComponentUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L102" />
+
+```csharp
+void DestructiblePartsSystemComponentUpdated()
+```
+
+### DisabledHitGroupsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L118" />
+
+```csharp
+void DisabledHitGroupsUpdated()
+```
+
+### FadeMaxDistUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L113" />
+
+```csharp
+void FadeMaxDistUpdated()
+```
+
+### FadeMinDistUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L112" />
+
+```csharp
+void FadeMinDistUpdated()
+```
+
+### FadeScaleUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L114" />
+
+```csharp
+void FadeScaleUpdated()
+```
+
+### GetMeshGroupMask()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L23" />
+
+Gets the model meshgroupmask of the entity.
+
+```csharp
+ulong? GetMeshGroupMask()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ulong?" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### GetModel()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L17" />
+
+Gets the model of the entity.
+
+```csharp
+string? GetModel()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### GetSkeletonInstance()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L11" />
+
+Gets the skeletance instance of the entity.
+
+```csharp
+CSkeletonInstance? GetSkeletonInstance()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CSkeletonInstance?" typeHref="/docs/api/schemadefinitions/cskeletoninstance" />
+
+### GlowBackfaceMultUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L111" />
+
+```csharp
+void GlowBackfaceMultUpdated()
+```
+
+### GlowUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L110" />
+
+```csharp
+void GlowUpdated()
+```
+
+### NoInterpolateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L108" />
+
+```csharp
+void NoInterpolateUpdated()
+```
+
+### ObjectCullingUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L116" />
+
+```csharp
+void ObjectCullingUpdated()
+```
+
+### RenderAttributesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L106" />
+
+```csharp
+void RenderAttributesUpdated()
+```
+
+### RenderFXUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L104" />
+
+```csharp
+void RenderFXUpdated()
+```
+
+### RenderModeUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L103" />
+
+```csharp
+void RenderModeUpdated()
+```
+
+### RenderToCubemapsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L107" />
+
+```csharp
+void RenderToCubemapsUpdated()
+```
+
+### RenderUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L105" />
+
+```csharp
+void RenderUpdated()
+```
+
+### SetBodygroupByName(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L51" />
+
+Sets the bodygroup to the entity.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetBodygroupByName(string group, int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="group" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetBodygroupByNameAsync(string, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L59" />
+
+Sets the bodygroup to the entity asynchronously.
+
+```csharp
+Task SetBodygroupByNameAsync(string group, int value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="group" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the bodygroup to be set.
+- <ApiParam name="value" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The value to be set for the bodygroup.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetMeshGroupMask(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L29" />
+
+Sets the model meshgroupmask of the entity.
+
+```csharp
+void SetMeshGroupMask(ulong meshGroupMask)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="meshGroupMask" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### SetModel(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L37" />
+
+Sets the model to the entity.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetModel(string model)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="model" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The model path to be used.
+
+### SetModelAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L44" />
+
+Sets the model to the entity asynchronously.
+
+```csharp
+Task SetModelAsync(string model)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="model" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The model path to be used.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetScale(float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L66" />
+
+Sets the scale of the entity.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetScale(float scale)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="scale" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SetScaleAsync(float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CBaseModelEntity.cs#L72" />
+
+Sets the scale of the entity.
+
+```csharp
+Task SetScaleAsync(float scale)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="scale" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### ShadowStrengthUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L115" />
+
+```csharp
+void ShadowStrengthUpdated()
+```
+
+### ViewOffsetUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseModelEntity.cs#L117" />
+
+```csharp
+void ViewOffsetUpdated()
+```
+

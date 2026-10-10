@@ -1,0 +1,99 @@
+---
+title: CFuncMover
+---
+
+# CFuncMover
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `path_name` | `m_iszPathName` | `FIELD_STRING` |
+| `path_node_start` | `m_iszPathNodeStart` | `FIELD_STRING` |
+| `path_node_end` | `m_iszPathNodeEnd` | `FIELD_STRING` |
+| `starts_moving` | `m_bIsMoving` | `FIELD_BOOLEAN` |
+| `starts_in_reverse` | `m_bIsReversing` | `FIELD_BOOLEAN` |
+| `starts_at_closest_point` | `m_bStartAtClosestPoint` | `FIELD_BOOLEAN` |
+| `starts_at_end` | `m_bStartAtEnd` | `FIELD_BOOLEAN` |
+| `starts_following_closest_mover` | `m_bStartFollowingClosestMover` | `FIELD_BOOLEAN` |
+| `time_to_reach_max_speed` | `m_flTimeToReachMaxSpeed` | `FIELD_FLOAT32` |
+| `distance_to_reach_max_speed` | `m_flDistanceToReachMaxSpeed` | `FIELD_FLOAT32` |
+| `time_to_reach_zero_speed` | `m_flTimeToReachZeroSpeed` | `FIELD_FLOAT32` |
+| `distance_to_reach_zero_speed` | `m_flDistanceToReachZeroSpeed` | `FIELD_FLOAT32` |
+| `time_to_blend_to_new_orientation` | `m_flTimeToBlendToNewOrientation` | `FIELD_FLOAT32` |
+| `start_forward_sound` | `m_iszStartForwardSound` | `FIELD_SOUNDNAME` |
+| `loop_forward_sound` | `m_iszLoopForwardSound` | `FIELD_SOUNDNAME` |
+| `stop_forward_sound` | `m_iszStopForwardSound` | `FIELD_SOUNDNAME` |
+| `start_reverse_sound` | `m_iszStartReverseSound` | `FIELD_SOUNDNAME` |
+| `loop_reverse_sound` | `m_iszLoopReverseSound` | `FIELD_SOUNDNAME` |
+| `stop_reverse_sound` | `m_iszStopReverseSound` | `FIELD_SOUNDNAME` |
+| `arrive_at_destination_sound` | `m_iszArriveAtDestinationSound` | `FIELD_SOUNDNAME` |
+| `CreateMovableNavMesh` | `m_bCreateMovableNavMesh` | `FIELD_BOOLEAN` |
+| `AllowMovableNavMeshDockingOnEntireEntity` | `m_bAllowMovableNavMeshDockingOnEntireEntity` | `FIELD_BOOLEAN` |
+| `orientation_match_entity` | `m_iszOrientationMatchEntityName` | `FIELD_STRING` |
+| `time_to_traverse_to_next_node` | `m_flTimeToTraverseToNextNode` | `FIELD_FLOAT32` |
+| `follow_other_mover_entity` | `m_iszFollowMoverEntityName` | `FIELD_STRING` |
+| `follow_other_mover_distance` | `m_flFollowMoverDistance` | `FIELD_FLOAT32` |
+| `follow_other_mover_spring_strength` | `m_flFollowMoverSpringStrength` | `FIELD_FLOAT32` |
+| `follow_other_mover_constraint` | `m_eFollowConstraint` | `FIELD_INT32` |
+| `solid` | `m_eSolidType` | `FIELD_UINT8` |
+| `move_type` | `m_eMoveType` | `FIELD_INT32` |
+| `orientation_update` | `m_eOrientationUpdate` | `FIELD_INT32` |
+| `orientation_face_entity` | `m_strOrientationFaceEntityName` | `FIELD_STRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Start` | `FIELD_VOID` |
+| `StartForward` | `FIELD_VOID` |
+| `StartReverse` | `FIELD_VOID` |
+| `Stop` | `FIELD_VOID` |
+| `StopImmediate` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `ToggleDirection` | `FIELD_VOID` |
+| `Pause` | `FIELD_VOID` |
+| `Unpause` | `FIELD_VOID` |
+| `TeleportToPathNode` | `FIELD_STRING` |
+| `MoveToPathNode` | `FIELD_STRING` |
+| `TransitionToPathNode` | `FIELD_STRING` |
+| `TransitionToPathNodeStartForward` | `FIELD_STRING` |
+| `TransitionToPathNodeStartReverse` | `FIELD_STRING` |
+| `SetSpeed` | `FIELD_FLOAT32` |
+| `SetSpeedImmediate` | `FIELD_FLOAT32` |
+| `SetTimeToReachMaxSpeed` | `FIELD_FLOAT32` |
+| `SetTimeToReachZeroSpeed` | `FIELD_FLOAT32` |
+| `SetTimeToBlendToNewOrientation` | `FIELD_FLOAT32` |
+| `SetOrientationMode` | `FIELD_INT32` |
+| `SetFollowEntity` | `FIELD_STRING` |
+| `SetFollowEntityForward` | `FIELD_STRING` |
+| `SetFollowEntityReverse` | `FIELD_STRING` |
+| `SetFaceEntity` | `FIELD_STRING` |
+| `SetFollowDistance` | `FIELD_FLOAT32` |
+| `SetFollowMinimumSpeed` | `FIELD_FLOAT32` |
+| `SetTimeToTraverseToNextNode` | `FIELD_FLOAT32` |
+| `SetMoveType` | `FIELD_INT32` |
+| `SetFollowMoverEntity` | `FIELD_STRING` |
+| `SetFollowMoverEntityToClosestOnSpline` | `FIELD_VOID` |
+| `DeleteFollowMoverSpringConstraint` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnStart` | `FIELD_CUSTOM` |
+| `OnStartForward` | `FIELD_CUSTOM` |
+| `OnStartReverse` | `FIELD_CUSTOM` |
+| `OnStop` | `FIELD_CUSTOM` |
+| `OnStopped` | `FIELD_CUSTOM` |
+| `OnMovementEnd` | `FIELD_CUSTOM` |
+| `OnNodePassed` | `FIELD_CUSTOM` |
+| `OnTransitionToPathNodeComplete` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncMoverLerpToNewPosition` |

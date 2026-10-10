@@ -1,0 +1,35 @@
+---
+title: CPathMoverEntitySpawner
+---
+
+# CPathMoverEntitySpawner
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `enabled` | `m_bEnabled` | `FIELD_BOOLEAN` |
+| `spawn_frequency_seconds` | `m_flSpawnFrequencySeconds` | `FIELD_FLOAT32` |
+| `spawn_frequency_dist_to_nearest` | `m_flSpawnFrequencyDistToNearestMover` | `FIELD_FLOAT32` |
+| `max_active` | `m_nMaxActive` | `FIELD_INT32` |
+| `entity_template%02d` | `m_szSpawnTemplates` | `FIELD_STRING` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPathMoverEntitySpawnerSpawnThink` |

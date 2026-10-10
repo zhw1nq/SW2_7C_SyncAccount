@@ -1,0 +1,48 @@
+---
+title: ILocalizer
+---
+
+# Interface ILocalizer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Translations/ILocalizer.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Translation](/docs/api/translation)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Represents a localizer that can be used to get translations for a given key.
+
+```csharp
+public interface ILocalizer
+```
+
+## Properties
+
+### this
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Translations/ILocalizer.cs#L13" />
+
+Gets the translation for the specified key.
+
+```csharp
+string this[string key] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### this]
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Translations/ILocalizer.cs#L21" />
+
+Gets the translation for the specified key with the specified arguments.
+
+```csharp
+string this[string key, params object[] args] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

@@ -1,0 +1,63 @@
+---
+title: CBaseDoor
+---
+
+# CBaseDoor
+
+Inherited from [CBaseToggle](/docs/api/datamaps/cbasetoggle)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `movedir` | `m_angMoveEntitySpace` | `FIELD_QANGLE` |
+| `noise1` | `m_NoiseMoving` | `FIELD_SOUNDNAME` |
+| `noise2` | `m_NoiseArrived` | `FIELD_SOUNDNAME` |
+| `startclosesound` | `m_NoiseMovingClosed` | `FIELD_SOUNDNAME` |
+| `closesound` | `m_NoiseArrivedClosed` | `FIELD_SOUNDNAME` |
+| `chainstodoor` | `m_ChainTarget` | `FIELD_STRING` |
+| `dmg` | `m_flBlockDamage` | `FIELD_FLOAT32` |
+| `spawnpos` | `m_eSpawnPosition` | `FIELD_INT32` |
+| `forceclosed` | `m_bForceClosed` | `FIELD_BOOLEAN` |
+| `loopmovesound` | `m_bLoopMoveSound` | `FIELD_BOOLEAN` |
+| `ignoredebris` | `m_bIgnoreDebris` | `FIELD_BOOLEAN` |
+| `CreateNavObstacle` | `m_bCreateNavObstacle` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Open` | `FIELD_VOID` |
+| `Close` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `Lock` | `FIELD_VOID` |
+| `Unlock` | `FIELD_VOID` |
+| `SetSpeed` | `FIELD_FLOAT32` |
+| `SetToggleState` | `FIELD_FLOAT32` |
+| `SetNoNPCs` | `FIELD_BOOLEAN` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnBlockedOpening` | `FIELD_CUSTOM` |
+| `OnBlockedClosing` | `FIELD_CUSTOM` |
+| `OnUnblockedOpening` | `FIELD_CUSTOM` |
+| `OnUnblockedClosing` | `FIELD_CUSTOM` |
+| `OnFullyClosed` | `FIELD_CUSTOM` |
+| `OnFullyOpen` | `FIELD_CUSTOM` |
+| `OnClose` | `FIELD_CUSTOM` |
+| `OnOpen` | `FIELD_CUSTOM` |
+| `OnLockedUse` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBaseDoorDoorTouch` |
+| `CBaseDoorDoorGoUp` |
+| `CBaseDoorDoorGoDown` |
+| `CBaseDoorDoorHitTop` |
+| `CBaseDoorDoorHitBottom` |
+| `CBaseDoorMovingSoundThink` |
+| `CBaseDoorCloseAreaPortalsThink` |

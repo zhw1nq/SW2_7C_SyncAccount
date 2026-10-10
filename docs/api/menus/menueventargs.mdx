@@ -1,0 +1,64 @@
+---
+title: MenuEventArgs
+---
+
+# Class MenuEventArgs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuAPI.cs#L243" />
+
+**Namespace**: [SwiftlyS2.Shared.Menus](/docs/api/menus)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Provides event data for menu-related events.
+
+```csharp
+public sealed class MenuEventArgs : EventArgs
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [EventArgs](https://learn.microsoft.com/dotnet/api/system.eventargs)
+- [MenuEventArgs](/docs/api/menus/menueventargs)
+
+#### Inherited Members
+
+- [EventArgs.Empty](https://learn.microsoft.com/dotnet/api/system.eventargs.empty)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Properties
+
+### Options
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuAPI.cs#L253" />
+
+The menu options involved in this event.
+
+```csharp
+public IReadOnlyList<IMenuOption>? Options { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IReadOnlyList&lt;IMenuOption&gt;?" typeHref="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1" />
+
+### Player
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuAPI.cs#L248" />
+
+The player who triggered this menu event.
+
+```csharp
+public IPlayer? Player { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

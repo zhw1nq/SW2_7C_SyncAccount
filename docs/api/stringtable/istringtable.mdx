@@ -1,0 +1,315 @@
+---
+title: IStringTable
+---
+
+# Interface IStringTable
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.StringTable](/docs/api/stringtable)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IStringTable
+```
+
+## Properties
+
+### NumStrings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L21" />
+
+Gets the number of strings in the string table.
+
+```csharp
+int NumStrings { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TableId
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L16" />
+
+Gets the ID of the string table.
+
+```csharp
+int TableId { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### TableName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L11" />
+
+Gets the name of the string table.
+
+```csharp
+string TableName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### FindStringIndex(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L28" />
+
+Finds the index of the specified string in the string table.
+
+```csharp
+int? FindStringIndex(string str)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to find the index of.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int?" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index of the string, or null if the string is not found.
+
+### GetOrAddString(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L109" />
+
+Gets the index of the specified string in the string table, or adds it if it does not exist.
+
+```csharp
+int GetOrAddString(string str)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to get or add.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index of the string, or new index if the string is not found and added.
+
+### GetString(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L42" />
+
+Gets the string at the specified index.
+
+```csharp
+string? GetString(int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index to get the string from.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string at the specified index, or null if the index is invalid.
+
+### GetStringUserData(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L57" />
+
+Gets the user data for the specified index.
+
+```csharp
+StringTableOutUserData GetStringUserData(int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index to get the user data from.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="StringTableOutUserData" typeHref="/docs/api/stringtable/stringtableoutuserdata" /> — The user data, or invalid if the index is invalid.
+
+### GetStringUserData(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L72" />
+
+Gets the user data for the specified string.
+
+```csharp
+StringTableOutUserData GetStringUserData(string str)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to get the user data for.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="StringTableOutUserData" typeHref="/docs/api/stringtable/stringtableoutuserdata" /> — The user data, or invalid if the string is not found.
+
+### IsStringIndexValid(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L35" />
+
+Checks if the specified index is valid.
+
+```csharp
+bool IsStringIndexValid(int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index to check.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the index is valid, false otherwise.
+
+### ReplicateUserData(int, StringTableUserData, in CRecipientFilter)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L117" />
+
+Replicates the user data for the specified string to the specified recipients.
+
+```csharp
+void ReplicateUserData(int stringIndex, StringTableUserData userData, in CRecipientFilter filter)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="stringIndex" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index of the string to replicate the user data for.
+- <ApiParam name="userData" type="StringTableUserData" typeHref="/docs/api/stringtable/stringtableuserdata" /> — The user data to replicate.
+- <ApiParam name="filter" type="CRecipientFilter" typeHref="/docs/api/natives/crecipientfilter" /> — The recipients to replicate the user data to.
+
+### ReplicateUserData(string, StringTableUserData, in CRecipientFilter)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L130" />
+
+Replicates the user data for the specified string to the specified recipients.
+Notice that the string MUST be already added to the string table BEFORE A FEW TICKS.
+If the string is not added, the replication will fail.
+If the string is added only 1-2 ticks ago before this call, the server will overwrites the replicated value.
+
+```csharp
+void ReplicateUserData(string str, StringTableUserData userData, in CRecipientFilter filter)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to replicate the user data for.
+- <ApiParam name="userData" type="StringTableUserData" typeHref="/docs/api/stringtable/stringtableuserdata" /> — The user data to replicate.
+- <ApiParam name="filter" type="CRecipientFilter" typeHref="/docs/api/natives/crecipientfilter" /> — The recipients to replicate the user data to.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown if the string is not found in the string table.
+
+### SetOrAddStringUserData(string, StringTableUserData, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L102" />
+
+Sets the user data for the specified string, or adds the string and set if it does not exist.
+
+```csharp
+bool SetOrAddStringUserData(string str, StringTableUserData userData, bool forceOverride = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to set the user data for.
+- <ApiParam name="userData" type="StringTableUserData" typeHref="/docs/api/stringtable/stringtableuserdata" /> — The user data to set.
+- <ApiParam name="forceOverride" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether to override the user data if it already exists.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the user data was successfully set or added, false otherwise.
+
+### SetStringUserData(int, StringTableUserData, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L82" />
+
+Sets the user data for the specified index.
+
+```csharp
+bool SetStringUserData(int index, StringTableUserData userData, bool forceOverride = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index to set the user data for.
+- <ApiParam name="userData" type="StringTableUserData" typeHref="/docs/api/stringtable/stringtableuserdata" /> — The user data to set.
+- <ApiParam name="forceOverride" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether to override the user data if it already exists.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the user data was successfully set, false otherwise.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown if the index is invalid.
+
+### SetStringUserData(string, StringTableUserData, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L92" />
+
+Sets the user data for the specified string.
+
+```csharp
+bool SetStringUserData(string str, StringTableUserData userData, bool forceOverride = true)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to set the user data for.
+- <ApiParam name="userData" type="StringTableUserData" typeHref="/docs/api/stringtable/stringtableuserdata" /> — The user data to set.
+- <ApiParam name="forceOverride" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether to override the user data if it already exists.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the user data was successfully set, false otherwise.
+
+<ApiLabel>Exceptions</ApiLabel>
+
+- <ApiParam type="ArgumentException" typeHref="https://learn.microsoft.com/dotnet/api/system.argumentexception" /> — Thrown if the string is not found in the string table.
+
+### TryGetStringUserData(int, out StringTableOutUserData)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L50" />
+
+Tries to get the user data for the specified index.
+
+```csharp
+bool TryGetStringUserData(int index, out StringTableOutUserData result)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index to get the user data from.
+- <ApiParam name="result" type="StringTableOutUserData" typeHref="/docs/api/stringtable/stringtableoutuserdata" /> — The user data, or invalid if the index is invalid.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the user data was successfully retrieved, false otherwise.
+
+### TryGetStringUserData(string, out StringTableOutUserData)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/StringTable/IStringTable.cs#L65" />
+
+Tries to get the user data for the specified string.
+
+```csharp
+bool TryGetStringUserData(string str, out StringTableOutUserData result)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="str" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The string to get the user data for.
+- <ApiParam name="result" type="StringTableOutUserData" typeHref="/docs/api/stringtable/stringtableoutuserdata" /> — The user data, or invalid if the string is not found.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the user data was successfully retrieved, false otherwise.
+

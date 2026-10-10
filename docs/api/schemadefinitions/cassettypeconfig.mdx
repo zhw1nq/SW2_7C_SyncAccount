@@ -1,0 +1,61 @@
+---
+title: CAssetTypeConfig
+---
+
+# Interface CAssetTypeConfig
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAssetTypeConfig.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAssetTypeConfig : ISchemaClass<CAssetTypeConfig>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CAssetTypeConfig\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AssetTypes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAssetTypeConfig.cs#L18" />
+
+```csharp
+ref CUtlVector<PointerTo<CSimpleAssetTypeInfo>> AssetTypes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CSimpleAssetTypeInfo&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### AssetWarnings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAssetTypeConfig.cs#L22" />
+
+```csharp
+ref CUtlVector<PointerTo<CAssetWarning>> AssetWarnings { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CAssetWarning&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SubassetTypes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAssetTypeConfig.cs#L20" />
+
+```csharp
+ref CUtlVector<PointerTo<CSubassetTypeInfo>> SubassetTypes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CSubassetTypeInfo&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

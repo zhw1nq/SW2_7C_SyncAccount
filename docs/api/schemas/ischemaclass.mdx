@@ -1,0 +1,40 @@
+---
+title: ISchemaClass
+---
+
+# Interface ISchemaClass
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClass.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Schemas](/docs/api/schemas)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ISchemaClass : INativeHandle
+```
+
+#### Implements
+
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Methods
+
+### As\<K\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClass.cs#L12" />
+
+Convert this handle to another type.
+
+```csharp
+K As<K>() where K : class, ISchemaClass<K>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="K" /> — The converted handle.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="K" /> — The type to convert to.
+

@@ -1,0 +1,75 @@
+---
+title: CPhysicsProp
+---
+
+# CPhysicsProp
+
+Inherited from [CBreakableProp](/docs/api/datamaps/cbreakableprop)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `massscale` | `m_massScale` | `FIELD_FLOAT32` |
+| `buoyancyscale` | `m_buoyancyScale` | `FIELD_FLOAT32` |
+| `Damagetype` | `m_damageType` | `FIELD_INT32` |
+| `acceptdamagefromheldobjects` | `m_bAcceptDamageFromHeldObjects` | `FIELD_BOOLEAN` |
+| `dynamiccontinuouscontactbehavior` | `m_nDynamicContinuousContactBehavior` | `FIELD_UINT8` |
+| `glowstate` | `m_iInitialGlowState` | `FIELD_INT32` |
+| `glowrange` | `m_nGlowRange` | `FIELD_INT32` |
+| `glowrangemin` | `m_nGlowRangeMin` | `FIELD_INT32` |
+| `glowcolor` | `m_glowColor` | `FIELD_COLOR32` |
+| `damagetoenablemotion` | `m_damageToEnableMotion` | `FIELD_INT32` |
+| `forcetoenablemotion` | `m_flForceToEnableMotion` | `FIELD_FLOAT32` |
+| `CrateType` | `m_CrateType` | `FIELD_INT32` |
+| `ItemClass%d` | `m_strItemClass` | `FIELD_STRING` |
+| `ItemCount%d` | `m_nItemCount` | `FIELD_INT32` |
+| `ammobalancing_removable` | `m_bRemovableForAmmoBalancing` | `FIELD_BOOLEAN` |
+| `updatenavwhenmoving` | `m_bUpdateNavWhenMoving` | `FIELD_BOOLEAN` |
+| `forcenavcut` | `m_bForceNavObstacleCut` | `FIELD_BOOLEAN` |
+| `allowobstacleconvexhullmerging` | `m_bAllowObstacleConvexHullMerging` | `FIELD_BOOLEAN` |
+| `forcenavignore` | `m_bForceNavIgnore` | `FIELD_BOOLEAN` |
+| `nonavmeshblocker` | `m_bNoNavmeshBlocker` | `FIELD_BOOLEAN` |
+| `forcenpcexclude` | `m_bForceNpcExclude` | `FIELD_BOOLEAN` |
+| `auto_convert_back_from_debris` | `m_bShouldAutoConvertBackFromDebris` | `FIELD_BOOLEAN` |
+| `mute_impact_effects` | `m_bMuteImpactEffects` | `FIELD_BOOLEAN` |
+| `enableuseoutput` | `m_bEnableUseOutput` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `EnableMotion` | `FIELD_VOID` |
+| `DisableMotion` | `FIELD_VOID` |
+| `Wake` | `FIELD_VOID` |
+| `SetAutoConvertBackFromDebris` | `FIELD_BOOLEAN` |
+| `Sleep` | `FIELD_VOID` |
+| `StartGlowing` | `FIELD_VOID` |
+| `StopGlowing` | `FIELD_VOID` |
+| `SetGlowOverride` | `FIELD_VECTOR` |
+| `SetGlowRange` | `FIELD_INT32` |
+| `SetMass` | `FIELD_FLOAT32` |
+| `SetGravityEnabled` | `FIELD_VOID` |
+| `DisableGravity` | `FIELD_VOID` |
+| `SetDragEnabled` | `FIELD_VOID` |
+| `DisableDrag` | `FIELD_VOID` |
+| `EnableCollisions` | `FIELD_VOID` |
+| `DisableCollisions` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnAwakened` | `FIELD_CUSTOM` |
+| `OnAwake` | `FIELD_CUSTOM` |
+| `OnAsleep` | `FIELD_CUSTOM` |
+| `OnMotionEnabled` | `FIELD_CUSTOM` |
+| `OnPlayerUse` | `FIELD_CUSTOM` |
+| `OnPlayerPickup` | `FIELD_CUSTOM` |
+| `OnOutOfWorld` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPhysicsPropClearFlagsThink` |

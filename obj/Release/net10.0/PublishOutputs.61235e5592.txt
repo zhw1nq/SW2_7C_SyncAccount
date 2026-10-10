@@ -1,0 +1,6 @@
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/resources/templates/template.jsonc
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/resources/translations/en.jsonc
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/resources/translations/vn.jsonc
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/SyncAccount.dll
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/SyncAccount.pdb
+/mnt/srv/projects/git_proj/SW2_7C_SyncAccount/build/publish/SyncAccount/SyncAccount.deps.json

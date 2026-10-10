@@ -1,0 +1,33 @@
+---
+title: Command Overrides
+---
+
+Command overrides allow you to remap permission checks for existing commands without changing plugin code.
+
+## Config File
+
+Edit the following file:
+
+`addons/swiftlys2/configs/command_overrides.jsonc`
+
+```jsonc
+{
+    "CommandOverrides": {
+        "Permissions": {
+            "sw_abc": "test.permission"
+        }
+    }
+}
+```
+
+## How It Works
+
+- `sw_abc` is the command name.
+- `test.permission` is the new permission that command will require.
+- Add more command-to-permission pairs under `CommandOverrides.Permissions` as needed.
+
+## Notes
+
+- Use exact command names when defining overrides.
+- Overrides only change required permissions; command behavior remains unchanged.
+- Keep this file under source control to make permission policy changes easy to audit.

@@ -1,0 +1,121 @@
+---
+title: RnCompound_t
+---
+
+# Interface RnCompound_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface RnCompound_t : ISchemaClass<RnCompound_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<RnCompound_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Bounds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L26" />
+
+```csharp
+AABB_t Bounds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="AABB_t" typeHref="/docs/api/schemadefinitions/aabb_t" />
+
+### Capsules
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L20" />
+
+```csharp
+ref CUtlVector<RnCapsule_t> Capsules { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnCapsule_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Hulls
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L22" />
+
+```csharp
+ref CUtlVector<RnHull_t> Hulls { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnHull_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Meshes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L24" />
+
+```csharp
+ref CUtlVector<RnMesh_t> Meshes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnMesh_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### OrthographicAreas
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L28" />
+
+```csharp
+ref Vector OrthographicAreas { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Spheres
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L18" />
+
+```csharp
+ref CUtlVector<RnSphere_t> Spheres { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnSphere_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SurfaceArea
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L30" />
+
+```csharp
+ref float SurfaceArea { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Volume
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/RnCompound_t.cs#L32" />
+
+```csharp
+ref float Volume { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

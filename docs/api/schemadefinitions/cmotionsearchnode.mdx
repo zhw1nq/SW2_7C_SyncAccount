@@ -1,0 +1,85 @@
+---
+title: CMotionSearchNode
+---
+
+# Interface CMotionSearchNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CMotionSearchNode : ISchemaClass<CMotionSearchNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CMotionSearchNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Children
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L18" />
+
+```csharp
+ref CUtlVector<PointerTo<CMotionSearchNode>> Children { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;CMotionSearchNode&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Quantizer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L20" />
+
+```csharp
+CVectorQuantizer Quantizer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CVectorQuantizer" typeHref="/docs/api/schemadefinitions/cvectorquantizer" />
+
+### SampleCodes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L22" />
+
+```csharp
+ref CUtlVector<CUtlVector<SampleCode>> SampleCodes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlVector&lt;SampleCode&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SampleIndices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L24" />
+
+```csharp
+ref CUtlVector<CUtlVector<int>> SampleIndices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlVector&lt;int&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### SelectableSamples
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CMotionSearchNode.cs#L26" />
+
+```csharp
+ref CUtlVector<int> SelectableSamples { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;int&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

@@ -1,0 +1,170 @@
+---
+title: Class Helper
+---
+
+# Class Helper
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L7" />
+
+**Namespace**: [SwiftlyS2.Shared](/docs/api)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class Helper
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [Helper](/docs/api/helper)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### AsProtobuf\<T\>(nint, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L98" />
+
+Convert the pointer to the protobuf class.
+
+```csharp
+public static T AsProtobuf<T>(nint ptr, bool manuallyAllocated) where T : ITypedProtobuf<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="ptr" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The pointer to the protobuf class.
+- <ApiParam name="manuallyAllocated" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the pointer is manually allocated.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — The protobuf class.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The protobuf class to convert to.
+
+### AsSchema\<T\>(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L86" />
+
+Convert the pointer to the schema class.
+
+```csharp
+public static T AsSchema<T>(nint ptr) where T : ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="ptr" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The pointer to the schema class.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — The schema class.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The schema class to convert to.
+
+### Colored(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L65" />
+
+Replace the color codes in the text with the corresponding color codes.
+
+```csharp
+public static string Colored(this string text)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The text to replace the color codes in.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The text with the color codes replaced.
+
+### EstimateTextWidth(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L145" />
+
+Estimates the display width of a text string based on character types.
+
+```csharp
+public static float EstimateTextWidth(string text)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="text" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The text string to measure.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The estimated display width in relative units.
+
+### GetCharWidth(char)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L119" />
+
+Estimates the display width of a character based on its type.
+Inspired by: https://github.com/spectreconsole/wcwidth
+
+```csharp
+public static float GetCharWidth(char c)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="c" type="char" typeHref="https://learn.microsoft.com/dotnet/api/system.char" /> — The character to measure.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" /> — The estimated display width in relative units.
+
+### GetSchemaSize\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L108" />
+
+Get the size of a schema class.
+
+```csharp
+public static int GetSchemaSize<T>() where T : ISchemaClass<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The size of the schema class.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The schema class to get the size of.
+
+### ParseHexColor(string, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Helper.cs#L153" />
+
+Parses a hex color string and returns the RGBA color components.
+
+```csharp
+public static (int? r, int? g, int? b, int? a) ParseHexColor(string hexColor, bool alphaFirst = false)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="hexColor" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The hex color string to parse.
+- <ApiParam name="alphaFirst" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether alpha component comes first (ARGB format). Default is false (RGBA format).
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="(int? r, int? g, int? b, int? a)" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Color components (R, G, B, A) or nulls if invalid. Alpha defaults to 255 for RGB format.
+

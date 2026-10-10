@@ -1,0 +1,169 @@
+---
+title: CSteamAudioBakedReverbData
+---
+
+# Interface CSteamAudioBakedReverbData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSteamAudioBakedReverbData : ISchemaClass<CSteamAudioBakedReverbData>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSteamAudioBakedReverbData\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Bands
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L18" />
+
+```csharp
+ref int Bands { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ClusterForProbe
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L34" />
+
+```csharp
+ref CUtlVector<short> ClusterForProbe { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;short&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ClusteredProbes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L32" />
+
+```csharp
+CSteamAudioProbeData ClusteredProbes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioProbeData" typeHref="/docs/api/schemadefinitions/csteamaudioprobedata" />
+
+### CompressedClusteredData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L38" />
+
+```csharp
+CSteamAudioCompressedReverb CompressedClusteredData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioCompressedReverb" typeHref="/docs/api/schemadefinitions/csteamaudiocompressedreverb" />
+
+### CompressedData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L36" />
+
+```csharp
+CSteamAudioCompressedReverb CompressedData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioCompressedReverb" typeHref="/docs/api/schemadefinitions/csteamaudiocompressedreverb" />
+
+### Grid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L24" />
+
+```csharp
+CSteamAudioProbeGrid Grid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioProbeGrid" typeHref="/docs/api/schemadefinitions/csteamaudioprobegrid" />
+
+### Movables
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L41" />
+
+```csharp
+SchemaUntypedField Movables { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SchemaUntypedField" typeHref="/docs/api/schemas/schemauntypedfield" />
+
+### Probes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L22" />
+
+```csharp
+CSteamAudioProbeData Probes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioProbeData" typeHref="/docs/api/schemadefinitions/csteamaudioprobedata" />
+
+### ReverbClusteringSettings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L28" />
+
+```csharp
+SteamAudioReverbClusteringSettings_t ReverbClusteringSettings { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SteamAudioReverbClusteringSettings_t" typeHref="/docs/api/schemadefinitions/steamaudioreverbclusteringsettings_t" />
+
+### ReverbCompressionSettings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L30" />
+
+```csharp
+SteamAudioReverbCompressionSettings_t ReverbCompressionSettings { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SteamAudioReverbCompressionSettings_t" typeHref="/docs/api/schemadefinitions/steamaudioreverbcompressionsettings_t" />
+
+### ReverbSettings
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L26" />
+
+```csharp
+SteamAudioReverbSettings_t ReverbSettings { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SteamAudioReverbSettings_t" typeHref="/docs/api/schemadefinitions/steamaudioreverbsettings_t" />
+
+### Scene
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSteamAudioBakedReverbData.cs#L20" />
+
+```csharp
+CSteamAudioSceneData Scene { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSteamAudioSceneData" typeHref="/docs/api/schemadefinitions/csteamaudioscenedata" />
+

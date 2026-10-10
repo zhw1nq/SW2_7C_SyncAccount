@@ -1,0 +1,75 @@
+---
+title: ISchemaClassFixedArray
+---
+
+# Interface ISchemaClassFixedArray
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClassFixedArray.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Schemas](/docs/api/schemas)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ISchemaClassFixedArray<T> : ISchemaField, INativeHandle where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+#### Implements
+
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ElementAlignment
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClassFixedArray.cs#L5" />
+
+```csharp
+int ElementAlignment { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ElementCount
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClassFixedArray.cs#L7" />
+
+```csharp
+int ElementCount { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ElementSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClassFixedArray.cs#L9" />
+
+```csharp
+int ElementSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### this
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Schemas/ISchemaClassFixedArray.cs#L11" />
+
+```csharp
+T this[int index] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="T" />
+

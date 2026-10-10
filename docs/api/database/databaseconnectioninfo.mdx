@@ -1,0 +1,164 @@
+---
+title: DatabaseConnectionInfo
+---
+
+# Struct DatabaseConnectionInfo
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Database](/docs/api/database)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public record struct DatabaseConnectionInfo : IEquatable<DatabaseConnectionInfo>
+```
+
+#### Implements
+
+- [IEquatable\<DatabaseConnectionInfo\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### DatabaseConnectionInfo(string, string, string, string, string, uint, ushort, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public DatabaseConnectionInfo(string Driver, string Host, string Database, string User, string Pass, uint Timeout, ushort Port, string RawUri)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="Driver" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="Host" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="Database" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="User" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="Pass" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="Timeout" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="Port" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="RawUri" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Properties
+
+### Database
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string Database { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Driver
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string Driver { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Host
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string Host { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Pass
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string Pass { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Port
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public ushort Port { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+
+### RawUri
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string RawUri { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Timeout
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public uint Timeout { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+
+### User
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L5" />
+
+```csharp
+public string User { readonly get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Database/IDatabaseService.cs#L7" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override readonly string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+

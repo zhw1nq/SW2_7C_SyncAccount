@@ -1,0 +1,440 @@
+---
+title: TraceResult
+---
+
+# Struct TraceResult
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.Trace](/docs/api/trace)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct TraceResult
+```
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### TraceResult()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L10" />
+
+```csharp
+public TraceResult()
+```
+
+## Properties
+
+### BodyTransform
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L28" />
+
+The transformation matrix of the body that was hit.
+
+```csharp
+public readonly CTransform BodyTransform { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTransform" typeHref="/docs/api/natives/ctransform" />
+
+### Contents
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L24" />
+
+The contents mask of the surface or volume that was hit.
+
+```csharp
+public readonly ulong Contents { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### DidHit
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L84" />
+
+Returns true if the trace hit something (either the trace fraction is less than 1.0 or the start position was in solid).
+
+```csharp
+public bool DidHit { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Direction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L92" />
+
+Calculates the normalized direction vector of the trace from start to end.
+
+```csharp
+public Vector Direction { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Distance
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L88" />
+
+Calculates the total distance traveled from the start position to the end position.
+
+```csharp
+public float Distance { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### EndPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L40" />
+
+The ending position of the trace.
+
+```csharp
+public readonly Vector EndPos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### Entity
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L80" />
+
+The entity that was hit by the trace, if applicable. Null if nothing or a static surface was hit.
+
+```csharp
+public readonly CEntityInstance? Entity { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CEntityInstance?" typeHref="/docs/api/schemadefinitions/centityinstance" />
+
+### ExactHitPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L76" />
+
+Indicates whether the exact hit point was calculated for this trace result.
+
+```csharp
+public readonly bool ExactHitPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Fraction
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L56" />
+
+The fraction of the trace distance traveled before hitting something (0.0 = start, 1.0 = end, > 1.0 = no hit).
+
+```csharp
+public readonly float Fraction { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HitBox
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L20" />
+
+Information about the hitbox that was hit by the trace, if applicable.
+
+```csharp
+public readonly HitBoxTrace? HitBox { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="HitBoxTrace?" typeHref="/docs/api/trace/hitboxtrace" />
+
+### HitNormal
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L44" />
+
+The surface normal of the point where the trace hit.
+
+```csharp
+public readonly Vector HitNormal { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### HitOffset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L52" />
+
+The distance from the trace start position to the hit point along the trace direction.
+
+```csharp
+public readonly float HitOffset { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### HitPoint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L48" />
+
+The exact point in 3D space where the trace hit a surface or entity.
+
+```csharp
+public readonly Vector HitPoint { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### HitboxBoneIndex
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L64" />
+
+The bone index of the hitbox that was hit, if applicable.
+
+```csharp
+public readonly short HitboxBoneIndex { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="short" typeHref="https://learn.microsoft.com/dotnet/api/system.int16" />
+
+### RayType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L68" />
+
+The type of ray that was used for this trace.
+
+```csharp
+public readonly RayType_t RayType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="RayType_t" typeHref="/docs/api/natives/raytype_t" />
+
+### ShapeAttributes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L32" />
+
+The collision attributes of the shape that was hit.
+
+```csharp
+public readonly TraceCollisionAttributes ShapeAttributes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="TraceCollisionAttributes" typeHref="/docs/api/trace/tracecollisionattributes" />
+
+### StartInSolid
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L72" />
+
+Indicates whether the starting position of the trace was already inside a solid object.
+
+```csharp
+public readonly bool StartInSolid { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### StartPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L36" />
+
+The starting position of the trace.
+
+```csharp
+public readonly Vector StartPos { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+
+### SurfaceProperties
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L16" />
+
+The physical surface properties of the surface that was hit by the trace.
+
+```csharp
+public readonly PhysSurfacePropertiesTrace? SurfaceProperties { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="PhysSurfacePropertiesTrace?" typeHref="/docs/api/trace/physsurfacepropertiestrace" />
+
+### Triangle
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L60" />
+
+The triangle index of the surface that was hit, if applicable.
+
+```csharp
+public readonly int Triangle { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+## Methods
+
+### HitEntity\<T\>(out T?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L170" />
+
+```csharp
+public bool HitEntity<T>(out T? entity) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="entity" type="T?" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### HitEntity\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L176" />
+
+```csharp
+public bool HitEntity<T>() where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### HitEntityByDesignerName\<T\>(string, out T?, NameMatchType)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L100" />
+
+```csharp
+public bool HitEntityByDesignerName<T>(string designerName, out T? outEntity, NameMatchType matchType = NameMatchType.StartsWith) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="outEntity" type="T?" />
+- <ApiParam name="matchType" type="NameMatchType" typeHref="/docs/api/natives/namematchtype" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### HitEntityByDesignerName\<T\>(string, NameMatchType)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L136" />
+
+```csharp
+public bool HitEntityByDesignerName<T>(string designerName, NameMatchType matchType = NameMatchType.StartsWith) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="designerName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+- <ApiParam name="matchType" type="NameMatchType" typeHref="/docs/api/natives/namematchtype" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### HitPlayer(out IPlayer?)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L141" />
+
+```csharp
+public bool HitPlayer(out IPlayer? player)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="player" type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### HitPlayer()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L165" />
+
+```csharp
+public bool HitPlayer()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ToString()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Trace/TraceResult.cs#L181" />
+
+Returns the fully qualified type name of this instance.
+
+```csharp
+public override string ToString()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The fully qualified type name.
+

@@ -1,0 +1,73 @@
+---
+title: CAudioSentence
+---
+
+# Interface CAudioSentence
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAudioSentence.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CAudioSentence : ISchemaClass<CAudioSentence>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CAudioSentence\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### EmphasisSamples
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAudioSentence.cs#L22" />
+
+```csharp
+ref CUtlVector<CAudioEmphasisSample> EmphasisSamples { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAudioEmphasisSample&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### MorphData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAudioSentence.cs#L24" />
+
+```csharp
+CAudioMorphData MorphData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CAudioMorphData" typeHref="/docs/api/schemadefinitions/caudiomorphdata" />
+
+### RunTimePhonemes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAudioSentence.cs#L20" />
+
+```csharp
+ref CUtlVector<CAudioPhonemeTag> RunTimePhonemes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CAudioPhonemeTag&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ShouldVoiceDuck
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CAudioSentence.cs#L18" />
+
+```csharp
+ref bool ShouldVoiceDuck { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

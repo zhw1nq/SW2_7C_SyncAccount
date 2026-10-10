@@ -1,0 +1,34 @@
+---
+title: Console Filter
+---
+
+The console filter suppresses known noisy console lines so important logs remain visible.
+
+## Config File
+
+Edit the following file:
+
+`addone/swiftlys2/configs/confilter.jsonc`
+
+This file is a JSONC object where each entry defines one filter rule.
+
+- Key: rule name used to identify the filter.
+- Value: text or pattern to match in console output.
+- When output matches a configured rule, it is filtered out.
+
+## Command Management
+
+Use `sw confilter` with the following subcommands:
+
+| Subcommand | Description |
+| ---------- | ----------- |
+| `enable` | Enable console filtering. |
+| `disable` | Disable console filtering. |
+| `status` | Show the status of the console filter. |
+| `reload` | Reload console filter configuration. |
+
+## Typical Workflow
+
+1. Update `confilter.jsonc` with the rules you want.
+2. Run `sw confilter reload` to apply configuration changes.
+3. Use `sw confilter status` to confirm filtering is active.

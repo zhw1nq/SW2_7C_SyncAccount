@@ -1,0 +1,136 @@
+---
+title: ICommandContext
+---
+
+# Interface ICommandContext
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.Commands](/docs/api/commands)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ICommandContext
+```
+
+## Properties
+
+### Args
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L35" />
+
+Gets the array of arguments passed with the command.
+
+```csharp
+string[] Args { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string[]" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### CommandName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L30" />
+
+Gets the command name itself.
+
+```csharp
+string CommandName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### IsSentByPlayer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L10" />
+
+Gets a value indicating whether the command was sent by a player.
+
+```csharp
+bool IsSentByPlayer { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsSlient
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L25" />
+
+Gets a value indicating whether the command should be executed silently without broadcasting to other players.
+
+```csharp
+bool IsSlient { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Prefix
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L20" />
+
+Gets the command prefix.
+
+```csharp
+string Prefix { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Sender
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L15" />
+
+Gets the player who sent the command, or null if the command was not sent by a player.
+
+```csharp
+IPlayer? Sender { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+
+## Methods
+
+### Reply(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L41" />
+
+Sends a reply message to the command sender.
+
+```csharp
+void Reply(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The message to send as a reply.
+
+### ReplyAsync(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Commands/ICommandContext.cs#L47" />
+
+Sends a reply message to the command sender asynchronously.
+
+```csharp
+Task ReplyAsync(string message)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="message" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The message to send as a reply.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+

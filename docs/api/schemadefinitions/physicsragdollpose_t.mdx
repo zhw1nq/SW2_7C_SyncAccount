@@ -1,0 +1,79 @@
+---
+title: PhysicsRagdollPose_t
+---
+
+# Interface PhysicsRagdollPose_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface PhysicsRagdollPose_t : ISchemaClass<PhysicsRagdollPose_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<PhysicsRagdollPose_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Owner
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L20" />
+
+```csharp
+ref CHandle<CBaseEntity> Owner { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBaseEntity&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### SetFromDebugHistory
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L22" />
+
+```csharp
+ref bool SetFromDebugHistory { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Transforms
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L18" />
+
+```csharp
+ref CUtlVector<CTransform> Transforms { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CTransform&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+## Methods
+
+### OwnerUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L25" />
+
+```csharp
+void OwnerUpdated()
+```
+
+### TransformsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysicsRagdollPose_t.cs#L24" />
+
+```csharp
+void TransformsUpdated()
+```
+

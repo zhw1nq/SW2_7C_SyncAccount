@@ -1,0 +1,56 @@
+---
+title: EventDemoSkip
+---
+
+# Interface EventDemoSkip
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDemoSkip.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "demo_skip"
+
+```csharp
+public interface EventDemoSkip : IGameEvent<EventDemoSkip>
+```
+
+#### Implements
+
+- [IGameEvent\<EventDemoSkip\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### PlaybackTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDemoSkip.cs#L25" />
+
+current playback tick
+<br />
+type: long
+
+```csharp
+int PlaybackTick { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SkiptoTick
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventDemoSkip.cs#L32" />
+
+tick we're going to
+<br />
+type: long
+
+```csharp
+int SkiptoTick { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

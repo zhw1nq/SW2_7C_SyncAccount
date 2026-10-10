@@ -1,0 +1,47 @@
+---
+title: CPhysHinge
+---
+
+# CPhysHinge
+
+Inherited from [CPhysConstraint](/docs/api/datamaps/cphysconstraint)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `hingefriction` | `m_hingeFriction` | `FIELD_FLOAT32` |
+| `min_rotation` | `m_flMinRotation` | `FIELD_FLOAT32` |
+| `max_rotation` | `m_flMaxRotation` | `FIELD_FLOAT32` |
+| `initial_rotation` | `m_flInitialRotation` | `FIELD_FLOAT32` |
+| `systemloadscale` | `m_systemLoadScale` | `FIELD_FLOAT32` |
+| `motorfrequency` | `m_flMotorFrequency` | `FIELD_FLOAT32` |
+| `motordampingratio` | `m_flMotorDampingRatio` | `FIELD_FLOAT32` |
+| `AngleSpeedThreshold` | `m_flAngleSpeedThreshold` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetMotorTargetAngle` | `FIELD_FLOAT32` |
+| `SetAngularVelocity` | `FIELD_FLOAT32` |
+| `SetHingeFriction` | `FIELD_FLOAT32` |
+| `SetMinLimit` | `FIELD_FLOAT32` |
+| `SetMaxLimit` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `NotifyMinLimitReached` | `FIELD_CUSTOM` |
+| `NotifyMaxLimitReached` | `FIELD_CUSTOM` |
+| `OnStartMoving` | `FIELD_CUSTOM` |
+| `OnStopMoving` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPhysHingeSoundThink` |
+| `CPhysHingeLimitThink` |
+| `CPhysHingeMoveThink` |

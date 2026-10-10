@@ -1,0 +1,75 @@
+---
+title: CBaseConstraint
+---
+
+# Interface CBaseConstraint
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseConstraint.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CBaseConstraint : CBoneConstraintBase, ISchemaClass<CBoneConstraintBase>, ISchemaClass<CBaseConstraint>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBoneConstraintBase](/docs/api/schemadefinitions/cboneconstraintbase)
+- [ISchemaClass\<CBoneConstraintBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseConstraint\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseConstraint.cs#L18" />
+
+```csharp
+string Name { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### Slaves
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseConstraint.cs#L22" />
+
+```csharp
+ref CUtlLeanVector<CConstraintSlave, int> Slaves { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlLeanVector&lt;CConstraintSlave, int&gt;" typeHref="/docs/api/natives/cutlleanvectortt" />
+
+### Targets
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseConstraint.cs#L24" />
+
+```csharp
+ref CUtlVector<CConstraintTarget> Targets { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CConstraintTarget&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### UpVector
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CBaseConstraint.cs#L20" />
+
+```csharp
+ref Vector UpVector { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+

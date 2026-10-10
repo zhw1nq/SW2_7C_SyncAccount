@@ -1,0 +1,101 @@
+---
+title: CCSPlayer_ActionTrackingServices
+---
+
+# Interface CCSPlayer_ActionTrackingServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSPlayer_ActionTrackingServices : CPlayerPawnComponent, ISchemaClass<CPlayerPawnComponent>, ISchemaClass<CCSPlayer_ActionTrackingServices>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPlayerPawnComponent](/docs/api/schemadefinitions/cplayerpawncomponent)
+- [ISchemaClass\<CPlayerPawnComponent\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CCSPlayer_ActionTrackingServices\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### IsRescuing
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L20" />
+
+```csharp
+ref bool IsRescuing { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LastWeaponBeforeC4AutoSwitch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L18" />
+
+```csharp
+ref CHandle<CBasePlayerWeapon> LastWeaponBeforeC4AutoSwitch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CHandle&lt;CBasePlayerWeapon&gt;" typeHref="/docs/api/natives/chandlet" />
+
+### WeaponPurchasesThisMatch
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L22" />
+
+```csharp
+WeaponPurchaseTracker_t WeaponPurchasesThisMatch { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="WeaponPurchaseTracker_t" typeHref="/docs/api/schemadefinitions/weaponpurchasetracker_t" />
+
+### WeaponPurchasesThisRound
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L24" />
+
+```csharp
+WeaponPurchaseTracker_t WeaponPurchasesThisRound { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="WeaponPurchaseTracker_t" typeHref="/docs/api/schemadefinitions/weaponpurchasetracker_t" />
+
+## Methods
+
+### IsRescuingUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L26" />
+
+```csharp
+void IsRescuingUpdated()
+```
+
+### WeaponPurchasesThisMatchUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L27" />
+
+```csharp
+void WeaponPurchasesThisMatchUpdated()
+```
+
+### WeaponPurchasesThisRoundUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSPlayer_ActionTrackingServices.cs#L28" />
+
+```csharp
+void WeaponPurchasesThisRoundUpdated()
+```
+

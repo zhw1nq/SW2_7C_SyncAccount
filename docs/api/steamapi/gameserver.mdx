@@ -1,0 +1,125 @@
+---
+title: GameServer
+---
+
+# Class GameServer
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L133" />
+
+**Namespace**: [SwiftlyS2.Shared.SteamAPI](/docs/api/steamapi)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class GameServer
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [GameServer](/docs/api/steamapi/gameserver)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### BSecure()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L182" />
+
+```csharp
+public static bool BSecure()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### GetHSteamPipe()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L194" />
+
+```csharp
+public static HSteamPipe GetHSteamPipe()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HSteamPipe" typeHref="/docs/api/steamapi/hsteampipe" />
+
+### GetHSteamUser()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L200" />
+
+```csharp
+public static HSteamUser GetHSteamUser()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="HSteamUser" typeHref="/docs/api/steamapi/hsteamuser" />
+
+### GetSteamID()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L188" />
+
+```csharp
+public static CSteamID GetSteamID()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CSteamID" typeHref="/docs/api/steamapi/csteamid" />
+
+### Init(uint, ushort, ushort, EServerMode, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L152" />
+
+```csharp
+public static bool Init(uint unIP, ushort usGamePort, ushort usQueryPort, EServerMode eServerMode, string pchVersionString)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="unIP" type="uint" typeHref="https://learn.microsoft.com/dotnet/api/system.uint32" />
+- <ApiParam name="usGamePort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="usQueryPort" type="ushort" typeHref="https://learn.microsoft.com/dotnet/api/system.uint16" />
+- <ApiParam name="eServerMode" type="EServerMode" typeHref="/docs/api/steamapi/eservermode" />
+- <ApiParam name="pchVersionString" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### ReleaseCurrentThreadMemory()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L176" />
+
+```csharp
+public static void ReleaseCurrentThreadMemory()
+```
+
+### RunCallbacks()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L165" />
+
+```csharp
+public static void RunCallbacks()
+```
+
+### Shutdown()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/SteamAPI/Steam.cs#L158" />
+
+```csharp
+public static void Shutdown()
+```
+

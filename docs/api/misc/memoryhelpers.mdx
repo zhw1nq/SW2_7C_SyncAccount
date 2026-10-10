@@ -1,0 +1,84 @@
+---
+title: MemoryHelpers
+---
+
+# Class MemoryHelpers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Misc/MemoryHelpers.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Misc](/docs/api/misc)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public static class MemoryHelpers
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [MemoryHelpers](/docs/api/misc/memoryhelpers)
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.MemberwiseClone()](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Methods
+
+### CalcNewDoublingCount(int, int, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Misc/MemoryHelpers.cs#L8" />
+
+```csharp
+public static int CalcNewDoublingCount(int oldCount, int requestedCount, int minCount, int maxCount)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="oldCount" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="requestedCount" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="minCount" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="maxCount" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ShiftElementsLeft(nint, int, int, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Misc/MemoryHelpers.cs#L39" />
+
+```csharp
+public static void ShiftElementsLeft(nint memory, int elem, int num, int size, int elementSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="memory" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+- <ApiParam name="elem" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="num" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="size" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="elementSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ShiftElementsRight(nint, int, int, int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Misc/MemoryHelpers.cs#L30" />
+
+```csharp
+public static void ShiftElementsRight(nint memory, int elem, int num, int size, int elementSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="memory" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+- <ApiParam name="elem" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="num" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="size" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="elementSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

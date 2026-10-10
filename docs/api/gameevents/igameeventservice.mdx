@@ -1,0 +1,392 @@
+---
+title: IGameEventService
+---
+
+# Interface IGameEventService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L8" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEvents](/docs/api/gameevents)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Plugin-scoped service for managing game events.
+
+```csharp
+public interface IGameEventService
+```
+
+## Methods
+
+### Fire\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L59" />
+
+Fires an event to all players.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void Fire<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### Fire\<T\>(Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L69" />
+
+Fires an event to all players with a configured event.
+
+Thread unsafe, use async variant instead for non-main thread context.
+- `configureEvent`: The action to configure the event.
+
+```csharp
+[ThreadUnsafe]
+void Fire<T>(Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireAsync\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L76" />
+
+Fires an event to all players asynchronously.
+
+```csharp
+Task FireAsync<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireAsync\<T\>(Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L82" />
+
+Fires an event to all players with a configured event asynchronously.
+
+```csharp
+Task FireAsync<T>(Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToPlayer\<T\>(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L91" />
+
+Fires an event to a player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void FireToPlayer<T>(int slot) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToPlayer\<T\>(int, Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L102" />
+
+Fires an event to a player with a configured event.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void FireToPlayer<T>(int slot, Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the event.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToPlayerAsync\<T\>(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L110" />
+
+Fires an event to a player asynchronously.
+
+```csharp
+Task FireToPlayerAsync<T>(int slot) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToPlayerAsync\<T\>(int, Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L118" />
+
+Fires an event to a player with a configured event asynchronously.
+
+```csharp
+Task FireToPlayerAsync<T>(int slot, Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the event.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToServer\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L126" />
+
+Fires an event to the server.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void FireToServer<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+### FireToServer\<T\>(Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L136" />
+
+Fires an event to the server with a configured event.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void FireToServer<T>(Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the event.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToServerAsync\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L143" />
+
+Fires an event to the server asynchronously.
+
+```csharp
+Task FireToServerAsync<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### FireToServerAsync\<T\>(Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L150" />
+
+Fires an event to the server with a configured event asynchronously.
+
+```csharp
+Task FireToServerAsync<T>(Action<T> configureEvent) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configureEvent" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the event.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### HookPost\<T\>(GameEventHandler\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L32" />
+
+Hooks a post-event callback.
+
+```csharp
+Guid HookPost<T>(IGameEventService.GameEventHandler<T> callback) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="IGameEventService.GameEventHandler&lt;T&gt;" typeHref="/docs/api/gameevents/igameeventservice" /> — The callback to hook.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A GUID representing the hook. You can use this to unhook the callback later.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### HookPre\<T\>(GameEventHandler\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L24" />
+
+Hooks a pre-event callback.
+
+```csharp
+Guid HookPre<T>(IGameEventService.GameEventHandler<T> callback) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="IGameEventService.GameEventHandler&lt;T&gt;" typeHref="/docs/api/gameevents/igameeventservice" /> — The callback to hook.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — A GUID representing the hook. You can use this to unhook the callback later.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### IsListeningToEvent(int, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L157" />
+
+Check if the player is Listening this event.
+
+```csharp
+bool IsListeningToEvent(int slot, string eventName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+- <ApiParam name="eventName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The event name.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsListeningToEvent\<T\>(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L164" />
+
+Check if the player is Listening this event.
+
+```csharp
+bool IsListeningToEvent<T>(int slot) where T : IGameEvent<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="slot" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The player slot.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### Unhook(Guid)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L38" />
+
+Unhooks a callback.
+
+```csharp
+void Unhook(Guid guid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="guid" type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The GUID of the hook to unhook.
+
+### UnhookPost\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L50" />
+
+Unhooks all post-event callbacks.
+
+```csharp
+void UnhookPost<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+
+### UnhookPre\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameEvents/IGameEventService.cs#L44" />
+
+Unhooks all pre-event callbacks.
+
+```csharp
+void UnhookPre<T>() where T : IGameEvent<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The event type.
+

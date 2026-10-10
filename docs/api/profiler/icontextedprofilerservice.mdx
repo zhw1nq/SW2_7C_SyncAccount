@@ -1,0 +1,61 @@
+---
+title: IContextedProfilerService
+---
+
+# Interface IContextedProfilerService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Profiler/IContextedProfilerService.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.Profiler](/docs/api/profiler)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IContextedProfilerService
+```
+
+## Methods
+
+### RecordTime(string, double)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Profiler/IContextedProfilerService.cs#L22" />
+
+Record the time taken for the given profile.
+
+```csharp
+void RecordTime(string name, double duration)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the profile to record the time for.
+- <ApiParam name="duration" type="double" typeHref="https://learn.microsoft.com/dotnet/api/system.double" /> — The duration to record.
+
+### StartRecording(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Profiler/IContextedProfilerService.cs#L9" />
+
+Start recording a new profile with the given name.
+
+```csharp
+void StartRecording(string name)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the profile to start.
+
+### StopRecording(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Profiler/IContextedProfilerService.cs#L15" />
+
+Stop recording the profile with the given name.
+
+```csharp
+void StopRecording(string name)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the profile to stop.
+

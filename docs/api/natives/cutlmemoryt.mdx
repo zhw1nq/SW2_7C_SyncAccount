@@ -1,0 +1,276 @@
+---
+title: CUtlMemory
+---
+
+# Struct CUtlMemory
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L17" />
+
+**Namespace**: [SwiftlyS2.Shared.Natives](/docs/api/natives)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public struct CUtlMemory<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+#### Inherited Members
+
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Constructors
+
+### CUtlMemory(int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L30" />
+
+Please use SwiftlyS2.Shared.Natives.ManagedCUtlMemory%601 instead to construct it.
+If you really want to use this, you should call SwiftlyS2.Shared.Natives.CUtlMemory%601.Purge after you are done with it.
+
+```csharp
+public CUtlMemory(int growSize, int initSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="growSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="initSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### CUtlMemory(nint, int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L42" />
+
+Please use SwiftlyS2.Shared.Natives.ManagedCUtlMemory%601 instead to construct it.
+If you really want to use this, you should call SwiftlyS2.Shared.Natives.CUtlMemory%601.Purge after you are done with it.
+
+```csharp
+public CUtlMemory(nint memory, int numelements, bool readOnly)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="memory" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+- <ApiParam name="numelements" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="readOnly" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+## Properties
+
+### Base
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L217" />
+
+```csharp
+public nint Base { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### Count
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L218" />
+
+```csharp
+public int Count { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ElementSize
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L24" />
+
+```csharp
+public int ElementSize { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ExternallyAllocated
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L215" />
+
+```csharp
+public bool ExternallyAllocated { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsReadOnly
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L216" />
+
+```csharp
+public bool IsReadOnly { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### this
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L191" />
+
+```csharp
+public ref T this[int index] { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="T" />
+
+## Methods
+
+### AssumeMemory(nint, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L120" />
+
+```csharp
+public void AssumeMemory(nint memory, int numelements)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="memory" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+- <ApiParam name="numelements" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### ConvertToGrowableMemory(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L92" />
+
+```csharp
+public void ConvertToGrowableMemory(int growSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="growSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### DetachMemory()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L129" />
+
+```csharp
+public nint DetachMemory()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+
+### EnsureCapacity(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L173" />
+
+```csharp
+public void EnsureCapacity(int num)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="num" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Grow(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L140" />
+
+```csharp
+public void Grow(int num)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="num" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### Init(int, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L50" />
+
+```csharp
+public void Init(int growSize, int initSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="growSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="initSize" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### IsValidIndex(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L189" />
+
+```csharp
+public bool IsValidIndex(int index)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Purge()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L60" />
+
+```csharp
+public void Purge()
+```
+
+### Purge(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L71" />
+
+```csharp
+public void Purge(int numElements)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="numElements" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetExternalBuffer(nint, int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L111" />
+
+```csharp
+public void SetExternalBuffer(nint memory, int numelements, bool readOnly)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="memory" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" />
+- <ApiParam name="numelements" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+- <ApiParam name="readOnly" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### SetGrowSize(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Natives/Structs/CUtlMemory.cs#L184" />
+
+```csharp
+public void SetGrowSize(int size)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="size" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+

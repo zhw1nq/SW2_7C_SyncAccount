@@ -1,0 +1,534 @@
+---
+title: CCSCustomHudLayout
+---
+
+# Interface CCSCustomHudLayout
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSCustomHudLayout : CBaseEntity, CEntityInstance, IEquatable<CEntityInstance>, ISchemaClass<CEntityInstance>, ISchemaClass<CBaseEntity>, ISchemaClass<CCSCustomHudLayout>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CBaseEntity](/docs/api/schemadefinitions/cbaseentity)
+- [CEntityInstance](/docs/api/schemadefinitions/centityinstance)
+- [IEquatable\<CEntityInstance\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1)
+- [ISchemaClass\<CEntityInstance\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CBaseEntity\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CCSCustomHudLayout\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ClassNames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L26" />
+
+```csharp
+ref CUtlVector<CUtlString> ClassNames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### DialogVariableNames
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L28" />
+
+```csharp
+ref CUtlVector<CUtlString> DialogVariableNames { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### GlobalLayoutState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L22" />
+
+```csharp
+CCSCustomHudLayoutState GlobalLayoutState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSCustomHudLayoutState" typeHref="/docs/api/schemadefinitions/ccscustomhudlayoutstate" />
+
+### PanelIds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L24" />
+
+```csharp
+ref CUtlVector<CUtlString> PanelIds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PlayerLayoutStates
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L20" />
+
+```csharp
+ref CUtlVector<CCSCustomHudLayoutState> PlayerLayoutStates { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CCSCustomHudLayoutState&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### StrLayout
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L18" />
+
+```csharp
+string StrLayout { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+## Methods
+
+### ClassNamesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L34" />
+
+```csharp
+void ClassNamesUpdated()
+```
+
+### DialogVariableNamesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L35" />
+
+```csharp
+void DialogVariableNamesUpdated()
+```
+
+### GetDialogVariableString(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L82" />
+
+Get the value of a dialog variable string globally.
+
+```csharp
+string? GetDialogVariableString(string panelId, string variableName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value. Return null if the value is not set.
+
+### GetDialogVariableStringForPlayer(int, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L55" />
+
+Get the value of a dialog variable string override for a player.
+Doesn't fallback to global settings if the value is not set.
+
+```csharp
+string? GetDialogVariableStringForPlayer(int playerId, string panelId, string variableName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value. Return null if the value is not set.
+
+### GetHasClass(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L215" />
+
+Get the class status of a hud element globally.
+
+```csharp
+EHudPanelClassStatus_t GetHasClass(string panelId, string className)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — The class status. Return k_eHudPanelClassStatus_Undefined if the class status is not set.
+
+### GetHasClassForPlayer(int, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L150" />
+
+Get the class status of a hud element for a player.
+
+```csharp
+EHudPanelClassStatus_t GetHasClassForPlayer(int playerId, string panelId, string className)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — The class status. Return k_eHudPanelClassStatus_Undefined if the class status is not set.
+
+### GlobalLayoutStateUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L32" />
+
+```csharp
+void GlobalLayoutStateUpdated()
+```
+
+### IsInputCaptureEnabled()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L260" />
+
+Get the input capture state of a hud element globally.
+
+```csharp
+bool IsInputCaptureEnabled()
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+### IsInputCaptureEnabledForPlayer(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L254" />
+
+Get the input capture state of a hud element for a player.
+
+```csharp
+bool IsInputCaptureEnabledForPlayer(int playerId)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+### PanelIdsUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L33" />
+
+```csharp
+void PanelIdsUpdated()
+```
+
+### PlayerLayoutStatesUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L31" />
+
+```csharp
+void PlayerLayoutStatesUpdated()
+```
+
+### RemoveDialogVariableStringForPlayer(int, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L36" />
+
+Remove the value of a dialog variable string override for a player. The dialog variable string will follow global settings.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void RemoveDialogVariableStringForPlayer(int playerId, string panelId, string variableName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+
+### RemoveDialogVariableStringForPlayerAsync(int, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L45" />
+
+Remove the value of a dialog variable string override for a player asynchronously. The dialog variable string will follow global settings.
+
+```csharp
+Task RemoveDialogVariableStringForPlayerAsync(int playerId, string panelId, string variableName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetDialogVariableString(string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L65" />
+
+Set the value of a dialog variable string globally.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetDialogVariableString(string panelId, string variableName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to set.
+
+### SetDialogVariableStringAsync(string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L74" />
+
+Set the value of a dialog variable string globally asynchronously.
+
+```csharp
+Task SetDialogVariableStringAsync(string panelId, string variableName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to set.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetDialogVariableStringForPlayer(int, string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L16" />
+
+Set the value of a dialog variable string override for a player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetDialogVariableStringForPlayer(int playerId, string panelId, string variableName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to set.
+
+### SetDialogVariableStringForPlayerAsync(int, string, string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L26" />
+
+Set the value of a dialog variable string override for a player asynchronously.
+
+```csharp
+Task SetDialogVariableStringForPlayerAsync(int playerId, string panelId, string variableName, string value)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="variableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The dialog variable string name. Example: the variable name of "{s:dynamic}" is "dynamic".
+- <ApiParam name="value" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The value to set.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetHasClass(string, string, EHudPanelClassStatus_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L179" />
+
+Set whether the hud element has a class or not globally.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetHasClass(string panelId, string className, EHudPanelClassStatus_t classStatus)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+- <ApiParam name="classStatus" type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — <table><thead><tr><th class="term">Value</th><th class="description">Behavior</th></tr></thead><tbody><tr><td class="term">k_eHudPanelClassStatus_Undefined</td><td class="description">Does not override the existing class status.</td></tr><tr><td class="term">k_eHudPanelClassStatus_DoesNotHaveClass</td><td class="description">Explicitly specifies that the panel does not have the class.</td></tr><tr><td class="term">k_eHudPanelClassStatus_HasClass</td><td class="description">Explicitly specifies that the panel has the class.</td></tr></tbody></table>
+
+### SetHasClassAsync(string, string, EHudPanelClassStatus_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L207" />
+
+Set whether the hud element has a class or not globally asynchronously.
+
+```csharp
+Task SetHasClassAsync(string panelId, string className, EHudPanelClassStatus_t classStatus)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+- <ApiParam name="classStatus" type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — <table><thead><tr><th class="term">Value</th><th class="description">Behavior</th></tr></thead><tbody><tr><td class="term">k_eHudPanelClassStatus_Undefined</td><td class="description">Does not override the existing class status.</td></tr><tr><td class="term">k_eHudPanelClassStatus_DoesNotHaveClass</td><td class="description">Explicitly specifies that the panel does not have the class.</td></tr><tr><td class="term">k_eHudPanelClassStatus_HasClass</td><td class="description">Explicitly specifies that the panel has the class.</td></tr></tbody></table>
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetHasClassForPlayer(int, string, string, EHudPanelClassStatus_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L112" />
+
+Set whether the hud element has a class or not for a player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetHasClassForPlayer(int playerId, string panelId, string className, EHudPanelClassStatus_t classStatus)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+- <ApiParam name="classStatus" type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — <table><thead><tr><th class="term">Value</th><th class="description">Behavior</th></tr></thead><tbody><tr><td class="term">k_eHudPanelClassStatus_Undefined</td><td class="description">Does not override the existing class status.</td></tr><tr><td class="term">k_eHudPanelClassStatus_DoesNotHaveClass</td><td class="description">Explicitly specifies that the panel does not have the class.</td></tr><tr><td class="term">k_eHudPanelClassStatus_HasClass</td><td class="description">Explicitly specifies that the panel has the class.</td></tr></tbody></table>
+
+### SetHasClassForPlayerAsync(int, string, string, EHudPanelClassStatus_t)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L141" />
+
+Set whether the hud element has a class or not for a player asynchronously.
+
+```csharp
+Task SetHasClassForPlayerAsync(int playerId, string panelId, string className, EHudPanelClassStatus_t classStatus)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="panelId" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The id attribute of the target hud element.
+- <ApiParam name="className" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The class name.
+- <ApiParam name="classStatus" type="EHudPanelClassStatus_t" typeHref="/docs/api/schemadefinitions/ehudpanelclassstatus_t" /> — <table><thead><tr><th class="term">Value</th><th class="description">Behavior</th></tr></thead><tbody><tr><td class="term">k_eHudPanelClassStatus_Undefined</td><td class="description">Does not override the existing class status.</td></tr><tr><td class="term">k_eHudPanelClassStatus_DoesNotHaveClass</td><td class="description">Explicitly specifies that the panel does not have the class.</td></tr><tr><td class="term">k_eHudPanelClassStatus_HasClass</td><td class="description">Explicitly specifies that the panel has the class.</td></tr></tbody></table>
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetInputCaptureEnabled(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L240" />
+
+Set the input capture state of a hud element globally.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetInputCaptureEnabled(bool enabled)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+### SetInputCaptureEnabledAsync(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L247" />
+
+Set the input capture state of a hud element globally asynchronously.
+
+```csharp
+Task SetInputCaptureEnabledAsync(bool enabled)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### SetInputCaptureEnabledForPlayer(int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L224" />
+
+Set the input capture state of a hud element for a player.
+
+Thread unsafe, use async variant instead for non-main thread context.
+
+```csharp
+[ThreadUnsafe]
+void SetInputCaptureEnabledForPlayer(int playerId, bool enabled)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+### SetInputCaptureEnabledForPlayerAsync(int, bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Core/Modules/Schemas/Extensions/CCSCustomHudLayout.cs#L232" />
+
+Set the input capture state of a hud element for a player asynchronously.
+
+```csharp
+Task SetInputCaptureEnabledForPlayerAsync(int playerId, bool enabled)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="playerId" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Player id.
+- <ApiParam name="enabled" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — Whether the input capture is enabled or not.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Task" typeHref="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task" />
+
+### StrLayoutUpdated()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CCSCustomHudLayout.cs#L30" />
+
+```csharp
+void StrLayoutUpdated()
+```
+

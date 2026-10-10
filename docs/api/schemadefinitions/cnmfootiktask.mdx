@@ -1,0 +1,171 @@
+---
+title: CNmFootIKTask
+---
+
+# Interface CNmFootIKTask
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CNmFootIKTask : CNmPoseTask, ISchemaClass<CNmPoseTask>, ISchemaClass<CNmFootIKTask>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CNmPoseTask](/docs/api/schemadefinitions/cnmposetask)
+- [ISchemaClass\<CNmPoseTask\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmFootIKTask\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### BlendMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L34" />
+
+```csharp
+ref NmIKBlendMode_t BlendMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="NmIKBlendMode_t" typeHref="/docs/api/schemadefinitions/nmikblendmode_t" />
+
+### BlendWeight
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L36" />
+
+```csharp
+ref float BlendWeight { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### IsRunningFromDeserializedData
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L40" />
+
+```csharp
+ref bool IsRunningFromDeserializedData { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsTargetInWorldSpace
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L38" />
+
+```csharp
+ref bool IsTargetInWorldSpace { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### LeftEffectorBoneIdx
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L18" />
+
+```csharp
+ref int LeftEffectorBoneIdx { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LeftTarget
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L30" />
+
+```csharp
+CNmTarget LeftTarget { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNmTarget" typeHref="/docs/api/schemadefinitions/cnmtarget" />
+
+### LeftTargetBoneIdx
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L26" />
+
+```csharp
+ref int LeftTargetBoneIdx { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### LeftTargetTransform
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L22" />
+
+```csharp
+ref CTransform LeftTargetTransform { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTransform" typeHref="/docs/api/natives/ctransform" />
+
+### RightEffectorBoneIdx
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L20" />
+
+```csharp
+ref int RightEffectorBoneIdx { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### RightTarget
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L32" />
+
+```csharp
+CNmTarget RightTarget { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNmTarget" typeHref="/docs/api/schemadefinitions/cnmtarget" />
+
+### RightTargetBoneIdx
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L28" />
+
+```csharp
+ref int RightTargetBoneIdx { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### RightTargetTransform
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmFootIKTask.cs#L24" />
+
+```csharp
+ref CTransform RightTargetTransform { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CTransform" typeHref="/docs/api/natives/ctransform" />
+

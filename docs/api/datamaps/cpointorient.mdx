@@ -1,0 +1,34 @@
+---
+title: CPointOrient
+---
+
+# CPointOrient
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `orient_towards` | `m_iszSpawnTargetName` | `FIELD_STRING` |
+| `start_active` | `m_bActive` | `FIELD_BOOLEAN` |
+| `constraint_type` | `m_nConstraint` | `FIELD_INT32` |
+| `goal_direction_type` | `m_nGoalDirection` | `FIELD_INT32` |
+| `max_turn_rate` | `m_flMaxTurnRate` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetActive` | `FIELD_BOOLEAN` |
+| `SetTarget` | `FIELD_STRING` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+| Function Name |
+| --- |
+| `CPointOrientReorientThink` |

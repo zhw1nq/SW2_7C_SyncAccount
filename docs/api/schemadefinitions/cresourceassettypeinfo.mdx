@@ -1,0 +1,123 @@
+---
+title: CResourceAssetTypeInfo
+---
+
+# Interface CResourceAssetTypeInfo
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CResourceAssetTypeInfo : CSimpleAssetTypeInfo, ISchemaClass<CSimpleAssetTypeInfo>, ISchemaClass<CResourceAssetTypeInfo>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CSimpleAssetTypeInfo](/docs/api/schemadefinitions/csimpleassettypeinfo)
+- [ISchemaClass\<CSimpleAssetTypeInfo\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CResourceAssetTypeInfo\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AllowedToCompileInTestMode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L32" />
+
+```csharp
+ref bool AllowedToCompileInTestMode { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Blocks
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L22" />
+
+```csharp
+ref CUtlVector<ResourceBlockTypeInfo_t> Blocks { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;ResourceBlockTypeInfo_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CannotBeAMultiParentChildCompile
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L28" />
+
+```csharp
+ref bool CannotBeAMultiParentChildCompile { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### CompileDependsOnResourceTypes
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L20" />
+
+```csharp
+ref CUtlVector<CUtlString> CompileDependsOnResourceTypes { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CompilerIdentifier
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L18" />
+
+```csharp
+string CompilerIdentifier { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### PrefersIconForThumbnail
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L30" />
+
+```csharp
+ref bool PrefersIconForThumbnail { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### PreventDirectCompile
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L26" />
+
+```csharp
+ref bool PreventDirectCompile { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### RequiredSpecialDependency
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CResourceAssetTypeInfo.cs#L24" />
+
+```csharp
+string RequiredSpecialDependency { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

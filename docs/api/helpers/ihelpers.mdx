@@ -1,0 +1,127 @@
+---
+title: IHelpers
+---
+
+# Interface IHelpers
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L88" />
+
+**Namespace**: [SwiftlyS2.Shared.Helpers](/docs/api/helpers)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IHelpers
+```
+
+## Methods
+
+### GetClassnameByDefinitionIndex(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L117" />
+
+Get weapon classname from item definition index.
+
+```csharp
+string? GetClassnameByDefinitionIndex(int itemDefinitionIndex)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="itemDefinitionIndex" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The item definition index of the weapon.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The weapon classname (e.g., "weapon_awp") or null if not found.
+
+### GetClassnameByDefinitionIndex(ItemDefinitionIndex)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L124" />
+
+Get weapon classname from item definition index.
+
+```csharp
+string? GetClassnameByDefinitionIndex(ItemDefinitionIndex itemDefinitionIndex)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="itemDefinitionIndex" type="ItemDefinitionIndex" typeHref="/docs/api/helpers/itemdefinitionindex" /> — The item definition index of the weapon.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The weapon classname (e.g., "weapon_awp") or null if not found.
+
+### GetDefinitionIndexByClassname(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L131" />
+
+Get item definition index from weapon classname.
+
+```csharp
+int? GetDefinitionIndexByClassname(string classname)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="classname" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The weapon classname (e.g., "weapon_awp").
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int?" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The item definition index or null if not found.
+
+### GetWeaponCSDataFromKey(int, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L96" />
+
+Get weapon vdata from key.
+
+```csharp
+CCSWeaponBaseVData? GetWeaponCSDataFromKey(int unknown, string key)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="unknown" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — Not sure what this argument is for, but in general it's -1.
+- <ApiParam name="key" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The key of the weapon (usually item idx).
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CCSWeaponBaseVData?" typeHref="/docs/api/schemadefinitions/ccsweaponbasevdata" /> — The weapon vdata.
+
+### GetWeaponCSDataFromKey(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L103" />
+
+Get weapon vdata from item definition index.
+
+```csharp
+CCSWeaponBaseVData? GetWeaponCSDataFromKey(int itemDefinitionIndex)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="itemDefinitionIndex" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The item definition index of the weapon.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CCSWeaponBaseVData?" typeHref="/docs/api/schemadefinitions/ccsweaponbasevdata" /> — The weapon vdata.
+
+### GetWeaponCSDataFromKey(ItemDefinitionIndex)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Helpers/IHelpers.cs#L110" />
+
+Get weapon vdata from item definition index.
+
+```csharp
+CCSWeaponBaseVData? GetWeaponCSDataFromKey(ItemDefinitionIndex itemDefinitionIndex)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="itemDefinitionIndex" type="ItemDefinitionIndex" typeHref="/docs/api/helpers/itemdefinitionindex" /> — The item definition index of the weapon.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="CCSWeaponBaseVData?" typeHref="/docs/api/schemadefinitions/ccsweaponbasevdata" /> — The weapon vdata.
+

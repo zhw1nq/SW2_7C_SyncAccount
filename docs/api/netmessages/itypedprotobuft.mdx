@@ -1,0 +1,38 @@
+---
+title: ITypedProtobuf
+---
+
+# Interface ITypedProtobuf
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/ITypedProtobuf.cs#L5" />
+
+**Namespace**: [SwiftlyS2.Shared.NetMessages](/docs/api/netmessages)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface ITypedProtobuf<T> : INativeHandle where T : ITypedProtobuf<T>
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" />
+
+#### Implements
+
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Accessor
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/ITypedProtobuf.cs#L7" />
+
+```csharp
+IProtobufAccessor Accessor { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IProtobufAccessor" typeHref="/docs/api/netmessages/iprotobufaccessor" />
+

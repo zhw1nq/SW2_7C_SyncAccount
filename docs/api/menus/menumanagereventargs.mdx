@@ -1,0 +1,64 @@
+---
+title: MenuManagerEventArgs
+---
+
+# Class MenuManagerEventArgs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuManagerAPI.cs#L79" />
+
+**Namespace**: [SwiftlyS2.Shared.Menus](/docs/api/menus)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Provides event data for menu manager events.
+
+```csharp
+public sealed class MenuManagerEventArgs : EventArgs
+```
+
+#### Inheritance
+
+- [object](https://learn.microsoft.com/dotnet/api/system.object)
+- [EventArgs](https://learn.microsoft.com/dotnet/api/system.eventargs)
+- [MenuManagerEventArgs](/docs/api/menus/menumanagereventargs)
+
+#### Inherited Members
+
+- [EventArgs.Empty](https://learn.microsoft.com/dotnet/api/system.eventargs.empty)
+- [object.Equals(object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object))
+- [object.Equals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object))
+- [object.GetHashCode()](https://learn.microsoft.com/dotnet/api/system.object.gethashcode)
+- [object.GetType()](https://learn.microsoft.com/dotnet/api/system.object.gettype)
+- [object.ReferenceEquals(object?, object?)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals)
+- [object.ToString()](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+## Properties
+
+### Menu
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuManagerAPI.cs#L89" />
+
+The menu involved in this event.
+
+```csharp
+public IMenuAPI? Menu { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IMenuAPI?" typeHref="/docs/api/menus/imenuapi" />
+
+### Player
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Menus/IMenuManagerAPI.cs#L84" />
+
+The player involved in this menu event.
+
+```csharp
+public IPlayer? Player { get; init; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IPlayer?" typeHref="/docs/api/players/iplayer" />
+

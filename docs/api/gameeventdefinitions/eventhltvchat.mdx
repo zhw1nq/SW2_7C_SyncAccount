@@ -1,0 +1,55 @@
+---
+title: EventHltvChat
+---
+
+# Interface EventHltvChat
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvChat.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "hltv_chat"
+a HLTV chat msg sent by spectators
+
+```csharp
+public interface EventHltvChat : IGameEvent<EventHltvChat>
+```
+
+#### Implements
+
+- [IGameEvent\<EventHltvChat\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### SteamID
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvChat.cs#L31" />
+
+steam id
+<br />
+type: uint64
+
+```csharp
+ulong SteamID { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### Text
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventHltvChat.cs#L24" />
+
+type: string
+
+```csharp
+string Text { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+

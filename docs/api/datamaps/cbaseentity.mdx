@@ -1,0 +1,95 @@
+---
+title: CBaseEntity
+---
+
+# CBaseEntity
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `globalname` | `m_iGlobalname` | `FIELD_STRING` |
+| `speed` | `m_flSpeed` | `FIELD_FLOAT32` |
+| `vscripts` | `m_iszPrivateVScripts` | `FIELD_STRING` |
+| `nextthink` | `m_nNextThinkTick` | `FIELD_TICK` |
+| `effects` | `m_fEffects` | `FIELD_UINT32` |
+| `ResponseContext` | `m_iszResponseContext` | `FIELD_STRING` |
+| `subclass_id` | `m_nSubclassID` | `FIELD_UTLSTRINGTOKEN` |
+| `max_health` | `m_iMaxHealth` | `FIELD_INT32` |
+| `target` | `m_target` | `FIELD_STRING` |
+| `platform_type` | `m_nPlatformType` | `FIELD_UINT8` |
+| `damagefilter` | `m_iszDamageFilterName` | `FIELD_STRING` |
+| `MoveType` | `m_MoveType` | `FIELD_UINT8` |
+| `owner` | `m_hOwnerEntity` | `FIELD_EHANDLE` |
+| `teamnumber` | `m_iTeamNum` | `FIELD_UINT8` |
+| `basevelocity` | `m_vecBaseVelocity` | `FIELD_VECTOR` |
+| `avelocity` | `m_vecAngVelocity` | `FIELD_QANGLE` |
+| `gravity` | `m_flGravityScale` | `FIELD_FLOAT32` |
+| `friction` | `m_flFriction` | `FIELD_FLOAT32` |
+| `ltime` | `m_flLocalTime` | `FIELD_FLOAT32` |
+| `velocity` | `m_vecVelocity` | `FIELD_NETWORK_QUANTIZED_VECTOR` |
+| `spawnflags` | `m_spawnflags` | `FIELD_UINT32` |
+| `disablelowviolence` | `m_bDisableLowViolence` | `FIELD_BOOLEAN` |
+| `LagCompensate` | `m_bLagCompensate` | `FIELD_BOOLEAN` |
+| `health` | `m_iHealth` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `TeamNum` | `FIELD_INT32` |
+| `SetTeam` | `FIELD_INT32` |
+| `Kill` | `FIELD_VOID` |
+| `KillHierarchy` | `FIELD_VOID` |
+| `KillConstrained` | `FIELD_VOID` |
+| `Use` | `FIELD_INT32` |
+| `AlternativeSorting` | `FIELD_BOOLEAN` |
+| `SetParent` | `FIELD_STRING` |
+| `SetParentAttachment` | `FIELD_STRING` |
+| `SetParentAttachmentMaintainOffset` | `FIELD_STRING` |
+| `ClearParent` | `FIELD_VOID` |
+| `FollowEntity` | `FIELD_STRING` |
+| `SetDamageFilter` | `FIELD_STRING` |
+| `EnableDamageForces` | `FIELD_VOID` |
+| `DisableDamageForces` | `FIELD_VOID` |
+| `DispatchResponse` | `FIELD_STRING` |
+| `AddContext` | `FIELD_STRING` |
+| `RemoveContext` | `FIELD_STRING` |
+| `ClearContext` | `FIELD_VOID` |
+| `AddAttribute` | `FIELD_STRING` |
+| `RemoveAttribute` | `FIELD_STRING` |
+| `DisableShadow` | `FIELD_VOID` |
+| `EnableShadow` | `FIELD_VOID` |
+| `FireUser1` | `FIELD_STRING` |
+| `FireUser2` | `FIELD_STRING` |
+| `FireUser3` | `FIELD_STRING` |
+| `FireUser4` | `FIELD_STRING` |
+| `ChangeSubclass` | `FIELD_STRING` |
+| `EnablePlatform` | `FIELD_VOID` |
+| `DisablePlatform` | `FIELD_VOID` |
+| `PlatformFollowYaw` | `FIELD_VOID` |
+| `PlatformIgnoreYaw` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnUser1` | `FIELD_CUSTOM` |
+| `OnUser2` | `FIELD_CUSTOM` |
+| `OnUser3` | `FIELD_CUSTOM` |
+| `OnUser4` | `FIELD_CUSTOM` |
+| `OnKilled` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBaseEntitySUB_Remove` |
+| `CBaseEntitySUB_RemoveIfUncarried` |
+| `CBaseEntitySUB_DoNothing` |
+| `CBaseEntitySUB_Vanish` |
+| `CBaseEntitySUB_CallUseToggle` |
+| `CBaseEntitySUB_KillSelf` |
+| `CBaseEntitySUB_KillSelfIfUncarried` |
+| `CBaseEntityFakeScriptThinkFunc` |
+| `CBaseEntityClearNavIgnoreContentsThink` |

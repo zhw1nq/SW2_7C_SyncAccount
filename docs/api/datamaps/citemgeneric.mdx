@@ -1,0 +1,54 @@
+---
+title: CItemGeneric
+---
+
+# CItemGeneric
+
+Inherited from [CItem](/docs/api/datamaps/citem)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `spawn_particles` | `m_hSpawnParticleEffect` | `FIELD_HPARTICLESYSTEMDEFINITION` |
+| `spawn_sound` | `m_pAmbientSoundEffect` | `FIELD_STRING` |
+| `auto_start_ambient_sound` | `m_bAutoStartAmbientSound` | `FIELD_BOOLEAN` |
+| `spawn_script_func` | `m_pSpawnScriptFunction` | `FIELD_STRING` |
+| `pickup_particles` | `m_hPickupParticleEffect` | `FIELD_HPARTICLESYSTEMDEFINITION` |
+| `pickup_sound` | `m_pPickupSoundEffect` | `FIELD_STRING` |
+| `pickup_script_func` | `m_pPickupScriptFunction` | `FIELD_STRING` |
+| `timeout_particles` | `m_hTimeoutParticleEffect` | `FIELD_HPARTICLESYSTEMDEFINITION` |
+| `timeout_sound` | `m_pTimeoutSoundEffect` | `FIELD_STRING` |
+| `timeout_script_func` | `m_pTimeoutScriptFunction` | `FIELD_STRING` |
+| `pickup_filter_name` | `m_pPickupFilterName` | `FIELD_STRING` |
+| `allow_pickup_script_func` | `m_pAllowPickupScriptFunction` | `FIELD_STRING` |
+| `pickup_radius_override` | `m_flPickupRadius` | `FIELD_FLOAT32` |
+| `trigger_radius` | `m_flTriggerRadius` | `FIELD_FLOAT32` |
+| `trigger_sound` | `m_pTriggerSoundEffect` | `FIELD_STRING` |
+| `glow_in_trigger_radius` | `m_bGlowWhenInTrigger` | `FIELD_BOOLEAN` |
+| `glowcolor` | `m_glowColor` | `FIELD_COLOR32` |
+| `useable` | `m_bUseable` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `StartAmbientSound` | `FIELD_VOID` |
+| `StopAmbientSound` | `FIELD_VOID` |
+| `ToggleAmbientSound` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnPickup` | `FIELD_CUSTOM` |
+| `OnTimeout` | `FIELD_CUSTOM` |
+| `OnTriggerStartTouch` | `FIELD_CUSTOM` |
+| `OnTriggerTouch` | `FIELD_CUSTOM` |
+| `OnTriggerEndTouch` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CItemGenericItemGenericTouch` |

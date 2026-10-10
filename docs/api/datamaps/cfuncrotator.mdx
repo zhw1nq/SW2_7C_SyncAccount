@@ -1,0 +1,61 @@
+---
+title: CFuncRotator
+---
+
+# CFuncRotator
+
+Inherited from [CBaseModelEntity](/docs/api/datamaps/cbasemodelentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `solid` | `m_eSolidType` | `FIELD_UINT8` |
+| `starts_rotating` | `m_bIsRotating` | `FIELD_BOOLEAN` |
+| `angular_velocity` | `m_qAngularVelocity` | `FIELD_QANGLE` |
+| `time_to_reach_max_speed` | `m_flTimeToReachMaxSpeed` | `FIELD_FLOAT32` |
+| `time_to_reach_zero_speed` | `m_flTimeToReachZeroSpeed` | `FIELD_FLOAT32` |
+| `time_to_wait_oscillate` | `m_flTimeToWaitOscillate` | `FIELD_FLOAT32` |
+| `look_at_forced_up` | `m_vLookAtForcedUp` | `FIELD_VECTOR` |
+| `rotator_target_entity` | `m_strRotatorTarget` | `FIELD_STRING` |
+| `record_history` | `m_bRecordHistory` | `FIELD_BOOLEAN` |
+| `speed_scale` | `m_flSpeedScale` | `FIELD_FLOAT32` |
+| `speed_from_mover` | `m_iszSpeedFromMover` | `FIELD_STRING` |
+| `min_yaw_rotation` | `m_flMinYawRotation` | `FIELD_FLOAT32` |
+| `max_yaw_rotation` | `m_flMaxYawRotation` | `FIELD_FLOAT32` |
+| `rotate_type` | `m_eRotateType` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `Start` | `FIELD_VOID` |
+| `Stop` | `FIELD_VOID` |
+| `StartForward` | `FIELD_VOID` |
+| `StartReverse` | `FIELD_VOID` |
+| `ReturnToPreviousOrientation` | `FIELD_VOID` |
+| `ReturnToInitialOrientation` | `FIELD_VOID` |
+| `SetRotateType` | `FIELD_INT32` |
+| `Pitch` | `FIELD_FLOAT32` |
+| `Yaw` | `FIELD_FLOAT32` |
+| `Roll` | `FIELD_FLOAT32` |
+| `SetRotatorTarget` | `FIELD_STRING` |
+| `SetSpeed` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnRotationStarted` | `FIELD_CUSTOM` |
+| `OnRotationCompleted` | `FIELD_CUSTOM` |
+| `OnOscillate` | `FIELD_CUSTOM` |
+| `OnOscillateStartArrive` | `FIELD_CUSTOM` |
+| `OnOscillateStartDepart` | `FIELD_CUSTOM` |
+| `OnOscillateEndArrive` | `FIELD_CUSTOM` |
+| `OnOscillateEndDepart` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CFuncRotatorRotateThink` |

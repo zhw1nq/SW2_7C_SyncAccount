@@ -1,0 +1,176 @@
+---
+title: Interface INetMessageService
+---
+
+# Interface INetMessageService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.NetMessages](/docs/api/netmessages)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface INetMessageService
+```
+
+## Methods
+
+### Create\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L88" />
+
+Creates a new net message of specified type.
+
+```csharp
+T Create<T>() where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — The new net message.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Net message type.
+
+### HookClientMessage\<T\>(ClientNetMessageHandler\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L41" />
+
+Hooks a client net message.
+
+```csharp
+Guid HookClientMessage<T>(INetMessageService.ClientNetMessageHandler<T> callback) where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="INetMessageService.ClientNetMessageHandler&lt;T&gt;" typeHref="/docs/api/netmessages/inetmessageservice" /> — The callback to handle the net message.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The unique Guid for the handler. Can be used to unhook it later.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Client net message type.
+
+### HookServerMessage\<T\>(ServerNetMessageHandler\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L49" />
+
+Hooks a server net message.
+
+```csharp
+Guid HookServerMessage<T>(INetMessageService.ServerNetMessageHandler<T> callback) where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="INetMessageService.ServerNetMessageHandler&lt;T&gt;" typeHref="/docs/api/netmessages/inetmessageservice" /> — The callback to handle the net message.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The unique Guid for the handler. Can be used to unhook it later.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Server net message type.
+
+### HookServerMessageInternal\<T\>(ServerNetMessageInternalHandler\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L57" />
+
+Hooks a client net message internally.
+
+```csharp
+Guid HookServerMessageInternal<T>(INetMessageService.ServerNetMessageInternalHandler<T> callback) where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="callback" type="INetMessageService.ServerNetMessageInternalHandler&lt;T&gt;" typeHref="/docs/api/netmessages/inetmessageservice" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" />
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Server net message type.
+
+### Send\<T\>(Action\<T\>)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L95" />
+
+Sends a net message to players with configured recipient filter.
+
+```csharp
+void Send<T>(Action<T> configureMessage) where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="configureMessage" type="Action&lt;T&gt;" typeHref="https://learn.microsoft.com/dotnet/api/system.action-1" /> — The action to configure the net message and recipient filter.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Net message type.
+
+### Unhook(Guid)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L63" />
+
+Unhooks a net message handler.
+
+```csharp
+void Unhook(Guid guid)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="guid" type="Guid" typeHref="https://learn.microsoft.com/dotnet/api/system.guid" /> — The unique Guid for the handler.
+
+### UnhookClientMessage\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L69" />
+
+Unhooks all client net message handlers with specified type.
+
+```csharp
+void UnhookClientMessage<T>() where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Client net message type.
+
+### UnhookServerMessage\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L75" />
+
+Unhooks all server net message handlers with specified type.
+
+```csharp
+void UnhookServerMessage<T>() where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Server net message type.
+
+### UnhookServerMessageInternal\<T\>()
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/NetMessages/INetMessageService.cs#L81" />
+
+Unhooks all internal server net message handlers with specified type.
+
+```csharp
+void UnhookServerMessageInternal<T>() where T : ITypedProtobuf<T>, INetMessage<T>, IDisposable
+```
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — Server net message type.
+

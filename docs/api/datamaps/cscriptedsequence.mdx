@@ -1,0 +1,88 @@
+---
+title: CScriptedSequence
+---
+
+# CScriptedSequence
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `m_iszEntry` | `m_iszEntry` | `FIELD_STRING` |
+| `m_iszIdle` | `m_iszPreIdle` | `FIELD_STRING` |
+| `m_iszPlay` | `m_iszPlay` | `FIELD_STRING` |
+| `m_iszPostIdle` | `m_iszPostIdle` | `FIELD_STRING` |
+| `m_iszModifierToAddOnPlay` | `m_iszModifierToAddOnPlay` | `FIELD_STRING` |
+| `m_iszNextScript` | `m_iszNextScript` | `FIELD_STRING` |
+| `m_iszEntity` | `m_iszEntity` | `FIELD_STRING` |
+| `sync_group` | `m_iszSyncGroup` | `FIELD_STRING` |
+| `m_fMoveTo` | `m_nMoveTo` | `FIELD_INT32` |
+| `move_to_gait` | `m_nMoveToGait` | `FIELD_CHARACTER` |
+| `held_weapon_behavior` | `m_nHeldWeaponBehavior` | `FIELD_INT32` |
+| `forced_crouch_state` | `m_nForcedCrouchState` | `FIELD_INT32` |
+| `m_flRadius` | `m_flRadius` | `FIELD_FLOAT32` |
+| `m_flRepeat` | `m_flRepeat` | `FIELD_FLOAT32` |
+| `m_flMoveInterpTime` | `m_flMoveInterpTime` | `FIELD_FLOAT32` |
+| `m_flAngRate` | `m_flAngRate` | `FIELD_FLOAT32` |
+| `m_flMoveSpeed` | `m_flMoveSpeed` | `FIELD_FLOAT32` |
+| `m_bWaitUntilMoveCompletesToStartAnimation` | `m_bWaitUntilMoveCompletesToStartAnimation` | `FIELD_BOOLEAN` |
+| `m_flPlayAnimFadeInTime` | `m_flPlayAnimFadeInTime` | `FIELD_FLOAT32` |
+| `m_bLoopPreIdleSequence` | `m_bLoopPreIdleSequence` | `FIELD_BOOLEAN` |
+| `m_bLoopActionSequence` | `m_bLoopActionSequence` | `FIELD_BOOLEAN` |
+| `m_bLoopPostIdleSequence` | `m_bLoopPostIdleSequence` | `FIELD_BOOLEAN` |
+| `m_bSynchPostIdles` | `m_bSynchPostIdles` | `FIELD_BOOLEAN` |
+| `m_bIgnoreGravity` | `m_bIgnoreGravity` | `FIELD_BOOLEAN` |
+| `m_bIgnoreLookAt` | `m_bIgnoreLookAt` | `FIELD_BOOLEAN` |
+| `m_bDisableNPCCollisions` | `m_bDisableNPCCollisions` | `FIELD_BOOLEAN` |
+| `m_bKeepAnimgraphLockedPost` | `m_bKeepAnimgraphLockedPost` | `FIELD_BOOLEAN` |
+| `m_bDontAddModifiers` | `m_bDontAddModifiers` | `FIELD_BOOLEAN` |
+| `disable_aim_while_moving` | `m_bDisableAimingWhileMoving` | `FIELD_BOOLEAN` |
+| `ignore_rotation` | `m_bIgnoreRotation` | `FIELD_BOOLEAN` |
+| `dont_rotate_other` | `m_bDontRotateOther` | `FIELD_BOOLEAN` |
+| `repeatable` | `m_bIsRepeatable` | `FIELD_BOOLEAN` |
+| `should_leave_corpse` | `m_bShouldLeaveCorpse` | `FIELD_BOOLEAN` |
+| `start_on_spawn` | `m_bStartOnSpawn` | `FIELD_BOOLEAN` |
+| `no_interrupts` | `m_bDisallowInterrupts` | `FIELD_BOOLEAN` |
+| `can_override_npc_state` | `m_bCanOverrideNPCState` | `FIELD_BOOLEAN` |
+| `no_teleport_at_end` | `m_bDontTeleportAtEnd` | `FIELD_BOOLEAN` |
+| `high_priority` | `m_bHighPriority` | `FIELD_BOOLEAN` |
+| `hide_debug_complaints` | `m_bHideDebugComplaints` | `FIELD_BOOLEAN` |
+| `continue_on_death` | `m_bContinueOnDeath` | `FIELD_BOOLEAN` |
+| `m_bPositionRelativeToOtherEntity` | `m_bPositionRelativeToOtherEntity` | `FIELD_BOOLEAN` |
+| `onnpcdeath` | `m_onDeathBehavior` | `FIELD_INT32` |
+| `m_bAllowCustomInterruptConditions` | `m_bAllowCustomInterruptConditions` | `FIELD_BOOLEAN` |
+| `conflict_response` | `m_ConflictResponse` | `FIELD_INT32` |
+| `prevent_update_yaw_on_finish` | `m_bPreventUpdateYawOnFinish` | `FIELD_BOOLEAN` |
+| `ensure_on_navmesh_on_finish` | `m_bEnsureOnNavmeshOnFinish` | `FIELD_BOOLEAN` |
+| `onplayerdeath` | `m_iPlayerDeathBehavior` | `FIELD_INT32` |
+| `OnScriptEvent%02d` | `m_OnScriptEvent` | `FIELD_CUSTOM` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `MoveToPosition` | `FIELD_VOID` |
+| `BeginSequence` | `FIELD_VOID` |
+| `CancelSequence` | `FIELD_VOID` |
+| `SetActionSequence` | `FIELD_STRING` |
+| `ForceTarget` | `FIELD_STRING` |
+| `ScriptPlayerDeath` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnBeginSequence` | `FIELD_CUSTOM` |
+| `OnEndSequence` | `FIELD_CUSTOM` |
+| `OnActionStartOrLoop` | `FIELD_CUSTOM` |
+| `OnPostIdleEndSequence` | `FIELD_CUSTOM` |
+| `OnCancelSequence` | `FIELD_CUSTOM` |
+| `OnCancelFailedSequence` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CScriptedSequenceScriptThink` |

@@ -1,0 +1,83 @@
+---
+title: CPulseCell_Outflow_PlayVCD
+---
+
+# Interface CPulseCell_Outflow_PlayVCD
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_Outflow_PlayVCD.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CPulseCell_Outflow_PlayVCD : CPulseCell_Outflow_PlayVCDBase, CPulseCell_Outflow_PlaySceneBase, CPulseCell_BaseYieldingInflow, CPulseCell_BaseFlow, CPulseCell_Base, ISchemaClass<CPulseCell_Base>, ISchemaClass<CPulseCell_BaseFlow>, ISchemaClass<CPulseCell_BaseYieldingInflow>, ISchemaClass<CPulseCell_Outflow_PlaySceneBase>, ISchemaClass<CPulseCell_Outflow_PlayVCDBase>, ISchemaClass<CPulseCell_Outflow_PlayVCD>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CPulseCell_Outflow_PlayVCDBase](/docs/api/schemadefinitions/cpulsecell_outflow_playvcdbase)
+- [CPulseCell_Outflow_PlaySceneBase](/docs/api/schemadefinitions/cpulsecell_outflow_playscenebase)
+- [CPulseCell_BaseYieldingInflow](/docs/api/schemadefinitions/cpulsecell_baseyieldinginflow)
+- [CPulseCell_BaseFlow](/docs/api/schemadefinitions/cpulsecell_baseflow)
+- [CPulseCell_Base](/docs/api/schemadefinitions/cpulsecell_base)
+- [ISchemaClass\<CPulseCell_Base\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_BaseFlow\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_BaseYieldingInflow\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_Outflow_PlaySceneBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_Outflow_PlayVCDBase\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CPulseCell_Outflow_PlayVCD\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### ChoreoScene
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_Outflow_PlayVCD.cs#L18" />
+
+```csharp
+ref CStrongHandle<InfoForResourceTypeCChoreoSceneResource> ChoreoScene { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CStrongHandle&lt;InfoForResourceTypeCChoreoSceneResource&gt;" typeHref="/docs/api/natives/cstronghandlet" />
+
+### OnPaused
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_Outflow_PlayVCD.cs#L20" />
+
+```csharp
+CPulse_OutflowConnection OnPaused { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPulse_OutflowConnection" typeHref="/docs/api/schemadefinitions/cpulse_outflowconnection" />
+
+### OnResumed
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_Outflow_PlayVCD.cs#L22" />
+
+```csharp
+CPulse_OutflowConnection OnResumed { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CPulse_OutflowConnection" typeHref="/docs/api/schemadefinitions/cpulse_outflowconnection" />
+
+### OutRequirements
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CPulseCell_Outflow_PlayVCD.cs#L24" />
+
+```csharp
+ref CUtlVector<CPulseCell_Outflow_PlayVCD__VCDRequirementInfo_t> OutRequirements { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CPulseCell_Outflow_PlayVCD__VCDRequirementInfo_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

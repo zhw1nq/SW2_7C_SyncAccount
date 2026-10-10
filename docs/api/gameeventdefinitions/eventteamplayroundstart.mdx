@@ -1,0 +1,41 @@
+---
+title: EventTeamplayRoundStart
+---
+
+# Interface EventTeamplayRoundStart
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventTeamplayRoundStart.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.GameEventDefinitions](/docs/api/gameeventdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Event "teamplay_round_start"
+round restart
+
+```csharp
+public interface EventTeamplayRoundStart : IGameEvent<EventTeamplayRoundStart>
+```
+
+#### Implements
+
+- [IGameEvent\<EventTeamplayRoundStart\>](/docs/api/gameevents/igameeventt)
+
+## Properties
+
+### FullReset
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/GameEvents/Interfaces/EventTeamplayRoundStart.cs#L26" />
+
+is this a full reset of the map
+<br />
+type: bool
+
+```csharp
+bool FullReset { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

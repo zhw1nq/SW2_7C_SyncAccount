@@ -1,0 +1,256 @@
+---
+title: Network Messages
+---
+
+SwiftlyS2 provides a typed net-message API for sending generated protobuf messages and intercepting them in both client->server and server->client directions.
+
+<Callout type="warning">
+  Net-message objects used in callbacks are temporary wrappers. Read or copy values inside the callback and do not store those objects for later use.
+</Callout>
+
+## Accessing Net Message Service
+
+Net-message APIs are available through `Core.NetMessage`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    var netMessages = Core.NetMessage;
+}
+```
+
+## Sending Net Messages
+
+### One-Off Send
+
+Use `Send&lt;T&gt;` for short, one-off messages.
+
+```c#
+Core.NetMessage.Send<CUserMessageShake>(msg =>
+{
+    msg.Duration = 1.0f;
+    msg.Frequency = 2.0f;
+    msg.Amplitude = 0.5f;
+    msg.Command = 0;
+
+    msg.Recipients.AddAllPlayers();
+});
+```
+
+`Send&lt;T&gt;` creates the message, runs your configure callback, and sends it using the configured recipient filter.
+
+### Reusing a Message Instance
+
+Use `Create&lt;T&gt;` when you want to build and send the same message shape repeatedly.
+
+```c#
+using var msg = Core.NetMessage.Create<CUserMessageShake>();
+
+msg.Duration = 1.0f;
+msg.Frequency = 2.0f;
+msg.Amplitude = 0.5f;
+msg.Command = 0;
+
+msg.SendToAllPlayers();
+msg.SendToPlayer(0);
+```
+
+### Recipient Filters
+
+`INetMessage&lt;T&gt;.Recipients` exposes `CRecipientFilter` so you can build custom audiences.
+
+```c#
+using var msg = Core.NetMessage.Create<CUserMessageShake>();
+
+msg.Recipients.RemoveAllPlayers();
+msg.Recipients.AddRecipient(0);
+msg.Recipients.AddRecipient(1);
+
+msg.Send();
+```
+
+## Hooking Net Messages
+
+SwiftlyS2 supports three net-message hook pipelines:
+
+- Client messages (`HookClientMessage&lt;T&gt;`) for client->server traffic
+- Server messages (`HookServerMessage&lt;T&gt;`) for server->client traffic
+- Internal server messages (`HookServerMessageInternal&lt;T&gt;`) for server->client traffic with target `playerId`
+
+### Client Hooks
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _clientMoveHook;
+
+    public override void Load(bool hotReload)
+    {
+        _clientMoveHook = Core.NetMessage.HookClientMessage<CCLCMsg_Move>(OnClientMove);
+    }
+
+    public override void Unload(bool hotReload)
+    {
+        if (_clientMoveHook != Guid.Empty)
+        {
+            Core.NetMessage.Unhook(_clientMoveHook);
+        }
+    }
+
+    private HookResult OnClientMove(CCLCMsg_Move msg, int playerId)
+    {
+        Console.WriteLine($"player={playerId}, lastCmd={msg.LastCommandNumber}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [ClientNetMessageHandler]
+    public HookResult OnClientMove(CCLCMsg_Move msg, int playerId)
+    {
+        Console.WriteLine($"player={playerId}, lastCmd={msg.LastCommandNumber}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Server Hooks
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _serverSoundHook;
+
+    public override void Load(bool hotReload)
+    {
+        _serverSoundHook = Core.NetMessage.HookServerMessage<CMsgSosStartSoundEvent>(OnServerSound);
+    }
+
+    private HookResult OnServerSound(CMsgSosStartSoundEvent msg)
+    {
+        Console.WriteLine($"sound hash={msg.SoundeventHash}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [ServerNetMessageHandler]
+    public HookResult OnServerSound(CMsgSosStartSoundEvent msg)
+    {
+        Console.WriteLine($"sound hash={msg.SoundeventHash}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Internal Server Hooks
+
+Internal hooks include a `playerId` argument and are useful when behavior depends on the exact receiving player.
+Internal hooks are not used for every message sent from server to client, but only to a small subset of them.
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _serverInternalHook;
+
+    public override void Load(bool hotReload)
+    {
+        _serverInternalHook = Core.NetMessage.HookServerMessageInternal<CMsgSosStartSoundEvent>(OnServerSoundInternal);
+    }
+
+    private HookResult OnServerSoundInternal(CMsgSosStartSoundEvent msg, int playerId)
+    {
+        Console.WriteLine($"player={playerId}, sound hash={msg.SoundeventHash}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [ServerNetMessageInternalHandler]
+    public HookResult OnServerSoundInternal(CMsgSosStartSoundEvent msg, int playerId)
+    {
+        Console.WriteLine($"player={playerId}, sound hash={msg.SoundeventHash}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<Callout type="info">
+  Attribute handlers are discovered on registered classes. Your main `BasePlugin` class is registered by default.
+</Callout>
+
+## HookResult Behavior
+
+Net-message hooks return `HookResult`:
+
+- `HookResult.Continue`: continue processing and allow message flow
+- `HookResult.Stop`: block the message in that pipeline
+
+Typical behavior:
+
+- In client hooks, `Stop` prevents the message from reaching the server.
+- In server and internal server hooks, `Stop` prevents delivery to clients.
+
+## Unhooking
+
+You can unhook by `Guid` or clear all hooks for a specific net-message type.
+
+```c#
+Core.NetMessage.Unhook(hookGuid);
+
+Core.NetMessage.UnhookClientMessage<CCLCMsg_Move>();
+Core.NetMessage.UnhookServerMessage<CMsgSosStartSoundEvent>();
+Core.NetMessage.UnhookServerMessageInternal<CMsgSosStartSoundEvent>();
+```
+
+## Callback Signatures
+
+Programmatic hooks use these delegate signatures:
+
+```c#
+public delegate HookResult INetMessageService.ClientNetMessageHandler&lt;T&gt;(T msg, int playerId)
+  where T : ITypedProtobuf&lt;T&gt;, INetMessage&lt;T&gt;, IDisposable;
+
+public delegate HookResult INetMessageService.ServerNetMessageHandler&lt;T&gt;(T msg)
+  where T : ITypedProtobuf&lt;T&gt;, INetMessage&lt;T&gt;, IDisposable;
+
+public delegate HookResult INetMessageService.ServerNetMessageInternalHandler&lt;T&gt;(T msg, int playerId)
+  where T : ITypedProtobuf&lt;T&gt;, INetMessage&lt;T&gt;, IDisposable;
+```
+
+## Working with Raw Payload Accessor
+
+Generated message interfaces expose typed properties and `Accessor` (`IProtobufAccessor`) for field-based access when needed.
+
+```c#
+private HookResult OnServerSound(CMsgSosStartSoundEvent msg)
+{
+    uint hash = msg.SoundeventHash;
+
+    if (msg.Accessor.HasField("soundevent_hash"))
+    {
+        hash = msg.Accessor.GetUInt32("soundevent_hash");
+    }
+
+    Console.WriteLine($"sound hash={hash}");
+    return HookResult.Continue;
+}
+```
+
+## Reference
+
+See [INetMessageService](/docs/api/netmessages/inetmessageservice/) for send/create/hook/unhook APIs.
+
+See [INetMessage&lt;T&gt;](/docs/api/netmessages/inetmessaget/) and [ITypedProtobuf&lt;T&gt;](/docs/api/netmessages/itypedprotobuft/) for common message members.
+
+See [IProtobufAccessor](/docs/api/netmessages/iprotobufaccessor/) for raw protobuf field access.
+
+See [ClientNetMessageHandler](/docs/api/netmessages/clientnetmessagehandler/), [ServerNetMessageHandler](/docs/api/netmessages/servernetmessagehandler/), and [ServerNetMessageInternalHandler](/docs/api/netmessages/servernetmessageinternalhandler/) for attribute-based hooks.
+
+See [ProtobufDefinitions](/docs/api/protobufdefinitions/) for generated message interfaces.

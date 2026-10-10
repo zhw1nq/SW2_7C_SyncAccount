@@ -1,0 +1,38 @@
+---
+title: CBombTarget
+---
+
+# CBombTarget
+
+Inherited from [CBaseTrigger](/docs/api/datamaps/cbasetrigger)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `heistbomb` | `m_bIsHeistBombTarget` | `FIELD_BOOLEAN` |
+| `bomb_mount_target` | `m_szMountTarget` | `FIELD_STRING` |
+| `bomb_site_designation` | `m_nBombSiteDesignation` | `FIELD_INT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `BombExplode` | `FIELD_VOID` |
+| `BombPlanted` | `FIELD_VOID` |
+| `BombDefused` | `FIELD_VOID` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `BombExplode` | `FIELD_CUSTOM` |
+| `BombPlanted` | `FIELD_CUSTOM` |
+| `BombDefused` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CBombTargetCBombTargetShim::Touch` |
+| `CBombTargetCBombTargetShim::BombTargetUse` |

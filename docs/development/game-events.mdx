@@ -1,0 +1,206 @@
+---
+title: Game Events
+---
+
+<Callout type="warning">
+  Technically, game events are already a deprecated feature in Source 2. Many of the game events are currently not working.
+</Callout>
+
+SwiftlyS2 provides a plugin-scoped game-event service for firing generated game events and hooking them in pre/post mode.
+
+## Accessing Game Event Service
+
+Game events are available through `Core.GameEvent`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    var gameEvents = Core.GameEvent;
+}
+```
+
+## Firing Game Events
+
+### Fire to All Players
+
+```c#
+Core.GameEvent.Fire<EventShowSurvivalRespawnStatus>(@event =>
+{
+    @event.LocToken = "survival_respawn_status";
+    @event.Duration = 5;
+});
+```
+
+You can also fire without configuration:
+
+```c#
+Core.GameEvent.Fire<EventShowSurvivalRespawnStatus>();
+```
+
+### Fire to a Specific Player Slot
+
+```c#
+Core.GameEvent.FireToPlayer<EventShowSurvivalRespawnStatus>(slot: 0, @event =>
+{
+    @event.LocToken = "private_status";
+    @event.Duration = 3;
+});
+```
+
+### Fire to Server
+
+```c#
+Core.GameEvent.FireToServer<EventShowSurvivalRespawnStatus>(@event =>
+{
+    @event.LocToken = "server_only_status";
+});
+```
+
+### Async Fire Variants
+
+Use async variants in non-main-thread contexts:
+
+```c#
+await Core.GameEvent.FireAsync<EventShowSurvivalRespawnStatus>();
+await Core.GameEvent.FireToPlayerAsync<EventShowSurvivalRespawnStatus>(0);
+await Core.GameEvent.FireToServerAsync<EventShowSurvivalRespawnStatus>();
+```
+
+<Callout type="warning">
+  The event object (`@event`) in fire configure lambdas is temporary and must not be used outside that lambda.
+</Callout>
+
+## Hooking Game Events
+
+Game events can be hooked programmatically or by attributes.
+
+<Tabs items={['Programatically', 'With attribute']} defaultIndex={0}>
+  <Tab value="Programatically">
+    ```c#
+    private Guid _preHookGuid;
+    private Guid _postHookGuid;
+
+    public override void Load(bool hotReload)
+    {
+        _preHookGuid = Core.GameEvent.HookPre<EventPlayerDeath>(OnPlayerDeathPre);
+        _postHookGuid = Core.GameEvent.HookPost<EventPlayerDeath>(OnPlayerDeathPost);
+    }
+
+    public override void Unload(bool hotReload)
+    {
+        if (_preHookGuid != Guid.Empty)
+        {
+            Core.GameEvent.Unhook(_preHookGuid);
+        }
+
+        if (_postHookGuid != Guid.Empty)
+        {
+            Core.GameEvent.Unhook(_postHookGuid);
+        }
+    }
+
+    private HookResult OnPlayerDeathPre(EventPlayerDeath @event)
+    {
+        Console.WriteLine($"[PRE] victim={@event.UserId}, attacker={@event.Attacker}");
+        return HookResult.Continue;
+    }
+
+    private HookResult OnPlayerDeathPost(EventPlayerDeath @event)
+    {
+        Console.WriteLine($"[POST] headshot={@event.Headshot}, weapon={@event.Weapon}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="With attribute">
+    ```c#
+    [GameEventHandler(HookMode.Pre)]
+    public HookResult OnPlayerDeathPre(EventPlayerDeath @event)
+    {
+        Console.WriteLine($"[PRE] victim={@event.UserId}, attacker={@event.Attacker}");
+        return HookResult.Continue;
+    }
+
+    [GameEventHandler(HookMode.Post)]
+    public HookResult OnPlayerDeathPost(EventPlayerDeath @event)
+    {
+        Console.WriteLine($"[POST] headshot={@event.Headshot}, weapon={@event.Weapon}");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+In pre-hooks, returning `HookResult.Stop` blocks the game event.
+
+<Callout type="warning">
+    Hook callback event objects are temporary and only valid during the callback. If you need data later, copy the values you need.
+</Callout>
+
+You can also remove all hooks for a specific event type:
+
+```c#
+Core.GameEvent.UnhookPre<EventPlayerDeath>();
+Core.GameEvent.UnhookPost<EventPlayerDeath>();
+```
+
+## Callback Signature
+
+Hook callbacks follow this delegate signature:
+
+```c#
+public delegate HookResult IGameEventService.GameEventHandler&lt;T&gt;(T eventObj) where T : IGameEvent&lt;T&gt;
+```
+
+## Working with Event Data
+
+Generated game-event interfaces (for example `EventPlayerDeath`) expose typed properties.
+
+```c#
+private HookResult OnPlayerDeath(EventPlayerDeath @event)
+{
+    if (@event.AttackerPlayer != null && @event.UserIdPlayer != null)
+    {
+        Console.WriteLine($"{@event.AttackerPlayer.Name} killed {@event.UserIdPlayer.Name}");
+    }
+
+    return HookResult.Continue;
+}
+```
+
+`IGameEvent&lt;T&gt;` also exposes common members:
+
+- `DontBroadcast`
+- `Accessor` (`IGameEventAccessor`) for raw payload field access
+
+Example with `Accessor`:
+
+```c#
+private HookResult OnPlayerDeath(EventPlayerDeath @event)
+{
+    string weapon = @event.Accessor.GetString("weapon");
+    int attackerSlot = @event.Accessor.GetPlayerSlot("attacker");
+
+    Console.WriteLine($"attacker slot={attackerSlot}, weapon={weapon}");
+    return HookResult.Continue;
+}
+```
+
+## Checking Event Listening
+
+You can check whether a player slot is listening for an event:
+
+```c#
+bool listensByName = Core.GameEvent.IsListeningToEvent(0, "player_death");
+bool listensByType = Core.GameEvent.IsListeningToEvent<EventPlayerDeath>(0);
+```
+
+## Reference
+
+See [IGameEventService](/docs/api/gameevents/igameeventservice/) for fire/hook APIs.
+
+See [GameEventHandler](/docs/api/gameevents/gameeventhandler/) for attribute-based event hooks.
+
+See [IGameEvent&lt;T&gt;](/docs/api/gameevents/igameeventt/) and [IGameEventAccessor](/docs/api/gameevents/igameeventaccessor/) for common event members.
+
+See [GameEventDefinitions](/docs/api/gameeventdefinitions/) for all generated game event interfaces.

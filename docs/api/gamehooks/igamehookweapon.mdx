@@ -1,0 +1,46 @@
+---
+title: IGameHookWeapon
+---
+
+# Interface IGameHookWeapon
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Weapons/IWeapons.cs#L3" />
+
+**Namespace**: [SwiftlyS2.Shared.GameHooks](/docs/api/gamehooks)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IGameHookWeapon
+```
+
+## Properties
+
+### CanUse
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Weapons/IWeapons.cs#L13" />
+
+Hook triggered when a weapon can use logic is ran by game.
+
+```csharp
+ICanUseWeaponHook CanUse { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="ICanUseWeaponHook" typeHref="/docs/api/gamehooks/icanuseweaponhook" />
+
+### Drop
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/GameHooks/HooksCategories/Weapons/IWeapons.cs#L8" />
+
+Hook triggered when a weapon is dropped.
+
+```csharp
+IWeaponDropHook Drop { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IWeaponDropHook" typeHref="/docs/api/gamehooks/iweapondrophook" />
+

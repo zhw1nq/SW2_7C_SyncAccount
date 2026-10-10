@@ -1,0 +1,61 @@
+---
+title: SkeletonDemoDb_t
+---
+
+# Interface SkeletonDemoDb_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/SkeletonDemoDb_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface SkeletonDemoDb_t : ISchemaClass<SkeletonDemoDb_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<SkeletonDemoDb_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### AnimCaptures
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/SkeletonDemoDb_t.cs#L18" />
+
+```csharp
+ref CUtlVector<PointerTo<SkeletonAnimCapture_t>> AnimCaptures { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;PointerTo&lt;SkeletonAnimCapture_t&gt;&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### CameraTrack
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/SkeletonDemoDb_t.cs#L20" />
+
+```csharp
+ref CUtlVector<SkeletonAnimCapture_t__Camera_t> CameraTrack { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SkeletonAnimCapture_t__Camera_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### RecordingTime
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/SkeletonDemoDb_t.cs#L22" />
+
+```csharp
+ref float RecordingTime { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+

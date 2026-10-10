@@ -1,0 +1,301 @@
+---
+title: IMemoryService
+---
+
+# Interface IMemoryService
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L6" />
+
+**Namespace**: [SwiftlyS2.Shared.Memory](/docs/api/memory)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface IMemoryService
+```
+
+## Methods
+
+### Alloc(ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L103" />
+
+Allocate a block of memory.
+
+```csharp
+nint Alloc(ulong size)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="size" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The size of the memory block to allocate.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the allocated memory block.
+
+### Free(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L109" />
+
+Free a block of memory.
+
+```csharp
+void Free(nint pointer)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pointer" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the memory block to free.
+
+### GetAddressBySignature(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L44" />
+
+Get the address of a ida-style signature.
+
+```csharp
+nint? GetAddressBySignature(string library, string signature)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="library" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The library of that signature belongs to.
+- <ApiParam name="signature" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The signature of the function.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint?" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the function. Return null if not found.
+
+### GetInterfaceByName(string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L36" />
+
+Get the address of an valve or swiftly native interface by its name.
+
+```csharp
+nint? GetInterfaceByName(string name)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="name" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the interface.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint?" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the interface. Return null if not found.
+
+### GetObjectPtrVtableName(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L66" />
+
+Get the vtable name of an object pointer.
+
+```csharp
+string? GetObjectPtrVtableName(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the object pointer.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="string?" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The vtable name. Return null if not found.
+
+### GetUnmanagedFunctionByAddress\<TDelegate\>(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L14" />
+
+Get an unmanaged function by its address.
+
+```csharp
+IUnmanagedFunction<TDelegate> GetUnmanagedFunctionByAddress<TDelegate>(nint address) where TDelegate : Delegate
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the unmanaged function.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IUnmanagedFunction&lt;TDelegate&gt;" typeHref="/docs/api/memory/iunmanagedfunctiont" /> — The unmanaged function.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="TDelegate" /> — The delegate type of the unmanaged function.
+
+### GetUnmanagedFunctionByVTable\<TDelegate\>(nint, int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L23" />
+
+Get an unmanaged function by its vtable address and index.
+
+```csharp
+IUnmanagedFunction<TDelegate> GetUnmanagedFunctionByVTable<TDelegate>(nint pVTable, int index) where TDelegate : Delegate
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pVTable" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the vtable.
+- <ApiParam name="index" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" /> — The index of the function in the vtable.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IUnmanagedFunction&lt;TDelegate&gt;" typeHref="/docs/api/memory/iunmanagedfunctiont" /> — The unmanaged function.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="TDelegate" />
+
+### GetUnmanagedMemoryByAddress(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L29" />
+
+Get an unmanaged memory block by its address.
+
+```csharp
+IUnmanagedMemory GetUnmanagedMemoryByAddress(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address from which to create the Unmanaged Memory wrapper.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IUnmanagedMemory" typeHref="/docs/api/memory/iunmanagedmemory" />
+
+### GetVTableAddress(string, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L52" />
+
+Get the address of a vtable by its name.
+
+```csharp
+nint? GetVTableAddress(string library, string vtableName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="library" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The library of that vtable belongs to.
+- <ApiParam name="vtableName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the vtable.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint?" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the vtable. Return null if not found.
+
+### ObjectPtrHasBaseClass(nint, string)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L81" />
+
+Check if an object pointer has a base class.
+
+```csharp
+bool ObjectPtrHasBaseClass(nint address, string baseClassName)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the object pointer.
+- <ApiParam name="baseClassName" type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" /> — The name of the base class.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the object pointer has the base class, false otherwise.
+
+### ObjectPtrHasVtable(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L73" />
+
+Check if an object pointer has a vtable.
+
+```csharp
+bool ObjectPtrHasVtable(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the object pointer.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" /> — True if the object pointer has a vtable, false otherwise.
+
+### Resize(nint, ulong)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L117" />
+
+Resize a block of memory.
+
+```csharp
+nint Resize(nint pointer, ulong newSize)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="pointer" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the memory block to resize.
+- <ApiParam name="newSize" type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" /> — The new size of the memory block.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the resized memory block.
+
+### ResolveXrefAddress(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L59" />
+
+Resolve the address of a xref signature.
+
+```csharp
+nint ResolveXrefAddress(nint xrefAddress)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="xrefAddress" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the xref.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The resolved address.
+
+### ToSchemaClass\<T\>(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L89" />
+
+Convert a raw address to a schema class.
+
+```csharp
+T ToSchemaClass<T>(nint address) where T : class, ISchemaClass<T>
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the schema class.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="T" /> — The schema class.
+
+<ApiLabel>Type Parameters</ApiLabel>
+
+- <ApiParam name="T" /> — The schema class type.
+
+### ToServerSideClient(nint)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Memory/IMemoryService.cs#L96" />
+
+Convert a raw address to a server-side client.
+
+```csharp
+IServerSideClient ToServerSideClient(nint address)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="address" type="nint" typeHref="https://learn.microsoft.com/dotnet/api/system.intptr" /> — The address of the server-side client.
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="IServerSideClient" typeHref="/docs/api/engine/iserversideclient" /> — The server-side client.
+

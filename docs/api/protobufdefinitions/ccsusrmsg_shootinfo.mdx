@@ -1,0 +1,73 @@
+---
+title: CCSUsrMsg_ShootInfo
+---
+
+# Interface CCSUsrMsg_ShootInfo
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CCSUsrMsg_ShootInfo.cs#L7" />
+
+**Namespace**: [SwiftlyS2.Shared.ProtobufDefinitions](/docs/api/protobufdefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CCSUsrMsg_ShootInfo : ITypedProtobuf<CCSUsrMsg_ShootInfo>, INativeHandle, INetMessage<CCSUsrMsg_ShootInfo>, IDisposable
+```
+
+#### Implements
+
+- [ITypedProtobuf\<CCSUsrMsg_ShootInfo\>](/docs/api/netmessages/itypedprotobuft)
+- [INativeHandle](/docs/api/natives/inativehandle)
+- [INetMessage\<CCSUsrMsg_ShootInfo\>](/docs/api/netmessages/inetmessaget)
+- [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+## Properties
+
+### FrameNumber
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CCSUsrMsg_ShootInfo.cs#L15" />
+
+```csharp
+int FrameNumber { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### HitboxTransforms
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CCSUsrMsg_ShootInfo.cs#L16" />
+
+```csharp
+IProtobufRepeatedFieldSubMessageType<CMsgTransform> HitboxTransforms { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="IProtobufRepeatedFieldSubMessageType&lt;CMsgTransform&gt;" typeHref="/docs/api/netmessages/iprotobufrepeatedfieldsubmessagetypet" />
+
+### ShootDir
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CCSUsrMsg_ShootInfo.cs#L18" />
+
+```csharp
+QAngle ShootDir { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="QAngle" typeHref="/docs/api/natives/qangle" />
+
+### ShootPos
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Protobufs/Interfaces/CCSUsrMsg_ShootInfo.cs#L17" />
+
+```csharp
+Vector ShootPos { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="Vector" typeHref="/docs/api/natives/vector" />
+

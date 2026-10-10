@@ -1,0 +1,37 @@
+---
+title: CEnvEntityMaker
+---
+
+# CEnvEntityMaker
+
+Inherited from [CPointEntity](/docs/api/datamaps/cpointentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `EntityTemplate` | `m_iszTemplate` | `FIELD_STRING` |
+| `PostSpawnDirection` | `m_angPostSpawnDirection` | `FIELD_QANGLE` |
+| `PostSpawnDirectionVariance` | `m_flPostSpawnDirectionVariance` | `FIELD_FLOAT32` |
+| `PostSpawnSpeed` | `m_flPostSpawnSpeed` | `FIELD_FLOAT32` |
+| `PostSpawnInheritAngles` | `m_bPostSpawnUseAngles` | `FIELD_BOOLEAN` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `ForceSpawn` | `FIELD_VOID` |
+| `ForceSpawnAtEntityOrigin` | `FIELD_STRING` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnEntitySpawned` | `FIELD_CUSTOM` |
+| `OnEntityFailedSpawn` | `FIELD_CUSTOM` |
+
+## Functions
+
+| Function Name |
+| --- |
+| `CEnvEntityMakerCheckSpawnThink` |

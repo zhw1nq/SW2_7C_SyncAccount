@@ -1,0 +1,377 @@
+---
+title: INetChannelInfo
+---
+
+# Interface INetChannelInfo
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L12" />
+
+**Namespace**: [SwiftlyS2.Shared.Engine](/docs/api/engine)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface INetChannelInfo
+```
+
+## Properties
+
+### Address
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L15" />
+
+```csharp
+string Address { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### AvgLatency
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L26" />
+
+```csharp
+float AvgLatency { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### DataRate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L21" />
+
+```csharp
+int DataRate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### EngineLatency
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L27" />
+
+```csharp
+float EngineLatency { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### IsLocalHost
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L22" />
+
+```csharp
+bool IsLocalHost { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsLoopback
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L23" />
+
+```csharp
+bool IsLoopback { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsPlayback
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L25" />
+
+```csharp
+bool IsPlayback { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### IsTimingOut
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L24" />
+
+```csharp
+bool IsTimingOut { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L14" />
+
+```csharp
+string Name { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### RemoteAddress
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L17" />
+
+```csharp
+NetworkAddress RemoteAddress { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="NetworkAddress" typeHref="/docs/api/natives/networkaddress" />
+
+### RemoteFramerate
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L40" />
+
+```csharp
+(float FrameTime, float FrameTimeStdDeviation, float FrameStartTimeStdDeviation) RemoteFramerate { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="(float FrameTime, float FrameTimeStdDeviation, float FrameStartTimeStdDeviation)" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Time
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L19" />
+
+```csharp
+float Time { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeConnected
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L20" />
+
+```csharp
+float TimeConnected { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeSinceLastReceived
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L38" />
+
+```csharp
+float TimeSinceLastReceived { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeUntilTimeout
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L43" />
+
+```csharp
+float TimeUntilTimeout { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeoutSeconds
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L42" />
+
+```csharp
+float TimeoutSeconds { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+## Methods
+
+### GetAvgChoke(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L30" />
+
+```csharp
+float GetAvgChoke(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetAvgData(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L31" />
+
+```csharp
+float GetAvgData(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetAvgLoss(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L29" />
+
+```csharp
+float GetAvgLoss(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetAvgPacketBytes(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L32" />
+
+```csharp
+float GetAvgPacketBytes(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetAvgPackets(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L33" />
+
+```csharp
+float GetAvgPackets(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### GetSequenceNr(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L36" />
+
+```csharp
+int GetSequenceNr(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### GetTotalData(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L34" />
+
+```csharp
+ulong GetTotalData(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="ulong" typeHref="https://learn.microsoft.com/dotnet/api/system.uint64" />
+
+### GetTotalPackets(NetworkFlow)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L35" />
+
+```csharp
+int GetTotalPackets(NetworkFlow flow)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="flow" type="NetworkFlow" typeHref="/docs/api/engine/networkflow" />
+
+<ApiLabel>Returns</ApiLabel>
+
+- <ApiParam type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetInterpolationAmount(float, float)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L45" />
+
+```csharp
+void SetInterpolationAmount(float InterpolationAmount, float UpdateRate)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="InterpolationAmount" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+- <ApiParam name="UpdateRate" type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SetNumPredictionErrors(int)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L46" />
+
+```csharp
+void SetNumPredictionErrors(int num)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="num" type="int" typeHref="https://learn.microsoft.com/dotnet/api/system.int32" />
+
+### SetShowNetMessages(bool)
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Engine/INetChannelInfo.cs#L47" />
+
+```csharp
+void SetShowNetMessages(bool show)
+```
+
+<ApiLabel>Parameters</ApiLabel>
+
+- <ApiParam name="show" type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+

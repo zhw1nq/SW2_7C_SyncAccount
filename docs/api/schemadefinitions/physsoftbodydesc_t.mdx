@@ -1,0 +1,97 @@
+---
+title: PhysSoftbodyDesc_t
+---
+
+# Interface PhysSoftbodyDesc_t
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface PhysSoftbodyDesc_t : ISchemaClass<PhysSoftbodyDesc_t>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<PhysSoftbodyDesc_t\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Capsules
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L24" />
+
+```csharp
+ref CUtlVector<RnSoftbodyCapsule_t> Capsules { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnSoftbodyCapsule_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### InitPose
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L26" />
+
+```csharp
+ref CUtlVector<CTransform> InitPose { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CTransform&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ParticleBoneHash
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L18" />
+
+```csharp
+ref CUtlVector<uint> ParticleBoneHash { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;uint&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### ParticleBoneName
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L28" />
+
+```csharp
+ref CUtlVector<CUtlString> ParticleBoneName { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;CUtlString&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Particles
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L20" />
+
+```csharp
+ref CUtlVector<RnSoftbodyParticle_t> Particles { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnSoftbodyParticle_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### Springs
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/PhysSoftbodyDesc_t.cs#L22" />
+
+```csharp
+ref CUtlVector<RnSoftbodySpring_t> Springs { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;RnSoftbodySpring_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+

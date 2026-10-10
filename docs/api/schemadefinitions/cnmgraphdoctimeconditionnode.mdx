@@ -1,0 +1,65 @@
+---
+title: CNmGraphDocTimeConditionNode
+---
+
+# Interface CNmGraphDocTimeConditionNode
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTimeConditionNode.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CNmGraphDocTimeConditionNode : CNmGraphDocFlowNode, CNmGraphDocNode, ISchemaClass<CNmGraphDocNode>, ISchemaClass<CNmGraphDocFlowNode>, ISchemaClass<CNmGraphDocTimeConditionNode>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [CNmGraphDocFlowNode](/docs/api/schemadefinitions/cnmgraphdocflownode)
+- [CNmGraphDocNode](/docs/api/schemadefinitions/cnmgraphdocnode)
+- [ISchemaClass\<CNmGraphDocNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocFlowNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaClass\<CNmGraphDocTimeConditionNode\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### Comparand
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTimeConditionNode.cs#L18" />
+
+```csharp
+ref float Comparand { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Operator
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTimeConditionNode.cs#L22" />
+
+```csharp
+ref CNmTimeConditionNode__Operator_t Operator { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNmTimeConditionNode__Operator_t" typeHref="/docs/api/schemadefinitions/cnmtimeconditionnode__operator_t" />
+
+### Type
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CNmGraphDocTimeConditionNode.cs#L20" />
+
+```csharp
+ref CNmTimeConditionNode__ComparisonType_t Type { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CNmTimeConditionNode__ComparisonType_t" typeHref="/docs/api/schemadefinitions/cnmtimeconditionnode__comparisontype_t" />
+

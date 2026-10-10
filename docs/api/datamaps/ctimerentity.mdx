@@ -1,0 +1,46 @@
+---
+title: CTimerEntity
+---
+
+# CTimerEntity
+
+Inherited from [CLogicalEntity](/docs/api/datamaps/clogicalentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `StartDisabled` | `m_iDisabled` | `FIELD_INT32` |
+| `InitialDelay` | `m_flInitialDelay` | `FIELD_FLOAT32` |
+| `RefireTime` | `m_flRefireTime` | `FIELD_FLOAT32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `RefireTime` | `FIELD_FLOAT32` |
+| `FireTimer` | `FIELD_VOID` |
+| `Enable` | `FIELD_VOID` |
+| `Disable` | `FIELD_VOID` |
+| `Toggle` | `FIELD_VOID` |
+| `AddToTimer` | `FIELD_FLOAT32` |
+| `ResetTimer` | `FIELD_VOID` |
+| `SubtractFromTimer` | `FIELD_FLOAT32` |
+| `PauseTimer` | `FIELD_VOID` |
+| `UnpauseTimer` | `FIELD_VOID` |
+| `UseRandomTime` | `FIELD_INT32` |
+| `PauseAfterFiring` | `FIELD_BOOLEAN` |
+| `LowerRandomBound` | `FIELD_FLOAT32` |
+| `UpperRandomBound` | `FIELD_FLOAT32` |
+
+## Output
+
+| Output Name | Field Type |
+| --- | --- |
+| `OnTimer` | `FIELD_CUSTOM` |
+| `OnTimerHigh` | `FIELD_CUSTOM` |
+| `OnTimerLow` | `FIELD_CUSTOM` |
+
+## Functions
+
+_No Entry_

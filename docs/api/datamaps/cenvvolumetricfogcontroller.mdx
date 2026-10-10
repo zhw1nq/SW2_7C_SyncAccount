@@ -1,0 +1,58 @@
+---
+title: CEnvVolumetricFogController
+---
+
+# CEnvVolumetricFogController
+
+Inherited from [CBaseEntity](/docs/api/datamaps/cbaseentity)
+
+## Fields
+
+| EntityKeyValues Name | Field Name | Field Type |
+| --- | --- | --- |
+| `IsMaster` | `m_bIsMaster` | `FIELD_BOOLEAN` |
+| `FadeSpeed` | `m_flFadeSpeed` | `FIELD_FLOAT32` |
+| `volume_depth_override` | `m_nVolumeDepth` | `FIELD_INT32` |
+| `volume_first_slice_thickness` | `m_fFirstVolumeSliceThickness` | `FIELD_FLOAT32` |
+| `Anisotropy` | `m_flAnisotropy` | `FIELD_FLOAT32` |
+| `FogStrength` | `m_flScattering` | `FIELD_FLOAT32` |
+| `DrawDistance` | `m_flDrawDistance` | `FIELD_FLOAT32` |
+| `FadeInStart` | `m_flFadeInStart` | `FIELD_FLOAT32` |
+| `FadeInEnd` | `m_flFadeInEnd` | `FIELD_FLOAT32` |
+| `IndirectVoxelDimX` | `m_nIndirectTextureDimX` | `FIELD_INT32` |
+| `IndirectVoxelDimY` | `m_nIndirectTextureDimY` | `FIELD_INT32` |
+| `IndirectVoxelDimZ` | `m_nIndirectTextureDimZ` | `FIELD_INT32` |
+| `IndirectStrength` | `m_flIndirectStrength` | `FIELD_FLOAT32` |
+| `IndirectEnabled` | `m_bEnableIndirect` | `FIELD_BOOLEAN` |
+| `StartDisabled` | `m_bStartDisabled` | `FIELD_BOOLEAN` |
+| `box_mins` | `m_vBoxMins` | `FIELD_VECTOR` |
+| `box_maxs` | `m_vBoxMaxs` | `FIELD_VECTOR` |
+| `fogirradiancevolume` | `m_hFogIndirectTexture` | `FIELD_HRENDERTEXTURE` |
+| `NoiseSpeed` | `m_fNoiseSpeed` | `FIELD_FLOAT32` |
+| `NoiseStrength` | `m_fNoiseStrength` | `FIELD_FLOAT32` |
+| `NoiseScale` | `m_vNoiseScale` | `FIELD_VECTOR` |
+| `WindSpeed` | `m_fWindSpeed` | `FIELD_FLOAT32` |
+| `WindDirection` | `m_vWindDirection` | `FIELD_VECTOR` |
+| `TintColor` | `m_TintColor` | `FIELD_COLOR32` |
+
+## Input
+
+| Input Name | Field Type |
+| --- | --- |
+| `SetToDefaults` | `FIELD_VOID` |
+| `SetFogStrength` | `FIELD_FLOAT32` |
+| `SetAnisotropy` | `FIELD_FLOAT32` |
+| `SetFadeSpeed` | `FIELD_FLOAT32` |
+| `SetDrawDistance` | `FIELD_FLOAT32` |
+| `EnableIndirect` | `FIELD_BOOLEAN` |
+| `Enable` | `FIELD_BOOLEAN` |
+| `Disable` | `FIELD_BOOLEAN` |
+| `ForceRefresh` | `FIELD_VOID` |
+
+## Output
+
+_No Entry_
+
+## Functions
+
+_No Entry_

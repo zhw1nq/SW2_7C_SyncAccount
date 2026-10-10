@@ -1,0 +1,1060 @@
+---
+title: Porting from CounterStrikeSharp
+description: A comprehensive guide to migrating your CounterStrikeSharp plugins to SwiftlyS2
+---
+
+# Porting from CounterStrikeSharp
+
+This guide will help you migrate your existing CounterStrikeSharp plugins to SwiftlyS2. We'll cover the key differences between the frameworks and provide side-by-side examples to make the transition as smooth as possible.
+
+<Callout type="info">
+  SwiftlyS2 is designed to be more powerful and feature-rich than CounterStrikeSharp, with many improvements in performance, API design, and developer experience.
+</Callout>
+
+## Overview
+
+SwiftlyS2 introduces several key improvements over CounterStrikeSharp:
+
+- **Modern .NET 10** - Takes advantage of the latest .NET features and performance improvements
+- **Improved API Design** - More intuitive and consistent API structure
+- **Better Developer Experience** - Enhanced tooling, debugging, and documentation
+- **Advanced Features** - Built-in menu system, database abstraction, configuration management
+- **Performance Optimizations** - Faster event handling and memory management
+
+## Migration Checklist
+
+Before starting your migration, ensure you have:
+
+- [ ] .NET 10.0 SDK installed
+- [ ] Your existing CounterStrikeSharp plugin source code
+- [ ] Understanding of your plugin's dependencies
+- [ ] Test environment set up for SwiftlyS2
+
+## Project Setup
+
+### Package Reference
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```xml
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.3" />
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```xml
+    <PackageReference Include="SwiftlyS2.CS2" Version="1.0.3" ExcludeAssets="runtime" PrivateAssets="all" />
+    ```
+  </Tab>
+</Tabs>
+
+**Version patterns:**
+
+- `1.0.3` - Specific version
+- `*` - Latest stable release
+- `*-*` - Latest preview/pre-release version
+
+### Target Framework
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```xml
+    <TargetFramework>net8.0</TargetFramework>
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```xml
+    <TargetFramework>net10.0</TargetFramework>
+    ```
+  </Tab>
+</Tabs>
+
+<Callout type="warning">
+  SwiftlyS2 requires .NET 10.0 or later. Make sure you have the appropriate SDK installed.
+</Callout>
+
+## Plugin Class
+
+### Base Structure
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    public class MyPlugin : BasePlugin
+    {
+        public override string ModuleName => "My Plugin";
+        public override string ModuleVersion => "1.0.0";
+
+        public override void Load(bool hotReload)
+        {
+        }
+    }
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    [PluginMetadata(Id = "my.plugin", Version = "1.0.0", Name = "My Plugin", Author = "Author")]
+    public sealed class Plugin(ISwiftlyCore core) : BasePlugin(core)
+    {
+        // Use static Core to access across plugin files if not using partial class
+        public static new ISwiftlyCore Core { get; private set; } = null!;
+
+        public override void Load(bool hotReload)
+        {
+            Core = base.Core;
+        }
+
+        public override void Unload()
+        {
+        }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Event Handling (Game Events)
+
+### Attribute-Based Registration (Recommended)
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    RegisterEventHandler<EventPlayerDeath>(OnPlayerDeath);
+    RegisterEventHandler<EventPlayerDeath>(OnPlayerDeath, HookMode.Pre);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    [GameEventHandler(HookMode.Post)]
+    private HookResult OnPlayerDeath(EventPlayerDeath @event)
+    {
+        var player = @event.Accessor.GetPlayer("userid");
+        return HookResult.Continue;
+    }
+
+    [GameEventHandler(HookMode.Pre)]
+    private HookResult OnPlayerDeathPre(EventPlayerDeath @event)
+    {
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Manual Registration
+
+In SwiftlyS2, you can also register event handlers manually in the `Load()` method:
+
+```csharp
+// SwiftlyS2 - manual registration in Load()
+Core.GameEvent.HookPost<EventPlayerDeath>(OnPlayerDeath);
+Core.GameEvent.HookPre<EventPlayerDeath>(OnPlayerDeathPre);
+```
+
+### Event Handler Signature
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    private HookResult OnPlayerDeath(EventPlayerDeath @event, GameEventInfo info)
+    {
+        var player = @event.Userid;
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    private HookResult OnPlayerDeath(EventPlayerDeath @event)
+    {
+        var player = @event.Accessor.GetPlayer("userid");
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<Callout type="info">
+  In SwiftlyS2, the `GameEventInfo` parameter is removed, and players are accessed through the `@event.Accessor.GetPlayer()` method.
+</Callout>
+
+### Getting Player from Event
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var player = @event.Userid;
+    var attacker = @event.Attacker;
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var player = @event.Accessor.GetPlayer("userid");
+    var attacker = @event.Accessor.GetPlayer("attacker");
+    ```
+  </Tab>
+</Tabs>
+
+## Player Operations
+
+## Getting All Players
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var players = Utilities.GetPlayers();
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var players = Core.PlayerManager.GetAllPlayers();
+    ```
+  </Tab>
+</Tabs>
+
+## Player Properties
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var isValid = player.IsValid;
+    var name = player.PlayerName;
+    var steamId = player.SteamID;
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var isValid = player.IsValid;
+    var name = player.Controller?.PlayerName;
+    var steamId = player.SteamID; // uppercase ID
+    ```
+  </Tab>
+</Tabs>
+
+## Sending Messages
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    // Send to specific player
+    player.PrintToChat("message");
+    
+    // Send to all players
+    Server.PrintToChatAll("message");
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // Send to specific player
+    player.SendChat("message");
+    
+    // Send to all players
+    Core.PlayerManager.SendChat("message");
+    ```
+  </Tab>
+</Tabs>
+
+### Additional Message Types
+
+SwiftlyS2 provides multiple message methods for enhanced communication:
+
+```csharp
+// Additional message types in SwiftlyS2
+Core.PlayerManager.SendCenter("center message");
+Core.PlayerManager.SendAlert("alert message");
+Core.PlayerManager.SendConsole("console message");
+Core.PlayerManager.SendCenterHTML("<b>HTML</b>", duration: 5000); // duration in milliseconds
+```
+
+## Chat Colors
+
+SwiftlyS2 uses square brackets instead of curly braces for colors:
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    "{red}Red text {green}Green text"
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    "[red]Red text [green]Green text"
+    ```
+  </Tab>
+</Tabs>
+
+## Timers & Scheduling
+
+<Callout type="warning">
+  SwiftlyS2 timers use game ticks as the base unit. Use `*BySeconds` variants for time-based delays.
+</Callout>
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    AddTimer(5.0f, () => { /* code */ });
+    AddTimer(1.0f, () => { /* code */ }, TimerFlags.REPEAT);
+    Server.NextFrame(() => { /* code */ });
+    Server.NextWorldUpdate(() => { /* code */ });
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    Core.Scheduler.Delay(64, () => { /* code */ }); // delay in ticks
+    Core.Scheduler.DelayBySeconds(5, () => { /* code */ }); // delay in seconds
+    Core.Scheduler.DelayAndRepeatBySeconds(5, 1, () => { /* code */ }); // initial delay + repeat interval
+    Core.Scheduler.NextTick(() => { /* code */ }); // next server tick
+    Core.Scheduler.NextWorldUpdate(() => { /* code */ }); // next world update frame
+    ```
+  </Tab>
+</Tabs>
+
+## Commands
+
+### Basic Command Registration
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    AddCommand("mycommand", "Description", OnMyCommand);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    [Command("mycommand")]
+    public void OnMyCommand(ICommandContext context)
+    {
+        var player = context.Sender;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Admin Commands
+
+In SwiftlyS2, permissions are part of the Command attribute:
+
+```csharp
+[Command("admincommand", permission: "admin.permission")]
+public void OnAdminCommand(ICommandContext context)
+{
+    // Only players with admin.permission can use this command
+}
+```
+
+### Command Aliases
+
+SwiftlyS2 provides a clean way to register command aliases:
+
+```csharp
+// Register primary command with aliases
+Core.Command.RegisterCommand("mycommand", OnMyCommand);
+Core.Command.RegisterCommandAlias("mycommand", "mc");
+Core.Command.RegisterCommandAlias("mycommand", "mycmd");
+```
+
+Here's a helper method for registering multiple aliases efficiently:
+
+```csharp
+private static void RegisterCommandWithAliases(List<string> commands, ICommandService.CommandListener handler)
+{
+    if (commands.Count == 0)
+        return;
+
+    // First command is the primary, rest are aliases
+    var primary = commands[0];
+    Core.Command.RegisterCommand(primary, handler);
+
+    foreach (var alias in commands.Skip(1))
+    {
+        Core.Command.RegisterCommandAlias(primary, alias);
+    }
+}
+
+// Usage
+RegisterCommandWithAliases(["guns", "gun", "weapons"], OnGunsCommand);
+```
+
+## Menus
+
+SwiftlyS2 has a built-in full menu system with support for buttons, inputs, sliders, and more.
+
+### Creating a Menu
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var menu = new ChatMenu("Title");
+    menu.AddMenuOption("Option 1", (p, o) => { });
+    MenuManager.OpenChatMenu(player, menu);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var menu = Core.MenusAPI
+        .CreateBuilder()
+        .Design.SetMenuTitle("Title")
+        .Design.SetMenuTitleVisible(true)
+        // All options below are optional
+        .Design.SetMenuFooterVisible(true)
+        .Design.SetGlobalScrollStyle(MenuOptionScrollStyle.LinearScroll) // doesn't wrap when reaching the end
+        .SetAutoCloseDelay(10) // auto close after 10 seconds
+        .SetSelectButton(KeyBind.Space) // button to select option
+        .SetPlayerFrozen(false); // don't freeze player while menu is open
+
+    var button = new ButtonMenuOption("Option 1");
+    button.Click += (player, option) =>
+    {
+        // handle click
+        return ValueTask.CompletedTask;
+    };
+    menu.AddOption(button);
+
+    var builtMenu = menu.Build();
+    Core.MenusAPI.OpenMenuForPlayer(player, builtMenu);
+    ```
+  </Tab>
+</Tabs>
+
+### Closing Menus
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    MenuManager.CloseActiveMenu(player);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    Core.MenusAPI.CloseMenuForPlayer(player, menuInstance);
+    ```
+  </Tab>
+</Tabs>
+
+## Entity Operations
+
+### Finding Entities
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    Utilities.FindAllEntitiesByDesignerName<CPlantedC4>("planted_c4");
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    Core.EntitySystem.GetAllEntities(); // all entities
+    Core.EntitySystem.GetAllEntitiesByClass<CPlantedC4>(); // by class type
+    Core.EntitySystem.GetAllEntitiesByDesignerName<CPlantedC4>("planted_c4"); // by designer name
+    ```
+  </Tab>
+</Tabs>
+
+### Modifying Schema Values
+
+<Callout type="info">
+  In CSS you need to call `SetStateChanged` after modifying networked properties. In SwiftlyS2 use the `Updated()` method instead.
+</Callout>
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    player.PlayerPawn.Value.Health = 100;
+    Utilities.SetStateChanged(player.PlayerPawn.Value, "CBaseEntity", "m_iHealth");
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var pawn = player.PlayerPawn;
+    pawn.Health = 100;
+    pawn.HealthUpdated();
+    ```
+  </Tab>
+</Tabs>
+
+## Configuration
+
+SwiftlyS2 uses the .NET Options pattern with support for JSON, JSONC, and TOML files with hot-reload capability.
+
+### Loading Configuration
+
+```csharp
+// SwiftlyS2
+private PluginConfig _config = null!;
+
+private void LoadConfiguration()
+{
+    const string ConfigFileName = "config.json";
+    const string ConfigSection = "MyPlugin";
+
+    // Initialize config file from model (creates file with defaults if not exists)
+    Core.Configuration
+        .InitializeJsonWithModel<PluginConfig>(ConfigFileName, ConfigSection)
+        // Configure the config source with hot-reload support
+        .Configure(cfg => cfg.AddJsonFile(
+            Core.Configuration.GetConfigPath(ConfigFileName),
+            optional: false,
+            reloadOnChange: true)); // auto-reload on file change
+
+    // Build service provider with options pattern
+    ServiceCollection services = new();
+    services.AddSwiftly(Core)
+        .AddOptionsWithValidateOnStart<PluginConfig>()
+        .BindConfiguration(ConfigSection);
+
+    var provider = services.BuildServiceProvider();
+    _config = provider.GetRequiredService<IOptions<PluginConfig>>().Value;
+}
+```
+
+### Config Model Example
+
+```csharp
+public sealed class PluginConfig
+{
+    public string DatabaseConnection { get; set; } = "";
+    public int MaxPlayers { get; set; } = 10;
+    public bool EnableFeature { get; set; } = true;
+}
+```
+
+The generated `config.json` will look like:
+
+```json
+{
+  "MyPlugin": {
+    "DatabaseConnection": "",
+    "MaxPlayers": 10,
+    "EnableFeature": true
+  }
+}
+```
+
+## Database
+
+SwiftlyS2 has a global database configuration system. Database connections are defined once in SwiftlyS2's `configs/database.jsonc` and referenced by name in plugins.
+
+**Supported databases:** MySQL, PostgreSQL, SQLite
+
+### Global Configuration
+
+Create a `configs/database.jsonc` file in your SwiftlyS2 installation:
+
+```json
+{
+  "default_connection": "host",
+  "connections": {
+    "host": "mysql://username:password@localhost:3306/database"
+  }
+}
+```
+
+**Connection string formats:**
+- MySQL: `mysql://user:pass@host:3306/database`
+- PostgreSQL: `postgresql://user:pass@host:5432/database`
+- SQLite: `sqlite://path/to/database.db`
+
+### Using in Plugins
+
+```csharp
+// Plugin config references connection by name
+public sealed class PluginConfig
+{
+    public string DatabaseConnection { get; set; } = "host"; // name from database.jsonc
+}
+
+// Get connection using the name
+using var connection = Core.Database.GetConnection(_config.DatabaseConnection);
+connection.Open();
+
+// Use with Dapper or any ADO.NET approach
+await connection.ExecuteAsync("SELECT * FROM players WHERE steamid = @SteamId", new { SteamId = steamId });
+```
+
+## Translations
+
+### File Location
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```
+    lang/en.json
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```
+    resources/translations/en.jsonc
+    ```
+  </Tab>
+</Tabs>
+
+### Usage
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    // Server language
+    Localizer["key"]
+    Localizer["key", arg1, arg2]
+
+    // Player language
+    Localizer.ForPlayer(player, "key")
+    Localizer.ForPlayer(player, "key", arg1, arg2)
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // Server language
+    Core.Localizer["key"]
+    Core.Localizer["key", arg1, arg2]
+
+    // Player language
+    var localizer = Core.Translation.GetPlayerLocalizer(player);
+    localizer["key"]
+    localizer["key", arg1, arg2]
+    ```
+  </Tab>
+</Tabs>
+
+## Project File (.csproj)
+
+Full example with comments:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- SwiftlyS2 requires .NET 10 -->
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Enable modern C# features -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <!-- Required for schema access -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Use filename as namespace and assembly name -->
+    <RootNamespace>$(MSBuildThisFileName)</RootNamespace>
+    <AssemblyName>$(MSBuildThisFileName)</AssemblyName>
+    <!-- Disable auto-generated assembly info -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Performance optimization -->
+    <TieredCompilation>true</TieredCompilation>
+    <!-- Copy dependencies to output -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- Output to build folder -->
+    <OutputPath>$(MSBuildThisFileDirectory)build/</OutputPath>
+    <PublishDir>$(OutputPath)publish/$(MSBuildThisFileName)</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SwiftlyS2 package - use *-* for latest preview, * for stable -->
+    <PackageReference Include="SwiftlyS2.CS2" Version="*-*" ExcludeAssets="runtime" PrivateAssets="all" />
+    <!-- Copy resources folder to output (translations, configs, etc.) -->
+    <None Update="resources\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Optional: Create zip after publish -->
+  <Target Name="CreateZip" AfterTargets="Publish">
+    <ZipDirectory SourceDirectory="$(PublishDir)../" DestinationFile="$(OutputPath)../$(AssemblyName).zip" Overwrite="true" />
+  </Target>
+</Project>
+```
+
+## ConVars
+
+### Finding and Reading ConVars
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var convar = ConVar.Find("mp_round_restart_delay");
+    var value = convar?.GetPrimitiveValue<float>();
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var convar = Core.ConVar.Find<float>("mp_round_restart_delay");
+    var value = convar?.Value;
+    ```
+  </Tab>
+</Tabs>
+
+### Setting ConVar Values
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var convar = ConVar.Find("mp_warmup_time");
+    convar?.SetValue(30);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var convar = Core.ConVar.Find<int>("mp_warmup_time");
+    if (convar != null)
+        convar.Value = 30;
+    ```
+  </Tab>
+</Tabs>
+
+## Listeners
+
+SwiftlyS2 uses typed event handlers with strongly-typed event parameters.
+
+### Client Events
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    RegisterListener<Listeners.OnClientConnect>((slot, name, ip) => { });
+    RegisterListener<Listeners.OnClientDisconnect>((slot) => { });
+    RegisterListener<Listeners.OnClientAuthorized>((slot, steamId) => { });
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // Typed event handlers (recommended)
+    private void OnClientConnected(IOnClientConnectedEvent @event)
+    {
+        // @event.PlayerId, can set @event.Result = HookResult.Stop to prevent join
+    }
+
+    private void OnClientDisconnected(IOnClientDisconnectedEvent @event)
+    {
+        // @event.PlayerId, @event.Reason
+    }
+
+    private void OnClientSteamAuthorize(IOnClientSteamAuthorizeEvent @event)
+    {
+        // @event.PlayerId
+    }
+
+    private void OnClientPutInServer(IOnClientPutInServerEvent @event)
+    {
+        // Player fully connected and ready
+    }
+
+    // Register in Load():
+    Core.Event.OnClientConnected += OnClientConnected;
+    Core.Event.OnClientDisconnected += OnClientDisconnected;
+    Core.Event.OnClientSteamAuthorize += OnClientSteamAuthorize;
+    Core.Event.OnClientPutInServer += OnClientPutInServer;
+    ```
+  </Tab>
+</Tabs>
+
+### Map Events
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    RegisterListener<Listeners.OnMapStart>((mapName) => { });
+    RegisterListener<Listeners.OnMapEnd>(() => { });
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    private void OnMapLoad(IOnMapLoadEvent @event)
+    {
+        var mapName = @event.MapName;
+    }
+
+    private void OnMapUnload(IOnMapUnloadEvent @event)
+    {
+        var mapName = @event.MapName;
+    }
+
+    // Register in Load():
+    Core.Event.OnMapLoad += OnMapLoad;
+    Core.Event.OnMapUnload += OnMapUnload;
+    ```
+  </Tab>
+</Tabs>
+
+### Entity Events
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    RegisterListener<Listeners.OnEntityCreated>((entity) => { });
+    RegisterListener<Listeners.OnEntitySpawned>((entity) => { });
+    RegisterListener<Listeners.OnEntityDeleted>((entity) => { });
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    private void OnEntityCreated(IOnEntityCreatedEvent @event)
+    {
+        var entity = @event.Entity;
+    }
+
+    private void OnEntitySpawned(IOnEntitySpawnedEvent @event)
+    {
+        var entity = @event.Entity;
+    }
+
+    private void OnEntityDeleted(IOnEntityDeletedEvent @event)
+    {
+        var entity = @event.Entity;
+    }
+
+    // Register in Load():
+    Core.Event.OnEntityCreated += OnEntityCreated;
+    Core.Event.OnEntitySpawned += OnEntitySpawned;
+    Core.Event.OnEntityDeleted += OnEntityDeleted;
+    ```
+  </Tab>
+</Tabs>
+
+### Other Useful Events
+
+```csharp
+// SwiftlyS2 additional events
+private void OnTick() { } // every server tick (hot path!)
+private void OnWorldUpdate() { } // every world update, even in hibernation
+private void OnEntityTakeDamage(IOnEntityTakeDamageEvent @event) { } // damage hook
+private void OnPrecacheResource(IOnPrecacheResourceEvent @event) { @event.AddItem("path/to/resource.vmdl"); }
+
+// Register in Load():
+Core.Event.OnTick += OnTick;
+Core.Event.OnWorldUpdate += OnWorldUpdate;
+Core.Event.OnEntityTakeDamage += OnEntityTakeDamage;
+Core.Event.OnPrecacheResource += OnPrecacheResource;
+```
+
+## Player Movement
+
+### Teleportation
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    player.PlayerPawn.Value?.Teleport(position, angles, velocity);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    player.Teleport(position, angles, velocity);
+    // or with Vector.Zero for no velocity change
+    player.Teleport(position, angles, Vector.Zero);
+    ```
+  </Tab>
+</Tabs>
+
+### Reading Velocity and Position
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var velocity = player.PlayerPawn.Value?.AbsVelocity;
+    var position = player.PlayerPawn.Value?.AbsOrigin;
+    var angles = player.PlayerPawn.Value?.EyeAngles;
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    var pawn = player.PlayerPawn;
+    var velocity = pawn?.AbsVelocity;
+    var position = pawn?.CBodyComponent?.SceneNode?.AbsOrigin;
+    var angles = pawn?.EyeAngles;
+    ```
+  </Tab>
+</Tabs>
+
+## GameData & Function Hooking
+
+SwiftlyS2 provides a powerful system for working with game signatures, offsets, and function hooking. GameData files are stored in each plugin's own `resources/gamedata/` folder, allowing each plugin to manage its own signatures and offsets independently.
+
+<Callout type="info">
+  This is an advanced topic. Most plugins won't need to use function hooking directly.
+</Callout>
+
+### Delegate Definition
+
+In SwiftlyS2, you need to define delegates that match the native function signatures:
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    // CSS - no explicit delegate needed, uses DynamicHook
+    // Hook handlers receive DynamicHook for parameter extraction
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // SwiftlyS2 - define delegate matching the native function signature
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    private delegate nint GiveNamedItemDelegate(nint pItemServices, nint weaponName);
+
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    private delegate void FindMatchingWeaponsDelegate(nint pPawn, nint weaponName, int team, byte searchInventory, nint outVector);
+    ```
+  </Tab>
+</Tabs>
+
+### Signature Lookup
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    var funcAddress = GameData.GetSignature("CCSPlayer_FindMatchingWeaponsForTeamLoadout");
+    var func = new MemoryFunctionVoid<IntPtr, string, int, bool, IntPtr>(funcAddress);
+    func.Invoke(player.PlayerPawn.Value.Handle, weaponName, (int)team, false, vectorPtr);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    if (Core.GameData.TryGetSignature("CCSPlayer_FindMatchingWeaponsForTeamLoadout", out var address))
+    {
+        var func = Core.Memory.GetUnmanagedFunctionByAddress<FindMatchingWeaponsDelegate>(address);
+        func.Invoke(pPawn, weaponName, team, searchInventory, outVector);
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### VTable Hooking
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    VirtualFunctions.GiveNamedItemFunc.Hook(OnGiveNamedItemPre, HookMode.Pre);
+    VirtualFunctions.GiveNamedItemFunc.Hook(OnGiveNamedItemPost, HookMode.Post);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    private IUnmanagedFunction<GiveNamedItemDelegate>? _giveNamedItem;
+    private Guid _giveNamedItemHookId;
+
+    // In Load() or initialization
+    if (Core.GameData.TryGetOffset("CCSPlayer_ItemServices::GiveNamedItem", out var offset))
+    {
+        var vtable = Core.Memory.GetVTableAddress("server", "CCSPlayer_ItemServices");
+        if (vtable.HasValue)
+        {
+            _giveNamedItem = Core.Memory.GetUnmanagedFunctionByVTable<GiveNamedItemDelegate>(vtable.Value, (int)offset);
+            _giveNamedItemHookId = _giveNamedItem.AddHook(OnGiveNamedItemHook);
+        }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Hook Handler Implementation
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    // CSS - separate Pre and Post handlers
+    private HookResult OnGiveNamedItemPre(DynamicHook hook)
+    {
+        var itemServices = hook.GetParam<CCSPlayer_ItemServices>(0);
+        string classname = hook.GetParam<string>(1);
+        return HookResult.Continue;
+    }
+
+    private HookResult OnGiveNamedItemPost(DynamicHook hook)
+    {
+        // Post-execution logic
+        return HookResult.Continue;
+    }
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // SwiftlyS2 - single handler with callNext pattern
+    private GiveNamedItemDelegate OnGiveNamedItemHook(Func<GiveNamedItemDelegate> callNext)
+    {
+        return (pItemServices, weaponName) =>
+        {
+            // Pre-hook logic here
+            var classname = Marshal.PtrToStringUTF8(weaponName);
+
+            // Call original function
+            var result = callNext()(pItemServices, weaponName);
+
+            // Post-hook logic here
+
+            return result;
+        };
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Hook Cleanup
+
+<Tabs items={['CounterStrikeSharp', 'SwiftlyS2']} defaultIndex={0}>
+  <Tab value="CounterStrikeSharp">
+    ```csharp
+    VirtualFunctions.GiveNamedItemFunc.Unhook(OnGiveNamedItemPre, HookMode.Pre);
+    VirtualFunctions.GiveNamedItemFunc.Unhook(OnGiveNamedItemPost, HookMode.Post);
+    ```
+  </Tab>
+  <Tab value="SwiftlyS2">
+    ```csharp
+    // SwiftlyS2 - in Unload()
+    if (_giveNamedItem != null && _giveNamedItemHookId != Guid.Empty)
+        _giveNamedItem.RemoveHook(_giveNamedItemHookId);
+    ```
+  </Tab>
+</Tabs>
+
+## Migration Tips & Best Practices
+
+### Start Small
+Begin by migrating basic functionality first:
+1. Plugin structure and metadata
+2. Basic commands and events
+3. Player operations and messaging
+4. Configuration and database connections
+5. Advanced features like menus and function hooking
+
+### Common Migration Patterns
+
+#### Pattern: Update Package References
+Always update your `.csproj` file first:
+```xml
+<!-- Remove CSS references -->
+<!-- <PackageReference Include="CounterStrikeSharp.API" Version="..." /> -->
+
+<!-- Add SwiftlyS2 reference -->
+<PackageReference Include="SwiftlyS2.CS2" Version="*-*" ExcludeAssets="runtime" PrivateAssets="all" />
+```
+
+#### Pattern: Core Access
+Replace global utility classes with Core services:
+```csharp
+// Old CSS pattern
+Utilities.GetPlayers().ForEach(player => { });
+
+// New SwiftlyS2 pattern  
+Core.PlayerManager.GetAllPlayers().ForEach(player => { });
+```
+
+#### Pattern: Event Registration
+Use attributes for cleaner event handling:
+```csharp
+// Instead of manual registration in Load()
+// RegisterEventHandler<EventPlayerDeath>(OnPlayerDeath);
+
+// Use attributes (recommended)
+[GameEventHandler(HookMode.Post)]
+private HookResult OnPlayerDeath(EventPlayerDeath @event) { }
+```
+
+### Testing Your Migration
+
+1. **Compile First**: Ensure your plugin compiles without errors
+2. **Test Basic Functions**: Verify commands, events, and player operations work
+3. **Check Resources**: Ensure translations and config files are properly located
+4. **Test Hot Reload**: SwiftlyS2 has improved hot reload support
+
+### Getting Help
+
+- **Documentation**: Check the SwiftlyS2 API documentation for detailed reference
+- **Examples**: Look at the plugin template examples in the `examples/` folder
+- **Community**: Join the SwiftlyS2 Discord or forums for community support
+
+<Callout type="success">
+  Migration from CounterStrikeSharp to SwiftlyS2 typically results in cleaner, more maintainable code with better performance and more features.
+</Callout>

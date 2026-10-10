@@ -1,0 +1,178 @@
+---
+title: Configuration
+---
+
+SwiftlyS2 provides a flexible configuration system that allows your plugin to create config files, bind typed models, and reload settings while the server is running.
+
+## Accessing Configuration Service
+
+The configuration service is available through `Core.Configuration`.
+
+```c#
+public override void Load(bool hotReload)
+{
+    var configuration = Core.Configuration;
+}
+```
+
+## Configuration Paths
+
+You can inspect where your plugin configuration files are stored and build full paths for individual files.
+
+### Base Path
+
+```c#
+string basePath = Core.Configuration.BasePath;
+```
+
+### Check if Base Path Exists
+
+```c#
+bool exists = Core.Configuration.BasePathExists;
+```
+
+### Get Configuration File Path
+
+```c#
+string configPath = Core.Configuration.GetConfigPath("config.jsonc");
+```
+
+`GetConfigPath` expects the file name including extension.
+
+## Initializing Configuration Files
+
+Configuration files can be initialized from packaged templates or from C# models.
+
+### Initialize with Template
+
+To use templates, package a `templates` folder in your plugin and place the template files there.
+
+```c#
+Core.Configuration.InitializeWithTemplate("config.jsonc", "config.template.jsonc");
+Core.Configuration.InitializeWithTemplate("database.toml", "database.template.toml");
+```
+
+### Initialize JSON with Model
+
+```c#
+Core.Configuration.InitializeJsonWithModel<MainConfig>("config.jsonc", "Main");
+```
+
+### Initialize TOML with Model
+
+```c#
+Core.Configuration.InitializeTomlWithModel<DatabaseConfig>("database.toml", "Database");
+```
+
+Both model-based methods create the file only when it does not already exist.
+
+## Configuring the Configuration Manager
+
+After initialization, configure the internal manager with your providers and reload behavior.
+
+```c#
+Core.Configuration.Configure(builder =>
+{
+    builder.AddJsonFile("config.jsonc", optional: false, reloadOnChange: true);
+    builder.AddTomlFile("database.toml", optional: false, reloadOnChange: true);
+});
+```
+
+The `Configure` function receives an `IConfigurationBuilder` and returns `IPluginConfigurationService`, so you can continue chaining methods.
+
+## Method Chaining
+
+All setup methods return the configuration service, allowing fluent setup in one block.
+
+```c#
+Core.Configuration
+    .InitializeJsonWithModel<MainConfig>("config.jsonc", "Main")
+    .InitializeTomlWithModel<DatabaseConfig>("database.toml", "Database")
+    .Configure(builder =>
+    {
+        builder.AddJsonFile("config.jsonc", optional: false, reloadOnChange: true);
+        builder.AddTomlFile("database.toml", optional: false, reloadOnChange: true);
+    });
+```
+
+## Working with Configuration Manager
+
+You can access the internal configuration manager directly when needed.
+
+```c#
+IConfigurationManager manager = Core.Configuration.Manager;
+```
+
+## Complete Example
+
+### 1. Define Configuration Models
+
+```c#
+namespace MyPlugin;
+
+public class MainConfig
+{
+    public bool Enabled { get; set; } = true;
+    public bool Debug { get; set; } = false;
+    public int MaxPlayers { get; set; } = 32;
+}
+
+public class DatabaseConfig
+{
+    public string Host { get; set; } = "127.0.0.1";
+    public int Port { get; set; } = 3306;
+}
+```
+
+### 2. Initialize in Plugin Load
+
+```c#
+public override void Load(bool hotReload)
+{
+    Core.Configuration
+        .InitializeJsonWithModel<MainConfig>("config.jsonc", "Main")
+        .InitializeTomlWithModel<DatabaseConfig>("database.toml", "Database")
+        .Configure(builder =>
+        {
+            builder.AddJsonFile("config.jsonc", optional: false, reloadOnChange: true);
+            builder.AddTomlFile("database.toml", optional: false, reloadOnChange: true);
+        });
+
+    var services = new ServiceCollection();
+
+    services.AddSwiftly(Core);
+    services.AddOptionsWithValidateOnStart<MainConfig>().BindConfiguration("Main");
+    services.AddOptionsWithValidateOnStart<DatabaseConfig>().BindConfiguration("Database");
+}
+```
+
+### 3. Consume with IOptionsMonitor
+
+```c#
+public class ExampleService
+{
+    private readonly IOptionsMonitor<MainConfig> _main;
+    private readonly IOptionsMonitor<DatabaseConfig> _database;
+
+    public ExampleService(IOptionsMonitor<MainConfig> main, IOptionsMonitor<DatabaseConfig> database)
+    {
+        _main = main;
+        _database = database;
+
+        _main.OnChange(newConfig =>
+        {
+            Console.WriteLine($"Main config reloaded. Enabled: {newConfig.Enabled}");
+        });
+    }
+
+    public void PrintSettings()
+    {
+        Console.WriteLine($"Debug: {_main.CurrentValue.Debug}");
+        Console.WriteLine($"DB Host: {_database.CurrentValue.Host}:{_database.CurrentValue.Port}");
+    }
+}
+```
+
+## Reference
+
+See [IPluginConfigurationService](/docs/api/services/ipluginconfigurationservice/) for more details.

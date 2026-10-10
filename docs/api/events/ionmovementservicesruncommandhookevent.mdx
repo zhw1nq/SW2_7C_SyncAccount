@@ -1,0 +1,63 @@
+---
+title: IOnMovementServicesRunCommandHookEvent
+---
+
+# Interface IOnMovementServicesRunCommandHookEvent
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnMovementServicesRunCommandHookEvent.cs#L9" />
+
+**Namespace**: [SwiftlyS2.Shared.Events](/docs/api/events)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+Called when the movement services run command hook is triggered.
+
+```csharp
+[Obsolete("This event is deprecated and will be removed in future versions. Use GameHooks instead.")]
+public interface IOnMovementServicesRunCommandHookEvent
+```
+
+## Properties
+
+### ButtonState
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnMovementServicesRunCommandHookEvent.cs#L19" />
+
+The button state.
+
+```csharp
+CInButtonState ButtonState { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CInButtonState" typeHref="/docs/api/schemadefinitions/cinbuttonstate" />
+
+### MovementServices
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnMovementServicesRunCommandHookEvent.cs#L15" />
+
+The movement services.
+
+```csharp
+CCSPlayer_MovementServices MovementServices { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CCSPlayer_MovementServices" typeHref="/docs/api/schemadefinitions/ccsplayer_movementservices" />
+
+### UserCmdPB
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Shared/Modules/Events/EventParams/IOnMovementServicesRunCommandHookEvent.cs#L23" />
+
+The user command protobuf.
+
+```csharp
+CSGOUserCmdPB UserCmdPB { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CSGOUserCmdPB" typeHref="/docs/api/protobufdefinitions/csgousercmdpb" />
+

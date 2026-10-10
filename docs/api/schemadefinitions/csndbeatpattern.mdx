@@ -1,0 +1,205 @@
+---
+title: CSndBeatPattern
+---
+
+# Interface CSndBeatPattern
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L11" />
+
+**Namespace**: [SwiftlyS2.Shared.SchemaDefinitions](/docs/api/schemadefinitions)
+
+**Assembly**: SwiftlyS2.CS2.dll
+
+```csharp
+public interface CSndBeatPattern : ISchemaClass<CSndBeatPattern>, ISchemaField, ISchemaClass, INativeHandle
+```
+
+#### Implements
+
+- [ISchemaClass\<CSndBeatPattern\>](/docs/api/schemas/ischemaclasst)
+- [ISchemaField](/docs/api/schemas/ischemafield)
+- [ISchemaClass](/docs/api/schemas/ischemaclass)
+- [INativeHandle](/docs/api/natives/inativehandle)
+
+## Properties
+
+### KeyType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L38" />
+
+```csharp
+ref SndBeatKeyType_t KeyType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SndBeatKeyType_t" typeHref="/docs/api/schemadefinitions/sndbeatkeytype_t" />
+
+### LaunchSyncEventType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L30" />
+
+```csharp
+ref SndBeatEventType_t LaunchSyncEventType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SndBeatEventType_t" typeHref="/docs/api/schemadefinitions/sndbeateventtype_t" />
+
+### LaunchSyncType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L20" />
+
+```csharp
+ref SndBeatLaunchSyncType_t LaunchSyncType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SndBeatLaunchSyncType_t" typeHref="/docs/api/schemadefinitions/sndbeatlaunchsynctype_t" />
+
+### Length
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L26" />
+
+```csharp
+ref float Length { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### Looping
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L28" />
+
+```csharp
+ref bool Looping { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="bool" typeHref="https://learn.microsoft.com/dotnet/api/system.boolean" />
+
+### Name
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L18" />
+
+```csharp
+string Name { get; set; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="string" typeHref="https://learn.microsoft.com/dotnet/api/system.string" />
+
+### PatternFloats
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L42" />
+
+```csharp
+ref CUtlVector<SndBeatEventKeyedFloats_t> PatternFloats { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SndBeatEventKeyedFloats_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PatternKeys
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L40" />
+
+```csharp
+ref CUtlVector<SndBeatEventKeys_t> PatternKeys { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SndBeatEventKeys_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PatternMidi
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L46" />
+
+```csharp
+ref CUtlVector<SndBeatEventKeyedMidiNotes_t> PatternMidi { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SndBeatEventKeyedMidiNotes_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PatternSndEvts
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L44" />
+
+```csharp
+ref CUtlVector<SndBeatEventKeyedSndEvts_t> PatternSndEvts { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="CUtlVector&lt;SndBeatEventKeyedSndEvts_t&gt;" typeHref="/docs/api/natives/cutlvectort" />
+
+### PlayBeatMult
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L36" />
+
+```csharp
+ref float PlayBeatMult { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### PlayEventType
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L34" />
+
+```csharp
+ref SndBeatEventType_t PlayEventType { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SndBeatEventType_t" typeHref="/docs/api/schemadefinitions/sndbeateventtype_t" />
+
+### SyncBeatMult
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L32" />
+
+```csharp
+ref float SyncBeatMult { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### SyncPriority
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L22" />
+
+```csharp
+ref float SyncPriority { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="float" typeHref="https://learn.microsoft.com/dotnet/api/system.single" />
+
+### TimeSignature
+
+<ViewSource href="https://github.com/swiftly-solution/swiftlys2/blob/master/managed/src/SwiftlyS2.Generated/Schemas/Interfaces/CSndBeatPattern.cs#L24" />
+
+```csharp
+SndBeatTimeSignature_t TimeSignature { get; }
+```
+
+<ApiLabel>Property Value</ApiLabel>
+
+- <ApiParam type="SndBeatTimeSignature_t" typeHref="/docs/api/schemadefinitions/sndbeattimesignature_t" />
+
