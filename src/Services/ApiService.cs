@@ -235,6 +235,9 @@ public sealed class ApiService(Func<PluginConfig> configProvider, ILogger logger
         }
     }
 
+    /// <summary>
+    /// Downloads avatar with cache — used only for MockAvatarUrl.
+    /// </summary>
     public async Task<byte[]?> DownloadAvatarAsync(string url, CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(url)) return null;
@@ -244,6 +247,25 @@ public sealed class ApiService(Func<PluginConfig> configProvider, ILogger logger
             return cachedBytes;
         }
 
+        var bytes = await DownloadAvatarCoreAsync(url, cancellationToken).ConfigureAwait(false);
+        if (bytes is { Length: > 0 })
+        {
+            _avatarCache[url] = bytes;
+        }
+        return bytes;
+    }
+
+    /// <summary>
+    /// Downloads avatar without cache — used for per-player avatars to avoid cross-contamination.
+    /// </summary>
+    public async Task<byte[]?> DownloadAvatarFreshAsync(string url, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(url)) return null;
+        return await DownloadAvatarCoreAsync(url, cancellationToken).ConfigureAwait(false);
+    }
+
+    private async Task<byte[]?> DownloadAvatarCoreAsync(string url, CancellationToken cancellationToken)
+    {
         var cfg = _configProvider();
         try
         {
@@ -274,7 +296,6 @@ public sealed class ApiService(Func<PluginConfig> configProvider, ILogger logger
                 return null;
             }
 
-            _avatarCache[url] = bytes;
             return bytes;
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
@@ -326,7 +347,7 @@ public sealed class ApiService(Func<PluginConfig> configProvider, ILogger logger
         byte[]? avatar = null;
         if (!string.IsNullOrWhiteSpace(response.Data.Image))
         {
-            avatar = await DownloadAvatarAsync(response.Data.Image, cancellationToken).ConfigureAwait(false);
+            avatar = await DownloadAvatarFreshAsync(response.Data.Image, cancellationToken).ConfigureAwait(false);
             if (avatar == null)
                 _logger.LogWarning("[SyncAccount] Registered avatar download failed for SteamID {SteamId}; name will still be applied.", steamId);
         }

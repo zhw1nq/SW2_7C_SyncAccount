@@ -24,7 +24,7 @@ namespace SyncAccount;
 public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
 {
     private readonly ConcurrentDictionary<int, CancellationTokenSource> _sessions = new();
-    private readonly ConcurrentDictionary<int, byte> _blockedGuests = new();
+    private readonly ConcurrentDictionary<int, DateTime> _blockedGuests = new();
     private readonly ConcurrentDictionary<int, string> _registeredNames = new();
     private readonly ConcurrentDictionary<int, byte> _customAvatarApplied = new();
     private readonly CancellationTokenSource _lifetime = new();
@@ -175,6 +175,9 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         if (player == null || !player.IsValid || player.IsFakeClient)
             return;
 
+        if (_blockedGuests.ContainsKey(playerId))
+            return;
+
         if (_api == null)
         {
             Core.Logger.LogWarning("[SyncAccount] Sync skipped for player {PlayerId}: plugin is not ready.", playerId);
@@ -245,8 +248,7 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
 
     private void ApplyRegistered(int playerId, string name, byte[]? avatar, CancellationTokenSource session)
     {
-        var player = GetPlayer(playerId);
-        if (player == null || !IsCurrentSession(playerId, session))
+        if (GetPlayer(playerId) is not { IsValid: true, IsFakeClient: false } player || !IsCurrentSession(playerId, session))
             return;
 
         _blockedGuests.TryRemove(playerId, out _);
@@ -259,6 +261,12 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         {
             _customAvatarApplied[playerId] = 1;
             ApplyAvatar(player, avatar);
+        }
+        else
+        {
+            // Avatar fetch failed — remove custom flag and ensure mock avatar is applied
+            _customAvatarApplied.TryRemove(playerId, out _);
+            ApplyMockAvatar(player);
         }
 
         BroadcastChat("sync.welcome", name);
@@ -335,13 +343,14 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         if (player == null || !IsCurrentSession(playerId, session))
             return;
 
-        _blockedGuests[playerId] = 1;
+        int delay = Math.Max(1, _config.GuestKickDelaySeconds);
+        var deadline = DateTime.UtcNow.AddSeconds(delay);
+        _blockedGuests[playerId] = deadline;
+
         player.SwitchTeam(Team.Spectator);
         player.VoiceFlags = VoiceFlagValue.Muted;
         PlaySoundToPlayer(player, _config.SoundFailed);
         SendPlayerChat(player, "sync.register_chat");
-
-        int delay = Math.Max(1, _config.GuestKickDelaySeconds);
         player.SendCenterHTML(Core.Translation.GetPlayerLocalizer(player)["sync.register_html"], delay * 1000);
 
         int countdownStart = Math.Max(1, delay - 3);
@@ -349,36 +358,33 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         {
             Core.Scheduler.DelayBySeconds(countdownStart, () =>
             {
-                if (!IsCurrentSession(playerId, session)) return;
                 var current = GetPlayer(playerId);
-                if (current != null && !current.IsFakeClient)
+                if (current != null && !current.IsFakeClient && _blockedGuests.ContainsKey(playerId))
                     SendPlayerChat(current, "sync.kick_countdown", 3);
             });
 
             Core.Scheduler.DelayBySeconds(countdownStart + 1, () =>
             {
-                if (!IsCurrentSession(playerId, session)) return;
                 var current = GetPlayer(playerId);
-                if (current != null && !current.IsFakeClient)
+                if (current != null && !current.IsFakeClient && _blockedGuests.ContainsKey(playerId))
                     SendPlayerChat(current, "sync.kick_countdown", 2);
             });
 
             Core.Scheduler.DelayBySeconds(countdownStart + 2, () =>
             {
-                if (!IsCurrentSession(playerId, session)) return;
                 var current = GetPlayer(playerId);
-                if (current != null && !current.IsFakeClient)
+                if (current != null && !current.IsFakeClient && _blockedGuests.ContainsKey(playerId))
                     SendPlayerChat(current, "sync.kick_countdown", 1);
             });
         }
 
         Core.Scheduler.DelayBySeconds(delay, () =>
         {
-            if (!IsCurrentSession(playerId, session)) return;
             var current = GetPlayer(playerId);
-            if (current == null || current.IsFakeClient) return;
-            current.Kick("NETWORK_DISCONNECT_REJECT_BADCHALLENGE", ENetworkDisconnectionReason.NETWORK_DISCONNECT_REJECT_BADCHALLENGE);
-            _blockedGuests.TryRemove(playerId, out _);
+            if (current != null && !current.IsFakeClient && _blockedGuests.ContainsKey(playerId))
+            {
+                KickPlayer(current);
+            }
         });
     }
 
@@ -388,7 +394,9 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         if (player == null || !IsCurrentSession(playerId, session))
             return;
 
-        _blockedGuests[playerId] = 1;
+        var deadline = DateTime.UtcNow.AddSeconds(5);
+        _blockedGuests[playerId] = deadline;
+
         player.SwitchTeam(Team.Spectator);
         player.VoiceFlags = VoiceFlagValue.Muted;
         PlaySoundToPlayer(player, _config.SoundFailed);
@@ -398,12 +406,33 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
 
         Core.Scheduler.DelayBySeconds(5, () =>
         {
-            if (!IsCurrentSession(playerId, session)) return;
             var current = GetPlayer(playerId);
-            if (current == null || current.IsFakeClient) return;
-            current.Kick("NETWORK_DISCONNECT_REJECT_BADCHALLENGE", ENetworkDisconnectionReason.NETWORK_DISCONNECT_REJECT_BADCHALLENGE);
-            _blockedGuests.TryRemove(playerId, out _);
+            if (current != null && !current.IsFakeClient && _blockedGuests.ContainsKey(playerId))
+            {
+                KickPlayer(current);
+            }
         });
+    }
+
+    private void KickPlayer(IPlayer player)
+    {
+        try
+        {
+            player.Kick("NETWORK_DISCONNECT_REJECT_BADCHALLENGE", (ENetworkDisconnectionReason)73);
+        }
+        catch (Exception ex)
+        {
+            Core.Logger.LogWarning("[SyncAccount] Failed to kick player {PlayerId} via IPlayer.Kick: {Message}", player.PlayerID, ex.Message);
+        }
+
+        try
+        {
+            Core.Engine.ExecuteCommand($"kickid {player.UserID} \"NETWORK_DISCONNECT_REJECT_BADCHALLENGE\"");
+        }
+        catch (Exception ex)
+        {
+            Core.Logger.LogWarning("[SyncAccount] Failed to kick player {PlayerId} via ExecuteCommand: {Message}", player.PlayerID, ex.Message);
+        }
     }
 
     private void PlaySoundToPlayer(IPlayer player, string soundName)
@@ -453,33 +482,83 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         }
     }
 
-    // ── Name Lock ──────────────────────────────────────────────
+    // ── Name Lock & Guest Enforcement ─────────────────────────
 
-    [GameEventHandler(HookMode.Post)]
+    [GameEventHandler(HookMode.Pre)]
     public HookResult OnPlayerSpawn(EventPlayerSpawn @event)
     {
-        if (@event.UserIdPlayer is { IsValid: true, IsFakeClient: false })
-            Core.Scheduler.NextTick(() => EnforcePlayerName(@event.UserId));
+        if (@event.UserIdPlayer is { IsValid: true, IsFakeClient: false } player)
+        {
+            int playerId = player.PlayerID;
+            if (_blockedGuests.ContainsKey(playerId))
+            {
+                player.SwitchTeam(Team.Spectator);
+                player.VoiceFlags = VoiceFlagValue.Muted;
+                SendPlayerChat(player, "sync.register_chat");
+                player.SendCenterHTML(Core.Translation.GetPlayerLocalizer(player)["sync.register_html"], 10000);
+
+                Core.Scheduler.NextTick(() =>
+                {
+                    var p = GetPlayer(playerId);
+                    if (p is { IsValid: true, IsFakeClient: false })
+                    {
+                        p.SwitchTeam(Team.Spectator);
+                        p.VoiceFlags = VoiceFlagValue.Muted;
+                    }
+                });
+                return HookResult.Stop;
+            }
+            Core.Scheduler.NextTick(() => EnforcePlayerName(playerId));
+        }
         return HookResult.Continue;
     }
 
-    [GameEventHandler(HookMode.Post)]
+    [GameEventHandler(HookMode.Pre)]
     public HookResult OnPlayerTeam(EventPlayerTeam @event)
     {
-        if (@event.UserIdPlayer is { IsValid: true, IsFakeClient: false })
-            Core.Scheduler.NextTick(() => EnforcePlayerName(@event.UserId));
+        if (@event.UserIdPlayer is { IsValid: true, IsFakeClient: false } player)
+        {
+            int playerId = player.PlayerID;
+            if (_blockedGuests.ContainsKey(playerId))
+            {
+                if (@event.Team != (byte)Team.Spectator)
+                {
+                    player.SwitchTeam(Team.Spectator);
+                    player.VoiceFlags = VoiceFlagValue.Muted;
+                    SendPlayerChat(player, "sync.register_chat");
+                    player.SendCenterHTML(Core.Translation.GetPlayerLocalizer(player)["sync.register_html"], 10000);
+
+                    Core.Scheduler.NextTick(() =>
+                    {
+                        var p = GetPlayer(playerId);
+                        if (p is { IsValid: true, IsFakeClient: false })
+                        {
+                            p.SwitchTeam(Team.Spectator);
+                            p.VoiceFlags = VoiceFlagValue.Muted;
+                        }
+                    });
+                    return HookResult.Stop;
+                }
+                return HookResult.Continue;
+            }
+            Core.Scheduler.NextTick(() => EnforcePlayerName(playerId));
+        }
         return HookResult.Continue;
     }
 
     [GameEventHandler(HookMode.Pre)]
     public HookResult OnPlayerChangeName(EventPlayerChangename @event)
     {
-        if (!_registeredNames.TryGetValue(@event.UserId, out var targetName))
+        if (@event.UserIdPlayer is not { IsValid: true, IsFakeClient: false } player)
+            return HookResult.Continue;
+
+        int playerId = player.PlayerID;
+        if (!_registeredNames.TryGetValue(playerId, out var targetName))
             return HookResult.Continue;
 
         if (@event.NewName != targetName)
         {
-            Core.Scheduler.NextTick(() => EnforcePlayerName(@event.UserId));
+            Core.Scheduler.NextTick(() => EnforcePlayerName(playerId));
             return HookResult.Stop;
         }
         return HookResult.Continue;
@@ -489,6 +568,8 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
     {
         foreach (var (playerId, _) in _registeredNames)
             EnforcePlayerName(playerId);
+        foreach (var (playerId, deadline) in _blockedGuests)
+            EnforceBlockedGuest(playerId, deadline);
     }
 
     private void EnforcePlayerName(int playerId)
@@ -496,14 +577,36 @@ public sealed class SyncAccountPlugin(ISwiftlyCore core) : BasePlugin(core)
         if (!_registeredNames.TryGetValue(playerId, out var targetName))
             return;
 
-        var player = GetPlayer(playerId);
-        if (player is not { IsValid: true } || player.IsFakeClient)
+        if (GetPlayer(playerId) is not { IsValid: true, IsFakeClient: false } player)
             return;
 
         if (player.Controller is { IsValid: true } && player.Controller.PlayerName != targetName)
         {
             player.Controller.PlayerName = targetName;
             player.Controller.PlayerNameUpdated();
+        }
+    }
+
+    private void EnforceBlockedGuest(int playerId, DateTime deadline)
+    {
+        if (GetPlayer(playerId) is not { IsValid: true, IsFakeClient: false } player)
+            return;
+
+        if (DateTime.UtcNow >= deadline)
+        {
+            KickPlayer(player);
+            return;
+        }
+
+        if (player.Controller is { IsValid: true } && player.Controller.TeamNum != (byte)Team.Spectator)
+        {
+            player.SwitchTeam(Team.Spectator);
+            SendPlayerChat(player, "sync.register_chat");
+            player.SendCenterHTML(Core.Translation.GetPlayerLocalizer(player)["sync.register_html"], 10000);
+        }
+        if (player.VoiceFlags != VoiceFlagValue.Muted)
+        {
+            player.VoiceFlags = VoiceFlagValue.Muted;
         }
     }
 }
